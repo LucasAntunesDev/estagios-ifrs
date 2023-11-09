@@ -15,16 +15,16 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#EF5D58] my-4">
+        <h1 class="font-bold text-4xl text-[#C62126] my-4">
             <i class="fa-solid fa-circle-user"></i>
             Formulário de Usuário
         </h1>
-        <a href="usuariosAdmnistrativos.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
+        <a href="usuarios.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do usuário</legend>
 
-            <form action="salvarUsuarioAdmnistrativo.php" method="post" class="flex flex-col justify-center items-center gap-2">
+            <form action="salvarUsuario.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $usuario->getId(); ?>'>
                 <div>
                     <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>

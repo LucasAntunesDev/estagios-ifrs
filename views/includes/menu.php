@@ -19,7 +19,7 @@ h-16 bg-[#127852] text-zinc-50 border-b-[3px] border-[#517174]">
 
     <li class="w-fit flex hover:text-zinc-200 transition duration-300 ease-in-out items-center gap-x-1 font-bold">
         <i class="fa-solid fa-circle-user"></i>
-        <a href="usuariosAdmnistrativos.php">Usuarios Admnistrativos</a>
+        <a href="usuarios.php">Usuarios</a>
     </li>
 
     <li class="w-fit flex hover:text-zinc-200 transition duration-300 ease-in-out items-center gap-x-1 font-bold">

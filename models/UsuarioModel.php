@@ -2,18 +2,18 @@
 
 namespace Model;
 
-use Model\VO\UsuarioAdmnistrativoVO;
+use Model\VO\UsuarioVO;
 use Util\Database;
 
-final class UsuarioAdmnistrativoModel extends Model {
+final class UsuarioModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM usuarios_administrativos');
+        $data = $db->select('SELECT * FROM usuario');
 
         $array = [];
 
         foreach ($data as $row) {
-            $vo = new UsuarioAdmnistrativoVO($row['id'], $row['nome'], $row['login'], $row['senha']);
+            $vo = new UsuarioVO($row['id'], $row['nome'], $row['login'], $row['senha']);
             array_push($array, $vo);
         }
 
@@ -21,13 +21,13 @@ final class UsuarioAdmnistrativoModel extends Model {
     }
     public function selectOne($vo = null) {
         $db = new Database();
-        $query = 'SELECT * FROM usuarios_administrativos WHERE id = :id';
+        $query = 'SELECT * FROM usuario WHERE id = :id';
         $binds = [':id' => $vo->getId()];
         $data = $db->select($query, $binds);
 
         if (count($data) === 0) return null;
 
-        return new UsuarioAdmnistrativoVO(
+        return new UsuarioVO(
             $data[0]['id'],
             $data[0]['nome'],
             $data[0]['login'],
@@ -37,7 +37,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function insert($vo = null) {
         $db = new Database();
-        $query = 'INSERT INTO usuarios_administrativos 
+        $query = 'INSERT INTO usuario
         (nome, login, senha) 
         VALUES 
         (:nome, :login, :senha)';
@@ -62,14 +62,14 @@ final class UsuarioAdmnistrativoModel extends Model {
         ];
 
         if (empty($vo->getSenha())) {
-            $query = 'UPDATE usuarios_administrativos 
+            $query = 'UPDATE usuario
                     SET nome = :nome, 
                     login = :login
                     WHERE id = :id';
         } else {
             $binds['senha'] = sha1($vo->getSenha());
 
-            $query = 'UPDATE usuarios_administrativos 
+            $query = 'UPDATE usuario
                     SET nome = :nome, 
                     login = :login,
                     senha = :senha
@@ -81,7 +81,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function delete($vo = null) {
         $db = new Database();
-        $query = 'DELETE FROM usuarios_administrativos WHERE id = :id';
+        $query = 'DELETE FROM usuario WHERE id = :id';
         $binds = [':id' => $vo->getId()];
 
         return $db->execute($query, $binds);
@@ -89,7 +89,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
     public function doLogin($vo) {
         $db = new Database();
-        $query = 'SELECT * FROM usuarios_administrativos WHERE login = :login AND senha = :senha';
+        $query = 'SELECT * FROM usuario WHERE login = :login AND senha = :senha';
         $binds = [
             ':login' => $vo->getLogin(),
             ':senha' => sha1($vo->getSenha())
@@ -99,7 +99,7 @@ final class UsuarioAdmnistrativoModel extends Model {
 
         if (count($data) == 0) return false;
 
-        $usuario = new UsuarioAdmnistrativoVO(
+        $usuario = new UsuarioVO(
             $data[0]['id'],
             $data[0]['nome'],
             $data[0]['login'],

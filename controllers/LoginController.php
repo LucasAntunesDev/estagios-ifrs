@@ -2,8 +2,8 @@
 
 namespace Controller;
 
-use Model\UsuarioAdmnistrativoModel;
-use Model\VO\UsuarioAdmnistrativoVO;
+use Model\UsuarioModel;
+use Model\VO\UsuarioVO;
 
 final class LoginController extends Controller {
 
@@ -16,8 +16,8 @@ final class LoginController extends Controller {
     }
 
     public function fazerLogin() {
-        $vo = new UsuarioAdmnistrativoVO(0, '', $_POST['login'], $_POST['senha']);
-        $model = new UsuarioAdmnistrativoModel();
+        $vo = new UsuarioVO(0, '', $_POST['login'], $_POST['senha']);
+        $model = new UsuarioModel();
 
         $success = $model->doLogin($vo);
 
@@ -29,7 +29,7 @@ final class LoginController extends Controller {
     }
     
     public function logout(){
-        $model = new UsuarioAdmnistrativoModel();
+        $model = new UsuarioModel();
         $model->logout();
         $this->redirect('login.php');
     }

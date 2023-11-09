@@ -41,14 +41,14 @@
                         <label for="login" class="block text-sm font-medium leading-6 text-[#127852] 
                         mb-2">Login</label>
                         <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset 
-                        ring-gray-500 focus:ring-2 focus:ring-inset
+                        ring-[#127852] focus:ring-2 focus:ring-inset
                         focus:ring-[#C62126] outline-none text-zinc-800">
                     </div>
 
                     <div>
                         <label for="senha" class="block text-sm font-medium leading-6 text-[#127852]
                         mb-2">Senha</label>
-                        <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 focus:ring-2 focus:ring-inset focus:ring-[#C62126] outline-none text-zinc-800">
+                        <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-[#127852] focus:ring-2 focus:ring-inset focus:ring-[#C62126] outline-none text-zinc-800">
                     </div>
                     <button type="submit" class="bg-[#127852] rounded-full py-1 px-24 
                     hover:bg-zinc-50 border-2 border-[#127852] hover:text-[#C62126] text-zinc-50 font-bold">
