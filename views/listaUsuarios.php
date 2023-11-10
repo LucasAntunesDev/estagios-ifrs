@@ -18,8 +18,8 @@
         <i class="fa-solid fa-circle-user"></i>
             Usuários
         </h1>
-        <a href="Usuario.php" class="bg-emerald-600 rounded-full
-         text-zinc-50 shadow-md hover:bg-emerald-800 p-2 flex 
+        <a href="usuario.php" class="bg-[#127852] rounded-full
+         text-zinc-50 shadow-md hover:bg-zinc-50 p-2 flex 
         items-center transition duration-300 ease-in-out mb-2"">
 
             <span class="material-symbols-outlined">
@@ -48,13 +48,13 @@
                     echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuario->getLogin() . '</td>';
                     echo '<td class="border-[1px]  px-4 flex flex-col">';
 
-                    echo "<a href='Usuario.php?id=" . $usuario->getId() . "' class=' bg-emerald-600 rounded-md py-1 px-4 hover:bg-emerald-800
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center'>
+                    echo "<a href='Usuario.php?id=" . $usuario->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852]'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                    echo "<a href='excluirUsuario.php?id=" . $usuario->getId() . "' class=' bg-red-600 rounded-md py-1 px-4 hover:bg-red-800
-                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center mb-4'>
+                    echo "<a href='excluirUsuario.php?id=" . $usuario->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
+                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126]'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
                         </a>";

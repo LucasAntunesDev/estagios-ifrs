@@ -16,13 +16,9 @@ final class UsuarioController extends Controller {
         ]);
     }
 
-    //monta o formulário
     public function get() {
-        //versões maiores que 7.2
-        $id = $_GET['id'] ?? null;
-
-        // versões menores que 7.2
-        $id = (isset($_GET['id'])) ? $_GET['id'] : null;
+        $id = $_GET['id'] ?? null; #>= php 8
+        $id = (isset($_GET['id'])) ? $_GET['id'] : null; # < php 8
 
         if (empty($id)) {
             $vo = new UsuarioVO();

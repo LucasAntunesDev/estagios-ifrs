@@ -1,0 +1,139 @@
+<?php
+
+namespace Model\VO;
+
+final class AlunoVO extends VO {
+    private $matricula;
+    private $id_aluno;
+    private $nome;
+    private $datanasc;
+    private $email;
+    private $cpf;
+    private $rg;
+    private $endereco;
+    private $telefone;
+    private $ano_turma;
+    private $id_cidade;
+    private $id_curso;
+
+    public function __construct(
+        $matricula = 0,
+        $id_aluno = 0,
+        $nome = '',
+        $datanasc = 0,
+        $email = '',
+        $cpf = 0,
+        $rg = '',
+        $endereco = '',
+        $telefone = 0,
+        $ano_turma = '',
+        $id_cidade = 0,
+        $id_curso = 0,
+    ) {
+        // parent::__construct($id);
+        $this->matricula = $matricula;
+        $this->id_aluno =  $id_aluno;
+        $this->nome = $nome;
+        $this->datanasc = $datanasc;
+        $this->email = $email;
+        $this->cpf = $cpf;
+        $this->rg = $rg;
+        $this->endereco = $endereco;
+        $this->telefone = $telefone;
+        $this->ano_turma = $ano_turma;
+        $this->id_cidade = $id_cidade;
+        $this->id_curso = $id_curso;
+    }
+
+    public function getMatricula() {
+        return $this->matricula;
+    }
+
+    public function setMatricula($matricula) {
+        $this->matricula = $matricula;
+    }
+
+    public function getIdAluno() {
+        return $this->id_aluno;
+    }
+
+    public function setIdAluno($id_aluno) {
+        $this->id_aluno = $id_aluno;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
+
+    public function getDataNascimento() {
+        return $this->datanasc;
+    }
+
+    public function setDataNascimento($datanasc) {
+        $this->datanasc = $datanasc;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function setEmail($email) {
+        $this->email = $email;
+    }
+
+    public function getCPF() {
+        return $this->cpf;
+    }
+
+    public function setCPF($cpf) {
+        $this->cpf = $cpf;
+    }
+
+    public function getRG() {
+        return $this->rg;
+    }
+
+    public function setRG($rg) {
+        $this->rg = $rg;
+    }
+
+    public function getEndereco() {
+        return $this->endereco;
+    }
+
+    public function setEndereco($endereco) {
+        $this->endereco = $endereco;
+    }
+
+    public function getTelefone() {
+        return $this->telefone;
+    }
+
+    public function setTelefone($telefone) {
+        $this->telefone = $telefone;
+    }
+
+    public function getAnoTurma() {
+        return $this->ano_turma;
+    }
+
+    public function setAnoTurma($ano_turma) {
+        $this->ano_turma = $ano_turma;
+    }
+
+    public function getIdCidade() {
+        return $this->id_cidade;
+    }
+
+    public function setIdCidade($id_cidade) {
+        $this->id_cidade = $id_cidade;
+    }
+
+    public function getIdCurso() {
+        return $this->id_curso;
+    }
+}
