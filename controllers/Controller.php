@@ -11,9 +11,7 @@ abstract class Controller {
 
         if ($obrigaLogin) {
             $model = new UsuarioModel();
-
             if (!$model->checkLogin()) $this->redirect('login.php');
-            
         }
     }
 
@@ -22,7 +20,6 @@ abstract class Controller {
     }
 
     public function loadView($view, $data = []) {
-        #Esse método cria automaticamente variáveis baseados nos indexes do array
         extract($data);
         include("views/$view.php");
     }

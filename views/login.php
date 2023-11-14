@@ -14,28 +14,20 @@
     <?php include_once('includes/menu.php'); ?>
 
     <div class="flex flex-row">
-        <div class="flex flex-col justify-center items-center gap-2  w-[50vw]" id="login-div">
-            <style>
-                #login-div {
-                    height: calc(100vh - 64px);
-                }
-            </style>
 
-            <!-- <div class="w-[-webkit-fill-available]"> -->
-            <h1 class="font-bold text-5xl text-[#C62126] my-4">
-                Login
-            </h1>
 
-            <img src="views/assets/estagios_foto.png" class="h-96">
-            <!-- </div> -->
-        </div>
-
-        <div class="flex justify-center items-center">
-            <form action="fazerLogin.php" method="POST" class="bg-[#F6FAF8] flex flex-col justify-center 
-            items-center gap-2 py-20 rounded-xl px-32">
+        <div class="flex justify-center items-center w-[65%]">
+            <!-- <form action="fazerLogin.php" method="POST" class="bg-[#F6FAF8] flex flex-col justify-center  -->
+            <form action="fazerLogin.php" method="POST" class="flex flex-col justify-center 
+            items-center gap-2 py-20 rounded-xl px-2">
 
                 <fieldset class="flex flex-col 
                 justify-center items-center gap-y-8 ">
+                    <h1 class="font-bold text-5xl text-[#C62126] my-4">
+                        Login
+                    </h1>
+
+
 
                     <div>
                         <label for="login" class="block text-sm font-medium leading-6 text-[#127852] 
@@ -60,6 +52,18 @@
 
         </div>
 
+        <div class="flex flex-col justify-center items-center gap-2" id="login-div">
+            <style>
+                #login-div {
+                    height: calc(100vh - 64px);
+                }
+            </style>
+
+            <!-- <div class="w-[-webkit-fill-available]"> -->
+
+            <img src="views/assets/estagios_foto.png" class="h-96">
+            <!-- </div> -->
+        </div>
     </div>
 
     </div>

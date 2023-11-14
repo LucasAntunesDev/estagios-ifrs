@@ -17,7 +17,6 @@ final class AlunoController extends Controller {
         ]);
     }
 
-    //monta o formulário
     public function get() {
         $id = $_GET['id_aluno'] ?? null; #>= php 8
         $id = (isset($_GET['id_aluno'])) ? $_GET['id_aluno'] : null; # < php 8
