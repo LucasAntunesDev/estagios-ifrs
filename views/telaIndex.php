@@ -14,15 +14,43 @@
 
     <?php include('views/includes/menu.php'); ?>
 
-    <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#C62126] my-4">
-            <i class="fa-solid fa-circle-user"></i>
-            Formulário de Aluno
-        </h1>
-       
+    <div class="flex flex-row justify-center items-center gap-2">
 
-        </form>
+        <div class="flex flex-col justify-center text-start mx-28">
+            <h1 class="font-bold text-5xl text-[#C62126] my-4">
+                Estágios
+            </h1>
+
+            <p class="w-96 text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Duis facilisis sodales sapien, eget finibus purus solli
+                citudin a. Donec volutpat sem in urna ornare vulputate.
+            </p>
+
+
+            <button type="submit" class="hover:bg-[#127852] rounded-full py-1 px-24 
+                    bg-none border-2 border-[#127852] text-[#C62126] hover:text-zinc-50 font-bold
+                    capitalize mt-10">
+                Começar estágio
+            </button>
+
+            <button class="mt-8" onclick="teste()">
+                <i class="fa-solid fa-chevron-down text-[#127852] text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="flex justify-center items-center" id="login-div" style="height: calc(100vh - 64px);">
+            <img src="views/assets/estagios_foto.png" class="h-96">
+        </div>
+
     </div>
+
+    </div>
+
+    <script>
+        function teste() {
+        window.scrollTo(0, 550)}
+    </script>
 
 </body>
 

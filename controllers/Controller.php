@@ -11,7 +11,7 @@ abstract class Controller {
 
         if ($obrigaLogin) {
             $model = new UsuarioModel();
-            if (!$model->checkLogin()) $this->redirect('login.php');
+            if (!$model->checkLogin()) $this->redirect('index.php');
         }
     }
 
