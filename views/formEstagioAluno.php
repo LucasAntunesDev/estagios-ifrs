@@ -61,12 +61,12 @@
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
-                <!-- <div>
-                    <label for="rg" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Encaminhamentos</label>
-                    <input type="text" id="rg" name="rg" value='<?php echo $estagioAluno->getEncaminhamentos(); ?>' class="rounded-md 
+                <!-- <div> -->
+                    <!-- <label for="rg" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Encaminhamentos</label> -->
+                    <input type="hidden" id="rg" name="rg" value='<?php echo $estagioAluno->getEncaminhamentos(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div> -->
+                <!-- </div> -->
 
                 <div>
                     <label for="situacao_estagio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Situação</label>
@@ -103,8 +103,10 @@
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
+                <input type="hidden" name="id_curso" value='<?php echo $estagioAluno->getDataFim(); ?>'>
+                <!-- <input type="hidden" id="id_curso" name="id_curso" value=" <?php //echo $estagioAluno->getIdCurso(); ?>"> -->
                 <!-- <div>
-                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Supervisor</label>
+                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Curso</label>
                     <input type="number" id="id_curso" name="id_curso" value=" <?php //echo $estagioAluno->getIdCurso(); ?>" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
@@ -112,45 +114,35 @@
 
                 <div>
                     <label for="id_area" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Área</label>
-                    <input type="number" id="id_area" name="id_area" value=" <?php echo $estagioAluno->getIdArea(); ?>" class="rounded-md 
+                    <input type="text" id="id_area" name="id_area" value=" <?php echo $estagioAluno->getIdArea(); ?>" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
-                <!-- <div>
-                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Avaliação da empresa</label>
-                    <input type="number" id="id_curso" name="id_curso" value=" <?php// echo $estagioAluno->getAvaliacaoEmpressa(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div>
+                <input type="hidden" id="id_avaliacao_empresa" name="id_avaliacao_empresa" value=" <?php echo $estagioAluno->getAvaliacaoEmpressa(); ?>">
+                <input type="hidden" id="id_termo_compromisso" name="id_termo_compromisso" value=" <?php echo $estagioAluno->getIdTermoCompromisso(); ?>">
+                <input type="hidden" id="id_plano_atividades" name="id_plano_atividades" value=" <?php echo $estagioAluno->getIdPlanoAtividades(); ?>">
+                <input type="hidden" id="id_autoavaliacao" name="id_autoavaliacao" value=" <?php echo $estagioAluno->getIdAutoavaliacao(); ?>">
+                <input type="hidden" id="id_tcc" name="id_tcc" value=" <?php echo $estagioAluno->getIdTCC(); ?>">
+                <!-- <div> -->
+                    <!-- <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Avaliação da empresa</label> -->
+                <!-- </div> -->
 
-                <div>
-                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Termo de Compromisso</label>
-                    <input type="file" id="id_curso" name="id_curso" value=" <?php //echo $estagioAluno->getIdTermoCompromisso(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div>
+                <!-- <div> -->
+                    <!-- <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Termo de Compromisso</label> -->
+                <!-- </div> -->
 
-                <div>
-                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Plano de Atividades</label>
-                    <input type="file" id="id_curso" name="id_curso" value=" <?php //echo $estagioAluno->getIdPlanoAtividades(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div>
+                <!-- <div> -->
+                    <!-- <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Plano de Atividades</label> -->
+                <!-- </div> -->
 
-                <div>
-                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Autoavaliação</label>
-                    <input type="file" id="id_curso" name="id_curso" value=" <?php //echo $estagioAluno->getIdAutoavaliacao(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div>
+                <!-- <div> -->
+                    <!-- <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Autoavaliação</label> -->
+                <!-- </div> -->
 
-                <div>
-                    <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">TCC</label>
-                    <input type="file" id="id_curso" name="id_curso" value=" <?php //echo $estagioAluno->getIdTCC(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div> -->
+                <!-- <div> -->
+                    <!-- <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">TCC</label> -->
+                <!-- </div> -->
 
                 <div>
                     <button type="submit" class="bg-emerald-600 rounded-full py-1 px-24 hover:bg-emerald-800 text-zinc-50 flex items-center mt-4">

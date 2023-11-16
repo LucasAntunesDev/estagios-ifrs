@@ -25,7 +25,12 @@
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do usuário</legend>
 
             <form action="salvarAluno.php" method="post" class="flex flex-col justify-center items-center gap-2">
-                <input type="text" name="id" value='<?php echo $aluno->getId(); ?>'>
+                <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
+
+                <?php 
+                // echo $aluno->getId(); 
+                var_dump($aluno->getId());
+               ?>
                 <div>
                     <label for="matricula" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Matricula</label>
                     <input type="text" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 

@@ -65,7 +65,6 @@ final class AlunoModel extends Model {
 
         $binds = [
             ':matricula' => $vo->getMatricula(),
-            // ':id' => $vo->getIdAluno(),
             ':nome' => $vo->getNome(),
             ':datanasc' => $vo->getDataNascimento(),
             ':email' => $vo->getEmail(),
@@ -88,7 +87,6 @@ final class AlunoModel extends Model {
 
         $query = 'UPDATE aluno
                     SET  matricula = :matricula,
-                    -- id = :id,
                     nome = :nome,
                     datanasc = :datanasc,
                     email = :email,
