@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title>Estágios IFRS - Início</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel="shortcut icon" href="views\assets\IFRS W.png" type="image/x-icon">
 </head>
 
 <body class="mb-4">
 
     <?php include('views/includes/menu.php'); ?>
 
-    <div class="flex flex-row justify-center items-center gap-2">
+    <div class="flex flex-row justify-center items-center gap-2 bg-[url('assets/teste-fundo.png')]">
 
-        <div class="flex flex-col justify-center text-start mx-28">
-            <h1 class="font-bold text-5xl text-[#C62126] my-4">
-                Estágios
-            </h1>
+        <div class="flex flex-col justify-center text-start w-6/12">
+            <sapn class="font-bold text-5xl text-[#C62126] my-4 capitalize w-6/12">
+                Alguma frase de efeito para reforçar a importância
+                de fazer um Estágio
+            </sapn>
 
-            <p class="w-96 text-xl">
+            <p class="w-8/12 text-xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Duis facilisis sodales sapien, eget finibus purus solli
+                citudin a. Donec volutpat sem in urna ornare vulputate.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
@@ -41,7 +46,7 @@
         </div>
 
         <div class="flex justify-center items-center" id="login-div" style="height: calc(100vh - 64px);">
-            <img src="views/assets/estagios_foto.png" class="h-96">
+            <img src="views/assets/estagios_foto.png" class="h-[32rem]]">
         </div>
 
     </div>

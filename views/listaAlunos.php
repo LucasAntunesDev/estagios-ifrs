@@ -28,23 +28,23 @@
             Inserir Novo Aluno
 
         </a>
-        <div class="flex overflow-x-auto overflow-y-auto w-11/12 border-[1px] border-zinc-300 h-screen">
-            <table class="border-[1px] border-zinc-300 px-4">
+        <!-- <div class="flex overflow-x-auto overflow-y-auto w-11/12 border-[1px] border-zinc-300 h-screen"> -->
+            <table class="border-y-[1px] border-y-zinc-300 px-4">
                 <thead>
                     <tr>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Matrícula</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Id do aluno</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Nome</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Data de nascimento</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Email</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">CPF</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">RG</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Endereco</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Telefone</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Ano Turma</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Id Cidade</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Id Curso</th>
-                        <th class="text-xl font-bold border-[1px] border-zinc-300 px-1">Ações</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Matrícula</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Id do aluno</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Nome</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Data de nascimento</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Email</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">CPF</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">RG</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Endereco</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Telefone</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Ano Turma</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Id Cidade</th>
+                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Id Curso</th>
+                        <!-- <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Ações</th> -->
                     </tr>
                 </thead>
 
@@ -52,19 +52,19 @@
                     <?php
                     foreach ($alunos as $aluno) {
                         echo '<tr>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getMatricula() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getId() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getNome() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getDataNascimento() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getEmail() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getCPF() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getRG() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getEndereco() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getTelefone() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getAnoTurma() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getIdCidade() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $aluno->getIdCurso() . '</td>';
-                        echo '<td class="border-[1px]  px-4 flex flex-col">';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getMatricula() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getId() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getNome() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getDataNascimento() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getEmail() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getCPF() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getRG() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getEndereco() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getTelefone() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getAnoTurma() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getIdCidade() . '</td>';
+                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getIdCurso() . '</td>';
+                        echo '<td class="border-y-[1px]  px-4 flex flex-col">';
 
                         echo "<a href='Aluno.php?id=" . $aluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852]'>
@@ -84,7 +84,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    <!-- </div> -->
 </body>
 
 </html>

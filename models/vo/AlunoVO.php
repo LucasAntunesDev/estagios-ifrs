@@ -32,7 +32,6 @@ final class AlunoVO extends VO {
     ) {
         parent::__construct($id);
         $this->matricula = $matricula;
-        // $this->id =  $id;
         $this->nome = $nome;
         $this->datanasc = $datanasc;
         $this->email = $email;
