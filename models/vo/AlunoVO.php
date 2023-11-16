@@ -4,7 +4,7 @@ namespace Model\VO;
 
 final class AlunoVO extends VO {
     private $matricula;
-    private $id_aluno;
+    // private $id;
     private $nome;
     private $datanasc;
     private $email;
@@ -17,8 +17,8 @@ final class AlunoVO extends VO {
     private $id_curso;
 
     public function __construct(
+        $id = 0,
         $matricula = 0,
-        $id_aluno = 0,
         $nome = '',
         $datanasc = 0,
         $email = '',
@@ -30,9 +30,9 @@ final class AlunoVO extends VO {
         $id_cidade = 0,
         $id_curso = 0,
     ) {
-        // parent::__construct($id);
+        parent::__construct($id);
         $this->matricula = $matricula;
-        $this->id_aluno =  $id_aluno;
+        // $this->id =  $id;
         $this->nome = $nome;
         $this->datanasc = $datanasc;
         $this->email = $email;
@@ -53,13 +53,13 @@ final class AlunoVO extends VO {
         $this->matricula = $matricula;
     }
 
-    public function getIdAluno() {
-        return $this->id_aluno;
-    }
+    // public function getIdAluno() {
+    //     return $this->id;
+    // }
 
-    public function setIdAluno($id_aluno) {
-        $this->id_aluno = $id_aluno;
-    }
+    // public function setIdAluno($id) {
+    //     $this->id = $id;
+    // }
 
     public function getNome() {
         return $this->nome;

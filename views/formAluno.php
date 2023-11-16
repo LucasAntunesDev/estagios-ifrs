@@ -25,7 +25,7 @@
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do usuário</legend>
 
             <form action="salvarAluno.php" method="post" class="flex flex-col justify-center items-center gap-2">
-                <input type="hidden" name="id_aluno" value='<?php echo $aluno->getIdAluno(); ?>'>
+                <input type="text" name="id" value='<?php echo $aluno->getId(); ?>'>
                 <div>
                     <label for="matricula" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Matricula</label>
                     <input type="text" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
@@ -77,7 +77,7 @@
 
                 <div>
                     <label for="telefone" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Telefone</label>
-                    <input type="text" id="telefonen" name="telefone" value='<?php echo $aluno->getTelefone(); ?>' class="rounded-md 
+                    <input type="text" id="telefone" name="telefone" value='<?php echo $aluno->getTelefone(); ?>' class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>

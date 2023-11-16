@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html 5>
 <html lang="pt-BR">
 
 <head>
@@ -10,7 +10,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
 </head>
 
-<body>
+<body class="mb-4">
 
     <?php include('views/includes/menu.php'); ?>
 
@@ -27,12 +27,13 @@
                 citudin a. Donec volutpat sem in urna ornare vulputate.
             </p>
 
-
-            <button type="submit" class="hover:bg-[#127852] rounded-full py-1 px-24 
+            <a href="estagioAluno.php">
+                <button type="submit" class="hover:bg-[#127852] rounded-full py-2 px-16
                     bg-none border-2 border-[#127852] text-[#C62126] hover:text-zinc-50 font-bold
-                    capitalize mt-10">
-                Começar estágio
-            </button>
+                    capitalize mt-10 w-fit mx-auto">
+                    Começar estágio
+                </button>
+            </a>
 
             <button class="mt-8" onclick="teste()">
                 <i class="fa-solid fa-chevron-down text-[#127852] text-2xl"></i>
@@ -45,11 +46,44 @@
 
     </div>
 
+    <div class="flex justify-center items-center gap-x-20">
+        <img src="views/assets/img-placeholder-1.png" class="h-56">
+
+        <div class="flex flex-col">
+            <h1 class="font-bold text-4xl text-[#C62126] my-4">
+                Aprendizado
+            </h1>
+
+            <p class="w-96 text-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Duis facilisis sodales sapien, eget finibus purus solli
+                citudin a. Donec volutpat sem in urna ornare vulputate.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center gap-x-20 mt-10">
+        <div class="flex flex-col">
+            <h1 class="font-bold text-4xl text-[#C62126] my-4">
+                Oportunidades
+            </h1>
+
+            <p class="w-96 text-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Duis facilisis sodales sapien, eget finibus purus solli
+                citudin a. Donec volutpat sem in urna ornare vulputate.
+            </p>
+        </div>
+
+        <img src="views/assets/img-placeholder-2.png" class="h-56">
+    </div>
+
     </div>
 
     <script>
         function teste() {
-        window.scrollTo(0, 550)}
+            window.scrollTo(0, 550)
+        }
     </script>
 
 </body>

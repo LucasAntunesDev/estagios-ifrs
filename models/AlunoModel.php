@@ -14,8 +14,8 @@ final class AlunoModel extends Model {
 
         foreach ($data as $row) {
             $vo = new AlunoVO(
+                $row['id'],
                 $row['matricula'],
-                $row['id_aluno'],
                 $row['nome'],
                 $row['datanasc'],
                 $row['email'],
@@ -41,8 +41,8 @@ final class AlunoModel extends Model {
         if (count($data) === 0) return null;
 
         return new AlunoVO(
+            $data[0]['id'],
             $data[0]['matricula'],
-            $data[0]['id_aluno'],
             $data[0]['nome'],
             $data[0]['datanasc'],
             $data[0]['email'],
@@ -59,13 +59,13 @@ final class AlunoModel extends Model {
     public function insert($vo = null) {
         $db = new Database();
         $query = 'INSERT INTO aluno
-        (matricula, id_aluno, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) 
+        (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) 
         VALUES 
-        (:matricula, :id_aluno, :nome, :datanasc, :email, :cpf, :rg, :endereco, :telefone, :ano_turma, :id_cidade, :id_curso)';
+        (:matricula, :nome, :datanasc, :email, :cpf, :rg, :endereco, :telefone, :ano_turma, :id_cidade, :id_curso)';
 
         $binds = [
             ':matricula' => $vo->getMatricula(),
-            ':id_aluno' => $vo->getIdAluno(),
+            // ':id' => $vo->getIdAluno(),
             ':nome' => $vo->getNome(),
             ':datanasc' => $vo->getDataNascimento(),
             ':email' => $vo->getEmail(),
@@ -87,9 +87,8 @@ final class AlunoModel extends Model {
         $db = new Database();
 
         $query = 'UPDATE aluno
-                    SET nome = :nome, 
-                    matricula = :matricula,
-                    id_aluno = :id_aluno,
+                    SET  matricula = :matricula,
+                    -- id = :id,
                     nome = :nome,
                     datanasc = :datanasc,
                     email = :email,
@@ -100,11 +99,10 @@ final class AlunoModel extends Model {
                     ano_turma = :ano_turma,
                     id_cidade = :id_cidade,
                     id_curso = :id_curso
-                    WHERE id_aluno = :id_aluno';
+                    WHERE id = :id';
 
         $binds = [
             ':matricula' => $vo->getMatricula(),
-            ':id_aluno' => $vo->getId_Aluno(),
             ':nome' => $vo->getNome(),
             ':datanasc' => $vo->getDataNascimento(),
             ':email' => $vo->getEmail(),
@@ -114,7 +112,8 @@ final class AlunoModel extends Model {
             ':telefone' => $vo->getTelefone(),
             ':ano_turma' => $vo->getAnoTurma(),
             ':id_cidade' => $vo->getIdCidade(),
-            ':id_curso' => $vo->getIdCurso()
+            ':id_curso' => $vo->getIdCurso(),
+            ':id' => $vo->getId()
         ];
 
         return $db->execute($query, $binds);
@@ -122,8 +121,8 @@ final class AlunoModel extends Model {
 
     public function delete($vo = null) {
         $db = new Database();
-        $query = 'DELETE FROM aluno WHERE id_aluno = :id_aluno';
-        $binds = [':id_aluno' => $vo->getIdAluno()];
+        $query = 'DELETE FROM aluno WHERE id = :id';
+        $binds = [':id' => $vo->getId()];
 
         return $db->execute($query, $binds);
     }
