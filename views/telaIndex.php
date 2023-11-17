@@ -65,7 +65,7 @@
         <a class="text-red-600 hover:text-red-800" href="empresas.php">Empresa</a>
         <a class="text-red-600 hover:text-red-800" href="cidades.php">Cidade</a>
         <a class="text-red-600 hover:text-red-800" href="cursos.php">Curso</a>
-        <a class="text-red-600 hover:text-red-800" href=areas.php">Área</a>
+        <a class="text-red-600 hover:text-red-800" href="areas.php">Área</a>
         <a class="text-red-600 hover:text-red-800" href="supervisores.php">Supervisor</a>
     </div>
 
