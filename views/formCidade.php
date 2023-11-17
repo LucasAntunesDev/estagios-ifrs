@@ -23,7 +23,7 @@
         <a href="cidades.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do Cidade</legend>
+            <legend class="text-gray-900 font-bold text-center text-xl">Dados da Cidade</legend>
 
             <form action="salvarCidade.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $cidade->getId(); ?>'>
