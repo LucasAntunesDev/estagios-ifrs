@@ -23,8 +23,7 @@
         <div class="flex flex-col justify-center text-start w-6/12">
             <sapn class="font-bold 2xl:text-5xl xl:text-4xl text-[#C62126] my-4 capitalize 
             2xl:w-6/12 xl:w-8/12">
-                Alguma frase de efeito para reforçar a importância
-                de fazer um Estágio
+               Começe um estágio, descubra novas Oportunidades
             </sapn>
 
             <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-md">
