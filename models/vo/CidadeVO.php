@@ -3,7 +3,6 @@ namespace Model\VO;
 
 final class CidadeVO extends VO {
     private $nome;
-    private $login;
 
     public function __construct($id = 0, $nome = '') {
         parent::__construct($id);
