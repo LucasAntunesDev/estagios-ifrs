@@ -1,5 +1,5 @@
 <?php
-use Controller\AlunoController;
+use Controller\EstagioAlunoController;
 
 require('config.php');
 require('vendor/autoload.php');
