@@ -46,13 +46,13 @@ CREATE TABLE aluno (
 -- Extraindo dados da tabela aluno
 --
 
-INSERT INTO aluno (id, matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
-(1, 12345, 'João Silva', '2000-01-15', 'joao@example.com', 2147483647, 'RG12345', 'Rua A, Cidade A', 2147483647, 'A', 1, 1),
-(2, 54321, 'Maria Souza', '2001-05-20', 'maria@example.com', 2147483647, 'RG54321', 'Rua B, Cidade B', 1234567890, 'B', 2, 2),
-(3, 98765, 'Carlos Santos', '1999-11-10', 'carlos@example.com', 2147483647, 'RG98765', 'Rua C, Cidade C', 2147483647, 'A', 3, 1),
-(4, 13579, 'Ana Pereira', '2000-02-18', 'ana@example.com', 2147483646, 'RG13579', 'Rua D, Cidade D', 987654321, 'B', 2, 2),
-(5, 24680, 'Pedro Oliveira', '2002-04-25', 'pedro@example.com', 2147483645, 'RG24680', 'Rua E, Cidade E', 876543210, 'A', 3, 1),
-(6, 11111, 'Marta Mendes', '2001-11-11', 'marta@example.com', 2147483644, 'RG11111', 'Rua F, Cidade F', 765432109, 'A', 1, 3);
+INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
+('João Silva', '2000-01-15', 'joao@example.com', 2147483647, 'RG12345', 'Rua A, Cidade A', 2147483647, 'A', 1, 1),
+('Maria Souza', '2001-05-20', 'maria@example.com', 2147483647, 'RG54321', 'Rua B, Cidade B', 1234567890, 'B', 2, 2),
+('Carlos Santos', '1999-11-10', 'carlos@example.com', 2147483647, 'RG98765', 'Rua C, Cidade C', 2147483647, 'A', 3, 1),
+('Ana Pereira', '2000-02-18', 'ana@example.com', 2147483646, 'RG13579', 'Rua D, Cidade D', 987654321, 'B', 2, 2),
+('Pedro Oliveira', '2002-04-25', 'pedro@example.com', 2147483645, 'RG24680', 'Rua E, Cidade E', 876543210, 'A', 3, 1),
+('Marta Mendes', '2001-11-11', 'marta@example.com', 2147483644, 'RG11111', 'Rua F, Cidade F', 765432109, 'A', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -261,7 +261,7 @@ CREATE TABLE professor (
 -- Extraindo dados da tabela professor
 --
 
-INSERT INTO professor (id, nome, email, id_area) VALUES
+INSERT INTO professor (nome, email, id_area) VALUES
 ('Professor 1', 'professor1@example.com', 1),
 ('Professor 2', 'professor2@example.com', 2),
 ('Professor 3', 'professor3@example.com', 3),
@@ -288,7 +288,7 @@ CREATE TABLE supervisor (
 -- Extraindo dados da tabela supervisor
 --
 
-INSERT INTO supervisor (id, nome, telefone, email, empresa_numero_convenio, cargo) VALUES
+INSERT INTO supervisor (nome, telefone, email, empresa_numero_convenio, cargo) VALUES
 ('Supervisor 1', 1234567890, 'supervisor1@example.com', 1, 'Cargo 1'),
 ('Supervisor 2', 2147483647, 'supervisor2@example.com', 2, 'Cargo 2'),
 ('Supervisor 3', 2147483647, 'supervisor3@example.com', 3, 'Cargo 3'),

@@ -8,22 +8,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
-    <link rel="shortcut icon" href="views\assets\IFRS W.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="views\assets\IFRS W.png" type="image/x-icon"> -->
+    <?php include('views/includes/favicons.php');?>
 </head>
 
 <body class="mb-4">
 
-    <?php include('views/includes/menu.php'); ?>
+    <?php
+    include('views/includes/menu.php');
+    ?>
 
     <div class="flex flex-row justify-center items-center gap-2 bg-[url('assets/teste-fundo.png')]">
 
         <div class="flex flex-col justify-center text-start w-6/12">
-            <sapn class="font-bold text-5xl text-[#C62126] my-4 capitalize w-6/12">
+            <sapn class="font-bold 2xl:text-5xl xl:text-4xl text-[#C62126] my-4 capitalize 
+            2xl:w-6/12 xl:w-8/12">
                 Alguma frase de efeito para reforçar a importância
                 de fazer um Estágio
             </sapn>
 
-            <p class="w-8/12 text-xl">
+            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
@@ -46,9 +50,18 @@
         </div>
 
         <div class="flex justify-center items-center" id="login-div" style="height: calc(100vh - 64px);">
-            <img src="views/assets/estagios_foto.png" class="h-[32rem]]">
+            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96">
         </div>
 
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+        <a target="_blank" class="text-red-600 hover:text-red-800" href="usuarios.php">Usuários</a>
+        <a target="_blank" class="text-red-600 hover:text-red-800" href="alunos.php">Alunos</a>
+        <a target="_blank" class="text-red-600 hover:text-red-800" href="estagiosAlunos.php">Estagios Alunos</a>
+        <a target="_blank" class="text-red-600 hover:text-red-800" href="TCCS.php">TCC</a>
+        <a target="_blank" class="text-red-600 hover:text-red-800" href="planoAtividades.php">Plano de atividades</a>
+        <a target="_blank" class="text-red-600 hover:text-red-800" href="avaliacaoEmpresas.php">Avaliação da empresa</a>
     </div>
 
     <div class="flex justify-center items-center gap-x-20">
