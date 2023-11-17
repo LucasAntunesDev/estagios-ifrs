@@ -55,7 +55,8 @@ final class CursoModel extends Model {
         $db = new Database();
         $binds = [
             ':nome' => $vo->getNome(),
-            ':id_coordenador' => $vo->getIdCoordenador()
+            ':id_coordenador' => $vo->getIdCoordenador(),
+            ':id' => $vo->getId()
         ];
 
         $query = 'UPDATE curso

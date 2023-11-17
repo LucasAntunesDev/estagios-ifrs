@@ -49,7 +49,10 @@ final class AreaModel extends Model {
 
     public function update($vo = null) {
         $db = new Database();
-        $binds = [':nome' => $vo->getNome()];
+        $binds = [
+            ':nome' => $vo->getNome(),
+            ':id' => $vo->getId()
+        ];
 
         $query = 'UPDATE area
                     SET nome = :nome
