@@ -36,8 +36,8 @@
                 </div>
 
                 <div>
-                    <label for="is_coordenador" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Coordenador</label>
-                    <input type="number" id="is_coordenador" name="is_coordenador" value=" <?php echo $curso->getIdCoordenador(); ?>" class="rounded-md 
+                    <label for="id_coordenador" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Coordenador</label>
+                    <input type="number" id="id_coordenador" name="id_coordenador" value=" <?php echo $curso->getIdCoordenador(); ?>" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
