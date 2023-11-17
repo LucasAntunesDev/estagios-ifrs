@@ -2,5 +2,5 @@
 require_once('config.php');
 require_once('vendor/autoload.php');
 
-$controller = new Controller\CursosController();
+$controller = new Controller\CursoController();
 $controller->list();
