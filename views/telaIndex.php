@@ -56,12 +56,18 @@
     </div>
 
     <div class="flex flex-col justify-center items-center">
-        <a target="_blank" class="text-red-600 hover:text-red-800" href="usuarios.php">Usuários</a>
-        <a target="_blank" class="text-red-600 hover:text-red-800" href="alunos.php">Alunos</a>
-        <a target="_blank" class="text-red-600 hover:text-red-800" href="estagiosAlunos.php">Estagios Alunos</a>
-        <a target="_blank" class="text-red-600 hover:text-red-800" href="TCCS.php">TCC</a>
-        <a target="_blank" class="text-red-600 hover:text-red-800" href="planoAtividades.php">Plano de atividades</a>
-        <a target="_blank" class="text-red-600 hover:text-red-800" href="avaliacaoEmpresas.php">Avaliação da empresa</a>
+        <a class="text-red-600 hover:text-red-800" href="usuarios.php">Usuários</a>
+        <a class="text-red-600 hover:text-red-800" href="alunos.php">Alunos</a>
+        <a class="text-red-600 hover:text-red-800" href="estagiosAlunos.php">Estagios Alunos</a>
+        <a class="text-red-600 hover:text-red-800" href="TCCS.php">TCC</a>
+        <a class="text-red-600 hover:text-red-800" href="planoAtividades.php">Plano de atividades</a>
+        <a class="text-red-600 hover:text-red-800" href="avaliacaoEmpresas.php">Avaliação da empresa</a>
+        <a class="text-red-600 hover:text-red-800" href="autoAvaliacoes.php">Autoavaliação</a>
+        <a class="text-red-600 hover:text-red-800" href="empresas.php">Empresa</a>
+        <a class="text-red-600 hover:text-red-800" href="cidades.php">Cidade</a>
+        <a class="text-red-600 hover:text-red-800" href="cursos.php">Curso</a>
+        <a class="text-red-600 hover:text-red-800" href=areas.php">Área</a>
+        <a class="text-red-600 hover:text-red-800" href="supervisores.php">Supervisor</a>
     </div>
 
     <div class="flex justify-center items-center gap-x-20">

@@ -1,132 +1,135 @@
-CREATE TABLE AREA (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NOME VARCHAR(255) NOT NULL
+create table area (
+	id int not null primary key auto_increment,
+	nome varchar(255) not null
 );
 
-CREATE TABLE CIDADE (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NOME VARCHAR(255) NOT NULL
-);
-
-
-CREATE TABLE TERMO_COMPROMISSO (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	URL VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE TCC (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	URL VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE AUTOAVALIACAO (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	URL VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE AVALIACAO_EMPRESA (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	URL VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE PLANO_ATIVIDADES (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	URL VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE PROFESSOR (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NOME VARCHAR(255) NOT NULL,
-	EMAIL VARCHAR(255) NOT NULL,
-ID_AREA INT NOT NULL,
-	FOREIGN KEY (ID_AREA) REFERENCES AREA(ID)
-);
-
-CREATE TABLE CURSO (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NOME VARCHAR(255) NOT NULL,
-	ID_COORDENADOR INT NOT NULL,
-	FOREIGN KEY (ID_COORDENADOR) REFERENCES PROFESSOR(ID)
-);
-
-CREATE TABLE EMPRESA (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NOME VARCHAR(255) NOT NULL,
-ENDERECO VARCHAR(255) NOT NULL,	
-	TELEFONE INT NOT NULL,
-EMAIL VARCHAR(255) NOT NULL,
-	CNPJ INT NOT NULL UNIQUE
+create table cidade (
+	id int not null primary key auto_increment,
+	nome varchar(255) not null
 );
 
 
-CREATE TABLE SUPERVISOR (
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NOME VARCHAR(255) NOT NULL,
-	TELEFONE INT NOT NULL,
-EMAIL VARCHAR(255) NOT NULL,
-	ID_EMPRESA INT NOT NULL,
-CARGO VARCHAR(255) NOT NULL,
-	FOREIGN KEY (ID_EMPRESA) REFERENCES EMPRESA(ID)
+create table termo_compromisso (
+	id int not null primary key auto_increment,
+	url varchar(255) not null
 );
 
-CREATE TABLE aluno(
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	MATRICULA INT NOT NULL UNIQUE,
-	NOME VARCHAR(255) NOT NULL,
-	DATANASC DATE NOT NULL,
-	EMAIL VARCHAR(255) NOT NULL,
-	CPF INT NOT NULL UNIQUE,
-	RG VARCHAR(255) NOT NULL,
-	ENDERECO VARCHAR(255) NOT NULL,
-	TELEFONE INT NOT NULL,
-	ANO_TURMA CHAR(1) NOT NULL,
-	ID_CIDADE INT NOT NULL,
-	ID_CURSO INT NOT NULL,
-	FOREIGN KEY (ID_CIDADE) REFERENCES CIDADE(ID),
-FOREIGN KEY (ID_CURSO) REFERENCES CURSO(ID)
+create table tcc (
+	id int not null primary key auto_increment,
+	url varchar(255) not null
 );
 
-CREATE TABLE ESTAGIO_ALUNO(
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	ID_ALUNO INT NOT NULL UNIQUE,
-ID_EMPRESA  INT NOT NULL UNIQUE,
-	CARGA_HORARIA INT NOT NULL,
-	ID_COORDENADOR INT NOT NULL UNIQUE,
-	TIPO_PROCESSO_ESTAGIO VARCHAR(255) NOT NULL,
-	NUMERO_ENCAMINHAMENTOS INT NOT NULL UNIQUE,
-	SITUACAO_ESTAGIO ENUM('Não Iniciado','Em andamento','Finalizado') NOT NULL,
-	DATA_INICIO DATE NOT NULL,
-	PREVISAO_FIM DATE NOT NULL,
-	ID_ORIENTADOR INT NOT NULL UNIQUE,
-ID_COORIENTADOR INT NOT NULL UNIQUE,
-ID_SUPERVISOR INT NOT NULL UNIQUE,
-	DATA_FIM DATE,
-	ID_AREA INT NOT NULL,
-	ID_AVALIACAO_EMPRESA INT,
-	ID_TERMO_COMPROMISSO INT,
-	ID_PLANO_ATIVIDADES INT,
-	ID_AUTOAVALIACAO INT,
-	ID_TCC INT,
-	FOREIGN KEY (ID_ALUNO) REFERENCES ALUNO(ID),
-	FOREIGN KEY (ID_EMPRESA) REFERENCES EMPRESA(ID),
-	FOREIGN KEY (ID_COORDENADOR) REFERENCES PROFESSOR(ID),
-	FOREIGN KEY (ID_ORIENTADOR) REFERENCES PROFESSOR(ID),
-	FOREIGN KEY (ID_COORIENTADOR) REFERENCES PROFESSOR(ID),
-	FOREIGN KEY (ID_SUPERVISOR) REFERENCES SUPERVISOR(ID),
-	FOREIGN KEY (ID_AREA) REFERENCES AREA(ID),
-	FOREIGN KEY (ID_AVALIACAO_EMPRESA) REFERENCES AVALIACAO_EMPRESA(ID),
-	FOREIGN KEY (ID_TERMO_COMPROMISSO) REFERENCES TERMO_COMPROMISSO(ID),
-	FOREIGN KEY (ID_PLANO_ATIVIDADES) REFERENCES PLANO_ATIVIDADES(ID),
-	FOREIGN KEY (ID_AUTOAVALIACAO) REFERENCES AUTOAVALIACAO(ID),
-    FOREIGN KEY (ID_TCC) REFERENCES TCC(ID)
+create table autoavaliacao (
+	id int not null primary key auto_increment,
+	url varchar(255) not null
 );
 
-CREATE TABLE USUARIO(
-	ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    NOME VARCHAR(255) NOT NULL,
-    LOGIN VARCHAR(255) NOT NULL,
-    SENHA VARCHAR(255) NOT NULL
+create table avaliacao_empresa (
+	id int not null primary key auto_increment,
+	url varchar(255) not null
 );
+
+create table plano_atividades (
+	id int not null primary key auto_increment,
+	url varchar(255) not null
+);
+
+create table professor (
+	id int not null primary key auto_increment,
+	nome varchar(255) not null,
+	email varchar(255) not null,
+id_area int not null,
+	foreign key (id_area) references area(id)
+);
+
+create table curso (
+	id int not null primary key auto_increment,
+	nome varchar(255) not null,
+	id_coordenador int not null,
+	foreign key (id_coordenador) references professor(id)
+);
+
+create table empresa (
+	id int not null primary key auto_increment,
+	nome varchar(255) not null,
+endereco varchar(255) not null,	
+	telefone int not null,
+email varchar(255) not null,
+	cnpj int not null unique,
+	id_cidade int not null,
+	foreign key (id_cidade) references cidade(id)
+);
+
+
+create table supervisor (
+	id int not null primary key auto_increment,
+	nome varchar(255) not null,
+	telefone int not null,
+email varchar(255) not null,
+	id_empresa int not null,
+cargo varchar(255) not null,
+	foreign key (id_empresa) references empresa(id)
+);
+
+create table aluno(
+	id int not null primary key auto_increment,
+	matricula int not null unique,
+	nome varchar(255) not null,
+	datanasc date not null,
+	email varchar(255) not null,
+	cpf int not null unique,
+	rg varchar(255) not null,
+	endereco varchar(255) not null,
+	telefone int not null,
+	ano_turma char(1) not null,
+	id_cidade int not null,
+	id_curso int not null,
+	foreign key (id_cidade) references cidade(id),
+foreign key (id_curso) references curso(id)
+);
+
+create table estagio_aluno(
+	id int not null primary key auto_increment,
+	id_aluno int not null unique,
+	id_empresa  int not null,
+	carga_horaria int not null,
+	id_coordenador int not,
+	tipo_processo_estagio varchar(255) not null,
+	numero_encaminhamentos int not null,
+	situacao_estagio enum('não iniciado','em andamento','finalizado') not null,
+	data_inicio date not null,
+	previsao_fim date not null,
+	id_orientador int not,
+	id_coorientador int not,
+	id_supervisor int not,
+	data_fim date,
+	id_area int not null,
+	id_avaliacao_empresa int,
+	id_termo_compromisso int,
+	id_plano_atividades int,
+	id_autoavaliacao int,
+	id_tcc int,
+	foreign key (id_aluno) references aluno(id),
+	foreign key (id_empresa) references empresa(id),
+	foreign key (id_coordenador) references professor(id),
+	foreign key (id_orientador) references professor(id),
+	foreign key (id_coorientador) references professor(id),
+	foreign key (id_supervisor) references supervisor(id),
+	foreign key (id_area) references area(id),
+	foreign key (id_avaliacao_empresa) references avaliacao_empresa(id),
+	foreign key (id_termo_compromisso) references termo_compromisso(id),
+	foreign key (id_plano_atividades) references plano_atividades(id),
+	foreign key (id_autoavaliacao) references autoavaliacao(id),
+    foreign key (id_tcc) references tcc(id)
+);
+
+create table usuario(
+	id int not null primary key auto_increment,
+    nome varchar(255) not null,
+    login varchar(255) not null,
+    senha varchar(255) not null
+);
+
 
 INSERT INTO `usuario` (`nome`, `login`, `senha`) VALUES
 ('admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997');
@@ -165,12 +168,12 @@ INSERT INTO cidade (nome) VALUES
 ('Cidade 3');
 
 INSERT INTO empresa (nome, endereco, telefone, email, cnpj, id_cidade) VALUES
-('Empresa 1', 'Endereço 1', 1234567890, 'empresa1@example.com', 2147483647, 1),
-('Empresa 2', 'Endereço 2', 2147483647, 'empresa2@example.com', 2147483647, 2),
-('Empresa 3', 'Endereço 3', 2147483647, 'empresa3@example.com', 2147483647, 3),
-('Empresa 4', 'Endereço 4', 2147483647, 'empresa4@example.com', 2147483647, 1),
-('Empresa 5', 'Endereço 5', 2147483647, 'empresa5@example.com', 2147483647, 2),
-('Empresa 6', 'Endereço 6', 2147483647, 'empresa6@example.com', 2147483647, 3);
+('Empresa 1', 'Endereço 1', 1234567890, 'empresa1@example.com', 123456, 1),
+('Empresa 2', 'Endereço 2', 2147483647, 'empresa2@example.com', 32546, 2),
+('Empresa 3', 'Endereço 3', 2147483647, 'empresa3@example.com', 57751, 3),
+('Empresa 4', 'Endereço 4', 2147483647, 'empresa4@example.com', 333431, 1),
+('Empresa 5', 'Endereço 5', 2147483647, 'empresa5@example.com', 14646, 2),
+('Empresa 6', 'Endereço 6', 2147483647, 'empresa6@example.com', 445751, 3);
 
 
 INSERT INTO plano_atividades (id, url) VALUES
@@ -178,7 +181,7 @@ INSERT INTO plano_atividades (id, url) VALUES
 (2, 'http://www.exemplo.com/plano2'),
 (3, 'http://www.exemplo.com/plano3');
 
-INSERT INTO supervisor (nome, telefone, email, empresa_numero_convenio, cargo) VALUES
+INSERT INTO supervisor (nome, telefone, email, id_empresa, cargo) VALUES
 ('Supervisor 1', 1234567890, 'supervisor1@example.com', 1, 'Cargo 1'),
 ('Supervisor 2', 2147483647, 'supervisor2@example.com', 2, 'Cargo 2'),
 ('Supervisor 3', 2147483647, 'supervisor3@example.com', 3, 'Cargo 3'),
@@ -202,20 +205,20 @@ INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone
 INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
 (54321, 'Maria Souza', '2001-05-20', 'maria@example.com', 2147643642, 'RG54321', 'Rua B, Cidade B', 2, 'B', 2, 2);
 
-INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
-(98765, 'Carlos Santos', '1999-11-10', 'carlos@example.com', 2147653643, 'RG98765', 'Rua C, Cidade C', 1, 'A', 3, 1);
+INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES 
+(90765, 'Carlos Santos', '1999-11-10', 'carlos@example.com', 0000653643, 'RG98765', 'Rua C, Cidade C', 1, 'A', 3, 1);
+
+INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES 
+(13579, 'Ana Pereira', '2000-02-18', 'ana@example.com', 0247483046, 'RG13579', 'Rua D, Cidade D', 3, 'B', 2, 2);
 
 INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
-(13579, 'Ana Pereira', '2000-02-18', 'ana@example.com', 2147483646, 'RG13579', 'Rua D, Cidade D', 3, 'B', 2, 2);
+(24680, 'Pedro Oliveira', '2002-04-25', 'pedro@example.com', 2137483645, 'RG24680', 'Rua E, Cidade E', 3, 'A', 3, 1);
 
 INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
-(24680, 'Pedro Oliveira', '2002-04-25', 'pedro@example.com', 2147483645, 'RG24680', 'Rua E, Cidade E', 3, 'A', 3, 1);
-
-INSERT INTO aluno (matricula, nome, datanasc, email, cpf, rg, endereco, telefone, ano_turma, id_cidade, id_curso) VALUES
-(11111, 'Marta Mendes', '2001-11-11', 'marta@example.com', 2147483644, 'RG11111', 'Rua F, Cidade F', 2, 'A', 1, 3);
+(11111, 'Marta Mendes', '2001-11-11', 'marta@example.com', 3333333333, 'RG11111', 'Rua F, Cidade F', 2, 'A', 1, 3);
 
 
-INSERT INTO estagio_aluno (id_aluno, empresa_numero_convenio, carga_horaria, id_coordenador, tipo_processo_estagio, encaminhamentos, situacao_estagio, data_inicio, previsao_fim, id_orientador, id_coorientador, id_supervisor, data_fim, id_area, id_avaliacao_empresa, id_termo_compromisso, id_plano_atividades, id_autoavaliacao, id_tcc) VALUES
+INSERT INTO estagio_aluno (id_aluno, id_empresa, carga_horaria, id_coordenador, tipo_processo_estagio, numero_encaminhamentos, situacao_estagio, data_inicio, previsao_fim, id_orientador, id_coorientador, id_supervisor, data_fim, id_area, id_avaliacao_empresa, id_termo_compromisso, id_plano_atividades, id_autoavaliacao, id_tcc) VALUES
 (1, 1, 30, 1, 'Estágio Curricular', 301, 'Não Iniciado', '2023-10-01', '0000-00-00', 1, 1, 1, '2023-12-31', 1, 1, 1, 1, 1, 1),
 (2, 2, 20, 2, 'Estágio Profissional', 302, 'Em andamento', '2023-09-15', '0000-00-00', 2, 2, 2, '2024-02-29', 2, 2, 2, 2, 2, 2),
 (3, NULL, 40, 3, 'Estágio Voluntário', 303, 'Finalizado', '2023-11-05', '2023-12-15', 3, 3, 3, '2023-12-15', 3, 3, 3, 3, 3, 3),
