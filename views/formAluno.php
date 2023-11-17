@@ -23,15 +23,10 @@
         <a href="alunos.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do usuário</legend>
+            <legend class="text-gray-900 font-bold text-center text-xl">Dados do Aluno</legend>
 
             <form action="salvarAluno.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
-
-                <?php 
-                // echo $aluno->getId(); 
-                var_dump($aluno->getId());
-               ?>
                 <div>
                     <label for="matricula" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Matricula</label>
                     <input type="text" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
