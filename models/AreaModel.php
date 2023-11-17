@@ -39,7 +39,7 @@ final class AreaModel extends Model {
         (nome) 
         VALUES 
         (:nome)';
-        
+
         $binds = [':nome' => $vo->getNome()];
 
         $success = $db->execute($query, $binds);
@@ -51,17 +51,9 @@ final class AreaModel extends Model {
         $db = new Database();
         $binds = [':nome' => $vo->getNome()];
 
-        if (empty($vo->getSenha())) {
-            $query = 'UPDATE area
+        $query = 'UPDATE area
                     SET nome = :nome
                     WHERE id = :id';
-        } else {
-            $binds['senha'] = sha1($vo->getSenha());
-
-            $query = 'UPDATE area
-                    SET nome = :nome
-                    WHERE id = :id';
-        }
 
         return $db->execute($query, $binds);
     }
@@ -73,5 +65,4 @@ final class AreaModel extends Model {
 
         return $db->execute($query, $binds);
     }
-
 }
