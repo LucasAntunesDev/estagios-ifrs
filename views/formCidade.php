@@ -31,7 +31,7 @@
                 <div>
                     <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>
                     <input type="text" id="nome" name="nome" value='<?php echo $cidade->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 

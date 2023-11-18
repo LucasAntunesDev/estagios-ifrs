@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
-    <?php include('views/includes/favicons.php');?>
+    <?php include('views/includes/favicons.php'); ?>
 </head>
 
 <body>
@@ -27,80 +27,81 @@
 
             <form action="salvarAluno.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
+                
                 <div>
                     <label for="matricula" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Matricula</label>
                     <input type="text" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>
                     <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="data_nascimento" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Data de Nascimento</label>
                     <input type="date" id="data_nascimento" name="data_nascimento" value=" <?php echo $aluno->getDataNascimento(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="email" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Email</label>
                     <input type="email" id="email" name="email" value='<?php echo $aluno->getEmail(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="cpf" class="block text-sm font-medium leading-6 text-gray-900 mb-2">CPF</label>
                     <input type="int" id="cpf" name="cpf" value=" <?php echo $aluno->getCPF(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="rg" class="block text-sm font-medium leading-6 text-gray-900 mb-2">RG</label>
                     <input type="text" id="rg" name="rg" value='<?php echo $aluno->getRG(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="endereco" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Endereço</label>
                     <input type="text" id="endereco" name="endereco" value=" <?php echo $aluno->getEndereco(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="telefone" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Telefone</label>
                     <input type="text" id="telefone" name="telefone" value='<?php echo $aluno->getTelefone(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="turma" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Turma</label>
                     <input type="text" id="turma" name="turma" value=" <?php echo $aluno->getAnoTurma(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="id_cidade" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Cidade</label>
                     <input type="number" id="id_cidade" name="id_cidade" value='<?php echo $aluno->getIdCidade(); ?>' class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
                 <div>
                     <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Curso</label>
                     <input type="number" id="id_curso" name="id_curso" value=" <?php echo $aluno->getIdCurso(); ?>" class="rounded-md 
-                border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 </div>
 
