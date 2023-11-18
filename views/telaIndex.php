@@ -26,7 +26,7 @@
                Começe um estágio, descubra novas Oportunidades
             </sapn>
 
-            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-md">
+            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
@@ -54,21 +54,6 @@
 
     </div>
 
-    <div class="flex flex-col justify-center items-center">
-        <a class="text-red-600 hover:text-red-800" href="usuarios.php">Usuários</a>
-        <a class="text-red-600 hover:text-red-800" href="alunos.php">Alunos</a>
-        <a class="text-red-600 hover:text-red-800" href="estagiosAlunos.php">Estagios Alunos</a>
-        <a class="text-red-600 hover:text-red-800" href="TCCS.php">TCC</a>
-        <a class="text-red-600 hover:text-red-800" href="planoAtividades.php">Plano de atividades</a>
-        <a class="text-red-600 hover:text-red-800" href="avaliacaoEmpresas.php">Avaliação da empresa</a>
-        <a class="text-red-600 hover:text-red-800" href="autoAvaliacoes.php">Autoavaliação</a>
-        <a class="text-red-600 hover:text-red-800" href="empresas.php">Empresa</a>
-        <a class="text-red-600 hover:text-red-800" href="cidades.php">Cidade</a>
-        <a class="text-red-600 hover:text-red-800" href="cursos.php">Curso</a>
-        <a class="text-red-600 hover:text-red-800" href="areas.php">Área</a>
-        <a class="text-red-600 hover:text-red-800" href="supervisores.php">Supervisor</a>
-    </div>
-
     <div class="flex justify-center items-center gap-x-20">
         <img src="views/assets/img-placeholder-1.png" class="h-56">
 
@@ -77,7 +62,7 @@
                 Aprendizado
             </h1>
 
-            <p class="w-96 text-md">
+            <p class="w-96 2xl:text-xl xl:text-lg text-neutral-700">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
@@ -91,7 +76,7 @@
                 Oportunidades
             </h1>
 
-            <p class="w-96 text-md">
+            <p class="w-96 2xl:text-xl xl:text-lg text-neutral-700">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
