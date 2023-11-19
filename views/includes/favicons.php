@@ -5,3 +5,5 @@
 <link rel="icon" type="image/png" href="https://ifrs.edu.br/bento/wp-content/themes/ifrs-portal-theme/favicons/favicon-16x16.png" sizes="16x16">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
+
+<link rel="stylesheet" href="views/includes/scrollbar.css">
