@@ -138,7 +138,7 @@ final class EstagioAlunoVO extends VO {
     }
 
     public function getNumeroEncaminhamentos() {
-        return $this->id_empresa;
+        return $this->numero_encaminhamentos;
     }
 
     public function setNumeroEncaminhamentos($numero_encaminhamentos) {
@@ -146,7 +146,7 @@ final class EstagioAlunoVO extends VO {
     }
 
     public function getSituacaoEstagio() {
-        return $this->numero_encaminhamentos;
+        return $this->situacao_estagio;
     }
 
     public function setSituacaoEstagio($situacao_estagio) {
@@ -154,15 +154,15 @@ final class EstagioAlunoVO extends VO {
     }
 
     public function getDataInicio() {
-        return $this->situacao_estagio;
+        return $this->data_inicio;
     }
 
-    public function setDataInicio($data_fim) {
-        $this->data_fim = $data_fim;
+    public function setDataInicio($data_inicio) {
+        $this->data_inicio = $data_inicio;
     }
 
     public function getPrevisaoFim() {
-        return $this->data_fim;
+        return $this->previsao_fim;
     }
 
     public function setPrevisaoFim($previsao_fim) {
@@ -178,7 +178,7 @@ final class EstagioAlunoVO extends VO {
     }
 
     public function getIdCoorientador() {
-        return $this->id_orientador;
+        return $this->id_coorientador;
     }
 
     public function setIdCoorientador($id_coorientador) {
@@ -186,7 +186,7 @@ final class EstagioAlunoVO extends VO {
     }
 
     public function getIdSupervisor() {
-        return $this->id_coorientador;
+        return $this->id_supervisor;
     }
 
     public function setIdSupervisor($id_supervisor) {
