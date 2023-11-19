@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estágios IFRS - Usuários</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <?php include('views/includes/favicons.php');?>
+    <?php include('views/includes/favicons.php'); ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
@@ -16,57 +16,58 @@
 
     <div class="flex flex-col justify-center items-center gap-2">
         <h1 class="font-bold text-4xl text-[#C62126] py-4">
-        <i class="fa-solid fa-circle-user"></i>
+            <i class="fa-solid fa-circle-user"></i>
             Usuários
         </h1>
-        <a href="usuario.php" class="bg-[#127852] rounded-full
-         text-zinc-50 shadow-md hover:bg-zinc-50 p-2 flex 
-        items-center transition duration-300 ease-in-out mb-2"">
 
-            <span class="material-symbols-outlined">
-                add
-            </span>
-            Inserir Novo Usuário
+        <a href="usuario.php" class="bg-[#127852] rounded-full p-2 hover:bg-zinc-50
+                     text-zinc-50 flex items-center justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out
+                     mb-2 mr-8 self-end transition duration-300 ease-in-out">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+            </svg>
 
         </a>
 
-        <table class="border-[1px] border-zinc-300 px-4">
-            <thead>
-                <tr>
-                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">ID</th>
-                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Nome</th>
-                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Login</th>
-                    <th class="text-xl font-bold border-[1px] border-zinc-300 px-4">Ações</th>
-                </tr>
-            </thead>
+        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border-1 border-x border-y rounded-xl">
+            <table class="max-w-full">
+                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
+                    <tr class="border-b">
+                        <th class="px-6 py-3 capitalize w-min">ID</th>
+                        <th class="px-6 py-3 capitalize w-min">Nome</th>
+                        <th class="px-6 py-3 capitalize w-min">Login</th>
+                        <th class="px-6 py-3 capitalize w-min">Ações</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <?php
-                foreach ($usuarios as $usuario) {
-                    echo '<tr>';
-                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuario->getId() . '</td>';
-                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuario->getNome() . '</td>';
-                    echo '<td class="border-[1px] border-zinc-300 px-4">' . $usuario->getLogin() . '</td>';
-                    echo '<td class="border-[1px]  px-4 flex flex-col">';
+                <tbody>
+                    <?php
+                    foreach ($usuarios as $usuario) {
+                        echo ' <tr class="border-b">';
+                        echo '<td class="p-1 w-min">' . $usuario->getId() . '</td>';
+                        echo '<td class="p-1 w-min">' . $usuario->getNome() . '</td>';
+                        echo '<td class="p-1 w-min">' . $usuario->getLogin() . '</td>';
+                        echo '<td class="p-1 w-min">';
 
-                    echo "<a href='Usuario.php?id=" . $usuario->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852]'>
+                        echo "<a href='Usuario.php?id=" . $usuario->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                    echo "<a href='excluirUsuario.php?id=" . $usuario->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
-                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126]'>
+                        echo "<a href='excluirUsuario.php?id=" . $usuario->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
+                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126] transition duration-300 ease-in-out'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
                         </a>";
 
                         echo '</td>';
-                    echo '</tr>';
-                }
-                ?>
-            </tbody>
-        </table>
-
+                        echo '</tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 

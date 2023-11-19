@@ -19,52 +19,53 @@
             <i class="fa-solid fa-circle-user"></i>
             Alunos
         </h1>
-        <a href="aluno.php" class="bg-[#127852] rounded-full
-         text-zinc-50 shadow-md hover:bg-zinc-50 p-2 flex 
-        items-center transition duration-300 ease-in-out mb-2"">
+        
+        <a href="aluno.php" class="bg-[#127852] rounded-full p-2 hover:bg-zinc-50
+                     text-zinc-50 flex items-center justify-center border-2 border-[#127852] hover:text-[#127852]
+                     mb-2 mr-8 self-end transition duration-300 ease-in-out">
 
-            <span class=" material-symbols-outlined">
-            add
-            </span>
-            Inserir Novo Aluno
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+            </svg>
 
         </a>
-        <!-- <div class="flex overflow-x-auto overflow-y-auto w-11/12 border-[1px] border-zinc-300 h-screen"> -->
+
+        <div class="relative overflow-x-auto w-11/12 border-gray-200 border-1 rounded-md border-gray-200 border-1 border-x border-y rounded-xl">
             <table class="border-y-[1px] border-y-zinc-300 px-4">
-                <thead>
-                    <tr>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Matrícula</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Id do aluno</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Nome</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Data de nascimento</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Email</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">CPF</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">RG</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Endereco</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Telefone</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Ano Turma</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Id Cidade</th>
-                        <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Id Curso</th>
-                        <!-- <th class="text-xl font-bold border-y-[1px] border-y-zinc-300 px-1">Ações</th> -->
+                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
+                     <tr class="border-b">
+                        <th class="px-6 py-3 capitalize w-min">Matrícula</th>
+                        <th class="px-6 py-3 capitalize w-min">Id do aluno</th>
+                        <th class="px-6 py-3 capitalize w-min">Nome</th>
+                        <th class="px-6 py-3 capitalize w-min">Data de nascimento</th>
+                        <th class="px-6 py-3 capitalize w-min">Email</th>
+                        <th class="px-6 py-3 capitalize w-min">CPF</th>
+                        <th class="px-6 py-3 capitalize w-min">RG</th>
+                        <th class="px-6 py-3 capitalize w-min">Endereco</th>
+                        <th class="px-6 py-3 capitalize w-min">Telefone</th>
+                        <th class="px-6 py-3 capitalize w-min">Ano Turma</th>
+                        <th class="px-6 py-3 capitalize w-min">Id Cidade</th>
+                        <th class="px-6 py-3 capitalize w-min">Id Curso</th>
+                        <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <?php
                     foreach ($alunos as $aluno) {
-                        echo '<tr>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getMatricula() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getId() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getNome() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getDataNascimento() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getEmail() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getCPF() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getRG() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getEndereco() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getTelefone() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getAnoTurma() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getIdCidade() . '</td>';
-                        echo '<td class="border-y-[1px] border-y-zinc-300 px-4">' . $aluno->getIdCurso() . '</td>';
+                        echo '<tr class="border-b">';
+                        echo '<td class="p-1 w-min">' . $aluno->getMatricula() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getId() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getNome() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getDataNascimento() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getEmail() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getCPF() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getRG() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getEndereco() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getTelefone() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getAnoTurma() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getIdCidade() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getIdCurso() . '</td>';
                         echo '<td class="border-y-[1px]  px-4 flex flex-col">';
 
                         echo "<a href='Aluno.php?id=" . $aluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
@@ -73,7 +74,7 @@
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
                         echo "<a href='excluirAluno.php?id=" . $aluno->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
-                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126]'>
+                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126] transition duration-300 ease-in-out'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
                         </a>";
@@ -85,7 +86,7 @@
                 </tbody>
             </table>
         </div>
-    <!-- </div> -->
+    </div>
 </body>
 
 </html>
