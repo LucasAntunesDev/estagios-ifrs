@@ -37,6 +37,7 @@
                         <th class="px-6 py-3 capitalize w-min">ID</th>
                         <th class="px-6 py-3 capitalize w-min">Nome</th>
                         <th class="px-6 py-3 capitalize w-min">Coordenador</th>
+                        <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
 
