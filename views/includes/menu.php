@@ -4,7 +4,7 @@
 h-16 bg-[#127852] text-zinc-50 border-b-[3px] border-[#517174] min-w-screen max-w-[-webkit-fill-available]">
 
     <a href="index.php">
-        <img src="views/assets/IFRS W.png" alt="Logo do IFRS" class="h-10 hover:scale-110 
+        <img src="views/assets/IFRS W.png" alt="Logo do IFRS" class="h-10  
 transition ease-in-out duration-300 cursor-pointer">
     </a>
 
@@ -57,7 +57,7 @@ transition ease-in-out duration-300 cursor-pointer">
     ?>
     <div class="<?php echo isset($_SESSION['usuario']) ? '' : 'hidden' ?>">
 
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="hover:scale-110 transition duration-300
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" transition duration-300
     ease-in-out" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                 <path fill-rule="evenodd" d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
