@@ -42,33 +42,33 @@ final class EstagioAlunoModel extends Model {
     }
     public function selectOne($vo = null) {
         $db = new Database();
-        $query = 'SELECT * FROM estagioAluno WHERE id = :id';
+        $query = 'SELECT * FROM estagio_aluno WHERE id = :id';
         $binds = [':id' => $vo->getId()];
         $data = $db->select($query, $binds);
 
         if (count($data) === 0) return null;
 
         return new EstagioAlunoVO(
-            $data['id'],
-            $data['id_aluno'],
-            $data['id_empresa'],
-            $data['carga_horaria'],
-            $data['id_coordenador'],
-            $data['tipo_processo_estagio'],
-            $data['numero_encaminhamentos'],
-            $data['situacao_estagio'],
-            $data['data_inicio'],
-            $data['previsao_fim'],
-            $data['id_orientador'],
-            $data['id_coorientador'],
-            $data['id_supervisor'],
-            $data['data_fim'],
-            $data['id_area'],
-            $data['id_avaliacao_empresa'],
-            $data['id_termo_compromisso'],
-            $data['id_plano_atividades'],
-            $data['id_autoavaliacao'],
-            $data['id_tcc']
+            $data[0]['id'],
+            $data[0]['id_aluno'],
+            $data[0]['id_empresa'],
+            $data[0]['carga_horaria'],
+            $data[0]['id_coordenador'],
+            $data[0]['tipo_processo_estagio'],
+            $data[0]['numero_encaminhamentos'],
+            $data[0]['situacao_estagio'],
+            $data[0]['data_inicio'],
+            $data[0]['previsao_fim'],
+            $data[0]['id_orientador'],
+            $data[0]['id_coorientador'],
+            $data[0]['id_supervisor'],
+            $data[0]['data_fim'],
+            $data[0]['id_area'],
+            $data[0]['id_avaliacao_empresa'],
+            $data[0]['id_termo_compromisso'],
+            $data[0]['id_plano_atividades'],
+            $data[0]['id_autoavaliacao'],
+            $data[0]['id_tcc']
         );
     }
 

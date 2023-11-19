@@ -38,8 +38,7 @@ final class EstagioAlunoController extends Controller {
     }
 
     public function get() {
-        $id = $_GET['id_estagioAluno'] ?? null; #>= php 8
-        $id = (isset($_GET['id_estagioAluno'])) ? $_GET['id_estagioAluno'] : null; # < php 8
+        $id = $_GET['id'] ?? null;
 
         if (empty($id)) {
             $vo = new EstagioAlunoVO();
@@ -83,7 +82,7 @@ final class EstagioAlunoController extends Controller {
     }
 
     public function remove() {
-        if (empty($_GET['id_estagioAluno'])) die('Necessário passar o ID');
+        if (empty($_GET['id'])) die('Necessário passar o ID');
 
         $model = new EstagioAlunoModel();
 
