@@ -48,7 +48,7 @@
                         echo '<td class="p-1 w-min">' . $area->getNome() . '</td>';
                         echo '<td class="border-y-[1px]  px-4 flex flex-col">';
 
-                        echo "<a href='Area.php?id=" . $area->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
+                        echo "<a href='Area.php?id=" . $area->getId() . "'class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
