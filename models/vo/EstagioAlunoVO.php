@@ -4,11 +4,11 @@ namespace Model\VO;
 
 final class EstagioAlunoVO extends VO {
     private $id_aluno;
-    private $empresa_numero_convenio;
+    private $id_empresa;
     private $carga_horaria;
     private $id_coordenador;
     private $tipo_processo_estagio;
-    private $encaminhamentos;
+    private $numero_encaminhamentos;
     private $situacao_estagio;
     private $data_inicio;
     private $previsao_fim;
@@ -26,12 +26,12 @@ final class EstagioAlunoVO extends VO {
     public function __construct(
         $id = 0,
         $id_aluno = 0,
-        $empresa_numero_convenio = 0,
-        $carga_horaria = 220,
+        $id_empresa = 0,
+        $carga_horaria = 200,
         $id_coordenador = 0,
         $tipo_processo_estagio = '',
-        $encaminhamentos = 0,
-        $situacao_estagio = '',
+        $numero_encaminhamentos = 0,
+        $situacao_estagio = 'Não Iniciado',
         $data_inicio = '',
         $previsao_fim = '',
         $id_orientador = 0,
@@ -39,19 +39,41 @@ final class EstagioAlunoVO extends VO {
         $id_supervisor = 0,
         $data_fim = '',
         $id_area = 0,
-        $id_avaliacao_empresa = '',
-        $id_termo_compromisso = '',
-        $id_plano_atividades = '',
-        $id_autoavaliacao = '',
-        $id_tcc = ''
+        $id_avaliacao_empresa = null,
+        $id_termo_compromisso = null,
+        $id_plano_atividades = null,
+        $id_autoavaliacao = null,
+        $id_tcc = null
+
+       #id_tcc
+       #$id = 0,
+       #$id_aluno = 0,
+       #$id_empresa = 0,
+       #$carga_horaria = 220,
+       #$id_coordenador = 0,
+       #$tipo_processo_estagio = '',
+       #$numero_encaminhamentos = 0,
+       #$situacao_estagio = '',
+       #$data_inicio = '',
+       #$previsao_fim = '',
+       #$id_orientador = 0,
+       #$id_coorientador = 0,
+       #$id_supervisor = 0,
+       #$data_fim = '',
+       #$id_area = 0,
+       #$id_avaliacao_empresa = '',
+       #$id_termo_compromisso = '',
+       #$id_plano_atividades = '',
+       #$id_autoavaliacao = '',
+       #$id_tcc = ''
     ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
-        $this->empresa_numero_convenio = $empresa_numero_convenio;
+        $this->id_empresa = $id_empresa;
         $this->carga_horaria = $carga_horaria;
         $this->id_coordenador = $id_coordenador;
         $this->tipo_processo_estagio = $tipo_processo_estagio;
-        $this->encaminhamentos = $encaminhamentos;
+        $this->numero_encaminhamentos = $numero_encaminhamentos;
         $this->situacao_estagio = $situacao_estagio;
         $this->data_inicio = $data_inicio;
         $this->previsao_fim = $previsao_fim;
@@ -83,12 +105,12 @@ final class EstagioAlunoVO extends VO {
         $this->id_aluno = $id_aluno;
     }
 
-    public function getEmpresaNumeroConvenio() {
-        return $this->empresa_numero_convenio;
+    public function getIdEmpresa() {
+        return $this->id_empresa;
     }
 
-    public function setEmpresaNumeroConvenio($empresa_numero_convenio) {
-        $this->empresa_numero_convenio = $empresa_numero_convenio;
+    public function setIdEmpresa($id_empresa) {
+        $this->id_empresa = $id_empresa;
     }
 
     public function getCargaHoraria() {
@@ -115,16 +137,16 @@ final class EstagioAlunoVO extends VO {
         $this->$tipo_processo_estagio = $tipo_processo_estagio;
     }
 
-    public function getEncaminhamentos() {
-        return $this->empresa_numero_convenio;
+    public function getNumeroEncaminhamentos() {
+        return $this->id_empresa;
     }
 
-    public function setEncaminhamentos($encaminhamentos) {
-        $this->encaminhamentos = $encaminhamentos;
+    public function setNumeroEncaminhamentos($numero_encaminhamentos) {
+        $this->numero_encaminhamentos = $numero_encaminhamentos;
     }
 
     public function getSituacaoEstagio() {
-        return $this->encaminhamentos;
+        return $this->numero_encaminhamentos;
     }
 
     public function setSituacaoEstagio($situacao_estagio) {
@@ -148,7 +170,7 @@ final class EstagioAlunoVO extends VO {
     }
 
     public function getIdOrientador() {
-        return $this->previsao_fim;
+        return $this->id_orientador;
     }
 
     public function setIdOrientador($id_orientador) {

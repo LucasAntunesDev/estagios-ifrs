@@ -8,7 +8,7 @@ use Model\VO\EstagioAlunoVO;
 
 #id	
 #id_aluno	
-#empresa_numero_convenio	
+#id_empresa	
 #carga_horaria	
 #id_coordenador	
 #tipo_processo_estagio	
@@ -56,11 +56,11 @@ final class EstagioAlunoController extends Controller {
         $vo = new EstagioAlunoVO(
             $_POST['id'],
             $_POST['id_aluno'],
-            $_POST['empresa_numero_convenio'],
+            $_POST['id_empresa'],
             $_POST['carga_horaria'],
             $_POST['id_coordenador'],
             $_POST['tipo_processo_estagio'],
-            $_POST['encaminhamentos'],
+            $_POST['numero_encaminhamentos'],
             $_POST['situacao_estagio'],
             $_POST['data_inicio'],
             $_POST['previsao_fim'],

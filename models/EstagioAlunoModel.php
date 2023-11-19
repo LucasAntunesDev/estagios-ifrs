@@ -16,11 +16,11 @@ final class EstagioAlunoModel extends Model {
             $vo = new EstagioAlunoVO(
                 $row['id'],
                 $row['id_aluno'],
-                $row['empresa_numero_convenio'],
+                $row['id_empresa'],
                 $row['carga_horaria'],
                 $row['id_coordenador'],
                 $row['tipo_processo_estagio'],
-                $row['encaminhamentos'],
+                $row['numero_encaminhamentos'],
                 $row['situacao_estagio'],
                 $row['data_inicio'],
                 $row['previsao_fim'],
@@ -51,11 +51,11 @@ final class EstagioAlunoModel extends Model {
         return new EstagioAlunoVO(
             $data['id'],
             $data['id_aluno'],
-            $data['empresa_numero_convenio'],
+            $data['id_empresa'],
             $data['carga_horaria'],
             $data['id_coordenador'],
             $data['tipo_processo_estagio'],
-            $data['encaminhamentos'],
+            $data['numero_encaminhamentos'],
             $data['situacao_estagio'],
             $data['data_inicio'],
             $data['previsao_fim'],
@@ -75,18 +75,56 @@ final class EstagioAlunoModel extends Model {
     public function insert($vo = null) {
         $db = new Database();
         $query = 'INSERT INTO estagio_aluno
-        (id, id_aluno, empresa_numero_convenio, carga_horaria, id_coordenador, tipo_processo_estagio, encaminhamentos, situacao_estagio, data_inicio, previsao_fim, id_orientador, id_coorientador, id_supervisor, data_fim, id_area, id_avaliacao_empresa, id_termo_compromisso, id_plano_atividades, id_autoavaliacao, id_tcc) 
+        (id,
+        id_aluno,
+        id_empresa,
+        carga_horaria,
+        id_coordenador,
+        tipo_processo_estagio,
+        numero_encaminhamentos,
+        situacao_estagio,
+        data_inicio,
+        previsao_fim,
+        id_orientador,
+        id_coorientador,
+        id_supervisor,
+        data_fim,
+        id_area,
+        id_avaliacao_empresa,
+        id_termo_compromisso,
+        id_plano_atividades,
+        id_autoavaliacao,
+        id_tcc)
         VALUES 
-        (:id, :id_aluno, :empresa_numero_convenio, :carga_horaria, :id_coordenador, :tipo_processo_estagio, :encaminhamentos, :situacao_estagio, :data_inicio, :previsao_fim, :id_orientador, :id_coorientador, :id_supervisor, :data_fim, id_area, :id_avaliacao_empresa, :id_termo_compromisso, :id_plano_atividades, :id_autoavaliacao, :id_tcc)';
+        (:id,
+        :id_aluno,
+        :id_empresa,
+        :carga_horaria,
+        :id_coordenador,
+        :tipo_processo_estagio,
+        :numero_encaminhamentos,
+        :situacao_estagio,
+        :data_inicio,
+        :previsao_fim,
+        :id_orientador,
+        :id_coorientador,
+        :id_supervisor,
+        :data_fim,
+        :id_area,
+        :id_avaliacao_empresa,
+        :id_termo_compromisso,
+        :id_plano_atividades,
+        :id_autoavaliacao,
+        :id_tcc)';
 
         $binds = [
             ':id' =>   $vo->getId(),
             ':id_aluno' =>  $vo->getIdAluno(),
-            ':empresa_numero_convenio' =>  $vo->getEmpresaNumeroConvenio(),
+            ':id_empresa' =>  $vo->getIdEmpresa(),
             ':carga_horaria' =>  $vo->getCargaHoraria(),
             ':id_coordenador' =>  $vo->getIdCoordenador(),
             ':tipo_processo_estagio' =>  $vo->getTipoProcessoEstagio(),
-            ':encaminhamentos' =>  $vo->getEncaminhamentos(),
+            ':numero_encaminhamentos' =>  $vo->getNumeroEncaminhamentos(),
             ':situacao_estagio' =>  $vo->getSituacaoEstagio(),
             ':data_inicio' =>  $vo->getDataInicio(),
             ':previsao_fim' =>  $vo->getPrevisaoFim(),
@@ -113,11 +151,11 @@ final class EstagioAlunoModel extends Model {
         $query = 'UPDATE estagio_aluno
                     SET id = :id
                     id_aluno  =  :id_aluno 
-                    empresa_numero_convenio =  :empresa_numero_convenio
+                    id_empresa =  :id_empresa
                     carga_horaria =  :carga_horaria
                     id_coordenador =  :id_coordenador
                     tipo_processo_estagio =  :tipo_processo_estagio
-                    encaminhamentos =  :encaminhamentos
+                    numero_encaminhamentos =  :numero_encaminhamentos
                     situacao_estagio =  :situacao_estagio
                     data_inicio =  :data_inicio
                     previsao_fim =  :previsao_fim
@@ -136,11 +174,11 @@ final class EstagioAlunoModel extends Model {
         $binds = [
             ':id' =>   $vo->getId(),
             ':id_aluno' =>  $vo->getIdAluno(),
-            ':empresa_numero_convenio' =>  $vo->getEmpresaNumeroConvenio(),
+            ':id_empresa' =>  $vo->getIdEmpresa(),
             ':carga_horaria' =>  $vo->getCargaHoraria(),
             ':id_coordenador' =>  $vo->getIdCoordenador(),
             ':tipo_processo_estagio' =>  $vo->getTipoProcessoEstagio(),
-            ':encaminhamentos' =>  $vo->getEncaminhamentos(),
+            ':numero_encaminhamentos' =>  $vo->getNumeroEncaminhamentos(),
             ':situacao_estagio' =>  $vo->getSituacaoEstagio(),
             ':data_inicio' =>  $vo->getDataInicio(),
             ':previsao_fim' =>  $vo->getPrevisaoFim(),
