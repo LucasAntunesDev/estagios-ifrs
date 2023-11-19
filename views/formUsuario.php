@@ -20,23 +20,23 @@
             <i class="fa-solid fa-circle-user"></i>
             Formulário de Usuário
         </h1>
-        <a href="usuarios.php" class="text-gray-900 font-bold hover:text-gray-700">Voltar para a listagem</a>
+        <a href="usuarios.php" class="text-neutral-700 font-bold hover:text-gray-700">Voltar para a listagem</a>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do usuário</legend>
+            <legend class="text-neutral-700 font-bold text-center text-xl">Dados do usuário</legend>
 
             <form action="salvarUsuario.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $usuario->getId(); ?>'>
 
                 <div>
-                    <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>
+                    <label for="nome" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Nome</label>
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                 <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
                             </svg>
 
@@ -45,15 +45,15 @@
                 </div>
 
                 <div>
-                    <label for="login" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Login</label>
+                    <label for="login" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Login</label>
 
                     <div class="relative">
                         <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                 <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
                             </svg>
 
@@ -63,15 +63,15 @@
                 </div>
 
                 <div>
-                    <label for="senha" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Senha</label>
+                    <label for="senha" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Senha</label>
 
                     <div class="relative">
                         <input type="password" id="senha" name="senha" value="" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                 <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
                             </svg>
 
