@@ -57,12 +57,12 @@
                         echo '<td class="p-1 w-min">' . $aluno->getMatricula() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getId() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getNome() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getDataNascimento() . '</td>';
+                        echo '<td class="p-1 w-min date">' . $aluno->getDataNascimento() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getEmail() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getCPF() . '</td>';
+                        echo '<td class="p-1 w-min cpf">' . $aluno->getCPF() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getRG() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getEndereco() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getTelefone() . '</td>';
+                        echo '<td class="p-1 w-min phone_with_ddd">' . $aluno->getTelefone() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getAnoTurma() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getIdCidade() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getIdCurso() . '</td>';
