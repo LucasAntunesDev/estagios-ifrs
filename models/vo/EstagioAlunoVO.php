@@ -44,28 +44,6 @@ final class EstagioAlunoVO extends VO {
         $id_plano_atividades = null,
         $id_autoavaliacao = null,
         $id_tcc = null
-
-       #id_tcc
-       #$id = 0,
-       #$id_aluno = 0,
-       #$id_empresa = 0,
-       #$carga_horaria = 220,
-       #$id_coordenador = 0,
-       #$tipo_processo_estagio = '',
-       #$numero_encaminhamentos = 0,
-       #$situacao_estagio = '',
-       #$data_inicio = '',
-       #$previsao_fim = '',
-       #$id_orientador = 0,
-       #$id_coorientador = 0,
-       #$id_supervisor = 0,
-       #$data_fim = '',
-       #$id_area = 0,
-       #$id_avaliacao_empresa = '',
-       #$id_termo_compromisso = '',
-       #$id_plano_atividades = '',
-       #$id_autoavaliacao = '',
-       #$id_tcc = ''
     ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
@@ -88,15 +66,7 @@ final class EstagioAlunoVO extends VO {
         $this->id_autoavaliacao = $id_autoavaliacao;
         $this->id_tcc = $id_tcc;
     }
-
-    // public function getId() {
-    //     return $this->id;
-    // }
-
-    // public function setId($id) {
-    //     $this->id = $id;
-    // }
-
+    
     public function getIdAluno() {
         return $this->id_aluno;
     }

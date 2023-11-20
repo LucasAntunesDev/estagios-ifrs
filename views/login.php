@@ -20,7 +20,6 @@
 
 
         <div class="flex justify-center items-center w-[65%]">
-            <!-- <form action="fazerLogin.php" method="POST" class="bg-[#F6FAF8] flex flex-col justify-center  -->
             <form action="fazerLogin.php" method="POST" class="flex flex-col justify-center 
             items-center gap-2 py-20 rounded-xl px-2">
 

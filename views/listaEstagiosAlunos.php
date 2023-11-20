@@ -20,21 +20,6 @@
             Estágios
         </h1>
 
-        <!-- <div class="flex items-center xl:w-11/12 my-8">
-            <div class="flex-auto">
-                <h1 class="flex items-center font-semibold leading-6 text-base">Users</h1>
-                <p class="mt-2 text-sm axt">A list of all the users in your account including their name, title, email and role.</p>
-            </div>
-            <div class="lh bwf bwv bzz">
-                <a href="estagioAluno.php">
-                    <button type="button" class="bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852]">
-                        Add user
-                    </button>
-                </a>
-            </div>
-        </div> -->
-
         <a href="estagioAluno.php" class="bg-[#127852] rounded-full p-2 hover:bg-zinc-50
                      text-zinc-50 flex items-center justify-center border-2 border-[#127852] hover:text-[#127852]
                      mb-2 mr-8 self-end transition duration-300 ease-in-out">
@@ -45,7 +30,6 @@
 
         </a>
 
-        <!-- <div class="flex overflow-x-auto overflow-y-auto w-11/12 border-[1px] border-zinc-300 h-screen"> -->
         <div class="relative overflow-x-auto w-11/12 border-gray-200 border-1 border-x border-y rounded-xl">
             <table class="min-w-full">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">

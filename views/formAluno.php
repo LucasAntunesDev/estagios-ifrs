@@ -256,9 +256,6 @@ $data_cidades = $db->select('SELECT * FROM cidade');
                             <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Curso</label>
 
                             <div class="relative">
-                                <!-- <input type="number" id="id_curso" name="id_curso" value=" <?php echo $aluno->getIdCurso(); ?>" class="rounded-md 
-                                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800"> -->
                                 <select id="id_curso" name="id_curso" value="id_curso" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
@@ -276,8 +273,6 @@ $data_cidades = $db->select('SELECT * FROM cidade');
                             </div>
                         </div>
                     </div>
-
-                    <!-- </div> -->
 
                     <button type="submit" class="class=' bg-[#127852] rounded-md py-1 px-20 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] 

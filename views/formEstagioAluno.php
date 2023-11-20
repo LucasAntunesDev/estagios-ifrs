@@ -66,8 +66,6 @@ $data_areas = $db->select('SELECT * FROM area');
             </ol>
         </nav>
 
-        <!-- <a href="estagiosAlunos.php" class="text-gray-900 font-bold hover:text-neutral-700">Voltar para a listagem</a> -->
-
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md">
             <legend class="text-gray-900 font-bold text-center text-xl">Dados do estágio</legend>
 
@@ -196,14 +194,6 @@ $data_areas = $db->select('SELECT * FROM area');
                     </div>
 
                     <input type="hidden" id="numero_encaminhamentos" name="numero_encaminhamentos" value='<?php echo $estagioAluno->getNumeroEncaminhamentos(); ?>'>
-
-                    <!-- <div>
-                    <label for="situacao_estagio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Situação</label>
-                    <input type="text" id="situacao_estagio" name="situacao_estagio" value=" <?php //echo $estagioAluno->getSituacaoEstagio(); 
-                                                                                                ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
-                </div> -->
 
                     <input type="hidden" id="previsao_fim" name="previsao_fim" value='<?php echo $estagioAluno->getPrevisaoFim(); ?>'>
 

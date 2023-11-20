@@ -7,7 +7,7 @@
     <title>Estágios IFRS - Alunos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <?php include('views/includes/favicons.php');?>
+    <?php include('views/includes/favicons.php'); ?>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <i class="fa-solid fa-circle-user"></i>
             Alunos
         </h1>
-        
+
         <a href="aluno.php" class="bg-[#127852] rounded-full p-2 hover:bg-zinc-50
                      text-zinc-50 flex items-center justify-center border-2 border-[#127852] hover:text-[#127852]
                      mb-2 mr-8 self-end transition duration-300 ease-in-out">
@@ -33,7 +33,7 @@
         <div class="relative overflow-x-auto w-11/12 border-gray-200 border-1 rounded-md border-gray-200 border-1 border-x border-y rounded-xl">
             <table class="border-y-[1px] border-y-zinc-300 px-4">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
-                     <tr class="border-b">
+                    <tr class="border-b">
                         <th class="px-6 py-3 capitalize w-min">Matrícula</th>
                         <th class="px-6 py-3 capitalize w-min">Id do aluno</th>
                         <th class="px-6 py-3 capitalize w-min">Nome</th>

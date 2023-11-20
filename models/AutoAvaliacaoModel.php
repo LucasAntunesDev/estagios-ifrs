@@ -13,8 +13,8 @@ final class AutoAvaliacaoModel extends Model {
 
         $array = [];
 
-        foreach($data as $row) {
-            $array[] = new DocumentosVO($row['id'], $row['url']);            
+        foreach ($data as $row) {
+            $array[] = new DocumentosVO($row['id'], $row['url']);
         }
 
         return $array;
@@ -25,7 +25,7 @@ final class AutoAvaliacaoModel extends Model {
         $query = "SELECT * FROM autoavaliacao WHERE id = :id";
         $binds = [":id" => $vo->getId()];
         $data = $db->select($query, $binds);
-        
+
         if (count($data) == 0) {
             return null;
         }
@@ -48,7 +48,6 @@ final class AutoAvaliacaoModel extends Model {
         } else {
             return null;
         }
-
     }
 
     public function update($vo) {
@@ -59,13 +58,12 @@ final class AutoAvaliacaoModel extends Model {
             ":id" => $vo->getId()
         ];
 
-        if(empty($vo->getUrl())){
+        if (empty($vo->getUrl())) {
             return false;
         }
 
         $query = "UPDATE autoavaliacao SET url = :url WHERE id = :id";
         return $db->execute($query, $binds);
-
     }
 
     public function delete($vo) {
@@ -77,8 +75,5 @@ final class AutoAvaliacaoModel extends Model {
         ];
 
         return $db->execute($query, $binds);
-
     }
-
-
 }
