@@ -70,12 +70,12 @@
                         echo '<td class="p-1 w-min">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getNumeroEncaminhamentos() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getSituacaoEstagio() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getDataInicio() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getPrevisaoFim() . '</td>';
+                        echo '<td class="p-1 w-min date">' . $estagioAluno->getDataInicio() . '</td>';
+                        echo '<td class="p-1 w-min date">' . $estagioAluno->getPrevisaoFim() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdOrientador() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoorientador() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdSupervisor() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getDataFim() . '</td>';
+                        echo '<td class="p-1 w-min date">' . $estagioAluno->getDataFim() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdArea() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdAvaliacaoEmpresa() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdTermoCompromisso() . '</td>';
