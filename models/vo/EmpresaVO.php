@@ -3,13 +3,13 @@
 namespace Model\VO;
 
 final class EmpresaVO extends VO {
-    private $id;
-    private $nome;
-    private $endereco;
-    private $telefone;
-    private $email;
-    private $cnpj;
-    private $id_cidade;
+    protected $id;
+    protected $nome;
+    protected $endereco;
+    protected $telefone;
+    protected $email;
+    protected $cnpj;
+    protected $id_cidade;
     public function __construct(
         $id = 0,
         $nome = '',
