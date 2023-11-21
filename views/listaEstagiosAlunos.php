@@ -65,7 +65,7 @@
                         echo '<td class="p-1 w-min">' . $estagioAluno->getId() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdAluno() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdEmpresa() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getCargaHoraria() . '</td>';
+                        echo '<td class="p-1 w-min">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoordenador() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getNumeroEncaminhamentos() . '</td>';
