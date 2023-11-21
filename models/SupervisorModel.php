@@ -18,7 +18,7 @@ final class SupervisorModel extends Model {
                 $row['nome'],
                 $row['telefone'],
                 $row['email'],
-                $row['empresa_numero_convenio'],
+                $row['id_empresa'],
                 $row['cargo']
             );
             array_push($array, $vo);
@@ -39,20 +39,20 @@ final class SupervisorModel extends Model {
             $data[0]['nome'],
             $data[0]['telefone'],
             $data[0]['email'],
-            $data[0]['empresa_numero_convenio'],
+            $data[0]['id_empresa'],
             $data[0]['cargo']
         );
     }
 
     public function insert($vo = null) {
         $db = new Database();
-        $query = 'INSERT INTO supervisor (nome, telefone, email, empresa_numero_convenio, cargo) VALUES ( :nome, :telefone, :email, :empresa_numero_convenio, :cargo)';
+        $query = 'INSERT INTO supervisor (nome, telefone, email, id_empresa, cargo) VALUES ( :nome, :telefone, :email, :id_empresa, :cargo)';
 
         $binds = [
             ':nome' => $vo->getNome(),
             ':telefone' => $vo->getTelefone(),
             ':email' => $vo->getEmail(),
-            ':empresa_numero_convenio' => $vo->getEmpresa_numero_convenio(),
+            ':id_empresa' => $vo->getEmpresa_numero_convenio(),
             ':cargo' => $vo->getCargo()
         ];
 
@@ -69,7 +69,7 @@ final class SupervisorModel extends Model {
                     nome = :nome,
                     telefone = :telefone,
                     email = :email,
-                    empresa_numero_convenio = :empresa_numero_convenio,
+                    id_empresa = :id_empresa,
                     cargo = :cargo
                     WHERE id = :id';
 
@@ -77,7 +77,7 @@ final class SupervisorModel extends Model {
             ':nome' => $vo->getNome(),
             ':telefone' => $vo->Telefone(),
             ':email' => $vo->getEmail(),
-            ':empresa_numero_convenio' => $vo->getEmpresa_numero_convenio(),
+            ':id_empresa' => $vo->getEmpresa_numero_convenio(),
             ':cargo' => $vo->getCargo(),
             ':id' => $vo->getId()
         ];

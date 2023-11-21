@@ -12,7 +12,7 @@ final class SupervisorController extends Controller {
         $model  = new SupervisorModel();
         $data = $model->selectAll();
 
-        $this->loadView('listaSupervisor', [
+        $this->loadView('listaSupervisores', [
             'supervisores' => $data
         ]);
     }
@@ -38,7 +38,7 @@ final class SupervisorController extends Controller {
             $_POST['nome'],
             $_POST['telefone'],
             $_POST['email'],
-            $_POST['empresa_numero_convenio'],
+            $_POST['id_empresa'],
             $_POST['cargo']
         );
         $model = new SupervisorModel();

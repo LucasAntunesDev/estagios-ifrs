@@ -6,15 +6,15 @@ final class SupervisorVO extends VO {
     private $nome;
     private $telefone;
     private $email;
-    private $empresa_numero_convenio;
+    private $id_empresa;
     private $cargo;
 
-    public function __construct($id = 0, $nome = '', $telefone = '', $email = '', $empresa_numero_convenio = '' , $cargo = '') {
+    public function __construct($id = 0, $nome = '', $telefone = '', $email = '', $id_empresa = '' , $cargo = '') {
         parent::__construct($id);
         $this->nome = $nome;
         $this->telefone = $telefone;  
         $this->email = $email;
-        $this->empresa_numero_convenio = $empresa_numero_convenio;
+        $this->id_empresa = $id_empresa;
         $this->cargo = $cargo;
     }
 
@@ -43,12 +43,12 @@ final class SupervisorVO extends VO {
         $this->email = $email;
     }
 
-    public function getEmpresa_numero_convenio() {
-        return $this->empresa_numero_convenio;
+    public function getIdEmpresa() {
+        return $this->id_empresa;
     }
 
-    public function setEmpresa_numero_convenio($empresa_numero_convenio) {
-        $this->empresa_numero_convenio= $empresa_numero_convenio;
+    public function setIdEmpresa($id_empresa) {
+        $this->id_empresa= $id_empresa;
     }
 
     public function getCargo() {

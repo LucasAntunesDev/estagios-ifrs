@@ -50,7 +50,7 @@
                         echo '<td class="border-[1px] border-zinc-300 px-4">' . $supervisor->getNome() . '</td>';
                         echo '<td class="border-[1px] border-zinc-300 px-4">' . $supervisor->getTelefone() . '</td>';
                         echo '<td class="border-[1px] border-zinc-300 px-4">' . $supervisor->getEmail() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $supervisor->getEmpresa_numero_convenio() . '</td>';
+                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $supervisor->getIdEmpresa() . '</td>';
                         echo '<td class="border-[1px] border-zinc-300 px-4">' . $supervisor->getCargo() . '</td>';
                         echo '<td class="border-[1px]  px-4 flex flex-col">';
 
