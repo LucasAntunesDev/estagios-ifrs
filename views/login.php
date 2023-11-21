@@ -83,7 +83,7 @@
 
             <!-- <div class="w-[-webkit-fill-available]"> -->
 
-            <img src="views/assets/estagios_foto.png" class="h-96">
+            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96">
             <!-- </div> -->
         </div>
     </div>
