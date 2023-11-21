@@ -57,7 +57,7 @@
                         echo '<td class="p-1 w-min">' . $aluno->getMatricula() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getId() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getNome() . '</td>';
-                        echo '<td class="p-1 w-min date">' . $aluno->getDataNascimento() . '</td>';
+                        echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($aluno->getDataNascimento())) . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getEmail() . '</td>';
                         echo '<td class="p-1 w-min cpf">' . $aluno->getCPF() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getRG() . '</td>';
