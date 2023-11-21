@@ -30,7 +30,7 @@
 
         </a>
 
-        <div class="relative overflow-x-auto w-11/12 border-gray-200 border-1 rounded-md border-gray-200 border-1 border-x border-y rounded-xl">
+        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border-1 rounded-md border-gray-200 border-1 border-x border-y rounded-xl">
             <table class="border-y-[1px] border-y-zinc-300 px-4">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
