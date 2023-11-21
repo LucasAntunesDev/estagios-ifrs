@@ -34,7 +34,7 @@
                 citudin a. Donec volutpat sem in urna ornare vulputate.
             </p>
 
-            <a href="estagioAluno.php">
+            <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?>>
                 <button type="submit" class="hover:bg-[#127852] rounded-full py-2 px-16
                     bg-none border-2 border-[#127852] text-[#C62126] hover:text-zinc-50 font-bold
                     capitalize mt-10 w-fit mx-auto">
