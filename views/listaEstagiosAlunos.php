@@ -69,7 +69,7 @@
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoordenador() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getNumeroEncaminhamentos() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getSituacaoEstagio() . '</td>';
+                        echo '<td class="p-1 w-min capitalize">' . $estagioAluno->getSituacaoEstagio() . '</td>';
                         echo '<td class="p-1 w-min date">' . $estagioAluno->getDataInicio() . '</td>';
                         echo '<td class="p-1 w-min date">' . $estagioAluno->getPrevisaoFim() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdOrientador() . '</td>';
