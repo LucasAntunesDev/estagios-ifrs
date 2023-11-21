@@ -89,12 +89,7 @@ final class EstagioAlunoModel extends Model {
         id_coorientador,
         id_supervisor,
         data_fim,
-        id_area,
-        id_avaliacao_empresa,
-        id_termo_compromisso,
-        id_plano_atividades,
-        id_autoavaliacao,
-        id_tcc)
+        id_area)
         VALUES 
         (:id,
         :id_aluno,
@@ -110,12 +105,7 @@ final class EstagioAlunoModel extends Model {
         :id_coorientador,
         :id_supervisor,
         :data_fim,
-        :id_area,
-        :id_avaliacao_empresa,
-        :id_termo_compromisso,
-        :id_plano_atividades,
-        :id_autoavaliacao,
-        :id_tcc)';
+        :id_area)';
 
         $binds = [
             ':id' =>   $vo->getId(),
@@ -132,12 +122,7 @@ final class EstagioAlunoModel extends Model {
             ':id_coorientador' =>  $vo->getIdCoorientador(),
             ':id_supervisor' =>  $vo->getIdSupervisor(),
             ':data_fim' =>  $vo->getDataFim(),
-            ':id_area' =>  $vo->getIdArea(),
-            ':id_avaliacao_empresa' =>  $vo->getIdAvaliacaoEmpresa(),
-            ':id_termo_compromisso' =>  $vo->getIdTermoCompromisso(),
-            ':id_plano_atividades' =>  $vo->getIdPlanoAtividades(),
-            ':id_autoavaliacao' =>  $vo->getIdAutoavaliacao(),
-            ':id_tcc' =>  $vo->getIdTCC()
+            ':id_area' =>  $vo->getIdArea()
         ];
 
         $success = $db->execute($query, $binds);
