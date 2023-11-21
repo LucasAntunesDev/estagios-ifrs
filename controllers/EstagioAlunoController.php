@@ -5,31 +5,17 @@ namespace Controller;
 use Embed\Http\Redirects;
 use Model\EstagioAlunoModel;
 use Model\VO\EstagioAlunoVO;
+use Model\AlunoModel;
+use Model\EmpresaModel;
+use Model\SupervisorModel;
+use Model\ProfessorModel;
+use Model\AreaModel;
 
-#id	
-#id_aluno	
-#id_empresa	
-#carga_horaria	
-#id_coordenador	
-#tipo_processo_estagio	
-#encaminhamentos	
-#situacao_estagio	
-#data_inicio	
-#previsao_fim	
-#id_orientador	
-#id_coorientador	
-#id_supervisor	
-#data_fim	
-#id_area	
-#id_avaliacao_empresa	
-#id_termo_compromisso	
-#id_plano_atividades	
-#id_autoavaliacao	
-#id_tcc
-
-final class EstagioAlunoController extends Controller {
-    public function list() {
-        $model  = new EstagioAlunoModel();
+final class EstagioAlunoController extends Controller
+{
+    public function list()
+    {
+        $model = new EstagioAlunoModel();
         $data = $model->selectAll();
 
         $this->loadView('listaEstagiosAlunos', [
@@ -37,7 +23,8 @@ final class EstagioAlunoController extends Controller {
         ]);
     }
 
-    public function get() {
+    public function get()
+    {
         $id = $_GET['id'] ?? null;
 
         if (empty($id)) {
@@ -47,10 +34,34 @@ final class EstagioAlunoController extends Controller {
             $vo = $model->selectOne(new EstagioAlunoVO($id));
         }
 
-        $this->loadView('formEstagioAluno', ['estagioAluno' => $vo]);
+        $model= new AlunoModel();
+        $alunos = $model->selectAll();
+
+        $model= new EmpresaModel();
+        $empresas = $model->selectAll();
+        
+        $model= new SupervisorModel();
+        $supervisores = $model->selectAll();
+        
+        $model= new ProfessorModel();
+        $professores = $model->selectAll();
+        
+        
+        $model= new AreaModel();
+        $areas = $model->selectAll();
+
+        $this->loadView('formEstagioAluno', [
+            'estagioAluno' => $vo,
+            'alunos' => $alunos,
+            'empresas' => $empresas,
+            'professores' => $professores,
+            'supervisores' => $supervisores,
+            'areas' => $areas
+        ]);
     }
 
-    public function save() {
+    public function save()
+    {
         $id = $_POST['id'];
         $vo = new EstagioAlunoVO(
             $_POST['id'],
@@ -78,16 +89,18 @@ final class EstagioAlunoController extends Controller {
 
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
 
-        $this->redirect('estagioAlunos.php');
+        $this->redirect('estagiosAlunos.php');
     }
 
-    public function remove() {
-        if (empty($_GET['id'])) die('Necessário passar o ID');
+    public function remove()
+    {
+        if (empty($_GET['id']))
+            die('Necessário passar o ID');
 
         $model = new EstagioAlunoModel();
 
         $return = $model->delete(new EstagioAlunoVO($_GET['id_estagio_aluno']));
 
-        $this->redirect('estagioAlunos.php');
+        $this->redirect('estagiosAlunos.php');
     }
 }
