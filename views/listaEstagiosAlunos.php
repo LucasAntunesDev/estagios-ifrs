@@ -60,11 +60,12 @@
 
                 <tbody>
                     <?php
+ 
                     foreach ($estagiosAlunos as $estagioAluno) {
                         echo '<tr class="border-1 border-gray-200 border-b">';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getId() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdAluno() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdEmpresa() . '</td>';
+                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeAluno(). ' ' .$estagioAluno->getIdAluno() . '</td>';
+                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeEmpresa() . ' ' .$estagioAluno->getIdEmpresa() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoordenador() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
