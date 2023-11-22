@@ -22,6 +22,12 @@ final class EstagioAlunoVO extends VO {
     private $id_plano_atividades;
     private $id_autoavaliacao;
     private $id_tcc;
+    private $nome_aluno;
+    private $nome_empresa;
+    private $nome_professor;
+    private $nome_supervisor;
+    private $nome_area;
+
 
     public function __construct(
         $id = 0,
@@ -43,7 +49,8 @@ final class EstagioAlunoVO extends VO {
         $id_termo_compromisso = null,
         $id_plano_atividades = null,
         $id_autoavaliacao = null,
-        $id_tcc = null
+        $id_tcc = null,
+        $nome_aluno = ''
     ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
@@ -65,8 +72,9 @@ final class EstagioAlunoVO extends VO {
         $this->id_plano_atividades = $id_plano_atividades;
         $this->id_autoavaliacao = $id_autoavaliacao;
         $this->id_tcc = $id_tcc;
+        $this->nome_aluno = $nome_aluno;
     }
-    
+
     public function getIdAluno() {
         return $this->id_aluno;
     }
@@ -217,5 +225,42 @@ final class EstagioAlunoVO extends VO {
 
     public function setIdTCC($id_tcc) {
         $this->id_tcc = $id_tcc;
+    }
+
+    public function getNomeAluno() {
+        return $this->nome_aluno;
+    }
+    public function setNomeAluno($nome_aluno) {
+        $this->nome_aluno = $nome_aluno;
+    }
+    public function getNomeEmpresa() {
+        return $this->nome_empresa;
+    }
+
+    public function setNomeEmpresa($nome_empresa) {
+        $this->nome_empresa = $nome_empresa;
+    }
+    public function getNomeProfessor() {
+        return $this->nome_professor;
+    }
+
+    public function setNomeProfessor($nome_professor) {
+        $this->nome_professor = $nome_professor;
+    }
+
+    public function getNomeSupervisor() {
+        return $this->nome_supervisor;
+    }
+
+    public function setNomeSupervisor($nome_supervisor) {
+        $this->nome_supervisor = $nome_supervisor;
+    }
+
+    public function getNomeArea() {
+        return $this->nome_area;
+    }
+
+    public function setNomeArea($nome_area) {
+        $this->nome_area = $nome_area;
     }
 }
