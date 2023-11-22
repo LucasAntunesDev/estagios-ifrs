@@ -31,7 +31,8 @@ final class EstagioAlunoModel extends Model {
                             aluno.nome as nome_aluno,
                             empresa.nome as nome_empresa,
                             professor.nome as nome_professor,
-                            supervisor.nome as supervisor_nome,
+                            professor.nome as nome_orientador,
+                            supervisor.nome as nome_supervisor,
                             area.nome as nome_area
                             FROM estagio_aluno
                             JOIN aluno
@@ -47,9 +48,9 @@ final class EstagioAlunoModel extends Model {
                             ');
 
         $array = [];
-        echo '<pre>';
-        var_dump($data);
-        echo '</pre>';
+        // echo '<pre>';
+        // var_dump($data);
+        // echo '</pre>';
         foreach ($data as $row) {
             $vo = new EstagioAlunoVO(
                 $row['id'],
