@@ -50,7 +50,11 @@ final class EstagioAlunoVO extends VO {
         $id_plano_atividades = null,
         $id_autoavaliacao = null,
         $id_tcc = null,
-        $nome_aluno = ''
+        $nome_aluno = '',
+        $nome_empresa = '',
+        $nome_professor = '',
+        $nome_supervisor = '',
+        $nome_area = ''
     ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
@@ -73,6 +77,10 @@ final class EstagioAlunoVO extends VO {
         $this->id_autoavaliacao = $id_autoavaliacao;
         $this->id_tcc = $id_tcc;
         $this->nome_aluno = $nome_aluno;
+        $this->nome_empresa = $nome_empresa;
+        $this->nome_professor = $nome_professor;
+        $this->nome_supervisor = $nome_supervisor;
+        $this->nome_area = $nome_area;
     }
 
     public function getIdAluno() {
