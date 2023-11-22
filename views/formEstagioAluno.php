@@ -1,16 +1,3 @@
-<?php
-
-use Util\Database;
-
-$db = new Database();
-$data_alunos = $db->select('SELECT * FROM aluno');
-$data_empresas = $db->select('SELECT * FROM empresa');
-$data_professores = $db->select('SELECT * FROM professor');
-$data_supervisores = $db->select('SELECT * FROM supervisor');
-$data_areas = $db->select('SELECT * FROM area');
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -80,10 +67,11 @@ $data_areas = $db->select('SELECT * FROM area');
                         <div class="relative ">
                             <select id="id_aluno" name="id_aluno" value="id_aluno" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800 w-72">
+                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800 w-72 pr-10">
                                 <?php
-                                foreach ($data_alunos as $alunos => $aluno) {
-                                    echo "<option value='$aluno[0]'>$aluno[2]</option>";
+                                foreach ($alunos as $aluno) {
+                                    $selected = ($aluno->getId() == $estagioAluno->getIdAluno()) ? "selected" : "";
+                                    echo "<option value='" . $aluno->getId() . "' " . $selected . "> " . $aluno->getNome() . "</option>";
                                 }
                                 ?>
                             </select>
@@ -106,10 +94,9 @@ $data_areas = $db->select('SELECT * FROM area');
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                     <?php
-                                    foreach ($data_empresas as $empresas => $empresa) {
-                                        echo "<option value='$empresa[0]'>$empresa[1]</option>";
-                                        // echo '<option value="'.$empresa[0]. '"'. '.>$empresa[1]</option>';
-                                        // $estagioAluno->getIdOrientador() == 'não iniciado' ? 'selected' : ''
+                                    foreach ($empresas as $empresa) {
+                                        $selected = ($empresa->getId() == $estagioAluno->getIdEmpresa()) ? "selected" : "";
+                                        echo "<option value='" . $empresa->getId() . "' " . $selected . "> " . $empresa->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -155,8 +142,9 @@ $data_areas = $db->select('SELECT * FROM area');
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                     <?php
-                                    foreach ($data_areas as $areas => $area) {
-                                        echo "<option value='$area[0]'>$area[1]</option>";
+                                    foreach ($areas as $area) {
+                                        $selected = ($area->getId() == $estagioAluno->getIdArea()) ? "selected" : "";
+                                        echo "<option value='" . $area->getId() . "' " . $selected . "> " . $area->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -207,8 +195,9 @@ $data_areas = $db->select('SELECT * FROM area');
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                         <?php
-                                        foreach ($data_professores as $coordenadores => $coordenador) {
-                                            echo "<option value='$coordenador[0]'>$coordenador[1] </option>";
+                                        foreach ($coordenadores as $coordenador) {
+                                            $selected = ($coordenador->getId() == $estagioAluno->getIdCoordenador()) ? "selected" : "";
+                                            echo "<option value='" . $coordenador->getId() . "' " . $selected . "> " . $coordenador->getNome() . "</option>";
                                         }
                                         ?>
                                     </select>
@@ -231,9 +220,9 @@ $data_areas = $db->select('SELECT * FROM area');
 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                     <?php
-                                    foreach ($data_professores as $orientadores => $orientador) {
-                                        echo "<option value='$orientador[0]' >$orientador[1] </option>";
-                                        // $estagioAluno->getIdOrientador() == 'não iniciado' ? 'selected' : ''
+                                    foreach ($orientadores as $orientador) {
+                                        $selected = ($orientador->getId() == $estagioAluno->getIdOrientador()) ? "selected" : "";
+                                        echo "<option value='" . $orientador->getId() . "' " . $selected . "> " . $orientador->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -255,8 +244,9 @@ focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                     <?php
-                                    foreach ($data_professores as $coorientadores => $coorientador) {
-                                        echo "<option value='$coorientador[0]'>$coorientador[1]</option>";
+                                    foreach ($coorientadores as $coorientador) {
+                                        $selected = ($coorientador->getId() == $estagioAluno->getIdCoorientador()) ? "selected" : "";
+                                        echo "<option value='" . $coorientador->getId() . "' " . $selected . "> " . $coorientador->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -278,8 +268,9 @@ focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                     <?php
-                                    foreach ($data_supervisores as $supervisores => $supervisor) {
-                                        echo "<option value='$supervisor[0]'>$supervisor[1]</option>";
+                                    foreach ($supervisores as $supervisor) {
+                                        $selected = ($supervisor->getId() == $estagioAluno->getIdSupervisor()) ? "selected" : "";
+                                        echo "<option value='" . $supervisor->getId() . "' " . $selected . "> " . $supervisor->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -298,11 +289,11 @@ focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
                 </div>
 
-                <input type="hidden" id="id_avaliacao_empresa" name="id_avaliacao_empresa" value=" <?php echo $estagioAluno->getIdAvaliacaoEmpresa(); ?>">
-                <input type="hidden" id="id_termo_compromisso" name="id_termo_compromisso" value=" <?php echo $estagioAluno->getIdTermoCompromisso(); ?>">
-                <input type="hidden" id="id_plano_atividades" name="id_plano_atividades" value=" <?php echo $estagioAluno->getIdPlanoAtividades(); ?>">
-                <input type="hidden" id="id_autoavaliacao" name="id_autoavaliacao" value=" <?php echo $estagioAluno->getIdAutoavaliacao(); ?>">
-                <input type="hidden" id="id_tcc" name="id_tcc" value=" <?php echo $estagioAluno->getIdTCC(); ?>">
+                <input type="hidden" id="id_avaliacao_empresa" name="id_avaliacao_empresa" value="<?php echo $estagioAluno->getIdAvaliacaoEmpresa(); ?>">
+                <input type="hidden" id="id_termo_compromisso" name="id_termo_compromisso" value="<?php echo $estagioAluno->getIdTermoCompromisso(); ?>">
+                <input type="hidden" id="id_plano_atividades" name="id_plano_atividades" value="<?php echo $estagioAluno->getIdPlanoAtividades(); ?>">
+                <input type="hidden" id="id_autoavaliacao" name="id_autoavaliacao" value="<?php echo $estagioAluno->getIdAutoavaliacao(); ?>">
+                <input type="hidden" id="id_tcc" name="id_tcc" value="<?php echo $estagioAluno->getIdTCC(); ?>">
 
                 <button type="submit" class="class=' bg-[#127852] rounded-md py-1 px-20 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] 
