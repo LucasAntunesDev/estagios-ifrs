@@ -23,6 +23,11 @@ final class EstagioAlunoModel extends Model {
                             estagio_aluno.id_supervisor,
                             estagio_aluno.data_fim,
                             estagio_aluno.id_area,
+                            estagio_aluno.id_avaliacao_empresa,
+                            estagio_aluno.id_termo_compromisso,
+                            estagio_aluno.id_plano_atividades,
+                            estagio_aluno.id_autoavaliacao,
+                            estagio_aluno.id_tcc,
                             aluno.nome as nome_aluno,
                             empresa.nome as nome_empresa,
                             professor.nome as nome_professor,
@@ -42,7 +47,9 @@ final class EstagioAlunoModel extends Model {
                             ');
 
         $array = [];
-
+        echo '<pre>';
+        var_dump($data);
+        echo '</pre>';
         foreach ($data as $row) {
             $vo = new EstagioAlunoVO(
                 $row['id'],
