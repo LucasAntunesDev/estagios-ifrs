@@ -73,9 +73,9 @@
                         echo '<td class="p-1 w-min capitalize">' . $estagioAluno->getSituacaoEstagio() . '</td>';
                         echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
                         echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdOrientador() . '</td>';
+                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeProfessor() . ' ' .$estagioAluno->getIdOrientador() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoorientador() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdSupervisor() . '</td>';
+                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeSupervisor() . ' ' .$estagioAluno->getIdSupervisor() . '</td>';
                         echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdArea() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdAvaliacaoEmpresa() . '</td>';
