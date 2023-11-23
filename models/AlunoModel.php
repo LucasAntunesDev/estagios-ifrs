@@ -8,7 +8,27 @@ use Util\Database;
 final class AlunoModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM aluno');
+        $data = $db->select('SELECT 
+                                aluno.id,
+                                aluno.matricula,
+                                aluno.nome, 
+                                aluno.datanasc,
+                                aluno.email,
+                                aluno.cpf,
+                                aluno.rg, 
+                                aluno.endereco,
+                                aluno.telefone,
+                                aluno.ano_turma,
+                                aluno.id_cidade,
+                                aluno.id_curso,
+                                curso.nome as nome_curso,
+                                cidade.nome as nome_cidade
+                                FROM aluno
+                                JOIN curso
+                                ON aluno.id_curso = curso.id
+                                JOIN cidade
+                                ON aluno.id_cidade = cidade.id
+                                ');
 
         $array = [];
 
@@ -25,7 +45,9 @@ final class AlunoModel extends Model {
                 $row['telefone'],
                 $row['ano_turma'],
                 $row['id_cidade'],
-                $row['id_curso']
+                $row['id_curso'],
+                $row['nome_curso'],
+                $row['nome_cidade']
             );
             array_push($array, $vo);
         }

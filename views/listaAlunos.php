@@ -30,7 +30,8 @@
 
         </a>
 
-        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border-1 rounded-md border-gray-200 border-1 border-x border-y rounded-xl">
+        <div class="relative overflow-x-auto border-gray-200 border-1 rounded-md border-gray-200 border-1 border-x border-y rounded-xl
+        2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12">
             <table class="border-y-[1px] border-y-zinc-300 px-4">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
@@ -43,15 +44,16 @@
                         <th class="px-6 py-3 capitalize w-min">RG</th>
                         <th class="px-6 py-3 capitalize w-min">Endereco</th>
                         <th class="px-6 py-3 capitalize w-min">Telefone</th>
-                        <th class="px-6 py-3 capitalize w-min">Ano Turma</th>
-                        <th class="px-6 py-3 capitalize w-min">Id Cidade</th>
-                        <th class="px-6 py-3 capitalize w-min">Id Curso</th>
+                        <th class="px-6 py-3 capitalize w-min">Turma</th>
+                        <th class="px-6 py-3 capitalize w-min">Cidade</th>
+                        <!-- <th class="px-6 py-3 capitalize w-min">Id Curso</th> -->
                         <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <?php
+                    
                     foreach ($alunos as $aluno) {
                         echo '<tr class="border-b">';
                         echo '<td class="p-1 w-min">' . $aluno->getMatricula() . '</td>';
@@ -63,9 +65,9 @@
                         echo '<td class="p-1 w-min">' . $aluno->getRG() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getEndereco() . '</td>';
                         echo '<td class="p-1 w-min phone_with_ddd">' . $aluno->getTelefone() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getAnoTurma() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getIdCidade() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getIdCurso() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getAnoTurma() . 'º ' . $aluno->getNomeCurso(). '</td>';
+                        // echo '<td class="p-1 w-min">' . $aluno->getNomeCurso() . ' ' .$aluno->getIdCurso() . '</td>';
+                        echo '<td class="p-1 w-min">' . $aluno->getNomeCidade() . ' ' .$aluno->getIdCidade() . '</td>';
                         echo '<td class=" px-4 flex flex-col">';
 
                         echo "<a href='Aluno.php?id=" . $aluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50

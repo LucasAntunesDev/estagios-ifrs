@@ -15,7 +15,7 @@ final class AlunoVO extends VO {
     private $id_cidade;
     private $id_curso;
     private $nome_curso;
-    private $nome_turma;
+    // private $nome_turma;
     private $nome_cidade;
 
     public function __construct(
@@ -32,7 +32,7 @@ final class AlunoVO extends VO {
         $id_cidade = 0,
         $id_curso = 0,
         $nome_curso = '',
-        $nome_turma = '',
+        // $nome_turma = '',
         $nome_cidade = ''
     ) {
         parent::__construct($id);
@@ -48,7 +48,7 @@ final class AlunoVO extends VO {
         $this->id_cidade = $id_cidade;
         $this->id_curso = $id_curso;
         $this->nome_curso   = $nome_curso;
-        $this->nome_turma = $nome_turma;
+        // $this->nome_turma = $nome_turma;
         $this->nome_cidade = $nome_cidade;
     }
 
@@ -144,13 +144,13 @@ final class AlunoVO extends VO {
         $this->nome_curso = $nome_curso;
     }
 
-    public function getNomeTurma() {
-        return $this->nome_turma;
-    }
+    // public function getNomeTurma() {
+    //     return $this->nome_turma;
+    // }
 
-    public function setNomeTurma($nome_turma) {
-        $this->nome_turma = $nome_turma;
-    }
+    // public function setNomeTurma($nome_turma) {
+    //     $this->nome_turma = $nome_turma;
+    // }
 
     public function getNomeCidade() {
         return $this->nome_cidade;

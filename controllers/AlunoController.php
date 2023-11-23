@@ -5,6 +5,8 @@ namespace Controller;
 use Embed\Http\Redirects;
 use Model\AlunoModel;
 use Model\VO\AlunoVO;
+use Model\CursoModel;
+use Model\CidadeModel;
 
 
 final class AlunoController extends Controller {
@@ -28,7 +30,17 @@ final class AlunoController extends Controller {
             $vo = $model->selectOne(new AlunoVO($id));
         }
 
-        $this->loadView('formAluno', ['aluno' => $vo]);
+        $model  = new CursoModel();
+        $cursos = $model->selectAll();
+        
+        $model  = new CidadeModel();
+        $cidades = $model->selectAll();
+
+        $this->loadView('formAluno', [
+            'aluno' => $vo,
+            'cursos' => $cursos,
+            'cidades' => $cidades
+        ]);
     }
 
     public function save() {
@@ -43,7 +55,7 @@ final class AlunoController extends Controller {
             $_POST['rg'],
             $_POST['endereco'],
             $_POST['telefone'],
-            $_POST['turma'],
+            $_POST['ano_turma'],
             $_POST['id_cidade'],
             $_POST['id_curso']
         );

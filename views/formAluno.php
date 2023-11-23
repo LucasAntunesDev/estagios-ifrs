@@ -1,13 +1,3 @@
-<?php
-
-use Util\Database;
-
-$db = new Database();
-$data_cursos = $db->select('SELECT * FROM curso');
-$data_cidades = $db->select('SELECT * FROM cidade');
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -205,8 +195,9 @@ $data_cidades = $db->select('SELECT * FROM cidade');
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800 w-[-webkit-fill-available]">
                                     <?php
-                                    foreach ($data_cidades as $cidades => $cidade) {
-                                        echo "<option value='$cidade[0]'>$cidade[1]</option>";
+                                    foreach ($cidades as $cidade) {
+                                        $selected = ($cidade->getId() == $aluno->getIdCidade()) ? "selected" : "";
+                                        echo "<option value='" . $cidade->getId() . "' " . $selected . "> " . $cidade->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
@@ -237,10 +228,10 @@ $data_cidades = $db->select('SELECT * FROM cidade');
                         </div>
 
                         <div>
-                            <label for="id_turma" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Turma</label>
+                            <label for="ano_turma" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Ano</label>
 
                             <div class="relative">
-                                <input type="text" id="turma" name="turma" value=" <?php echo $aluno->getAnoTurma(); ?>" class="rounded-md 
+                                <input type="number" min="1"  max="3" id="ano_turma" name="ano_turma" value=" <?php echo $aluno->getAnoTurma(); ?>" class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
 
@@ -260,8 +251,9 @@ $data_cidades = $db->select('SELECT * FROM cidade');
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                                     <?php
-                                    foreach ($data_cursos as $cursos => $curso) {
-                                        echo "<option value='$curso[0]'>$curso[1]</option>";
+                                    foreach ($cursos as $curso) {
+                                        $selected = ($curso->getId() == $aluno->getIdCurso()) ? "selected" : "";
+                                        echo "<option value='" . $curso->getId() . "' " . $selected . "> " . $curso->getNome() . "</option>";
                                     }
                                     ?>
                                 </select>
