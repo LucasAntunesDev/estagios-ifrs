@@ -35,21 +35,21 @@
             <table class="min-w-full">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
-                        <th class="px-6 py-3 capitalize w-min">id </th>
-                        <th class="px-6 py-3 capitalize w-min">id aluno </th>
-                        <th class="px-6 py-3 capitalize w-min">id empresa</th>
+                        <!-- <th class="px-6 py-3 capitalize w-min">id </th> -->
+                        <th class="px-6 py-3 capitalize w-min">aluno </th>
+                        <th class="px-6 py-3 capitalize w-min">empresa</th>
                         <th class="px-6 py-3 capitalize w-min">carga horária</th>
-                        <th class="px-6 py-3 capitalize w-min">id coordenador</th>
+                        <th class="px-6 py-3 capitalize w-min">coordenador</th>
                         <th class="px-6 py-3 capitalize w-min">tipo de processo</th>
                         <th class="px-6 py-3 capitalize w-min">encaminhamentos</th>
-                        <th class="px-6 py-3 capitalize w-min">situação</th>
+                        <th class="px-6 py-3 capitalize">situação</th>
                         <th class="px-6 py-3 capitalize w-min">início</th>
                         <th class="px-6 py-3 capitalize w-min">previsão de fim</th>
-                        <th class="px-6 py-3 capitalize w-min">id orientador</th>
-                        <th class="px-6 py-3 capitalize w-min">id coorientador</th>
-                        <th class="px-6 py-3 capitalize w-min">id supervisor</th>
+                        <th class="px-6 py-3 capitalize w-min">orientador</th>
+                        <th class="px-6 py-3 capitalize w-min">coorientador</th>
+                        <th class="px-6 py-3 capitalize w-min">supervisor</th>
                         <th class="px-6 py-3 capitalize w-min">data de fim</th>
-                        <th class="px-6 py-3 capitalize w-min">id da área</th>
+                        <th class="px-6 py-3 capitalize w-min">área</th>
                         <th class="px-6 py-3 capitalize w-min">id avaliação empresa</th>
                         <th class="px-6 py-3 capitalize w-min">id termo de compromisso</th>
                         <th class="px-6 py-3 capitalize w-min">id plano de atividades</th>
@@ -64,21 +64,77 @@
  
                     foreach ($estagiosAlunos as $estagioAluno) {
                         echo '<tr class="border-1 border-gray-200 border-b">';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getId() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeAluno(). ' ' .$estagioAluno->getIdAluno() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeEmpresa() . ' ' .$estagioAluno->getIdEmpresa() . '</td>';
+                        // echo '<td class="p-1 w-min">' . $estagioAluno->getId() . '</td>';
+                        echo '<td class="p-1 w-min">'. $estagioAluno->getNomeAluno() . '
+                                <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                                hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                                    $estagioAluno->getIdAluno() . 
+                                ' </span>
+                            </td>';
+                            echo '<td class="p-1 w-min">'. $estagioAluno->getNomeEmpresa() . '
+                            <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                            hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                                $estagioAluno->getIdEmpresa() . 
+                            ' </span>
+                        </td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoordenador() . '</td>';
+                        echo '<td class="p-1 w-min">'. $estagioAluno->getNomeCoordenador() . '
+                        <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                        hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                            $estagioAluno->getIdCoordenador() . 
+                        ' </span>
+                        </td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getNumeroEncaminhamentos() . '</td>';
-                        echo '<td class="p-1 w-min capitalize">' . $estagioAluno->getSituacaoEstagio() . '</td>';
+                        echo '<td class="p-1 w-min">
+                                <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                                hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' .
+                                     $estagioAluno->getNumeroEncaminhamentos() . 
+                                '</sapn>
+                            </td>';
+                        echo '<td class="p-1 w-max capitalize">
+                            <span class="';
+                                switch ($estagioAluno->getSituacaoEstagio()) {
+                                    case 'em andamento':
+                                        echo'bg-yellow-200 hover:bg-yellow-400 text-yellow-800';
+                                        break;
+                                    case 'finalizado':
+                                        echo'bg-emerald-300 hover:bg-emerald-500 text-emerald-900';
+                                        break;
+                                    default:
+                                    echo 'bg-red-300 hover:bg-red-500 text-red-900';
+                                        break;
+                                }
+                        echo ' rounded-full p-2 block w-max hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                            $estagioAluno->getSituacaoEstagio() . 
+                            '</span>
+                        </td>';
                         echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
                         echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeProfessor() . ' ' .$estagioAluno->getIdOrientador() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdCoorientador() . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getNomeSupervisor() . ' ' .$estagioAluno->getIdSupervisor() . '</td>';
+                        echo '<td class="p-1 w-min">'. $estagioAluno->getNomeOrientador() . '
+                                <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                                hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                                    $estagioAluno->getIdOrientador() . 
+                                ' </span>
+                            </td>';
+                        echo '<td class="p-1 w-min">'. $estagioAluno->getNomeCoorientador() . '
+                        <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                        hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                            $estagioAluno->getIdCoorientador() . 
+                        ' </span>
+                        </td>';
+                        echo '<td class="p-1 w-min">'. $estagioAluno->getNomeSupervisor() . '
+                        <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                        hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                            $estagioAluno->getIdSupervisor() . 
+                        ' </span>
+                        </td>';
                         echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
-                        echo '<td class="p-1 w-min">' . $estagioAluno->getIdArea() . '</td>';
+                        echo '<td class="p-1 w-min">'. $estagioAluno->getNomeArea() . '
+                        <span class="bg-sky-300 py-1 px-3 rounded-md hover:bg-sky-500 text-sky-800
+                        hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
+                            $estagioAluno->getIdArea() . 
+                        ' </span>
+                        </td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdAvaliacaoEmpresa() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdTermoCompromisso() . '</td>';
                         echo '<td class="p-1 w-min">' . $estagioAluno->getIdPlanoAtividades() . '</td>';

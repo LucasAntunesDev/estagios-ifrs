@@ -9,42 +9,47 @@ final class EstagioAlunoModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
         $data = $db->select('SELECT estagio_aluno.id,
-                            estagio_aluno.id_aluno,
-                            estagio_aluno.id_empresa,
-                            estagio_aluno.carga_horaria,
-                            estagio_aluno.id_coordenador,
-                            estagio_aluno.tipo_processo_estagio,
-                            estagio_aluno.numero_encaminhamentos,
-                            estagio_aluno.situacao_estagio,
-                            estagio_aluno.data_inicio,
-                            estagio_aluno.previsao_fim,
-                            estagio_aluno.id_orientador,
-                            estagio_aluno.id_coorientador,
-                            estagio_aluno.id_supervisor,
-                            estagio_aluno.data_fim,
-                            estagio_aluno.id_area,
-                            estagio_aluno.id_avaliacao_empresa,
-                            estagio_aluno.id_termo_compromisso,
-                            estagio_aluno.id_plano_atividades,
-                            estagio_aluno.id_autoavaliacao,
-                            estagio_aluno.id_tcc,
-                            aluno.nome as nome_aluno,
-                            empresa.nome as nome_empresa,
-                            professor.nome as nome_professor,
-                            professor.nome as nome_orientador,
-                            supervisor.nome as nome_supervisor,
-                            area.nome as nome_area
-                            FROM estagio_aluno
-                            JOIN aluno
-                            ON estagio_aluno.id_aluno = aluno.id
-                            JOIN empresa
-                            ON estagio_aluno.id_empresa = empresa.id
-                            JOIN professor
-                            ON estagio_aluno.id_orientador = professor.id
-                            JOIN supervisor
-                            ON estagio_aluno.id_supervisor = supervisor.id
-                            JOIN area
-                            ON estagio_aluno.id_area = area.id
+        estagio_aluno.id_aluno,
+        estagio_aluno.id_empresa,
+        estagio_aluno.carga_horaria,
+        estagio_aluno.id_coordenador,
+        estagio_aluno.tipo_processo_estagio,
+        estagio_aluno.numero_encaminhamentos,
+        estagio_aluno.situacao_estagio,
+        estagio_aluno.data_inicio,
+        estagio_aluno.previsao_fim,
+        estagio_aluno.id_orientador,
+        estagio_aluno.id_coorientador,
+        estagio_aluno.id_supervisor,
+        estagio_aluno.data_fim,
+        estagio_aluno.id_area,
+        estagio_aluno.id_avaliacao_empresa,
+        estagio_aluno.id_termo_compromisso,
+        estagio_aluno.id_plano_atividades,
+        estagio_aluno.id_autoavaliacao,
+        estagio_aluno.id_tcc,
+        aluno.nome as nome_aluno,
+        empresa.nome as nome_empresa,
+        orientador.nome as "nome_orientador",
+        coorientador.nome as "nome_coorientador",
+        coordenador.nome as "nome_coordenador",
+        supervisor.nome as "nome_supervisor",
+        area.nome as nome_area
+        FROM estagio_aluno
+        JOIN aluno
+        ON estagio_aluno.id_aluno = aluno.id
+        JOIN empresa
+        ON estagio_aluno.id_empresa = empresa.id
+        JOIN professor orientador
+        ON estagio_aluno.id_orientador = orientador.id
+        JOIN professor coorientador
+        ON estagio_aluno.id_coorientador = coorientador.id
+        JOIN professor coordenador
+        ON estagio_aluno.id_coordenador = coordenador.id
+        JOIN supervisor
+        ON estagio_aluno.id_supervisor = supervisor.id
+        JOIN area
+        ON estagio_aluno.id_area = area.id
                             ');
 
         $array = [];
@@ -75,7 +80,9 @@ final class EstagioAlunoModel extends Model {
                 $row['id_tcc'],
                 $row['nome_aluno'],
                 $row['nome_empresa'],
-                $row['nome_professor'],
+                $row['nome_coordenador'],
+                $row['nome_orientador'],
+                $row['nome_coorientador'],
                 $row['nome_supervisor'],
                 $row['nome_area']
             );
@@ -178,7 +185,7 @@ final class EstagioAlunoModel extends Model {
         $db = new Database();
 
         $query = 'UPDATE estagio_aluno
-                    SET id = :id
+                    SET
                     id_aluno  =  :id_aluno 
                     id_empresa =  :id_empresa
                     carga_horaria =  :carga_horaria
@@ -201,7 +208,6 @@ final class EstagioAlunoModel extends Model {
                     WHERE id = :id';
 
         $binds = [
-            ':id' =>   $vo->getId(),
             ':id_aluno' =>  $vo->getIdAluno(),
             ':id_empresa' =>  $vo->getIdEmpresa(),
             ':carga_horaria' =>  $vo->getCargaHoraria(),
@@ -220,7 +226,8 @@ final class EstagioAlunoModel extends Model {
             ':id_termo_compromisso' =>  $vo->getIdTermoCompromisso(),
             ':id_plano_atividades' =>  $vo->getIdPlanoAtividades(),
             ':id_autoavaliacao' =>  $vo->getIdAutoavaliacao(),
-            ':id_tcc' =>  $vo->getIdTCC()
+            ':id_tcc' =>  $vo->getIdTCC(),
+            ':id' =>   $vo->getId()
         ];
 
         return $db->execute($query, $binds);
