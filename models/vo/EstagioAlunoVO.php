@@ -24,7 +24,9 @@ final class EstagioAlunoVO extends VO {
     private $id_tcc;
     private $nome_aluno;
     private $nome_empresa;
-    private $nome_professor;
+    private $nome_coordenador ;
+    private $nome_orientador;
+    private $nome_coorientador;
     private $nome_supervisor;
     private $nome_area;
 
@@ -52,7 +54,9 @@ final class EstagioAlunoVO extends VO {
         $id_tcc = null,
         $nome_aluno = '',
         $nome_empresa = '',
-        $nome_professor = '',
+        $nome_coordenador = '',
+        $nome_orientador = '',
+        $nome_coorientador = '',
         $nome_supervisor = '',
         $nome_area = ''
     ) {
@@ -78,7 +82,9 @@ final class EstagioAlunoVO extends VO {
         $this->id_tcc = $id_tcc;
         $this->nome_aluno = $nome_aluno;
         $this->nome_empresa = $nome_empresa;
-        $this->nome_professor = $nome_professor;
+        $this->nome_coordenador  = $nome_coordenador;
+        $this->nome_orientador = $nome_orientador;
+        $this->nome_coorientador = $nome_coorientador;
         $this->nome_supervisor = $nome_supervisor;
         $this->nome_area = $nome_area;
     }
@@ -248,12 +254,28 @@ final class EstagioAlunoVO extends VO {
     public function setNomeEmpresa($nome_empresa) {
         $this->nome_empresa = $nome_empresa;
     }
-    public function getNomeProfessor() {
-        return $this->nome_professor;
+    public function getNomeCoordenador() {
+        return $this->nome_coordenador;
     }
 
-    public function setNomeProfessor($nome_professor) {
-        $this->nome_professor = $nome_professor;
+    public function setNomeCoordenador($nome_coordenador) {
+        $this->nome_coordenador = $nome_coordenador;
+    }
+   
+    public function getNomeOrientador() {
+        return $this->nome_orientador;
+    }
+
+    public function setNomeOrientador($nome_orientador) {
+        $this->nome_orientador = $nome_orientador;
+    }
+   
+    public function getNomeCoorientador() {
+        return $this->nome_coorientador;
+    }
+
+    public function setNomeCoorientador($nome_coorientador) {
+        $this->nome_coorientador = $nome_coorientador;
     }
 
     public function getNomeSupervisor() {

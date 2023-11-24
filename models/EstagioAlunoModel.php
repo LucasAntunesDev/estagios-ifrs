@@ -50,7 +50,7 @@ final class EstagioAlunoModel extends Model {
         ON estagio_aluno.id_supervisor = supervisor.id
         JOIN area
         ON estagio_aluno.id_area = area.id
-                            ');
+        ');
 
         $array = [];
         // echo '<pre>';
