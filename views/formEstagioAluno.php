@@ -119,7 +119,7 @@
 
                         <div>
                             <label for="carga_horaria" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Carga Horaria (em horas)</label>
-                            <input type="number" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
+                            <input type="number" min="200" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                         </div>
