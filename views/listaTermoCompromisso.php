@@ -15,13 +15,13 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#C62126] py-4">
+        <h1 class="font-bold text-4xl text-vermelho py-4">
             <i class="fa-solid fa-circle-user"></i>
             Termo de Compromisso
         </h1>
 
-        <a href="estagioAluno.php" class="bg-[#127852] rounded-full p-2 hover:bg-zinc-50
-                     text-zinc-50 flex items-center justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out
+        <a href="estagioAluno.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
+                     text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
                      mb-2 mr-8 self-end transition duration-300 ease-in-out">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -48,13 +48,13 @@
                         echo '<td class="border-[1px] border-zinc-300 px-4"><a href="uploads/' . $termo->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
                         echo '<td class="p-1 w-min">';
 
-                        echo "<a href='termoCompromisso.php?id=" .  $termo->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>
+                        echo "<a href='termoCompromisso.php?id=" .  $termo->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                        echo "<a href='excluirTermoCompromisso.php?id=" .  $termo->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
-                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126] transition duration-300 ease-in-out'>
+                        echo "<a href='excluirTermoCompromisso.php?id=" .  $termo->getId() . "' class=' bg-vermelho rounded-md py-1 px-4 hover:bg-zinc-50
+                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-vermelho hover:text-vermelho transition duration-300 ease-in-out'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
                         </a>";

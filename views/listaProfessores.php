@@ -14,11 +14,11 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#C62126] py-4">
+        <h1 class="font-bold text-4xl text-vermelho py-4">
             <i class="fa-solid fa-circle-user"></i>
             Professores
         </h1>
-        <a href="professor.php" class="bg-[#127852] rounded-full
+        <a href="professor.php" class="bg-verde-1 rounded-full
          text-zinc-50 shadow-md hover:bg-zinc-50 p-2 flex 
         items-center transition duration-300 ease-in-out mb-2">
 
@@ -50,13 +50,13 @@
                         echo '<td class="border-[1px] border-zinc-300 px-4">' . $professor->getIdArea() . '</td>';
                         echo '<td class="border-[1px]  px-4 flex flex-col">';
 
-                        echo "<a href='professor.php?id=" . $professor->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852]'>
+                        echo "<a href='professor.php?id=" . $professor->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                        echo "<a href='excluirprofessor.php?id=" . $professor->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
-                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126]'>
+                        echo "<a href='excluirprofessor.php?id=" . $professor->getId() . "' class=' bg-vermelho rounded-md py-1 px-4 hover:bg-zinc-50
+                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-vermelho hover:text-vermelho'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
                         </a>";

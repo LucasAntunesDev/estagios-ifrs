@@ -15,13 +15,15 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#C62126] py-4">
-            <i class="fa-solid fa-circle-user"></i>
+        <h1 class="font-bold text-4xl text-vermelho py-4 flex items-center gap-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+            </svg>
             Usuários
         </h1>
 
-        <a href="usuario.php" class="bg-[#127852] rounded-full p-2 hover:bg-zinc-50
-                     text-zinc-50 flex items-center justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out
+        <a href="usuario.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
+                     text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
                      mb-2 mr-8 self-end transition duration-300 ease-in-out">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -50,13 +52,13 @@
                         echo '<td class="p-1 w-min">' . $usuario->getLogin() . '</td>';
                         echo '<td class="p-1 w-min">';
 
-                        echo "<a href='Usuario.php?id=" . $usuario->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>
+                        echo "<a href='Usuario.php?id=" . $usuario->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                        echo "<a href='excluirUsuario.php?id=" . $usuario->getId() . "' class=' bg-[#C62126] rounded-md py-1 px-4 hover:bg-zinc-50
-                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#C62126] hover:text-[#C62126] transition duration-300 ease-in-out'>
+                        echo "<a href='excluirUsuario.php?id=" . $usuario->getId() . "' class=' bg-vermelho rounded-md py-1 px-4 hover:bg-zinc-50
+                    text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-vermelho hover:text-vermelho transition duration-300 ease-in-out'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>
                         </a>";
