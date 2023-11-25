@@ -37,7 +37,7 @@ CREATE TABLE `aluno` (
   `rg` varchar(255) NOT NULL,
   `endereco` varchar(255) NOT NULL,
   `telefone` int(11) NOT NULL,
-  `ano_turma` char(1) NOT NULL,
+  `ano_turma` int(1) NOT NULL,
   `id_cidade` int(11) NOT NULL,
   `id_curso` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
