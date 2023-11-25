@@ -24,11 +24,16 @@ final class EstagioAlunoVO extends VO {
     private $id_tcc;
     private $nome_aluno;
     private $nome_empresa;
-    private $nome_coordenador ;
+    private $nome_coordenador;
     private $nome_orientador;
     private $nome_coorientador;
     private $nome_supervisor;
     private $nome_area;
+    private $url_autoavaliacao;
+    private $url_avaliacao_empresa;
+    private $url_termo_compromisso;
+    private $url_plano_atividades;
+    private $url_tcc;
 
 
     public function __construct(
@@ -58,7 +63,12 @@ final class EstagioAlunoVO extends VO {
         $nome_orientador = '',
         $nome_coorientador = '',
         $nome_supervisor = '',
-        $nome_area = ''
+        $nome_area = '',
+        $url_autoavaliacao = '',
+        $url_avaliacao_empresa = '',
+        $url_termo_compromisso = '',
+        $url_plano_atividades = '',
+        $url_tcc = ''
     ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
@@ -87,6 +97,11 @@ final class EstagioAlunoVO extends VO {
         $this->nome_coorientador = $nome_coorientador;
         $this->nome_supervisor = $nome_supervisor;
         $this->nome_area = $nome_area;
+        $this->url_autoavaliacao = $url_autoavaliacao ;
+        $this->url_avaliacao_empresa = $url_avaliacao_empresa;
+        $this->url_termo_compromisso = $url_termo_compromisso;
+        $this->url_plano_atividades = $url_plano_atividades;
+        $this->url_tcc = $url_tcc;
     }
 
     public function getIdAluno() {
@@ -261,7 +276,7 @@ final class EstagioAlunoVO extends VO {
     public function setNomeCoordenador($nome_coordenador) {
         $this->nome_coordenador = $nome_coordenador;
     }
-   
+
     public function getNomeOrientador() {
         return $this->nome_orientador;
     }
@@ -269,7 +284,7 @@ final class EstagioAlunoVO extends VO {
     public function setNomeOrientador($nome_orientador) {
         $this->nome_orientador = $nome_orientador;
     }
-   
+
     public function getNomeCoorientador() {
         return $this->nome_coorientador;
     }
@@ -292,5 +307,45 @@ final class EstagioAlunoVO extends VO {
 
     public function setNomeArea($nome_area) {
         $this->nome_area = $nome_area;
+    }
+
+    public function getUrlAutoavaliacao() {
+        return $this->url_autoavaliacao;
+    }
+
+    public function setUrlAutoavaliacao($url_autoavaliacao) {
+        $this->url_autoavaliacao = $url_autoavaliacao;
+    }
+
+    public function getUrlAvaliacaoEmpresa() {
+        return $this->url_avaliacao_empresa;
+    }
+
+    public function setUrlAvaliacaoEmpresa($url_avaliacao_empresa) {
+        $this->url_avaliacao_empresa = $url_avaliacao_empresa;
+    }
+
+    public function getUrlTermoCompromisso() {
+        return $this->url_termo_compromisso;
+    }
+
+    public function setUrlTermoCompromisso($url_termo_compromisso) {
+        $this->url_termo_compromisso = $url_termo_compromisso;
+    }
+
+    public function getUrlPlanoAtividades() {
+        return $this->url_plano_atividades;
+    }
+
+    public function setUrlPlanoAtividades($url_plano_atividades) {
+        $this->url_plano_atividades = $url_plano_atividades;
+    }
+
+    public function getUrlTcc() {
+        return $this->url_tcc;
+    }
+
+    public function setUrlTcc($url_tcc) {
+        $this->url_tcc = $url_tcc;
     }
 }
