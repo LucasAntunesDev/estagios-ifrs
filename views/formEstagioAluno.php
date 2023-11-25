@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estágios IFRS - Formulário de Estágio</title>
+    <title>Estágios IFRS - Gerenciar Estágio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
@@ -16,16 +16,16 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#C62126] my-4">
+        <h1 class="font-bold text-4xl text-vermelho my-4">
             <i class="fa-solid fa-circle-user"></i>
-            Formulário de Estágio
+            Gerenciar Estágio
         </h1>
 
         <nav class="flex" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-neutral-700 
-                    hover:text-[#C62126]">
+                    hover:text-vermelho">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2">
                             <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                             <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
@@ -39,7 +39,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                         </svg>
                         <a href="estagiosAlunos.php" class="ms-1 text-sm font-medium text-neutral-700 
-                        hover:text-[#C62126] md:ms-2">Estágios</a>
+                        hover:text-vermelho md:ms-2">Estágios</a>
                     </div>
                 </li>
                 <li aria-current="page">
@@ -67,7 +67,7 @@
                         <div class="relative ">
                             <select id="id_aluno" name="id_aluno" value="id_aluno" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800 w-72 pr-10">
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-72 pr-10">
                                 <?php
                                 foreach ($alunos as $aluno) {
                                     $selected = ($aluno->getId() == $estagioAluno->getIdAluno()) ? "selected" : "";
@@ -92,7 +92,7 @@
                             <div class="relative">
                                 <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($empresas as $empresa) {
                                         $selected = ($empresa->getId() == $estagioAluno->getIdEmpresa()) ? "selected" : "";
@@ -114,14 +114,14 @@
                             <label for="data_inicio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Data de Início</label>
                             <input type="date" id="data_inicio" name="data_inicio" value='<?php echo $estagioAluno->getDataInicio(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
                             <label for="carga_horaria" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Carga Horaria (em horas)</label>
                             <input type="number" min="200" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                     </div>
@@ -131,7 +131,7 @@
                             <label for="tipo_processo_estagio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Tipo de Processo</label>
                             <input type="text" id="tipo_processo_estagio" name="tipo_processo_estagio" value=" <?php echo $estagioAluno->getTipoProcessoEstagio(); ?>" class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
@@ -140,7 +140,7 @@
                             <div class="relative">
                                 <select id="id_area" name="id_area" value="id_area" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($areas as $area) {
                                         $selected = ($area->getId() == $estagioAluno->getIdArea()) ? "selected" : "";
@@ -163,8 +163,8 @@
 
                             <div class="relative">
                                 <select name="situacao_estagio" id="situacao_estagio" value="situacao_estagio" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800 w-[-webkit-fill-available]">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
+                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
 
                                     <option value="não iniciado" <?php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' ?>>Não Iniciado</option>
                                     <option value="em andamento" <?php echo $estagioAluno->getSituacaoEstagio() == 'em andamento' ? 'selected' : '' ?>>Em Andamento</option>
@@ -193,7 +193,7 @@
                                 <div class="relative">
                                     <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                         <?php
                                         foreach ($coordenadores as $coordenador) {
                                             $selected = ($coordenador->getId() == $estagioAluno->getIdCoordenador()) ? "selected" : "";
@@ -218,7 +218,7 @@
                             <div class="relative">
                                 <select id="id_orientador" name="id_orientador" value="id_orientador" class="rounded-md 
 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($orientadores as $orientador) {
                                         $selected = ($orientador->getId() == $estagioAluno->getIdOrientador()) ? "selected" : "";
@@ -242,7 +242,7 @@ focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                             <div class="relative">
                                 <select id="id_coorientador" name="id_coorientador" value="id_coorientador" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($coorientadores as $coorientador) {
                                         $selected = ($coorientador->getId() == $estagioAluno->getIdCoorientador()) ? "selected" : "";
@@ -266,7 +266,7 @@ focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                             <div class="relative">
                                 <select id="id_supervisor" name="id_supervisor" value="id_supervisor" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($supervisores as $supervisor) {
                                         $selected = ($supervisor->getId() == $estagioAluno->getIdSupervisor()) ? "selected" : "";
@@ -295,9 +295,9 @@ focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
                 <input type="hidden" id="id_autoavaliacao" name="id_autoavaliacao" value="<?php echo $estagioAluno->getIdAutoavaliacao(); ?>">
                 <input type="hidden" id="id_tcc" name="id_tcc" value="<?php echo $estagioAluno->getIdTCC(); ?>">
 
-                <button type="submit" class="class=' bg-[#127852] rounded-md py-1 px-20 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] 
-                     hover:text-[#127852] transition duration-300 ease-in-out">
+                <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 
+                     hover:text-verde-1 transition duration-300 ease-in-out">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                         <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>

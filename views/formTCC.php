@@ -16,7 +16,7 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-[#C62126] my-4">
+        <h1 class="font-bold text-4xl text-vermelho my-4">
             <i class="fa-solid fa-circle-user"></i>
             Formulário do TCC
         </h1>
@@ -31,14 +31,16 @@
                     <label for="url" class="block text-sm font-medium leading-6 text-gray-900 mb-2">TCC:</label>
                     <input type="file" id="url" name="url" accept="application/pdf" value='<?php echo $TCCS->getUrl(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-[#ef5d58] outline-none text-zinc-800">
+                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                 </div>
 
                 <div>
-                    <button type="submit" class="bg-emerald-600 rounded-full py-1 px-24 hover:bg-emerald-800 text-zinc-50 flex items-center mt-4">
-                        <span class="material-symbols-outlined">
-                            add
-                        </span>
+                    <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 
+                     hover:text-verde-1 transition duration-300 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                        </svg>
                         Salvar
                     </button>
             </form>
