@@ -1,7 +1,5 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 <div class="flex flex-row justify-between items-center px-12 shadow-md gap-x-4 
-h-16 bg-[#127852] text-zinc-50 border-b-[3px] border-[#517174] min-w-screen max-w-[-webkit-fill-available]">
+h-16 bg-verde-1 text-zinc-50 border-b-[3px] border-verde-2 min-w-screen max-w-[-webkit-fill-available]">
 
     <a href="index.php">
         <img src="views/assets/IFRS W.png" alt="Logo do IFRS" class="h-10  
