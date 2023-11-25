@@ -25,7 +25,7 @@
 
                 <fieldset class="flex flex-col 
                 justify-center items-center gap-y-8 ">
-                    <h1 class="font-bold text-5xl text-[#C62126] my-4">
+                    <h1 class="font-bold text-5xl text-vermelho my-4">
                         Login
                     </h1>
 
@@ -36,7 +36,7 @@
                         <div class="relative">
                             <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset 
                         ring-[#127852] focus:ring-2 focus:ring-inset
-                        focus:ring-[#C62126] outline-none text-zinc-800">
+                        focus:ring-vermelho outline-none text-zinc-800">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -52,7 +52,7 @@
                         mb-2">Senha</label>
 
                         <div class="relative">
-                            <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-[#127852] focus:ring-2 focus:ring-inset focus:ring-[#C62126] outline-none text-zinc-800">
+                            <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-[#127852] focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -65,7 +65,7 @@
                     </div>
 
                     <button type="submit" class="bg-[#127852] rounded-full py-1 px-24 
-                    hover:bg-zinc-50 border-2 border-[#127852] hover:text-[#C62126] text-zinc-50 font-bold">
+                    hover:bg-zinc-50 border-2 border-[#127852] hover:text-vermelho text-zinc-50 font-bold">
                         Entrar
                     </button>
                 </fieldset>
