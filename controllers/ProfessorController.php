@@ -12,7 +12,7 @@ final class ProfessorController extends Controller {
         $model  = new ProfessorModel();
         $data = $model->selectAll();
 
-        $this->loadView('listaProfessor', [
+        $this->loadView('listaProfessores', [
             'professores' => $data
         ]);
     }
