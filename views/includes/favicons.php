@@ -24,6 +24,12 @@
                 fontFamily: {
                     'sans': 'Urbanist, sans-serif',
                 },
+                width:{
+                    'available': '-webkit-fill-available',
+                },
+                height:{
+                    'available': '-webkit-fill-available',
+                },
                 colors: {
                     vermelho: '#C62126',
                     'verde': {
