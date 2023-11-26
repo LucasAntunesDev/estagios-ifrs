@@ -8,21 +8,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
-    <?php include('views/includes/favicons.php');?>
+    <?php include('views/includes/favicons.php'); ?>
 </head>
 
-<body class="mb-4">
+<body class="mb-4 scroll-smooth">
 
     <?php
     include('views/includes/menu.php');
     ?>
 
-    <div class="flex flex-row justify-center items-center gap-2 bg-[url('assets/teste-fundo.png')]">
+    <div class="flex flex-row justify-center items-center gap-2 h-screen">
 
         <div class="flex flex-col justify-center text-start w-6/12">
-            <sapn class="font-bold 2xl:text-5xl xl:text-4xl text-vermelho my-4 capitalize 
+            <sapn class="font-bold 2xl:text-6xl xl:text-4xl text-vermelho my-4 capitalize 
             2xl:w-6/12 xl:w-8/12">
-               Começe um estágio, descubra novas Oportunidades
+                Começe um estágio, descubra novas Oportunidades
             </sapn>
 
             <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700">
@@ -35,20 +35,37 @@
             </p>
 
             <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?>>
-                <button type="submit" class="hover:bg-[#127852] rounded-full py-2 px-16
-                    bg-none border-2 border-[#127852] text-vermelho hover:text-zinc-50 font-bold
-                    capitalize mt-10 w-fit mx-auto">
-                    Começar estágio
+                <button type="submit" class="bg-verde-1 rounded-full py-2 px-16
+                    hover:bg-white border-2 border-verde-1 hover:text-vermelho text-zinc-50 font-bold
+                    capitalize mt-10 w-fit self-start transition duration-300 ease-in-out flex items-center
+                    gap-x-1">
+                    <?php if (isset($_SESSION['usuario'])) {
+                        echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      ';
+                        echo 'Começar estágio';
+                    } else {
+                        echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
+                      </svg>
+                      ';
+                        echo 'Fazer Login';
+                    }
+                    ?>
                 </button>
             </a>
 
-            <button class="mt-8" onclick="teste()">
-                <i class="fa-solid fa-chevron-down text-[#127852] text-2xl"></i>
-            </button>
+            <!-- <button class="mt-8 outline-none text-verde-1 mx-auto" onclick="teste()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+                </svg>
+            </button> -->
         </div>
 
-        <div class="flex justify-center items-center" id="login-div" style="height: calc(100vh - 64px);">
-            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96">
+        <div class="flex justify-center items-center" id="login-div">
+            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96 lg:h-[28rem]">
         </div>
 
     </div>
