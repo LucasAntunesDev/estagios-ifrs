@@ -75,7 +75,7 @@
 
                 <div>
                     <label for="id_area" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Área</label>
-                    <input type="number" id="id_area" name="id_area" value=" <?php echo $professor->getIdArea(); ?>" class="rounded-md 
+                    <input type="text" id="id_area" name="id_area" value=" <?php echo $professor->getIdArea(); ?>" class="rounded-md 
                 border-0 py-1.5 px-7 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                 </div>
