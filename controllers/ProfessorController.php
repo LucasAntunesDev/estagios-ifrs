@@ -5,7 +5,7 @@ namespace Controller;
 use Embed\Http\Redirects;
 use Model\ProfessorModel;
 use Model\VO\ProfessorVO;
-
+use Model\AreaModel;
 
 final class ProfessorController extends Controller {
     public function list() {
@@ -28,7 +28,13 @@ final class ProfessorController extends Controller {
             $vo = $model->selectOne(new ProfessorVO($id));
         }
 
-        $this->loadView('formProfessor', ['professor' => $vo]);
+        $model= new AreaModel();
+        $areas = $model->selectAll();
+
+        $this->loadView('formProfessor', [
+            'professor' => $vo,
+            'areas' => $areas
+        ]);
     }
 
     public function save() {

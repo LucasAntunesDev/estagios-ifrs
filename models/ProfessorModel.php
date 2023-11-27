@@ -8,7 +8,13 @@ use Util\Database;
 final class ProfessorModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM professor');
+        $data = $db->select('
+                            SELECT 
+                            professor.id, professor.nome, professor.email, professor.id_area, area.nome as nome_area
+                            FROM professor
+                            JOIN area
+                            ON professor.id_area = area.id
+        ');
 
         $array = [];
 
@@ -17,7 +23,8 @@ final class ProfessorModel extends Model {
                 $row['id'],
                 $row['nome'],
                 $row['email'],
-                $row['id_area']
+                $row['id_area'],
+                $row['nome_area']
             );
             array_push($array, $vo);
         }

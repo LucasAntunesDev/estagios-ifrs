@@ -6,12 +6,14 @@ final class ProfessorVO extends VO {
     private $nome;
     private $email;
     private $idArea;
+    private $nome_area;
 
-    public function __construct($id = 0, $nome = '', $email = '', $idArea = '') {
+    public function __construct($id = 0, $nome = '', $email = '', $idArea = '', $nome_area = '') {
         parent::__construct($id);
         $this->nome = $nome;
         $this->email = $email;
         $this->idArea = $idArea;
+        $this->nome_area = $nome_area;
     }
 
     public function getNome() {
@@ -36,5 +38,13 @@ final class ProfessorVO extends VO {
 
     public function setIdArea($idArea) {
         $this->idArea = $idArea;
+    }
+
+    public function getNomeArea() {
+        return $this->nome_area;
+    }
+
+    public function setNomeArea($nome_area) {
+        $this->nome_area = $nome_area;
     }
 }

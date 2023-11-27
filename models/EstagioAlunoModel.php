@@ -53,9 +53,7 @@ final class EstagioAlunoModel extends Model {
         ');
 
         $array = [];
-        // echo '<pre>';
-        // var_dump($data);
-        // echo '</pre>';
+
         foreach ($data as $row) {
             $vo = new EstagioAlunoVO(
                 $row['id'],

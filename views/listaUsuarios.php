@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estágios IFRS - Usuários</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <?php include('views/includes/favicons.php'); ?>
+    <?php include('views/includes/links.php'); ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
