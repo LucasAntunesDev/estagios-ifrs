@@ -143,7 +143,8 @@
                             <label for="cpf" class="block text-sm font-medium leading-6 text-gray-900 mb-2">CPF (apenas números)</label>
 
                             <div class="relative">
-                                <input type="number" id="cpf" name="cpf" value=" <?php echo $aluno->getCPF(); ?>" class="rounded-md 
+                                
+                                <input type="number" name="cpf" maxlength="11" minlength="11" id="cpf" value="<?php echo $aluno->getCPF(); ?>" class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
