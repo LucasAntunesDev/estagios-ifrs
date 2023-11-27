@@ -8,7 +8,18 @@ use Util\Database;
 final class SupervisorModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM supervisor');
+        $data = $db->select('SELECT 
+                            supervisor.id,
+                             supervisor.nome,
+                             supervisor.telefone,
+                             supervisor.email,
+                             supervisor.id_empresa,
+                             supervisor.cargo,
+                             empresa.nome as nome_empresa
+                             FROM
+                            supervisor
+                            JOIN empresa
+                            ON supervisor.id_empresa = empresa.id');
 
         $array = [];
 
@@ -19,7 +30,8 @@ final class SupervisorModel extends Model {
                 $row['telefone'],
                 $row['email'],
                 $row['id_empresa'],
-                $row['cargo']
+                $row['cargo'],
+                $row['nome_empresa']
             );
             array_push($array, $vo);
         }

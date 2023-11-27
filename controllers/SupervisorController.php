@@ -5,6 +5,7 @@ namespace Controller;
 use Embed\Http\Redirects;
 use Model\SupervisorModel;
 use Model\VO\SupervisorVO;
+use Model\EmpresaModel;
 
 
 final class SupervisorController extends Controller {
@@ -28,7 +29,13 @@ final class SupervisorController extends Controller {
             $vo = $model->selectOne(new SupervisorVO($id));
         }
 
-        $this->loadView('formSupervisor', ['supervisor' => $vo]);
+        $model = new EmpresaModel();
+        $empresas = $model->selectAll();
+
+        $this->loadView('formSupervisor', [
+            'supervisor' => $vo,
+            'empresas' => $empresas
+        ]);
     }
 
     public function save() {

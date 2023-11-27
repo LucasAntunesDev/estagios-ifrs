@@ -47,8 +47,8 @@
                     <?php
                     foreach ($avaliacaoEmpresa as $avaliacao) {
                         echo '<tr class="border-b">';
-                        echo '<td class="border-[1px] border-zinc-300 px-4">' . $avaliacao->getId() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4"><a href="uploads/' . $avaliacao->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
+                        echo '<td class="p-1 w-min">' . $avaliacao->getId() . '</td>';
+                        echo '<td class="p-1 w-min"><a href="uploads/' . $avaliacao->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
                         echo '<td class="border-[1px]  px-4 flex flex-col">';
 
                         echo "<a href='avaliacaoEmpresa.php?id=" .  $avaliacao->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50

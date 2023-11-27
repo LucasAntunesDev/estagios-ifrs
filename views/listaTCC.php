@@ -48,7 +48,7 @@
                     foreach ($TCCS as $TCC) {
                         echo '<tr class="border-b">';
                         echo '<td class="p-1 w-min">' . $TCC->getId() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4"><a href="uploads/' . $TCC->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
+                        echo '<td class="p-1 w-min"><a href="uploads/' . $TCC->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
                         echo '<td class="p-1 w-min">';
 
                         echo "<a href='TCC.php?id=" .  $TCC->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50

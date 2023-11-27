@@ -15,12 +15,15 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-vermelho py-4">
-            <i class="fa-solid fa-circle-user"></i>
-            Termo de Compromisso
-        </h1>
+    <h1 class="font-bold text-4xl text-vermelho py-4 flex items-center gap-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+            <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd" />
+            <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
+        </svg>
+        Termo de compromisso
+    </h1>
 
-        <a href="estagioAluno.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
+        <a href="termoCompromisso.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
                      text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
                      mb-2 mr-8 self-end transition duration-300 ease-in-out">
 
@@ -43,9 +46,9 @@
                 <tbody>
                     <?php
                     foreach ($termoCompromisso as $termo) {
-                        echo '<tr class="border-b">';
+                        echo '<tr class="p-1 w-min">';
                         echo '<td class="p-1 w-min">' . $termo->getId() . '</td>';
-                        echo '<td class="border-[1px] border-zinc-300 px-4"><a href="uploads/' . $termo->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
+                        echo '<td class="p-1 w-min"><a href="uploads/' . $termo->getUrl() . '" target="_blank">Clique aqui para abrir</a></td>';
                         echo '<td class="p-1 w-min">';
 
                         echo "<a href='termoCompromisso.php?id=" .  $termo->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50

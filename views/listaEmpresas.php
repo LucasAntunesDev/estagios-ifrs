@@ -33,8 +33,7 @@
 
         </a>
 
-        <div class="relative overflow-x-auto border-gray-200 border-1 border-x border-y rounded-xl
-        2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12">
+        <div class="relative overflow-x-auto border-gray-200 border-1 border-x border-y rounded-xl">
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">

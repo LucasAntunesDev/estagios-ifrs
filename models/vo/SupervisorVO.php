@@ -8,14 +8,16 @@ final class SupervisorVO extends VO {
     private $email;
     private $id_empresa;
     private $cargo;
+    private $nome_empresa;
 
-    public function __construct($id = 0, $nome = '', $telefone = '', $email = '', $id_empresa = '' , $cargo = '') {
+    public function __construct($id = 0, $nome = '', $telefone = '', $email = '', $id_empresa = '' , $cargo = '', $nome_empresa = '') {
         parent::__construct($id);
         $this->nome = $nome;
         $this->telefone = $telefone;  
         $this->email = $email;
         $this->id_empresa = $id_empresa;
         $this->cargo = $cargo;
+        $this->nome_empresa = $nome_empresa;
     }
 
     public function getNome() {
@@ -57,5 +59,13 @@ final class SupervisorVO extends VO {
 
     public function setCargo($cargo) {
         $this->cargo = $cargo;
+    }
+
+    public function getNomeEmpresa() {
+        return $this->nome_empresa;
+    }
+
+    public function setNomeEmpresa($nome_empresa) {
+        $this->nome_empresa = $nome_empresa;
     }
 }
