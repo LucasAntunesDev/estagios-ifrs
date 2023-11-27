@@ -52,6 +52,8 @@ final class EstagioAlunoController extends Controller
         $model= new ProfessorModel();
         $coorientadores = $model->selectAll();
         
+        $model= new AlunoModel();
+        $alunos_sem_estagio = $model->selectSemEstagio();
         
         $model= new AreaModel();
         $areas = $model->selectAll();
@@ -64,6 +66,7 @@ final class EstagioAlunoController extends Controller
             'orientadores' => $orientadores,
             'coorientadores' => $coorientadores,
             'supervisores' => $supervisores,
+            'alunosSemEstagio' => $alunos_sem_estagio,
             'areas' => $areas
         ]);
     }

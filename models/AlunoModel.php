@@ -78,6 +78,35 @@ final class AlunoModel extends Model {
         );
     }
 
+    public function selectSemEstagio($vo = null) {
+        $db = new Database();
+        $data = $db->select('SELECT * FROM aluno WHERE aluno.id not in 
+            (select id_aluno from estagio_aluno where situacao_estagio = "em andamento")
+        ');
+        $array = [];
+
+        foreach ($data as $row) {
+            $vo = new AlunoVO(
+                $row['id'],
+                $row['matricula'],
+                $row['nome'],
+                $row['datanasc'],
+                $row['email'],
+                $row['cpf'],
+                $row['rg'],
+                $row['endereco'],
+                $row['telefone'],
+                $row['ano_turma'],
+                $row['id_cidade'],
+                $row['id_curso']
+            );
+            array_push($array, $vo);
+            
+            return $array;
+        }
+    
+    }
+
     public function insert($vo = null) {
         $db = new Database();
         $query = 'INSERT INTO aluno
