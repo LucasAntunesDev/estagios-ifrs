@@ -54,19 +54,19 @@
         </nav>
 
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do estágio</legend>
+            <legend class=" font-bold text-center text-xl">Dados do estágio</legend>
 
-            <form action="salvarEstagioAluno.php" method="post" class="flex flex-col justify-center items-center gap-2">
+            <form action="salvarEstagioAluno.php" method="post" class="flex flex-col justify-center items-center gap-2" enctype="multipart/form-data">
                 <input type="hidden" name="id" value='<?php echo $estagioAluno->getId(); ?>'>
 
                 <div class="flex flex-col justify-center items-baseline gap-2">
 
                     <div class="w-[-webkit-fill-available]">
-                        <label for="id_aluno" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Aluno</label>
+                        <label for="id_aluno" class="block text-sm font-medium leading-6  mb-2">Aluno</label>
 
                         <div class="relative ">
                             <select id="id_aluno" name="id_aluno" value="id_aluno" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-72 pr-10">
                                 <?php
                                 foreach ($alunos as $aluno) {
@@ -87,11 +87,11 @@
                     <div class="flex gap-x-4">
 
                         <div>
-                            <label for="id_empresa" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Empresa</label>
+                            <label for="id_empresa" class="block text-sm font-medium leading-6  mb-2">Empresa</label>
 
                             <div class="relative">
                                 <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($empresas as $empresa) {
@@ -111,16 +111,16 @@
                         </div>
 
                         <div>
-                            <label for="data_inicio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Data de Início</label>
+                            <label for="data_inicio" class="block text-sm font-medium leading-6  mb-2">Data de Início</label>
                             <input type="date" id="data_inicio" name="data_inicio" value='<?php echo $estagioAluno->getDataInicio(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
-                            <label for="carga_horaria" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Carga Horaria (em horas)</label>
+                            <label for="carga_horaria" class="block text-sm font-medium leading-6  mb-2">Carga Horaria (em horas)</label>
                             <input type="number" min="200" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
@@ -128,18 +128,18 @@
 
                     <div class="flex gap-x-4">
                         <div>
-                            <label for="tipo_processo_estagio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Tipo de Processo</label>
+                            <label for="tipo_processo_estagio" class="block text-sm font-medium leading-6  mb-2">Tipo de Processo</label>
                             <input type="text" id="tipo_processo_estagio" name="tipo_processo_estagio" value=" <?php echo $estagioAluno->getTipoProcessoEstagio(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
-                            <label for="id_area" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Area</label>
+                            <label for="id_area" class="block text-sm font-medium leading-6  mb-2">Area</label>
 
                             <div class="relative">
                                 <select id="id_area" name="id_area" value="id_area" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($areas as $area) {
@@ -159,7 +159,7 @@
                         </div>
 
                         <div>
-                            <label for="situacao_estagio" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Situação</label>
+                            <label for="situacao_estagio" class="block text-sm font-medium leading-6  mb-2">Situação</label>
 
                             <div class="relative">
                                 <select name="situacao_estagio" id="situacao_estagio" value="situacao_estagio" class="rounded-md 
@@ -188,11 +188,11 @@
                     <div class="flex gap-x-4 w-[-webkit-fill-available]">
                         <div>
                             <div>
-                                <label for="id_coordenador" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Coordenador</label>
+                                <label for="id_coordenador" class="block text-sm font-medium leading-6  mb-2">Coordenador</label>
 
                                 <div class="relative">
                                     <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                         <?php
                                         foreach ($coordenadores as $coordenador) {
@@ -213,11 +213,11 @@
                         </div>
 
                         <div>
-                            <label for="id_orientador" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Orientador</label>
+                            <label for="id_orientador" class="block text-sm font-medium leading-6  mb-2">Orientador</label>
 
                             <div class="relative">
                                 <select id="id_orientador" name="id_orientador" value="id_orientador" class="rounded-md 
-border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($orientadores as $orientador) {
@@ -237,11 +237,11 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
-                            <label for="id_coorientador" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Coorientador</label>
+                            <label for="id_coorientador" class="block text-sm font-medium leading-6  mb-2">Coorientador</label>
 
                             <div class="relative">
                                 <select id="id_coorientador" name="id_coorientador" value="id_coorientador" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($coorientadores as $coorientador) {
@@ -261,11 +261,11 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
-                            <label for="id_supervisor" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Supervisor</label>
+                            <label for="id_supervisor" class="block text-sm font-medium leading-6  mb-2">Supervisor</label>
 
                             <div class="relative">
                                 <select id="id_supervisor" name="id_supervisor" value="id_supervisor" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($supervisores as $supervisor) {
@@ -283,21 +283,55 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <input type="hidden" id="data_fim" name="data_fim" value="<?php echo $estagioAluno->getDataFim(); ?>">
 
                 </div>
 
-                <input type="hidden" name="id_termo_compromisso" value='<?php echo $estagioAluno->getIdTermoCompromisso(); ?>'>
-<div>
-    <label for="url_termo_compromisso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Termo Compromisso:</label>
-    <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-</div>
+                <div class="flex gap-x-4">
 
+                    <div>
+                        <label for="url_termo_compromisso" class="block text-sm font-medium leading-6  mb-2">Termo Compromisso</label>
+                        <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    </div>
+
+                    <div>
+                        <label for="url_plano_atividades" class="block text-sm font-medium leading-6  mb-2">Plano de Atividades</label>
+                        <input type="file" id="url_plano_atividades" name="url_plano_atividades" accept="application/pdf" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    </div>
+
+                </div>
+
+                <div class="flex gap-x-4">
+
+                    <div>
+                        <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação</label>
+                        <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    </div>
+
+                    <div>
+                        <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação da Empresa</label>
+                        <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    </div>
+
+                </div>
+
+                <div>
+                    <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">Avaliação da Empresa</label>
+                    <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
 
                 <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 
