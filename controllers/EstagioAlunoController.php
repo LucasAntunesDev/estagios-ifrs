@@ -2,7 +2,6 @@
 
 namespace Controller;
 
-use Embed\Http\Redirects;
 use Model\EstagioAlunoModel;
 use Model\VO\EstagioAlunoVO;
 use Model\AlunoModel;
@@ -34,28 +33,28 @@ final class EstagioAlunoController extends Controller
             $vo = $model->selectOne(new EstagioAlunoVO($id));
         }
 
-        $model= new AlunoModel();
+        $model = new AlunoModel();
         $alunos = $model->selectAll();
 
-        $model= new EmpresaModel();
+        $model = new EmpresaModel();
         $empresas = $model->selectAll();
-        
-        $model= new SupervisorModel();
+
+        $model = new SupervisorModel();
         $supervisores = $model->selectAll();
-        
-        $model= new ProfessorModel();
+
+        $model = new ProfessorModel();
         $coordenadores = $model->selectAll();
-        
-        $model= new ProfessorModel();
+
+        $model = new ProfessorModel();
         $orientadores = $model->selectAll();
-        
-        $model= new ProfessorModel();
+
+        $model = new ProfessorModel();
         $coorientadores = $model->selectAll();
-        
-        $model= new AlunoModel();
-        $alunos_sem_estagio = $model->selectSemEstagio();
-        
-        $model= new AreaModel();
+
+        $model = new AlunoModel();
+        $alunosSemEstagio = $model->selectSemEstagio();
+
+        $model = new AreaModel();
         $areas = $model->selectAll();
 
         $this->loadView('formEstagioAluno', [
@@ -66,7 +65,7 @@ final class EstagioAlunoController extends Controller
             'orientadores' => $orientadores,
             'coorientadores' => $coorientadores,
             'supervisores' => $supervisores,
-            'alunosSemEstagio' => $alunos_sem_estagio,
+            'alunosSemEstagio' => $alunosSemEstagio,
             'areas' => $areas
         ]);
     }
@@ -75,7 +74,7 @@ final class EstagioAlunoController extends Controller
     {
         $id = $_POST['id'];
         $vo = new EstagioAlunoVO(
-            $_POST['id'],
+            $id,
             $_POST['id_aluno'],
             $_POST['id_empresa'],
             $_POST['carga_horaria'],
@@ -90,14 +89,14 @@ final class EstagioAlunoController extends Controller
             $_POST['id_supervisor'],
             $_POST['data_fim'],
             $_POST['id_area'],
-            $_POST['id_avaliacao_empresa'],
-            $_POST['id_termo_compromisso'],
-            $_POST['id_plano_atividades'],
-            $_POST['id_autoavaliacao'],
-            $_POST['id_tcc'],
+            $_POST['url_termo_compromisso'],
+            $_POST['url_plano_atividades'],
+            $_POST['url_avaliacao_empresa'],
+            $_POST['url_tcc'],
+            $_POST['url_autoavaliacao']
         );
-        $model = new EstagioAlunoModel();
 
+        $model = new EstagioAlunoModel();
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
 
         $this->redirect('estagiosAlunos.php');
@@ -105,11 +104,11 @@ final class EstagioAlunoController extends Controller
 
     public function remove()
     {
-        if (empty($_GET['id']))
+        if (empty($_GET['id_estagio_aluno'])) {
             die('Necessário passar o ID');
+        }
 
         $model = new EstagioAlunoModel();
-
         $return = $model->delete(new EstagioAlunoVO($_GET['id_estagio_aluno']));
 
         $this->redirect('estagiosAlunos.php');

@@ -97,53 +97,6 @@ transition ease-in-out duration-300 cursor-pointer">
                     </a>
                 </li>
 
-                <div class="my-3 py-2 border-y-[1px] border-y-neutral-300">
-                    <li class="hover:bg-zinc-100 rounded-md py-1 mx-2">
-                        <a class="block flex items-center gap-x-2 py-1 px-3 text-neutral-700  font-bold" href="TCCS.php">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" clip-rule="evenodd" />
-                            </svg>
-                            TCC
-                        </a>
-                    </li>
-
-                    <li class="hover:bg-zinc-100 rounded-md py-1 mx-2">
-                        <a class="block flex items-center gap-x-2 py-1 px-3 text-neutral-700  font-bold" href="planoAtividades.php">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                <path fill-rule="evenodd" d="M3 3.5A1.5 1.5 0 014.5 2h6.879a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0117 7.622V16.5a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 16.5v-13zm10.857 5.691a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                            </svg>
-                            Plano de atividades
-                        </a>
-                    </li>
-
-                    <li class="hover:bg-zinc-100 rounded-md py-1 mx-2">
-                        <a class="block flex items-center gap-x-2 py-1 px-3 text-neutral-700  font-bold" href="termoCompromissos.php">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                <path fill-rule="evenodd" d="M3 3.5A1.5 1.5 0 014.5 2h6.879a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0117 7.622V16.5a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 16.5v-13zm10.857 5.691a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                            </svg>
-                            Termo de compromisso
-                        </a>
-                    </li>
-
-                    <li class="hover:bg-zinc-100 rounded-md py-1 mx-2">
-                        <a class="block flex items-center gap-x-2 py-1 px-3 text-neutral-700  font-bold" href="avaliacaoEmpresas.php">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                <path fill-rule="evenodd" d="M3 3.5A1.5 1.5 0 014.5 2h6.879a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0117 7.622V16.5a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 16.5v-13zm10.857 5.691a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                            </svg>
-                            Avaliação da empresa
-                        </a>
-                    </li>
-
-                    <li class="hover:bg-zinc-100 rounded-md py-1 mx-2">
-                        <a class="block flex items-center gap-x-2 py-1 px-3 text-neutral-700  font-bold" href="autoAvaliacoes.php">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                                <path fill-rule="evenodd" d="M3 3.5A1.5 1.5 0 014.5 2h6.879a1.5 1.5 0 011.06.44l4.122 4.12A1.5 1.5 0 0117 7.622V16.5a1.5 1.5 0 01-1.5 1.5h-11A1.5 1.5 0 013 16.5v-13zm10.857 5.691a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-                            </svg>
-                            Autoavaliação
-                        </a>
-                    </li>
-                </div>
-
                 <li class="hover:bg-zinc-100 rounded-md py-1 mx-2">
                     <a class="block flex items-center gap-x-2 py-1 px-3 text-neutral-700  font-bold" href="empresas.php">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">

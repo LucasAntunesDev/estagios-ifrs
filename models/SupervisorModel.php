@@ -64,7 +64,7 @@ final class SupervisorModel extends Model {
             ':nome' => $vo->getNome(),
             ':telefone' => $vo->getTelefone(),
             ':email' => $vo->getEmail(),
-            ':id_empresa' => $vo->getEmpresa_numero_convenio(),
+            ':id_empresa' => $vo->getIdEmpresa(),
             ':cargo' => $vo->getCargo()
         ];
 
@@ -87,9 +87,9 @@ final class SupervisorModel extends Model {
 
         $binds = [
             ':nome' => $vo->getNome(),
-            ':telefone' => $vo->Telefone(),
+            ':telefone' => $vo->getTelefone(),
             ':email' => $vo->getEmail(),
-            ':id_empresa' => $vo->getEmpresa_numero_convenio(),
+            ':id_empresa' => $vo->getIdEmpresa(),
             ':cargo' => $vo->getCargo(),
             ':id' => $vo->getId()
         ];

@@ -8,7 +8,19 @@ use Util\Database;
 final class EmpresaModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM empresa');
+        $data = $db->select('SELECT 
+        empresa.id,
+        empresa.nome,
+        empresa.endereco,
+        empresa.telefone,
+        empresa.email,
+        empresa.cnpj,
+        empresa.id_cidade,
+        cidade.nome as nome_cidade
+      FROM empresa
+      JOIN cidade
+      ON empresa.id_cidade = cidade.id');
+
 
         $array = [];
 
@@ -20,7 +32,8 @@ final class EmpresaModel extends Model {
                 $row['telefone'],
                 $row['email'],
                 $row['cnpj'],
-                $row['id_cidade']
+                $row['id_cidade'],
+                $row['nome_cidade']
             );
             array_push($array, $vo);
         }
@@ -49,31 +62,30 @@ final class EmpresaModel extends Model {
     public function insert($vo = null) {
         $db = new Database();
         $query = 'INSERT INTO empresa
-        (id, nome, endereco, telefone, email, cnpj, id_cidade)
-        VALUES 
-        (:id, :nome, :endereco, :telefone, :email,: cnpj, :id_cidade)';
-
+            (id, nome, endereco, telefone, email, cnpj, id_cidade)
+            VALUES 
+            (:id, :nome, :endereco, :telefone, :email, :cnpj, :id_cidade)';
+    
         $binds = [
-            ':matricula' => $vo->getMatricula(),
+            ':id' => $vo->getId(),
             ':nome' => $vo->getNome(),
             ':endereco' => $vo->getEndereco(),
             ':telefone' => $vo->getTelefone(),
             ':email' => $vo->getEmail(),
             ':cnpj' => $vo->getCNPJ(),
-            ':id_cidade' => $vo->getIdCiade()
+            ':id_cidade' => $vo->getIdCidade()
         ];
-
+    
         $success = $db->execute($query, $binds);
-
+    
         return $success ? $db->getLastInsertedId() : null;
     }
-
+    
     public function update($vo = null) {
         $db = new Database();
-
+    
         $query = 'UPDATE empresa
                     SET  
-                    id = :id, 
                     nome = :nome, 
                     endereco = :endereco, 
                     telefone = :telefone, 
@@ -81,18 +93,17 @@ final class EmpresaModel extends Model {
                     cnpj = :cnpj, 
                     id_cidade = :id_cidade
                     WHERE id = :id';
-
+    
         $binds = [
-            ':matricula' => $vo->getMatricula(),
             ':id' => $vo->getId(),
             ':nome' => $vo->getNome(),
             ':endereco' => $vo->getEndereco(),
             ':telefone' => $vo->getTelefone(),
             ':email' => $vo->getEmail(),
             ':cnpj' => $vo->getCNPJ(),
-            ':id_cidade' => $vo->getIdCiade()
+            ':id_cidade' => $vo->getIdCidade()
         ];
-
+    
         return $db->execute($query, $binds);
     }
 

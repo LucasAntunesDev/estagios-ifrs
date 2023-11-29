@@ -49,7 +49,6 @@
                         <th class="px-6 py-3 capitalize w-min">Telefone</th>
                         <th class="px-6 py-3 capitalize w-min">Turma</th>
                         <th class="px-6 py-3 capitalize w-min">Cidade</th>
-                        <!-- <th class="px-6 py-3 capitalize w-min">Id Curso</th> -->
                         <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
@@ -73,7 +72,6 @@
                         echo '<td class="p-1 w-min">' . $aluno->getEndereco() . '</td>';
                         echo '<td class="p-1 w-min phone_with_ddd">' . $aluno->getTelefone() . '</td>';
                         echo '<td class="p-1 w-min"><span class="flex items-center w-max">' . $aluno->getAnoTurma() . 'º ' . $aluno->getNomeCurso() . '</span></td>';
-                        // echo '<td class="p-1 w-min">' . $aluno->getNomeCurso() . ' ' .$aluno->getIdCurso() . '</td>';
                         echo '<td class="p-1 w-min">' . $aluno->getNomeCidade() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .

@@ -43,7 +43,7 @@
                         <th class="px-6 py-3 capitalize w-min">Telefone</th>
                         <th class="px-6 py-3 capitalize w-min">Email</th>
                         <th class="px-6 py-3 capitalize w-min">CNPJ</th>
-                        <th class="px-6 py-3 capitalize w-min">Id Cidade</th>
+                        <th class="px-6 py-3 capitalize w-min">Cidade</th>
                         <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
@@ -58,7 +58,12 @@
                         echo '<td class="p-1 w-min">' . $empresa->getTelefone() . '</td>';
                         echo '<td class="p-1 w-min">' . $empresa->getEmail() . '</td>';
                         echo '<td class="p-1 w-min">' . $empresa->getCNPJ() . '</td>';
-                        echo '<td class="p-1 w-min">' . $empresa->getIdCidade() . '</td>';
+                        echo '<td class="p-1 w-min">' . $empresa->getNomeCidade() . '
+                        <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
+                        hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
+                                $empresa->getIdCidade() .
+                            ' </span>
+                        </td>';
                         echo '<td class="p-1 w-min">';
 
                         echo "<a href='empresa.php?id=" . $empresa->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50

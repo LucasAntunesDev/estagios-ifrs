@@ -1,5 +1,5 @@
 <?php
-use Controller\EmpresaControlller;
+use Controller\EmpresaController;
 
 require('config.php');
 require('vendor/autoload.php');

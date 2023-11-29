@@ -5,7 +5,7 @@ namespace Controller;
 use Embed\Http\Redirects;
 use Model\EmpresaModel;
 use Model\VO\EmpresaVO;
-
+use Model\CidadeModel;
 
 final class EmpresaController extends Controller {
     public function list() {
@@ -28,7 +28,13 @@ final class EmpresaController extends Controller {
             $vo = $model->selectOne(new EmpresaVO($id));
         }
 
-        $this->loadView('formEmpresa', ['empresa' => $vo]);
+        $model  = new CidadeModel();
+        $cidades = $model->selectAll();
+
+        $this->loadView('formEmpresa', [
+            'empresa' => $vo,
+            'cidades' => $cidades
+        ]);
     }
 
     public function save() {

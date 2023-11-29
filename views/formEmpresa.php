@@ -61,7 +61,7 @@
             <legend class="text-gray-900 font-bold text-center text-xl">Dados da empresa</legend>
 
             <form action="salvarEmpresa.php" method="post" class="flex flex-col justify-center items-center gap-2">
-                <input type="hidden" name="numero_convenio" value='<?php echo $empresa->getId(); ?>'>
+                <input type="hidden" name="id" value='<?php echo $empresa->getId(); ?>'>
 
                 <div>
                     <label for="nome" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Nome</label>
@@ -139,7 +139,7 @@
                     <label for="cpnj" class="block text-sm font-medium leading-6 text-gray-900 mb-2">CNPJ</label>
 
                     <div class="relative">
-                        <input type="text" id="cpnj" name="cpnj" value='<?php echo $empresa->getCNPJ(); ?>' class="rounded-md 
+                        <input type="text" id="cnpj" name="cnpj" value='<?php echo $empresa->getCNPJ(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
 
@@ -153,6 +153,30 @@
                     </div>
 
                 </div>
+                
+                
+   
+                <div class="w-[-webkit-fill-available]">
+                            <label for="id_cidade" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Cidade</label>
+
+                            <div class="relative">
+                                <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
+                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
+                                    <?php
+                                    foreach ($cidades as $cidade) {
+                                        $selected = ($cidade->getId() == $empresa->getIdCidade()) ? "selected" : "";
+                                        echo "<option value='" . $cidade->getId() . "' " . $selected . "> " . $cidade->getNome() . "</option>";
+                                    }
+                                    ?>
+                                </select>
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
+                                        <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h10.5a.75.75 0 010 1.5H12v13.75a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75v-2.5a.75.75 0 00-.75-.75h-2.5a.75.75 0 00-.75.75v2.5a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5H2v-13h-.25A.75.75 0 011 2.75zM4 5.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM4.5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1zM8 5.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM8.5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1zM14.25 6a.75.75 0 00-.75.75V17a1 1 0 001 1h3.75a.75.75 0 000-1.5H18v-9h.25a.75.75 0 000-1.5h-4zm.5 3.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zm.5 3.5a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
 
                 <div>
                     <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50

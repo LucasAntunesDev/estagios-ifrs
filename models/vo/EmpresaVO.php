@@ -10,6 +10,8 @@ final class EmpresaVO extends VO {
     protected $email;
     protected $cnpj;
     protected $id_cidade;
+    private $nome_cidade;
+    
     public function __construct(
         $id = 0,
         $nome = '',
@@ -17,7 +19,8 @@ final class EmpresaVO extends VO {
         $telefone = 0,
         $email = '',
         $cnpj = 0,
-        $id_cidade = 0
+        $id_cidade = 0,
+        $nome_cidade = ''
     ) {
         parent::__construct($id);
         $this->id = $id;
@@ -27,6 +30,7 @@ final class EmpresaVO extends VO {
         $this->email = $email;
         $this->cnpj = $cnpj;
         $this->id_cidade = $id_cidade;
+        $this->nome_cidade = $nome_cidade;
     }
 
     public function getNome() {
@@ -75,6 +79,14 @@ final class EmpresaVO extends VO {
 
     public function setIdCidade($id_cidade) {
         $this->id_cidade = $id_cidade;
+    }
+
+    public function getNomeCidade() {
+        return $this->nome_cidade;
+    }
+
+    public function setNomeCidade($nome_cidade) {
+        $this->nome_cidade = $nome_cidade;
     }
 
 }

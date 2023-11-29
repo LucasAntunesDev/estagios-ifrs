@@ -283,17 +283,21 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
 
                     <input type="hidden" id="data_fim" name="data_fim" value="<?php echo $estagioAluno->getDataFim(); ?>">
 
                 </div>
 
-                <input type="hidden" id="id_avaliacao_empresa" name="id_avaliacao_empresa" value="<?php echo $estagioAluno->getIdAvaliacaoEmpresa(); ?>">
-                <input type="hidden" id="id_termo_compromisso" name="id_termo_compromisso" value="<?php echo $estagioAluno->getIdTermoCompromisso(); ?>">
-                <input type="hidden" id="id_plano_atividades" name="id_plano_atividades" value="<?php echo $estagioAluno->getIdPlanoAtividades(); ?>">
-                <input type="hidden" id="id_autoavaliacao" name="id_autoavaliacao" value="<?php echo $estagioAluno->getIdAutoavaliacao(); ?>">
-                <input type="hidden" id="id_tcc" name="id_tcc" value="<?php echo $estagioAluno->getIdTCC(); ?>">
+                <input type="hidden" name="id_termo_compromisso" value='<?php echo $estagioAluno->getIdTermoCompromisso(); ?>'>
+<div>
+    <label for="url_termo_compromisso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Termo Compromisso:</label>
+    <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+</div>
+
 
                 <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 

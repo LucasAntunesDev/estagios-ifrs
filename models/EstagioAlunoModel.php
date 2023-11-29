@@ -23,11 +23,11 @@ final class EstagioAlunoModel extends Model {
         estagio_aluno.id_supervisor,
         estagio_aluno.data_fim,
         estagio_aluno.id_area,
-        estagio_aluno.id_avaliacao_empresa,
-        estagio_aluno.id_termo_compromisso,
-        estagio_aluno.id_plano_atividades,
-        estagio_aluno.id_autoavaliacao,
-        estagio_aluno.id_tcc,
+        estagio_aluno.url_termo_compromisso,
+        estagio_aluno.url_plano_atividades,
+        estagio_aluno.url_avaliacao_empresa,
+        estagio_aluno.url_tcc,
+        estagio_aluno.url_autoavaliacao,
         aluno.nome as nome_aluno,
         empresa.nome as nome_empresa,
         orientador.nome as "nome_orientador",
@@ -71,11 +71,11 @@ final class EstagioAlunoModel extends Model {
                 $row['id_supervisor'],
                 $row['data_fim'],
                 $row['id_area'],
-                $row['id_avaliacao_empresa'],
-                $row['id_termo_compromisso'],
-                $row['id_plano_atividades'],
-                $row['id_autoavaliacao'],
-                $row['id_tcc'],
+                $row['url_termo_compromisso'],
+                $row['url_plano_atividades'],
+                $row['url_avaliacao_empresa'],
+                $row['url_tcc'],
+                $row['url_autoavaliacao'],
                 $row['nome_aluno'],
                 $row['nome_empresa'],
                 $row['nome_coordenador'],
@@ -94,9 +94,9 @@ final class EstagioAlunoModel extends Model {
         $query = 'SELECT * FROM estagio_aluno WHERE id = :id';
         $binds = [':id' => $vo->getId()];
         $data = $db->select($query, $binds);
-
+    
         if (count($data) === 0) return null;
-
+    
         return new EstagioAlunoVO(
             $data[0]['id'],
             $data[0]['id_aluno'],
@@ -113,14 +113,14 @@ final class EstagioAlunoModel extends Model {
             $data[0]['id_supervisor'],
             $data[0]['data_fim'],
             $data[0]['id_area'],
-            $data[0]['id_avaliacao_empresa'],
-            $data[0]['id_termo_compromisso'],
-            $data[0]['id_plano_atividades'],
-            $data[0]['id_autoavaliacao'],
-            $data[0]['id_tcc']
+            $data[0]['url_termo_compromisso'],
+            $data[0]['url_plano_atividades'],
+            $data[0]['url_avaliacao_empresa'],
+            $data[0]['url_tcc'],
+            $data[0]['url_autoavaliacao']
         );
     }
-
+    
     public function insert($vo = null) {
         $db = new Database();
         $query = 'INSERT INTO estagio_aluno
@@ -138,7 +138,12 @@ final class EstagioAlunoModel extends Model {
         id_coorientador,
         id_supervisor,
         data_fim,
-        id_area)
+        id_area,
+        url_termo_compromisso,
+        url_plano_atividades,
+        url_avaliacao_empresa,
+        url_tcc,
+        url_autoavaliacao)
         VALUES 
         (:id,
         :id_aluno,
@@ -154,8 +159,13 @@ final class EstagioAlunoModel extends Model {
         :id_coorientador,
         :id_supervisor,
         :data_fim,
-        :id_area)';
-
+        :id_area,
+        :url_termo_compromisso,
+        :url_plano_atividades,
+        :url_avaliacao_empresa,
+        :url_tcc,
+        :url_autoavaliacao)';
+    
         $binds = [
             ':id' =>   $vo->getId(),
             ':id_aluno' =>  $vo->getIdAluno(),
@@ -171,40 +181,45 @@ final class EstagioAlunoModel extends Model {
             ':id_coorientador' =>  $vo->getIdCoorientador(),
             ':id_supervisor' =>  $vo->getIdSupervisor(),
             ':data_fim' =>  $vo->getDataFim(),
-            ':id_area' =>  $vo->getIdArea()
+            ':id_area' =>  $vo->getIdArea(),
+            ':url_termo_compromisso' =>  $vo->getUrlTermoCompromisso(),
+            ':url_plano_atividades' =>  $vo->getUrlPlanoAtividades(),
+            ':url_avaliacao_empresa' =>  $vo->getUrlAvaliacaoEmpresa(),
+            ':url_tcc' =>  $vo->getUrlTcc(),
+            ':url_autoavaliacao' =>  $vo->getUrlAutoavaliacao()
         ];
-
+    
         $success = $db->execute($query, $binds);
-
+    
         return $success ? $db->getLastInsertedId() : null;
     }
-
+    
     public function update($vo = null) {
         $db = new Database();
-
+    
         $query = 'UPDATE estagio_aluno
                     SET
-                    id_aluno  =  :id_aluno 
-                    id_empresa =  :id_empresa
-                    carga_horaria =  :carga_horaria
-                    id_coordenador =  :id_coordenador
-                    tipo_processo_estagio =  :tipo_processo_estagio
-                    numero_encaminhamentos =  :numero_encaminhamentos
-                    situacao_estagio =  :situacao_estagio
-                    data_inicio =  :data_inicio
-                    previsao_fim =  :previsao_fim
-                    id_orientador =  :id_orientador
-                    id_coorientador =  :id_coorientador
-                    id_supervisor =  :id_supervisor
-                    data_fim =  :data_fim
-                    id_area =  :id_area
-                    id_avaliacao_empresa =  :id_avaliacao_empresa
-                    id_termo_compromisso =  :id_termo_compromisso
-                    id_plano_atividades =  :id_plano_atividades
-                    id_autoavaliacao =  :id_autoavaliacao
-                    id_tcc =  :id_tcc
+                    id_aluno  =  :id_aluno,
+                    id_empresa =  :id_empresa,
+                    carga_horaria =  :carga_horaria,
+                    id_coordenador =  :id_coordenador,
+                    tipo_processo_estagio =  :tipo_processo_estagio,
+                    numero_encaminhamentos =  :numero_encaminhamentos,
+                    situacao_estagio =  :situacao_estagio,
+                    data_inicio =  :data_inicio,
+                    previsao_fim =  :previsao_fim,
+                    id_orientador =  :id_orientador,
+                    id_coorientador =  :id_coorientador,
+                    id_supervisor =  :id_supervisor,
+                    data_fim =  :data_fim,
+                    id_area =  :id_area,
+                    url_termo_compromisso =  :url_termo_compromisso,
+                    url_plano_atividades =  :url_plano_atividades,
+                    url_avaliacao_empresa =  :url_avaliacao_empresa,
+                    url_tcc =  :url_tcc,
+                    url_autoavaliacao =  :url_autoavaliacao
                     WHERE id = :id';
-
+    
         $binds = [
             ':id_aluno' =>  $vo->getIdAluno(),
             ':id_empresa' =>  $vo->getIdEmpresa(),
@@ -220,22 +235,22 @@ final class EstagioAlunoModel extends Model {
             ':id_supervisor' =>  $vo->getIdSupervisor(),
             ':data_fim' =>  $vo->getDataFim(),
             ':id_area' =>  $vo->getIdArea(),
-            ':id_avaliacao_empresa' =>  $vo->getIdAvaliacaoEmpresa(),
-            ':id_termo_compromisso' =>  $vo->getIdTermoCompromisso(),
-            ':id_plano_atividades' =>  $vo->getIdPlanoAtividades(),
-            ':id_autoavaliacao' =>  $vo->getIdAutoavaliacao(),
-            ':id_tcc' =>  $vo->getIdTCC(),
-            ':id' =>   $vo->getId()
+            ':url_termo_compromisso' =>  $vo->getUrlTermoCompromisso(),
+            ':url_plano_atividades' =>  $vo->getUrlPlanoAtividades(),
+            ':url_avaliacao_empresa' =>  $vo->getUrlAvaliacaoEmpresa(),
+            ':url_tcc' =>  $vo->getUrlTcc(),
+            ':url_autoavaliacao' =>  $vo->getUrlAutoavaliacao(),
+            ':id' =>  $vo->getId()
         ];
-
+    
         return $db->execute($query, $binds);
     }
-
+    
     public function delete($vo = null) {
         $db = new Database();
         $query = 'DELETE FROM estagio_aluno WHERE id = :id';
         $binds = [':id' => $vo->getId()];
-
+    
         return $db->execute($query, $binds);
-    }
+    }    
 }

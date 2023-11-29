@@ -205,42 +205,16 @@ CREATE TABLE `estagio_aluno` (
   `id_supervisor` int(11) NOT NULL,
   `data_fim` date DEFAULT NULL,
   `id_area` int(11) NOT NULL,
-  `id_avaliacao_empresa` int(11) DEFAULT NULL,
-  `id_termo_compromisso` int(11) DEFAULT NULL,
-  `id_plano_atividades` int(11) DEFAULT NULL,
-  `id_autoavaliacao` int(11) DEFAULT NULL,
-  `id_tcc` int(11) DEFAULT NULL
+  `urlTermo_Compromisso` varchar(255),
+  `urlPlano_Atividades` varchar(255),
+  `urlAvaliacao_Empresa` varchar(255),
+  `urlTCC` varchar(255),
+  `urlAutovaliacao` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `estagio_aluno`
---
-
-INSERT INTO `estagio_aluno` (`id`, `id_aluno`, `id_empresa`, `carga_horaria`, `id_coordenador`, `tipo_processo_estagio`, `numero_encaminhamentos`, `situacao_estagio`, `data_inicio`, `previsao_fim`, `id_orientador`, `id_coorientador`, `id_supervisor`, `data_fim`, `id_area`, `id_avaliacao_empresa`, `id_termo_compromisso`, `id_plano_atividades`, `id_autoavaliacao`, `id_tcc`) VALUES
-(1, 1, 1, 200, 1, '', 2, 'em andamento', '2023-11-09', '2024-01-11', 3, 4, 1, '2024-02-21', 1, 1, 2, 2, 1, 3),
-(2, 2, 2, 200, 2, '', 3, 'em andamento', '2023-11-09', '2024-01-11', 3, 4, 1, '2024-02-21', 2, 2, 3, 3, 2, 4);
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `plano_atividades`
---
-
-CREATE TABLE `plano_atividades` (
-  `id` int(11) NOT NULL,
-  `url` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `plano_atividades`
---
-
-INSERT INTO `plano_atividades` (`id`, `url`) VALUES
-(1, 'http://www.exemplo.com/plano1'),
-(2, 'http://www.exemplo.com/plano2'),
-(3, 'http://www.exemplo.com/plano3');
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `professor`
@@ -294,47 +268,6 @@ INSERT INTO `supervisor` (`id`, `nome`, `telefone`, `email`, `id_empresa`, `carg
 
 -- --------------------------------------------------------
 
---
--- Estrutura da tabela `tcc`
---
-
-CREATE TABLE `tcc` (
-  `id` int(11) NOT NULL,
-  `url` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `tcc`
---
-
-INSERT INTO `tcc` (`id`, `url`) VALUES
-(1, 'http://www.exemplo.com/tcc1'),
-(2, 'http://www.exemplo.com/tcc2'),
-(3, 'http://www.exemplo.com/tcc3'),
-(4, ''),
-(5, '');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `termo_compromisso`
---
-
-CREATE TABLE `termo_compromisso` (
-  `id` int(11) NOT NULL,
-  `url` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `termo_compromisso`
---
-
-INSERT INTO `termo_compromisso` (`id`, `url`) VALUES
-(1, 'http://www.exemplo.com/termo1'),
-(2, 'http://www.exemplo.com/termo2'),
-(3, 'http://www.exemplo.com/termo3');
-
--- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `turma`
@@ -392,18 +325,6 @@ ALTER TABLE `aluno`
 -- Índices para tabela `area`
 --
 ALTER TABLE `area`
-  ADD PRIMARY KEY (`id`);
-
---
--- Índices para tabela `autoavaliacao`
---
-ALTER TABLE `autoavaliacao`
-  ADD PRIMARY KEY (`id`);
-
---
--- Índices para tabela `avaliacao_empresa`
---
-ALTER TABLE `avaliacao_empresa`
   ADD PRIMARY KEY (`id`);
 
 --
