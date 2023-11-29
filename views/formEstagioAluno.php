@@ -166,7 +166,6 @@
                 border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
 
-                                    <option value="não iniciado" <?php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' ?>>Não Iniciado</option>
                                     <option value="em andamento" <?php echo $estagioAluno->getSituacaoEstagio() == 'em andamento' ? 'selected' : '' ?>>Em Andamento</option>
                                     <option value="finalizado" <?php echo $estagioAluno->getSituacaoEstagio() == 'finalizado' ? 'selected' : '' ?>>Finalizado</option>
 
