@@ -14,9 +14,9 @@
 
     <?php include('views/includes/menu.php') ?>
     <?php
-        echo'<pre>';
-        var_dump($estagiosAlunos);
-        echo'</pre>';
+        //echo'<pre>';
+        //var_dump($estagiosAlunos);
+        //echo'</pre>';
     ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
@@ -146,6 +146,7 @@
                             $estagioAluno->getIdArea() .
                             ' </span>
                         </td>';
+                        // echo '<td class="p-1 table-cell"><a href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '" target="_blank">Clique aqui para abrir</a></td>';
                         echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlAvaliacaoEmpresa() . '</td>';
                         echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlTermoCompromisso() . '</td>';
                         echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlPlanoAtividades() . '</td>';
