@@ -56,7 +56,7 @@
         <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md">
             <legend class=" font-bold text-center text-xl">Dados do estágio</legend>
 
-            <form action="salvarEstagioAluno.php" method="post" class="flex flex-col justify-center items-center gap-2" enctype="multipart/form-data">
+            <form action="salvarEstagioAluno.php" method="post" class="flex flex-col justify-center items-center gap-2" enctype=multipart/form-data>
                 <input type="hidden" name="id" value='<?php echo $estagioAluno->getId(); ?>'>
 
                 <div class="flex flex-col justify-center items-baseline gap-2">
@@ -166,6 +166,7 @@
                 border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
 
+                                    <option value="não iniciado" <?php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' ?>>Não Iniciado</option>
                                     <option value="em andamento" <?php echo $estagioAluno->getSituacaoEstagio() == 'em andamento' ? 'selected' : '' ?>>Em Andamento</option>
                                     <option value="finalizado" <?php echo $estagioAluno->getSituacaoEstagio() == 'finalizado' ? 'selected' : '' ?>>Finalizado</option>
 
@@ -289,45 +290,42 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                 </div>
 
-                <div class="flex gap-x-4">
-
-                    <div>
-                        <label for="url_termo_compromisso" class="block text-sm font-medium leading-6  mb-2">Termo Compromisso</label>
-                        <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                    </div>
-
-                    <div>
-                        <label for="url_plano_atividades" class="block text-sm font-medium leading-6  mb-2">Plano de Atividades</label>
-                        <input type="file" id="url_plano_atividades" name="url_plano_atividades" accept="application/pdf" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                    </div>
-
-                </div>
-
-                <div class="flex gap-x-4">
-
-                    <div>
-                        <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação</label>
-                        <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                    </div>
-
-                    <div>
-                        <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação da Empresa</label>
-                        <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                    </div>
-
-                </div>
-
+                
                 <div>
-                    <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">Avaliação da Empresa</label>
+                    <label for="url_termo_compromisso" class="block text-sm font-medium leading-6  mb-2">Termo Compromisso:</label>
+                    <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
+
+                <input type="hidden" name="url_plano_atividades" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>'>
+                <div>
+                    <label for="url_plano_atividades" class="block text-sm font-medium leading-6  mb-2">Plano Atividades:</label>
+                    <input type="file" id="url_plano_atividades" name="url_plano_atividades" accept="application/pdf" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
+
+                <input type="hidden" name="url_avaliacao_empresa" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>'>
+                <div>
+                    <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação Empresa:</label>
+                    <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
+
+                <input type="hidden" name="url_tcc" value='<?php echo $estagioAluno->getUrlTcc(); ?>'>
+                <div>
+                    <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">TCC:</label>
                     <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
+        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
+
+                <input type="hidden" name="url_autoavaliacao" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>'>
+                <div>
+                    <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação:</label>
+                    <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
         border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                 </div>
