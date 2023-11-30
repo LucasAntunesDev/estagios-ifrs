@@ -52,7 +52,7 @@
                         echo '<td class="p-1 w-min">' . $professor->getId() . '</td>';
                         echo '<td class="p-1 w-min">' . $professor->getNome() . '</td>';
                         echo '<td class="p-1 w-min">' . $professor->getEmail() . '</td>';
-                        echo '<td class="p-1 w-min">' . $professor->getIdArea() . '</td>';
+                        echo '<td class="p-1 w-min">' . $professor->getNomeArea() . '</td>';
                         echo '<td class="p-1 w-min">';
 
                         echo "<a href='professor.php?id=" . $professor->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
