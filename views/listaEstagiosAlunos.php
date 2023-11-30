@@ -13,11 +13,6 @@
 <body class="min-w-screen max-w-full">
 
     <?php include('views/includes/menu.php') ?>
-    <?php
-        //echo'<pre>';
-        //var_dump($estagiosAlunos);
-        //echo'</pre>';
-    ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
         <h1 class="font-bold text-4xl text-vermelho py-4 flex items-center gap-x-2">
@@ -44,7 +39,6 @@
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
-                        <!-- <th class="px-6 py-3 capitalize ">id </th> -->
                         <th class="table-cell px-6 py-3 capitalize ">aluno </th>
                         <th class="table-cell px-6 py-3 capitalize ">empresa</th>
                         <th class="table-cell px-6 py-3 capitalize ">carga horária</th>
@@ -59,10 +53,10 @@
                         <th class="table-cell px-6 py-3 capitalize ">supervisor</th>
                         <th class="table-cell px-6 py-3 capitalize ">data de fim</th>
                         <th class="table-cell px-6 py-3 capitalize ">área</th>
-                        <th class="table-cell px-6 py-3 capitalize ">id avaliação empresa</th>
-                        <th class="table-cell px-6 py-3 capitalize ">id termo de compromisso</th>
-                        <th class="table-cell px-6 py-3 capitalize ">id plano de atividades</th>
-                        <th class="table-cell px-6 py-3 capitalize ">id autoavaliação</th>
+                        <th class="table-cell px-6 py-3 capitalize ">termo de compromisso</th>
+                        <th class="table-cell px-6 py-3 capitalize ">plano de atividades</th>
+                        <th class="table-cell px-6 py-3 capitalize ">avaliação empresa</th>
+                        <th class="table-cell px-6 py-3 capitalize ">autoavaliação</th>
                         <th class="table-cell px-6 py-3 capitalize ">TCC</th>
                         <th class="table-cell px-6 py-3 capitalize ">Ações</th>
                     </tr>
@@ -73,7 +67,6 @@
 
                     foreach ($estagiosAlunos as $estagioAluno) {
                         echo '<tr class="border-1 border-gray-200 border-b">';
-                        // echo '<td class="p-1 table-cell">' . $estagioAluno->getId() . '</td>';
                         echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeAluno() . '
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
@@ -115,7 +108,6 @@
                         }
                         echo ' text-sm font-medium py-1 px-2 rounded-md inline-flex items-center w-max
                         hover:cursor-pointer transition duration-300 ease-in-out">' .
-                            // hover:cursor-pointer transition duration-300 ease-in-out font-semibold">' . 
                             $estagioAluno->getSituacaoEstagio() .
                             '</span>
                         </td>';
@@ -146,12 +138,38 @@
                             $estagioAluno->getIdArea() .
                             ' </span>
                         </td>';
-                        // echo '<td class="p-1 table-cell"><a href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '" target="_blank">Clique aqui para abrir</a></td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlAvaliacaoEmpresa() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlTermoCompromisso() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlPlanoAtividades() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlAutoavaliacao() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlTcc() . '</td>';
+                        
+                        echo '<td class="p-1 table-cell">
+                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '">';
+                            if($estagioAluno->getUrlTermoCompromisso()) echo "Clique para baixar
+                        </a>
+                        </td>'";
+                        
+                        echo '<td class="p-1 table-cell">
+                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '">';
+                            if($estagioAluno->getUrlPlanoAtividades()) echo "Clique para baixar
+                        </a>
+                        </td>'";
+
+                        echo '<td class="p-1 table-cell">
+                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '">';
+                            if($estagioAluno->getUrlAvaliacaoEmpresa()) echo "Clique para baixar
+                        </a>
+                        </td>'";
+
+
+                        echo '<td class="p-1 table-cell">
+                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlAutoavaliacao() . '">';
+                            if($estagioAluno->getUrlAutoavaliacao()) echo "Clique para baixar
+                        </a>
+                        </td>'";
+
+                        echo '<td class="p-1 table-cell">
+                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlTcc() . '">';
+                            if($estagioAluno->getUrlTcc()) echo "Clique para baixar
+                        </a>
+                        </td>'";
+
                         echo '<td class="p-1 table-cell">';
 
                         echo "<a href='estagioAluno.php?id=" . $estagioAluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50

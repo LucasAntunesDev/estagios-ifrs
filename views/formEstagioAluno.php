@@ -66,7 +66,7 @@
 
                         <div class="relative ">
                             <select id="id_aluno" name="id_aluno" value="id_aluno" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-72 pr-10">
                                 <?php
                                 foreach ($alunos as $aluno) {
@@ -91,7 +91,7 @@
 
                             <div class="relative">
                                 <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($empresas as $empresa) {
@@ -113,14 +113,14 @@
                         <div>
                             <label for="data_inicio" class="block text-sm font-medium leading-6  mb-2">Data de Início</label>
                             <input type="date" id="data_inicio" name="data_inicio" value='<?php echo $estagioAluno->getDataInicio(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
                         <div>
                             <label for="carga_horaria" class="block text-sm font-medium leading-6  mb-2">Carga Horaria (em horas)</label>
                             <input type="number" min="200" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
@@ -130,7 +130,7 @@
                         <div>
                             <label for="tipo_processo_estagio" class="block text-sm font-medium leading-6  mb-2">Tipo de Processo</label>
                             <input type="text" id="tipo_processo_estagio" name="tipo_processo_estagio" value=" <?php echo $estagioAluno->getTipoProcessoEstagio(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
 
@@ -139,7 +139,7 @@
 
                             <div class="relative">
                                 <select id="id_area" name="id_area" value="id_area" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($areas as $area) {
@@ -163,7 +163,7 @@
 
                             <div class="relative">
                                 <select name="situacao_estagio" id="situacao_estagio" value="situacao_estagio" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
 
                                     <option value="não iniciado" <?php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' ?>>Não Iniciado</option>
@@ -192,7 +192,7 @@
 
                                 <div class="relative">
                                     <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                         <?php
                                         foreach ($coordenadores as $coordenador) {
@@ -217,7 +217,7 @@
 
                             <div class="relative">
                                 <select id="id_orientador" name="id_orientador" value="id_orientador" class="rounded-md 
-border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($orientadores as $orientador) {
@@ -241,7 +241,7 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                             <div class="relative">
                                 <select id="id_coorientador" name="id_coorientador" value="id_coorientador" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($coorientadores as $coorientador) {
@@ -265,7 +265,7 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                             <div class="relative">
                                 <select id="id_supervisor" name="id_supervisor" value="id_supervisor" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($supervisores as $supervisor) {
@@ -290,44 +290,55 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                 </div>
 
-                
-                <div>
-                    <label for="url_termo_compromisso" class="block text-sm font-medium leading-6  mb-2">Termo Compromisso:</label>
-                    <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+                <div class="flex gap-x-4">
+
+                    <div>
+                        <label for="url_termo_compromisso" class="block text-sm font-medium leading-6  mb-2">Termo Compromisso:</label>
+                        <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
+        border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    </div>
+
+                    <input type="hidden" name="url_plano_atividades" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>'>
+                    <div>
+                        <label for="url_plano_atividades" class="block text-sm font-medium leading-6  mb-2">Plano Atividades</label>
+                        <input type="file" id="url_plano_atividades" name="url_plano_atividades" accept="application/pdf" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>' class="rounded-md 
+        border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    </div>
+
                 </div>
 
-                <input type="hidden" name="url_plano_atividades" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>'>
-                <div>
-                    <label for="url_plano_atividades" class="block text-sm font-medium leading-6  mb-2">Plano Atividades:</label>
-                    <input type="file" id="url_plano_atividades" name="url_plano_atividades" accept="application/pdf" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                </div>
+                <div class="flex gap-x-4">
 
                 <input type="hidden" name="url_avaliacao_empresa" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>'>
                 <div>
-                    <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação Empresa:</label>
+                    <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação Empresa</label>
                     <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
-        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                </div>
-
-                <input type="hidden" name="url_tcc" value='<?php echo $estagioAluno->getUrlTcc(); ?>'>
-                <div>
-                    <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">TCC:</label>
-                    <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                 </div>
 
                 <input type="hidden" name="url_autoavaliacao" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>'>
                 <div>
-                    <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação:</label>
+                    <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação</label>
                     <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
-        border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
+        border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
+
+                </div>
+
+                <div class="flex gap-x-4">
+
+                <input type="hidden" name="url_tcc" value='<?php echo $estagioAluno->getUrlTcc(); ?>'>
+                <div>
+                    <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">TCC</label>
+                    <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
+        border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
+        focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                </div>
+
                 </div>
 
                 <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50
