@@ -118,8 +118,8 @@
                         </div>
 
                         <div>
-                            <label for="carga_horaria" class="block text-sm font-medium leading-6  mb-2">Carga Horaria (em horas)</label>
-                            <input type="number" min="200" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
+                            <label for="carga_horaria" class="block text-sm font-medium leading-6  mb-2">Carga horária (em horas)</label>
+                            <input type="text" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
                 border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                         </div>
@@ -166,7 +166,8 @@
                 border-0 py-1.5 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
 
-                                    <!-- <option value="não iniciado" <?//php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' ?>>Não Iniciado</option> -->
+                                    <!-- <option value="não iniciado" <? //php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' 
+                                                                        ?>>Não Iniciado</option> -->
                                     <option value="em andamento" <?php echo $estagioAluno->getSituacaoEstagio() == 'em andamento' ? 'selected' : '' ?>>Em Andamento</option>
                                     <option value="finalizado" <?php echo $estagioAluno->getSituacaoEstagio() == 'finalizado' ? 'selected' : '' ?>>Finalizado</option>
 
@@ -311,33 +312,33 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                 <div class="flex gap-x-4">
 
-                <input type="hidden" name="url_avaliacao_empresa" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>'>
-                <div>
-                    <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação Empresa</label>
-                    <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
+                    <input type="hidden" name="url_avaliacao_empresa" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>'>
+                    <div>
+                        <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6  mb-2">Avaliação Empresa</label>
+                        <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                </div>
+                    </div>
 
-                <input type="hidden" name="url_autoavaliacao" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>'>
-                <div>
-                    <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação</label>
-                    <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
+                    <input type="hidden" name="url_autoavaliacao" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>'>
+                    <div>
+                        <label for="url_autoavaliacao" class="block text-sm font-medium leading-6  mb-2">Autoavaliação</label>
+                        <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                </div>
+                    </div>
 
                 </div>
 
                 <div class="flex gap-x-4">
 
-                <input type="hidden" name="url_tcc" value='<?php echo $estagioAluno->getUrlTcc(); ?>'>
-                <div>
-                    <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">TCC</label>
-                    <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
+                    <input type="hidden" name="url_tcc" value='<?php echo $estagioAluno->getUrlTcc(); ?>'>
+                    <div>
+                        <label for="url_tcc" class="block text-sm font-medium leading-6  mb-2">TCC</label>
+                        <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
         focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
-                </div>
+                    </div>
 
                 </div>
 
