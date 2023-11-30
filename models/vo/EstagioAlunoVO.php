@@ -17,6 +17,11 @@ final class EstagioAlunoVO extends VO {
     private $id_supervisor;
     private $data_fim;
     private $id_area;
+    private $url_termo_compromisso;
+    private $url_plano_atividades;
+    private $url_avaliacao_empresa;
+    private $url_tcc;
+    private $url_autoavaliacao;
     private $nome_aluno;
     private $nome_empresa;
     private $nome_coordenador;
@@ -24,12 +29,7 @@ final class EstagioAlunoVO extends VO {
     private $nome_coorientador;
     private $nome_supervisor;
     private $nome_area;
-    private $url_termo_compromisso;
-    private $url_plano_atividades;
-    private $url_avaliacao_empresa;
-    private $url_tcc;
-    private $url_autoavaliacao;
-
+    
     public function __construct(
         $id = 0,
         $id_aluno = 0,
@@ -46,18 +46,18 @@ final class EstagioAlunoVO extends VO {
         $id_supervisor = 0,
         $data_fim = '',
         $id_area = 0,
+        $url_termo_compromisso = '',
+        $url_plano_atividades = '',
+        $url_avaliacao_empresa = '',
+        $url_tcc = '',
+        $url_autoavaliacao = '',
         $nome_aluno = '',
         $nome_empresa = '',
         $nome_coordenador = '',
         $nome_orientador = '',
         $nome_coorientador = '',
         $nome_supervisor = '',
-        $nome_area = '',
-        $url_termo_compromisso = '',
-        $url_plano_atividades = '',
-        $url_avaliacao_empresa = '',
-        $url_tcc = '',
-        $url_autoavaliacao = ''
+        $nome_area = ''
     ) {
         parent::__construct($id);
         $this->id_aluno = $id_aluno;
@@ -74,18 +74,18 @@ final class EstagioAlunoVO extends VO {
         $this->id_supervisor = $id_supervisor;
         $this->data_fim = $data_fim;
         $this->id_area = $id_area;
-        $this->nome_aluno = $nome_aluno;
-        $this->nome_empresa = $nome_empresa;
-        $this->nome_coordenador  = $nome_coordenador;
-        $this->nome_orientador = $nome_orientador;
-        $this->nome_coorientador = $nome_coorientador;
-        $this->nome_supervisor = $nome_supervisor;
-        $this->nome_area = $nome_area;
         $this->url_termo_compromisso = $url_termo_compromisso;
         $this->url_plano_atividades = $url_plano_atividades;
         $this->url_avaliacao_empresa = $url_avaliacao_empresa;
         $this->url_tcc = $url_tcc;
         $this->url_autoavaliacao = $url_autoavaliacao;
+        $this->nome_aluno = $nome_aluno;
+        $this->nome_empresa = $nome_empresa;
+        $this->nome_coordenador = $nome_coordenador;
+        $this->nome_orientador = $nome_orientador;
+        $this->nome_coorientador = $nome_coorientador;
+        $this->nome_supervisor = $nome_supervisor;
+        $this->nome_area = $nome_area;
     }
 
     public function getIdAluno() {
@@ -199,7 +199,6 @@ final class EstagioAlunoVO extends VO {
     public function setIdArea($id_area) {
         $this->id_area = $id_area;
     }
-
     public function getNomeAluno() {
         return $this->nome_aluno;
     }

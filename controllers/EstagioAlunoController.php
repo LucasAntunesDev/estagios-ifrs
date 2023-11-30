@@ -89,6 +89,7 @@ final class EstagioAlunoController extends Controller
             $_POST['id_supervisor'],
             $_POST['data_fim'],
             $_POST['id_area'],
+            // tentar o bloco de códigos aq
             $_POST['url_termo_compromisso'],
             $_POST['url_plano_atividades'],
             $_POST['url_avaliacao_empresa'],
@@ -104,12 +105,12 @@ final class EstagioAlunoController extends Controller
 
     public function remove()
     {
-        if (empty($_GET['id_estagio_aluno'])) {
+        if (empty($_GET['id'])) {
             die('Necessário passar o ID');
         }
 
         $model = new EstagioAlunoModel();
-        $return = $model->delete(new EstagioAlunoVO($_GET['id_estagio_aluno']));
+        $return = $model->delete(new EstagioAlunoVO($_GET['id']));
 
         $this->redirect('estagiosAlunos.php');
     }

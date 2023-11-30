@@ -13,6 +13,11 @@
 <body class="min-w-screen max-w-full">
 
     <?php include('views/includes/menu.php') ?>
+    <?php
+        echo'<pre>';
+        var_dump($estagiosAlunos);
+        echo'</pre>';
+    ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
         <h1 class="font-bold text-4xl text-vermelho py-4 flex items-center gap-x-2">
@@ -141,19 +146,19 @@
                             $estagioAluno->getIdArea() .
                             ' </span>
                         </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getIdAvaliacaoEmpresa() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getIdTermoCompromisso() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getIdPlanoAtividades() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getIdAutoavaliacao() . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getIdTCC() . '</td>';
+                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlAvaliacaoEmpresa() . '</td>';
+                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlTermoCompromisso() . '</td>';
+                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlPlanoAtividades() . '</td>';
+                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlAutoavaliacao() . '</td>';
+                        echo '<td class="p-1 table-cell">' . $estagioAluno->getUrlTcc() . '</td>';
                         echo '<td class="p-1 table-cell">';
 
-                        echo "<a href='estagioAluno.php?id=" . $estagioAluno->getIdAluno() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
+                        echo "<a href='estagioAluno.php?id=" . $estagioAluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";
-                        echo "<a href='excluirEstagioAluno.php?id=" . $estagioAluno->getIdAluno() . "' class=' bg-vermelho rounded-md py-1 px-4 hover:bg-zinc-50
+                        echo "<a href='excluirEstagioAluno.php?id=" . $estagioAluno->getId() . "' class=' bg-vermelho rounded-md py-1 px-4 hover:bg-zinc-50
                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-vermelho hover:text-vermelho transition duration-300 ease-in-out'>
                         Excluir
                         <span class='material-symbols-outlined'>delete</span>

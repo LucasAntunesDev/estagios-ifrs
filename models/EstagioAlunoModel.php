@@ -221,6 +221,7 @@ final class EstagioAlunoModel extends Model {
                     WHERE id = :id';
     
         $binds = [
+            ':id' =>  $vo->getId(),
             ':id_aluno' =>  $vo->getIdAluno(),
             ':id_empresa' =>  $vo->getIdEmpresa(),
             ':carga_horaria' =>  $vo->getCargaHoraria(),
@@ -239,8 +240,7 @@ final class EstagioAlunoModel extends Model {
             ':url_plano_atividades' =>  $vo->getUrlPlanoAtividades(),
             ':url_avaliacao_empresa' =>  $vo->getUrlAvaliacaoEmpresa(),
             ':url_tcc' =>  $vo->getUrlTcc(),
-            ':url_autoavaliacao' =>  $vo->getUrlAutoavaliacao(),
-            ':id' =>  $vo->getId()
+            ':url_autoavaliacao' =>  $vo->getUrlAutoavaliacao()
         ];
     
         return $db->execute($query, $binds);
