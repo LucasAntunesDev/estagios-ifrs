@@ -40,7 +40,7 @@
                         <th class="px-6 py-3 capitalize w-min">Id do Professor</th>
                         <th class="px-6 py-3 capitalize w-min">Nome</th>
                         <th class="px-6 py-3 capitalize w-min">Email</th>
-                        <th class="px-6 py-3 capitalize w-min">Id Area</th>
+                        <th class="px-6 py-3 capitalize w-min">Área</th>
                         <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
