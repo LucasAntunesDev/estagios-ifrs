@@ -70,7 +70,14 @@
 
     </div>
 
-    <div class="grid grid-cols-3 justify-items-center gap-8">
+    <div class="flex justify-center mb-8">
+        <span class="font-bold 2xl:text-6xl xl:text-4xl text-vermelho my-4 capitalize 
+                2xl:w-6/12 xl:w-8/12 text-center">
+                Gerenciar
+        </span>
+    </div>
+
+    <div class="grid grid-cols-4 justify-items-center gap-8 my-20">
 
     <a href="estagiosAlunos.php">
         <div class="max-w-sm w-56 bg-white border border-zinc-300 rounded-lg flex flex-col justify-center items-center h-56 hover:bg-zinc-50
@@ -189,6 +196,27 @@
             </div>
         </div>
         </a>
+<<<<<<< HEAD
+
+        <a href="areas.php">
+            <div class="max-w-sm w-56 bg-white border border-zinc-300 rounded-lg flex flex-col justify-center items-center h-56 hover:bg-zinc-50
+            transition duration-300 ease-in-out">
+               <div class="w-available flex items-center justify-center">
+              <div class="bg-emerald-300 w-available flex justify-center items-center py-4 rounded-md">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-28 h-28 fill-emerald-800">
+                <path fill-rule="evenodd" d="M2.25 2.25a.75.75 0 000 1.5H3v10.5a3 3 0 003 3h1.21l-1.172 3.513a.75.75 0 001.424.474l.329-.987h8.418l.33.987a.75.75 0 001.422-.474l-1.17-3.513H18a3 3 0 003-3V3.75h.75a.75.75 0 000-1.5H2.25zm6.04 16.5l.5-1.5h6.42l.5 1.5H8.29zm7.46-12a.75.75 0 00-1.5 0v6a.75.75 0 001.5 0v-6zm-3 2.25a.75.75 0 00-1.5 0v3.75a.75.75 0 001.5 0V9zm-3 2.25a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5z" clip-rule="evenodd" />
+            </svg>
+    
+              </div>
+                    
+               </div>
+    
+                <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-neutral-700 dark:text-white">Áreas</h5>
+                </div>
+            </div>
+            </a>
+=======
 
         <a href="areas.php">
         <div class="max-w-sm w-56 bg-white border border-zinc-300 rounded-lg flex flex-col justify-center items-center h-56 hover:bg-zinc-50
@@ -209,6 +237,7 @@
         </div>
         </a>
 
+>>>>>>> efe07a5d26563a8d79bb1d6ecdf795bfd1f5b03b
     </div>
 
     <div class="flex justify-center items-center gap-x-20">
