@@ -10,8 +10,11 @@ use Model\SupervisorModel;
 use Model\ProfessorModel;
 use Model\AreaModel;
 
-final class EstagioAlunoController extends Controller {
-    public function list() {
+final class EstagioAlunoController extends Controller
+{
+
+    public function list()
+    {
         $model = new EstagioAlunoModel();
         $data = $model->selectAll();
 
@@ -20,7 +23,8 @@ final class EstagioAlunoController extends Controller {
         ]);
     }
 
-    public function get() {
+    public function get()
+    {
         $id = $_GET['id'] ?? null;
 
         if (empty($id)) {
@@ -67,7 +71,25 @@ final class EstagioAlunoController extends Controller {
         ]);
     }
 
-    public function save() {
+    public function save()
+    {
+
+        function gerarUrl($url) {
+            if ($_FILES[$url]['error']) {
+                echo "Ocorreu um erro ao fazer o upload do arquivo";
+            }
+    
+            else {
+                $diretorio = "uploads/";
+                $nomeArquivo = uniqid();
+                $nomeArquivo .= ".";
+                $nomeArquivo .= pathinfo($_FILES[$url]['name'], PATHINFO_EXTENSION);
+                $nomeCompletoArquivo = $diretorio . $nomeArquivo;
+                $sucesso = move_uploaded_file($_FILES[$url]['tmp_name'], $nomeCompletoArquivo);
+                return $nomeArquivo;
+            }
+        }
+        
         $id = $_POST['id'];
         $vo = new EstagioAlunoVO(
             $id,
@@ -85,35 +107,23 @@ final class EstagioAlunoController extends Controller {
             $_POST['id_supervisor'],
             $_POST['data_fim'],
             $_POST['id_area'],
-            // tentar o bloco de códigos aq
-            $_POST['url_termo_compromisso'],
-            $_POST['url_plano_atividades'],
-            $_POST['url_avaliacao_empresa'],
-            $_POST['url_tcc'],
-            $_POST['url_autoavaliacao']
         );
 
-        // Bloco de Upload do Arquivo
-        // if ($_FILES['url']['error']) {
-        //     echo "Ocorre um erro ao fazer o upload do arquivo";
-        // } else {
-        //     $diretorio = "uploads/";
-        //     $nomeArquivo = uniqid();
-        //     $nomeArquivo .= ".";
-        //     $nomeArquivo .= pathinfo($_FILES['url']['name'], PATHINFO_EXTENSION);
-        //     $nomeCompletoArquivo = $diretorio . $nomeArquivo;
-
-        //     $sucesso = move_uploaded_file($_FILES['url']['tmp_name'], $nomeCompletoArquivo);
-        //     $vo->setUrl($nomeArquivo);
-        // }
+        $vo->setUrlTermoCompromisso(gerarUrl("url_termo_compromisso"));
+        $vo->setUrlPlanoAtividades(gerarUrl("url_plano_atividades"));
+        $vo->setUrlAvaliacaoEmpresa(gerarUrl("url_avaliacao_empresa"));
+        $vo->setUrlTcc(gerarUrl("url_tcc"));
+        $vo->setUrlAutoavaliacao(gerarUrl("url_autoavaliacao"));
 
         $model = new EstagioAlunoModel();
         $return = empty($id) ? $model->insert($vo) : $model->update($vo);
 
+
         $this->redirect('estagiosAlunos.php');
     }
 
-    public function remove() {
+    public function remove()
+    {
         if (empty($_GET['id'])) {
             die('Necessário passar o ID');
         }
