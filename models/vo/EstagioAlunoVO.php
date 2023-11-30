@@ -1,6 +1,7 @@
 <?php
 
 namespace Model\VO;
+use DateInterval;
 
 final class EstagioAlunoVO extends VO {
     private $id_aluno;
@@ -29,7 +30,7 @@ final class EstagioAlunoVO extends VO {
     private $nome_coorientador;
     private $nome_supervisor;
     private $nome_area;
-    
+
     public function __construct(
         $id = 0,
         $id_aluno = 0,
@@ -156,8 +157,12 @@ final class EstagioAlunoVO extends VO {
         return $this->previsao_fim;
     }
 
-    public function setPrevisaoFim($previsao_fim) {
+    public function setPrevisaoFim($previsao_fim, $horas_totais, $horas_diarias) {
         $this->previsao_fim = $previsao_fim;
+
+        $dias = ceil($horas_totais / $horas_diarias);
+
+        $this->previsao_fim->add(new DateInterval("P{$dias}D"));
     }
 
     public function getIdOrientador() {
