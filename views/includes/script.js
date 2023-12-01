@@ -33,3 +33,13 @@ $(document).ready(function(){
       });
     $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
   });
+
+  $(document).ready(function() {
+    $("#pesquisa-input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".table-auto tr").filter(function() {
+            $(this).toggle($(this).text()
+            .toLowerCase().indexOf(value) > -1)
+        });
+    });
+});

@@ -17,6 +17,7 @@
 <script src="views/includes/script.js"></script>
 
 
+
 <script>
     tailwind.config = {
         theme: {
