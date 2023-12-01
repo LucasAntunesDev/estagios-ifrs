@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estágios IFRS - Usuários</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <?php include('views/includes/links.php'); ?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <?php include('views/includes/links.php'); ?>
 </head>
 
 <body>
@@ -22,18 +22,32 @@
             Usuários
         </h1>
 
-        <a href="usuario.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
-                     text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
-                     mb-2 mr-8 self-end transition duration-300 ease-in-out">
+        <div class="flex items-center gap-x-4 justify-startpl-16 w-6/12 mb-4">
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-            </svg>
+            <a href="usuario.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
+         text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
+         mb-2 mr-8 self-end">
 
-        </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                </svg>
+            </a>
+
+            <div class="relative">
+                <input id="pesquisa-input" placeholder="Procurar" type="text" class="rounded-md 
+    border-0 py-1.5 pr-60 pl-10  ring-1 ring-inset ring-gray-500 
+    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
+                        <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
 
         <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border-1 border-x border-y rounded-xl">
-            <table class="max-w-full">
+            <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
                         <th class="px-6 py-3 capitalize w-min">ID</th>
@@ -72,7 +86,18 @@
         </div>
     </div>
 
-    <?php include_once('views/includes/footer.php')?>
+    <?php include_once('views/includes/footer.php') ?>
+    <script>
+        $(document).ready(function() {
+            $("#pesquisa-input").on("keydown", function() {
+                var value = $(this).val().toLowerCase();
+                $(".table-auto tr").filter(function() {
+                    $(this).toggle($(this).text()
+                        .toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -23,8 +23,7 @@
             Cidades
         </h1>
 
-        <div class="flex items-center gap-x-4 justify-start w-screen px-16 mb-4">
-
+        <div class="flex items-center gap-x-4 justify-startpl-16 w-6/12 mb-4">
 
             <a href="cidade.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
                      text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
@@ -45,10 +44,11 @@
                     </svg>
                 </div>
             </div>
+            
         </div>
 
         <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border-1 border-x border-y rounded-xl">
-            <table class="table-auto">
+            <table class="table-auto tabela">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
                         <th class="px-6 py-3 capitalize w-min">Id</th>
