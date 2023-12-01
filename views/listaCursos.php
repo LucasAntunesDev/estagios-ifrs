@@ -51,7 +51,7 @@
                         echo '<tr class="border-b">';
                         echo '<td class="p-1 w-min">' . $curso->getId() . '</td>';
                         echo '<td class="p-1 w-min">' . $curso->getNome() . '</td>';
-                        echo '<td class="p-1 w-min">' . $curso->getIdCoordenador() . '</td>';
+                        echo '<td class="p-1 w-min">' . $curso->getNomeCoordenador() . '</td>';
                         echo '<td class="border-y-[1px]  px-4 flex flex-col">';
 
                         echo "<a href='Curso.php?id=" . $curso->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
