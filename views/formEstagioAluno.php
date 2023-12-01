@@ -360,6 +360,8 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
     </form>
     </div>
 
+    <?php include_once('views/includes/footer.php') ?>
+
 </body>
 
 </html>

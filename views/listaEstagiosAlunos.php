@@ -145,35 +145,35 @@
                             $estagioAluno->getIdArea() .
                             ' </span>
                         </td>';
-                        
+
                         echo '<td class="p-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '">';
-                            if($estagioAluno->getUrlTermoCompromisso()) echo "Clique para baixar
+                        if ($estagioAluno->getUrlTermoCompromisso()) echo "Clique para baixar
                         </a>
                         </td>'";
-                        
+
                         echo '<td class="p-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '">';
-                            if($estagioAluno->getUrlPlanoAtividades()) echo "Clique para baixar
+                        if ($estagioAluno->getUrlPlanoAtividades()) echo "Clique para baixar
                         </a>
                         </td>'";
 
                         echo '<td class="p-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '">';
-                            if($estagioAluno->getUrlAvaliacaoEmpresa()) echo "Clique para baixar
+                        if ($estagioAluno->getUrlAvaliacaoEmpresa()) echo "Clique para baixar
                         </a>
                         </td>'";
 
 
                         echo '<td class="p-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlAutoavaliacao() . '">';
-                            if($estagioAluno->getUrlAutoavaliacao()) echo "Clique para baixar
+                        if ($estagioAluno->getUrlAutoavaliacao()) echo "Clique para baixar
                         </a>
                         </td>'";
 
                         echo '<td class="p-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTcc() . '">';
-                            if($estagioAluno->getUrlTcc()) echo "Clique para baixar
+                        if ($estagioAluno->getUrlTcc()) echo "Clique para baixar
                         </a>
                         </td>'";
 
@@ -199,6 +199,8 @@
         </div>
 
     </div>
+
+    <?php include_once('views/includes/footer.php') ?>
 
 </body>
 

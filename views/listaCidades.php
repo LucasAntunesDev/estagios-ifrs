@@ -70,6 +70,9 @@
             </table>
         </div>
     </div>
+
+    <?php include_once('views/includes/footer.php')?>
+
 </body>
 
 </html>

@@ -11,7 +11,7 @@
     <?php include('views/includes/links.php'); ?>
 </head>
 
-<body class="mb-4 scroll-smooth">
+<body class="scroll-smooth">
 
     <?php
     include('views/includes/menu.php');
@@ -70,14 +70,14 @@
 
     </div>
 
-    <div class="flex justify-center mb-8">
+    <!-- <div class="flex justify-center mb-8">
         <span class="font-bold 2xl:text-6xl xl:text-4xl text-vermelho my-4 capitalize 
                 2xl:w-6/12 xl:w-8/12 text-center">
-                Gerenciar
+            Gerenciar
         </span>
-    </div>
+    </div> -->
 
-    <div class="grid grid-cols-4 justify-items-center gap-8 my-20">
+    <!-- <div class="grid grid-cols-4 justify-items-center gap-8 my-20">
 
     <a href="estagiosAlunos.php">
         <div class="max-w-sm w-56 bg-white border border-zinc-300 rounded-lg flex flex-col justify-center items-center h-56 hover:bg-zinc-50
@@ -215,48 +215,50 @@
                 </div>
             </div>
             </a>
-    </div>
+    </div> -->
 
-    <div class="flex justify-center items-center gap-x-20">
-        <img src="views/assets/img-placeholder-1.png" class="h-56">
+    <div class="flex flex-col justify-center items-center gap-y-10">
 
-        <div class="flex flex-col">
-            <h1 class="font-bold text-4xl text-vermelho my-4">
-                Aprendizado
-            </h1>
+        <div class="flex justify-center items-center gap-x-20">
+            <img src="views/assets/img-placeholder-3.png" class="h-80 rounded-md">
 
-            <p class="w-96 2xl:text-xl xl:text-lg text-neutral-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis facilisis sodales sapien, eget finibus purus solli
-                citudin a. Donec volutpat sem in urna ornare vulputate.
-            </p>
+            <div class="flex flex-col w-3/5">
+                <sapn class="font-bold text-4xl text-vermelho my-4">
+                    Aprendizado
+                </sapn>
+
+                <p class="w-4/5 2xl:text-lg xl:text-md text-neutral-700">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis facilisis sodales sapien, eget finibus purus solli
+                    citudin a. Donec volutpat sem in urna ornare vulputate.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis facilisis sodales sapien, eget finibus purus solli
+                    citudin a. Donec volutpat sem in urna ornare vulputate.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-x-20">
+            <div class="flex flex-col w-3/5">
+                <sapn class="font-bold text-4xl text-vermelho my-4">
+                    Oportunidades
+                </sapn>
+
+                <p class="w-4/5 2xl:text-lg xl:text-md text-neutral-700">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis facilisis sodales sapien, eget finibus purus solli
+                    citudin a. Donec volutpat sem in urna ornare vulputate.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+
+            <img src="views/assets/img-placeholder-4.png" class="h-80 rounded-md">
         </div>
     </div>
 
-    <div class="flex justify-center items-center gap-x-20 mt-10">
-        <div class="flex flex-col">
-            <h1 class="font-bold text-4xl text-vermelho my-4">
-                Oportunidades
-            </h1>
-
-            <p class="w-96 2xl:text-xl xl:text-lg text-neutral-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis facilisis sodales sapien, eget finibus purus solli
-                citudin a. Donec volutpat sem in urna ornare vulputate.
-            </p>
-        </div>
-
-        <img src="views/assets/img-placeholder-2.png" class="h-56">
     </div>
 
-    </div>
-
-    <script>
-        function teste() {
-            window.scrollTo(0, 550)
-        }
-    </script>
-
+    <?php include_once('views/includes/footer.php')?>
 </body>
 
 </html>
