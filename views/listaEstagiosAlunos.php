@@ -96,14 +96,14 @@
                         echo '<td class="p-1 w-max capitalize">
                             <span class="';
                         switch ($estagioAluno->getSituacaoEstagio()) {
-                            case 'em andamento':
-                                echo 'bg-yellow-100 hover:bg-yellow-200 text-yellow-800';
+                            case 'não iniciado':
+                                echo 'bg-red-100 hover:bg-red-200 text-red-700';
                                 break;
                             case 'finalizado':
                                 echo 'bg-emerald-100 hover:bg-emerald-200 text-emerald-700';
                                 break;
                             default:
-                                echo 'bg-red-100 hover:bg-red-200 text-red-700';
+                                echo 'bg-yellow-100 hover:bg-yellow-200 text-yellow-800';
                                 break;
                         }
                         echo ' text-sm font-medium py-1 px-2 rounded-md inline-flex items-center w-max
@@ -112,10 +112,10 @@
                             '</span>
                         </td>';
                         // echo 'previsão '.$estagioAluno->getPrevisaoFim();
-                        $dias = ceil(200 / 6);
-                        echo $dias;
-                        echo '<br>';
-                        var_dump(strtotime(strval($estagioAluno->getDataInicio())));
+                        // $dias = ceil(200 / 6);
+                        // echo $dias;
+                        // echo '<br>';
+                        // var_dump(strtotime(strval($estagioAluno->getDataInicio())));
                         // var_dump(strtotime($estagioAluno->getDataInicio()));
                         // echo date_add($estagioAluno->getDataInicio()), strtotime($dias);
                         echo '<td class="p-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
