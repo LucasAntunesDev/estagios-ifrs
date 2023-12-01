@@ -61,7 +61,7 @@
 
                 <div class="flex flex-col justify-center items-baseline gap-2">
 
-                    <div class="w-[-webkit-fill-available]">
+                    <div class="w-available">
                         <label for="id_aluno" class="block text-sm font-medium leading-6  mb-2">Aluno</label>
 
                         <div class="relative ">
@@ -164,7 +164,7 @@
                             <div class="relative">
                                 <select name="situacao_estagio" id="situacao_estagio" value="situacao_estagio" class="rounded-md 
                 border-0 py-1.5 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-[-webkit-fill-available]">
+                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
 
                                     <!-- <option value="não iniciado" <? //php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' 
                                                                         ?>>Não Iniciado</option> -->
@@ -186,7 +186,7 @@
 
                     <input type="hidden" id="previsao_fim" name="previsao_fim" value='<?php echo $estagioAluno->getPrevisaoFim(); ?>'>
 
-                    <div class="flex gap-x-4 w-[-webkit-fill-available]">
+                    <div class="flex gap-x-4 w-available">
                         <div>
                             <div>
                                 <label for="id_coordenador" class="block text-sm font-medium leading-6  mb-2">Coordenador</label>

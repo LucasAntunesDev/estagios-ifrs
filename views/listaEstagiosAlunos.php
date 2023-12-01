@@ -111,6 +111,13 @@
                             $estagioAluno->getSituacaoEstagio() .
                             '</span>
                         </td>';
+                        // echo 'previsão '.$estagioAluno->getPrevisaoFim();
+                        $dias = ceil(200 / 6);
+                        echo $dias;
+                        echo '<br>';
+                        var_dump(strtotime(strval($estagioAluno->getDataInicio())));
+                        // var_dump(strtotime($estagioAluno->getDataInicio()));
+                        // echo date_add($estagioAluno->getDataInicio()), strtotime($dias);
                         echo '<td class="p-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
                         echo '<td class="p-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
                         echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeOrientador() . '
