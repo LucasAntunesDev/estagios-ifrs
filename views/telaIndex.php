@@ -220,7 +220,7 @@
     <div class="flex flex-col justify-center items-center gap-y-10">
 
         <div class="flex justify-center items-center gap-x-20">
-            <img src="views/assets/img-placeholder-3.png" class="h-80 rounded-md">
+            <img src="views/assets/img-placeholder-1.png" class="h-80 rounded-md">
 
             <div class="flex flex-col w-3/5">
                 <sapn class="font-bold text-4xl text-vermelho my-4">
@@ -252,7 +252,7 @@
                 </p>
             </div>
 
-            <img src="views/assets/img-placeholder-4.png" class="h-80 rounded-md">
+            <img src="views/assets/img-placeholder-2.png" class="h-80 rounded-md">
         </div>
     </div>
 
