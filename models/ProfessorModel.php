@@ -31,6 +31,34 @@ final class ProfessorModel extends Model {
 
         return $array;
     }
+
+    public function selectNaoCoordenadores($vo = null) {
+        $db = new Database();
+        $data = $db->select('
+                            SELECT 
+                            professor.id, professor.nome, professor.email, professor.id_area, area.nome as nome_area
+                            FROM professor
+                            JOIN area
+                            ON professor.id_area = area.id
+                            WHERE professor.id not in(select id_coordenador from curso)
+        ');
+
+        $array = [];
+
+        foreach ($data as $row) {
+            $vo = new ProfessorVO(
+                $row['id'],
+                $row['nome'],
+                $row['email'],
+                $row['id_area'],
+                $row['nome_area']
+            );
+            array_push($array, $vo);
+        }
+
+        return $array;
+    }
+
     public function selectOne($vo = null) {
         $db = new Database();
         $query = 'SELECT * FROM professor WHERE id = :id';

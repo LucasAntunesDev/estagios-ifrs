@@ -69,7 +69,13 @@ final class EstagioAlunoVO extends VO {
         $this->numero_encaminhamentos = $numero_encaminhamentos;
         $this->situacao_estagio = $situacao_estagio;
         $this->data_inicio = $data_inicio;
-        $this->previsao_fim = $previsao_fim;
+        // $this->previsao_fim = $previsao_fim;
+
+        $horas_diarias = 6;
+        // $dias = ceil($carga_horaria / $horas_diarias);
+
+        // $this->previsao_fim->add(new DateInterval("P{$dias}D"));
+        $this->previsao_fim = $data_inicio;
         $this->id_orientador = $id_orientador;
         $this->id_coorientador = $id_coorientador;
         $this->id_supervisor = $id_supervisor;

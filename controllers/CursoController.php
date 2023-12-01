@@ -5,6 +5,7 @@ namespace Controller;
 use Embed\Http\Redirects;
 use Model\CursoModel;
 use Model\VO\CursoVO;
+use Model\ProfessorModel;
 
 
 final class CursoController extends Controller {
@@ -28,7 +29,13 @@ final class CursoController extends Controller {
             $vo = $model->selectOne(new CursoVO($id));
         }
 
-        $this->loadView('formCurso', ['curso' => $vo]);
+        $model = new ProfessorModel();
+        $naoCoodenadores = $model->selectNaoCoordenadores();
+
+        $this->loadView('formCurso', [
+            'curso' => $vo,
+            'naoCoordenadores' => $naoCoodenadores
+        ]);
     }
 
     public function save() {

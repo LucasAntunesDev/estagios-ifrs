@@ -8,12 +8,26 @@ use Util\Database;
 final class CursoModel extends Model {
     public function selectAll($vo = null) {
         $db = new Database();
-        $data = $db->select('SELECT * FROM curso');
+        $data = $db->select('
+                            SELECT 
+                            curso.id,
+                            curso.nome,
+                            curso.id_coordenador,
+                            coordenador.nome as "nome_coordenador"
+                            FROM curso
+                            JOIN professor coordenador ON
+                            curso.id_coordenador = coordenador.id
+                             ');
 
         $array = [];
 
         foreach ($data as $row) {
-            $vo = new CursoVO($row['id'], $row['nome'], $row['id_coordenador']);
+            $vo = new CursoVO(
+                $row['id'],
+                $row['nome'],
+                $row['id_coordenador'],
+                $row['nome_coordenador']
+            );
             array_push($array, $vo);
         }
 
