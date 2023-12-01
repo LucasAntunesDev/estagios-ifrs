@@ -2,7 +2,7 @@
 h-16 bg-verde-1 text-zinc-50 border-b-[3px] border-verde-2 min-w-screen max-w-[-webkit-fill-available]">
 
     <a href="index.php">
-        <img src="views/assets/ifrs-logo-white.png" alt="Logo do IFRS" class="h-10  
+        <img src="views/assets/ifrs-logo-white.png" alt="Logo do IFRS" class="h-9  
 transition ease-in-out duration-300 cursor-pointer">
     </a>
     <?php
