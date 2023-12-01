@@ -17,15 +17,17 @@
     include('views/includes/menu.php');
     ?>
 
-    <div class="flex flex-row justify-center items-center gap-2 h-screen">
+    <div class="flex flex-row justify-center items-center gap-2 h-screen md:px-8">
 
         <div class="flex flex-col justify-center text-start w-6/12">
-            <sapn class="font-bold 2xl:text-6xl xl:text-4xl text-vermelho my-4 capitalize 
-            2xl:w-6/12 xl:w-8/12">
+            <sapn class="font-bold text-vermelho my-4 capitalize 
+            2xl:w-6/12 xl:w-8/12 lg:w-8/12 2xl:text-6xl xl:text-4xl lg:text-4xl
+            md:text-4xl md:w-7/12">
                 Começe um estágio, descubra novas Oportunidades
             </sapn>
 
-            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700">
+            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
+            lg:w-9/12">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
@@ -65,7 +67,7 @@
         </div>
 
         <div class="flex justify-center items-center" id="login-div">
-            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96 lg:h-[28rem]">
+            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96 lg:h-[24rem] md:h-96">
         </div>
 
     </div>
@@ -220,7 +222,7 @@
     <div class="flex flex-col justify-center items-center gap-y-10">
 
         <div class="flex justify-center items-center gap-x-20">
-            <img src="views/assets/img-placeholder-1.png" class="h-80 rounded-md">
+            <img src="views/assets/img-placeholder-1.png" class="xl:h-80 lg:h-72 md:h-64 sm:h-60 rounded-md">
 
             <div class="flex flex-col w-3/5">
                 <sapn class="font-bold text-4xl text-vermelho my-4">
@@ -252,7 +254,7 @@
                 </p>
             </div>
 
-            <img src="views/assets/img-placeholder-2.png" class="h-80 rounded-md">
+            <img src="views/assets/img-placeholder-2.png" class="xl:h-80 lg:h-72 md:h-64 sm:h-60 rounded-md">
         </div>
     </div>
 
