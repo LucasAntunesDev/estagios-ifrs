@@ -24,8 +24,9 @@ CREATE TABLE `aluno` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `aluno` (`id`, `matricula`, `nome`, `datanasc`, `email`, `cpf`, `rg`, `endereco`, `telefone`, `ano_turma`, `id_cidade`, `id_curso`) VALUES
-(1, 4567, 'Lucas', '0000-00-00', 'lucas@gmail.com', 4356, '4354656', '    Santa Helena, Bento Gonçalves', 99346437, '2', 1, 1),
-(2, 745565, 'Bernardo Bortolini Zanette', '2023-11-16', 'bernardobz@gmail.com', 5474575, '656756756', ' 457575', 1111111111, '2', 2, 1);
+(1, 4567, 'Lucas', '2006-04-06', 'lucas@gmail.com', 4356, '4354656', '     Santa Helena, Bento Gonçalves', 99346437, '2', 1, 1),
+(2, 745565, 'Bernardo', '2006-12-15', 'bernardo@gmail.com', 5474575, '656756756', '    457575', 1111111111, '2', 2, 1),
+(3, 2147483647, 'Guilherme', '2006-07-06', 'guiguerra@gmail.com', 5686778, '6767867867', 'Endereço 1', 2147483647, '2', 1, 1);
 
 CREATE TABLE `area` (
   `id` int(11) NOT NULL,
@@ -103,7 +104,8 @@ CREATE TABLE `professor` (
 INSERT INTO `professor` (`id`, `nome`, `email`, `id_area`) VALUES
 (1, 'Rafael Jaques', 'rafajaques@gmail.com', 1),
 (2, 'Thyago Salvá', 'salva@gmail.com', 1),
-(3, 'Ivan Prá', 'ivanpra@gmail.com', 1);
+(3, 'Ivan Prá', 'ivanpra@gmail.com', 1),
+(4, 'Eduardo Schenato', 'eduardoschenato@gmail.com', 1);
 
 CREATE TABLE `supervisor` (
   `id` int(11) NOT NULL,
@@ -126,8 +128,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nome`, `login`, `senha`) VALUES
 (1, 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997'),
-(2, 'Lucas', 'Lucas', '10c25665e49274c39b8e8f7ad6e2a3d0b0bc5052'),
-(3, 'teste', 'teste', '2e6f9b0d5885b6010f9167787445617f553a735f');
+(2, 'Lucas', 'Lucas', '10c25665e49274c39b8e8f7ad6e2a3d0b0bc5052');
 
 
 ALTER TABLE `aluno`
@@ -173,7 +174,7 @@ ALTER TABLE `usuario`
 
 
 ALTER TABLE `aluno`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 ALTER TABLE `area`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
@@ -191,7 +192,7 @@ ALTER TABLE `estagio_aluno`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 ALTER TABLE `professor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 ALTER TABLE `supervisor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
