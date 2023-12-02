@@ -88,9 +88,16 @@
                     border-0 py-1.5 pr-7 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
                             <?php
-                            foreach ($naoCoordenadores as $naoCoordenador) {
-                                $selected = ($naoCoordenador->getId() == $curso->getIdCoordenador()) ? "selected" : "";
-                                echo "<option value='" . $naoCoordenador->getId() . "' " . $selected . "> " . $naoCoordenador->getNome() . "</option>";
+                            if (isset($_GET['id'])) {
+                                foreach ($coordenadores as $coordenador) {
+                                    $selected = ($coordenador->getId() == $curso->getIdCoordenador()) ? "selected" : "";
+                                    echo "<option value='" . $coordenador->getId() . "' " . $selected . "> " . $coordenador->getNome() . "</option>";
+                                }
+                            } else {
+                                foreach ($naoCoordenadores as $naoCoordenador) {
+                                    $selected = ($naoCoordenador->getId() == $curso->getIdCoordenador()) ? "selected" : "";
+                                    echo "<option value='" . $naoCoordenador->getId() . "' " . $selected . "> " . $naoCoordenador->getNome() . "</option>";
+                                }
                             }
                             ?>
                         </select>
@@ -117,7 +124,7 @@
         </form>
     </div>
 
-    <?php include_once('views/includes/footer.php')?>
+    <?php include_once('views/includes/footer.php') ?>
 
 </body>
 

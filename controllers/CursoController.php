@@ -30,10 +30,14 @@ final class CursoController extends Controller {
         }
 
         $model = new ProfessorModel();
+        $coodenadores = $model->selectAll();
+        
+        $model = new ProfessorModel();
         $naoCoodenadores = $model->selectNaoCoordenadores();
 
         $this->loadView('formCurso', [
             'curso' => $vo,
+            'coordenadores' => $coodenadores,
             'naoCoordenadores' => $naoCoodenadores
         ]);
     }

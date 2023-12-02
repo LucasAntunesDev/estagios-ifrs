@@ -63,15 +63,23 @@
 
                     <div class="w-available">
                         <label for="id_aluno" class="block text-sm font-medium leading-6  mb-2">Aluno</label>
-
                         <div class="relative ">
                             <select id="id_aluno" name="id_aluno" value="id_aluno" class="rounded-md 
                     border-0 py-1.5 pl-10  ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-72 pr-10">
                                 <?php
-                                foreach ($alunosSemEstagio as $alunoSemEstagio) {
-                                    $selected = ($alunoSemEstagio->getId() == $estagioAluno->getIdAluno()) ? "selected" : "";
-                                    echo "<option value='" . $alunoSemEstagio->getId() . "' " . $selected . "> " . $alunoSemEstagio->getNome() . "</option>";
+                                echo '<pre>';
+                                var_dump($alunos);
+                                if (isset($_GET['id'])) {
+                                    foreach ($alunos as $aluno) {
+                                        $selected = ($aluno->getId() == $estagioAluno->getIdAluno()) ? "selected" : "";
+                                        echo "<option value='" . $aluno->getId() . "' " . $selected . "> " . $aluno->getNome() . "</option>";
+                                    }
+                                } else {
+                                    foreach ($alunosSemEstagio as $alunoSemEstagio) {
+                                        $selected = ($alunoSemEstagio->getId() == $estagioAluno->getIdAluno()) ? "selected" : "";
+                                        echo "<option value='" . $alunoSemEstagio->getId() . "' " . $selected . "> " . $alunoSemEstagio->getNome() . "</option>";
+                                    }
                                 }
                                 ?>
                             </select>
