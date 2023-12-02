@@ -31,7 +31,7 @@ final class LoginController extends Controller {
     public function logout(){
         $model = new UsuarioModel();
         $model->logout();
-        $this->redirect('login.php');
+        $this->redirect('index.php');
     }
 
 }
