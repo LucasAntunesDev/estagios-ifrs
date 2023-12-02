@@ -86,7 +86,7 @@
 
                         <div class="relative">
                             <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
                                 <?php
                                 foreach ($empresas as $empresa) {

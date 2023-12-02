@@ -72,7 +72,7 @@
 
                             <div class="relative">
                                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -89,7 +89,7 @@
                             <div class="relative">
 
                                 <input type="date" id="data_nascimento" name="data_nascimento" value=" <?php echo $aluno->getDataNascimento(); ?>" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -109,7 +109,7 @@
 
                             <div class="relative">
                                 <input type="number" id="telefone" name="telefone" value='<?php echo $aluno->getTelefone(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -124,7 +124,7 @@
 
                             <div class="relative">
                                 <input type="email" id="email" name="email" value='<?php echo $aluno->getEmail(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -145,7 +145,7 @@
                             <div class="relative">
 
                                 <input type="number" name="cpf" maxlength="11" minlength="11" id="cpf" value="<?php echo $aluno->getCPF(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -160,7 +160,7 @@
 
                             <div class="relative">
                                 <input type="text" id="rg" name="rg" value='<?php echo $aluno->getRG(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -177,7 +177,7 @@
 
                             <div class="relative">
                                 <input type="text" id="endereco" name="endereco" value=" <?php echo $aluno->getEndereco(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -193,7 +193,7 @@
 
                             <div class="relative">
                                 <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
                                     <?php
                                     foreach ($cidades as $cidade) {
@@ -218,7 +218,7 @@
 
                             <div class="relative">
                                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -233,7 +233,7 @@
 
                             <div class="relative">
                             <input type="number" id="ano_turma" name="ano_turma" value='<?php echo $aluno->getAnoTurma(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -249,7 +249,7 @@
 
                             <div class="relative">
                                 <select id="id_curso" name="id_curso" value="id_curso" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                     <?php
                                     foreach ($cursos as $curso) {

@@ -29,12 +29,12 @@
                 <fieldset class="flex flex-col justify-center bg-zinc-50 items-center gap-y-8  rounded-md px-10 py-10">
 
                     <div>
-                        <label for="login" class="block text-sm font-medium leading-6 text-[#127852] 
+                        <label for="login" class="block text-sm font-medium leading-6 text-verde-1 
                         mb-2">Login</label>
 
                         <div class="relative">
-                            <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset 
-                        ring-[#127852] focus:ring-2 focus:ring-inset
+                            <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset 
+                        ring-verde-1 focus:ring-2 focus:ring-inset
                         focus:ring-vermelho outline-none text-zinc-800">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -47,11 +47,11 @@
                     </div>
 
                     <div>
-                        <label for="senha" class="block text-sm font-medium leading-6 text-[#127852]
+                        <label for="senha" class="block text-sm font-medium leading-6 text-verde-1
                         mb-2">Senha</label>
 
                         <div class="relative">
-                            <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-[#127852] focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                            <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-verde-1 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -85,10 +85,7 @@
                 }
             </style>
 
-            <!-- <div class="w-[-webkit-fill-available]"> -->
                 <?php include_once('views/assets/login_vetor.svg') ?>
-            <!-- <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96"> -->
-            <!-- </div> -->
         </div>
     </div>
 

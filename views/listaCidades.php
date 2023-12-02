@@ -66,7 +66,7 @@
                         echo '<td class="p-1 w-min">';
 
                         echo "<a href='Cidade.php?id=" . $cidade->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out transition duration-300 ease-in-out'>
+                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out'>
                         Editar
                         <span class='material-symbols-outlined'>edit</span>
                         </a>";

@@ -87,17 +87,6 @@
     </div>
 
     <?php include_once('views/includes/footer.php') ?>
-    <script>
-        $(document).ready(function() {
-            $("#pesquisa-input").on("keydown", function() {
-                var value = $(this).val().toLowerCase();
-                $(".table-auto tr").filter(function() {
-                    $(this).toggle($(this).text()
-                        .toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

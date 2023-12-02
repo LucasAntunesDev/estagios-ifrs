@@ -99,7 +99,7 @@
 
                     <div class="relative">
                         <select id="id_area" name="id_area" value="id_area" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 text-gray-900 ring-1 ring-inset ring-gray-500 
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                     focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                             <?php
                             foreach ($areas as $area) {
