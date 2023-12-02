@@ -66,7 +66,7 @@
                     <label for="nome" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Nome</label>
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -83,7 +83,7 @@
 
                     <div class="relative">
                         <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -101,7 +101,7 @@
 
                     <div class="relative">
                         <input type="password" id="senha" name="senha" value="" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
                 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
