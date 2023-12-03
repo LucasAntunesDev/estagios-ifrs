@@ -1,8 +1,8 @@
-<div class="flex flex-row justify-between items-center px-12 shadow-md gap-x-4 
-h-16 bg-verde-1 text-zinc-50 border-b-[3px] border-verde-2 min-w-screen max-w-[-webkit-fill-available]">
+<header class="flex flex-row justify-between items-center px-12 shadow gap-x-4 
+h-16 bg-white text-verde-1 border border-b-neutral-200 min-w-screen max-w-available">
 
     <a href="index.php">
-        <img src="views/assets/ifrs-logo-white.png" alt="Logo do IFRS" class="h-9  
+        <img src="views/assets/ifrs-logo.png" alt="Logo do IFRS" class="h-20 
 transition ease-in-out duration-300 cursor-pointer">
     </a>
 
@@ -38,7 +38,7 @@ transition ease-in-out duration-300 cursor-pointer">
 
             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex items-center gap-x-1 hover:text-zinc-300 
              hover:cursor-pointer" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-6 h-6 fill-white/70">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="w-6 h-6 fill-verde-1">
                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                 </svg>
                 <span>Outros módulos</span>
@@ -48,9 +48,9 @@ transition ease-in-out duration-300 cursor-pointer">
 
             <!-- Dropdown menu -->
             <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
-                <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
+                <ul class="py-2 text-sm text-verde-1" aria-labelledby="dropdownDefaultButton">
                     <li class="hover:bg-zinc-100 rounded-md py-2 mx-2">
-                        <a class="flex items-center gap-x-2 py-1 px-3 text-neutral-900  font-bold" href="supervisores.php">
+                        <a class="flex items-center gap-x-2 py-1 px-3 text-verde-1  font-bold" href="supervisores.php">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
                             </svg>
@@ -59,7 +59,7 @@ transition ease-in-out duration-300 cursor-pointer">
                     </li>
 
                     <li class="hover:bg-zinc-100 rounded-md py-2 mx-2">
-                        <a class="flex items-center gap-x-2 py-1 px-3 text-neutral-900  font-bold" href="empresas.php">
+                        <a class="flex items-center gap-x-2 py-1 px-3 text-verde-1  font-bold" href="empresas.php">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h10.5a.75.75 0 010 1.5H12v13.75a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75v-2.5a.75.75 0 00-.75-.75h-2.5a.75.75 0 00-.75.75v2.5a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5H2v-13h-.25A.75.75 0 011 2.75zM4 5.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM4.5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1zM8 5.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM8.5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1zM14.25 6a.75.75 0 00-.75.75V17a1 1 0 001 1h3.75a.75.75 0 000-1.5H18v-9h.25a.75.75 0 000-1.5h-4zm.5 3.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zm.5 3.5a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1z" clip-rule="evenodd" />
                             </svg>
@@ -68,7 +68,7 @@ transition ease-in-out duration-300 cursor-pointer">
                     </li>
 
                     <li class="hover:bg-zinc-100 rounded-md py-2 mx-2">
-                        <a class="flex items-center gap-x-2 py-1 px-3 text-neutral-900  font-bold" href="cidades.php">
+                        <a class="flex items-center gap-x-2 py-1 px-3 text-verde-1  font-bold" href="cidades.php">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path d="M14.916 2.404a.75.75 0 01-.32 1.012l-.596.31V17a1 1 0 01-1 1h-2.26a.75.75 0 01-.75-.75v-3.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.5a.75.75 0 01-.75.75h-3.5a.75.75 0 010-1.5H2V9.957a.75.75 0 01-.596-1.372L2 8.275V5.75a.75.75 0 011.5 0v1.745l10.404-5.41a.75.75 0 011.012.32zM15.861 8.57a.75.75 0 01.736-.025l1.999 1.04A.75.75 0 0118 10.957V16.5h.25a.75.75 0 110 1.5h-2a.75.75 0 01-.75-.75V9.21a.75.75 0 01.361-.64z" />
                             </svg>
@@ -77,7 +77,7 @@ transition ease-in-out duration-300 cursor-pointer">
                     </li>
 
                     <li class="hover:bg-zinc-100 rounded-md py-2 mx-2">
-                        <a class="flex items-center gap-x-2 py-1 px-3 text-neutral-900  font-bold" href="cursos.php">
+                        <a class="flex items-center gap-x-2 py-1 px-3 text-verde-1  font-bold" href="cursos.php">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path fill-rule="evenodd" d="M9.664 1.319a.75.75 0 01.672 0 41.059 41.059 0 018.198 5.424.75.75 0 01-.254 1.285 31.372 31.372 0 00-7.86 3.83.75.75 0 01-.84 0 31.508 31.508 0 00-2.08-1.287V9.394c0-.244.116-.463.302-.592a35.504 35.504 0 013.305-2.033.75.75 0 00-.714-1.319 37 37 0 00-3.446 2.12A2.216 2.216 0 006 9.393v.38a31.293 31.293 0 00-4.28-1.746.75.75 0 01-.254-1.285 41.059 41.059 0 018.198-5.424zM6 11.459a29.848 29.848 0 00-2.455-1.158 41.029 41.029 0 00-.39 3.114.75.75 0 00.419.74c.528.256 1.046.53 1.554.82-.21.324-.455.63-.739.914a.75.75 0 101.06 1.06c.37-.369.69-.77.96-1.193a26.61 26.61 0 013.095 2.348.75.75 0 00.992 0 26.547 26.547 0 015.93-3.95.75.75 0 00.42-.739 41.053 41.053 0 00-.39-3.114 29.925 29.925 0 00-5.199 2.801 2.25 2.25 0 01-2.514 0c-.41-.275-.826-.541-1.25-.797a6.985 6.985 0 01-1.084 3.45 26.503 26.503 0 00-1.281-.78A5.487 5.487 0 006 12v-.54z" clip-rule="evenodd" />
                             </svg>
@@ -86,7 +86,7 @@ transition ease-in-out duration-300 cursor-pointer">
                     </li>
 
                     <li class="hover:bg-zinc-100 rounded-md py-2 mx-2">
-                        <a class="flex items-center gap-x-2 py-1 px-3 text-neutral-900  font-bold" href="areas.php">
+                        <a class="flex items-center gap-x-2 py-1 px-3 text-verde-1  font-bold" href="areas.php">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                 <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h16.5a.75.75 0 010 1.5H18v8.75A2.75 2.75 0 0115.25 15h-1.072l.798 3.06a.75.75 0 01-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 01-1.452-.38L5.823 15H4.75A2.75 2.75 0 012 12.25V3.5h-.25A.75.75 0 011 2.75zM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373zM13.25 5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0v-5.5a.75.75 0 01.75-.75zm-6.5 4a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 016.75 9zm4-1.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z" clip-rule="evenodd" />
                             </svg>
@@ -162,4 +162,4 @@ transition ease-in-out duration-300 cursor-pointer">
 
     ?>
 
-</div>
+</header>
