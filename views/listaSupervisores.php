@@ -51,7 +51,7 @@
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
-                        <th class="px-6 py-3 capitalize w-min">Id do Supervisor</th>
+                        <th class="px-6 py-3 capitalize w-min">Id</th>
                         <th class="px-6 py-3 capitalize w-min">Nome</th>
                         <th class="px-6 py-3 capitalize w-min">Telefone</th>
                         <th class="px-6 py-3 capitalize w-min">Email</th>
