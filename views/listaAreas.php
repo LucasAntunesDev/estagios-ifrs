@@ -46,7 +46,7 @@
 
         </div>
 
-        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border rounded-md rounded-xl">
+        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border ">
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
                     <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
