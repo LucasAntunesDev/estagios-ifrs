@@ -48,12 +48,12 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
         </div>
 
-        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border-1 border-x border-y rounded-xl">
+        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border rounded-md rounded-xl">
             <table class="table-auto">
-                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
-                    <tr class="border-b">
-                        <th class="px-6 py-3 capitalize w-min">ID</th>
-                        <th class="px-6 py-3 capitalize w-min">
+                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
+                    <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">ID</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
                                     echo (!isset($_GET['descrescente'])) ? "href='cursos.php?descrescente'" : "href='cursos.php'";
@@ -74,22 +74,22 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
                                 Nome
                             </div>
                         </th>
-                        <th class="px-6 py-3 capitalize w-min">Coordenador</th>
-                        <th class="px-6 py-3 capitalize w-min">Ações</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Coordenador</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Ações</th>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody class="text-sm">
                     <?php
 
                     if (isset($_GET['descrescente'])) rsort($cursos);
 
                     foreach ($cursos as $curso) {
-                        echo '<tr class="border-b">';
-                        echo '<td class="p-1 w-min">' . $curso->getId() . '</td>';
-                        echo '<td class="p-1 w-min">' . $curso->getNome() . '</td>';
-                        echo '<td class="p-1 w-min">' . $curso->getNomeCoordenador() . '</td>';
-                        echo '<td class="border-y-[1px]  px-4 flex flex-col">';
+                        echo '<tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $curso->getId() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $curso->getNome() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $curso->getNomeCoordenador() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">';
 
                         echo "<a href='Curso.php?id=" . $curso->getId() . "' class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out'>

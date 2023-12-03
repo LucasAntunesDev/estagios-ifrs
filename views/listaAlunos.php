@@ -51,10 +51,10 @@
         <div class="relative overflow-x-auto border-gray-200 border-1 border-1 border-x border-y rounded-xl
         2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12">
             <table class="table-auto">
-                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
-                    <tr class="border-b">
-                        <th class="px-6 py-3 capitalize w-min">Matrícula</th>
-                        <th class="px-6 py-3 capitalize w-min">
+                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
+                    <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Matrícula</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
                                     echo (!isset($_GET['descrescente'])) ? "href='alunos.php?descrescente'" : "href='alunos.php'";
@@ -75,40 +75,40 @@
                                 Nome
                             </div>
                         </th>
-                        <th class="px-6 py-3 capitalize w-min">Data de nascimento</th>
-                        <th class="px-6 py-3 capitalize w-min">Email</th>
-                        <th class="px-6 py-3 capitalize w-min">CPF</th>
-                        <th class="px-6 py-3 capitalize w-min">RG</th>
-                        <th class="px-6 py-3 capitalize w-min">Endereco</th>
-                        <th class="px-6 py-3 capitalize w-min">Telefone</th>
-                        <th class="px-6 py-3 capitalize w-min">Turma</th>
-                        <th class="px-6 py-3 capitalize w-min">Cidade</th>
-                        <th class="px-6 py-3 capitalize w-min">Ações</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Data de nascimento</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Email</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">CPF</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">RG</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Endereco</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Telefone</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Turma</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Cidade</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Ações</th>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody class="text-sm">
                     <?php
 
                     if (isset($_GET['descrescente'])) rsort($alunos);
 
                     foreach ($alunos as $aluno) {
-                        echo '<tr class="border-b">';
-                        echo '<td class="p-1 w-min">' . $aluno->getMatricula() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getNome() . '
+                        echo '<tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $aluno->getMatricula() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $aluno->getNome() . '
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $aluno->getId() .
                             ' </span>
                             </td>';
-                        echo '<td class="p-1 w-min">' . date('d/m/Y', strtotime($aluno->getDataNascimento())) . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getEmail() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . date('d/m/Y', strtotime($aluno->getDataNascimento())) . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $aluno->getEmail() . '</td>';
                         echo '<td class="p-1 w-min cpf">' . $aluno->getCPF() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getRG() . '</td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getEndereco() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $aluno->getRG() . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $aluno->getEndereco() . '</td>';
                         echo '<td class="p-1 w-min phone_with_ddd">' . $aluno->getTelefone() . '</td>';
-                        echo '<td class="p-1 w-min"><span class="flex items-center w-max">' . $aluno->getAnoTurma() . 'º ' . $aluno->getNomeCurso() . '</span></td>';
-                        echo '<td class="p-1 w-min">' . $aluno->getNomeCidade() . '
+                        echo '<td class="pl-1 pr-3 w-fit"><span class="flex items-center w-max">' . $aluno->getAnoTurma() . 'º ' . $aluno->getNomeCurso() . '</span></td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $aluno->getNomeCidade() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $aluno->getIdCidade() .

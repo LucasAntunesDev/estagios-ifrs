@@ -80,8 +80,9 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div>
+                        <label for="empresa" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Empresa</label>
                         <div class="relative">
                             <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white

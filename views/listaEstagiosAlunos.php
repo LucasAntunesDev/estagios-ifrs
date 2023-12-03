@@ -48,11 +48,12 @@
 
         </div>
 
-        <div class="relative overflow-x-auto 2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12">
+        <div class="relative overflow-x-auto 2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12 
+         border-gray-200 border rounded-md">
             <table class="table-auto">
-                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
-                    <tr class="border-b">
-                        <th class="table-cell capitalize px-4 py-3">
+                <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
+                    <tr class="border-b table-row">
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
                                     echo (!isset($_GET['descrescente'])) ? "href='estagiosAlunos.php?descrescente'" : "href='estagiosAlunos.php'";
@@ -73,25 +74,25 @@
                                 aluno
                             </div>
                         </th>
-                        <th class="table-cell capitalize px-4 py-3">empresa</th>
-                        <th class="table-cell capitalize px-4 py-3">carga horária</th>
-                        <th class="table-cell capitalize px-4 py-3">coordenador</th>
-                        <th class="table-cell capitalize px-4 py-3">tipo de processo</th>
-                        <th class="table-cell capitalize px-4 py-3">encaminhamentos</th>
-                        <th class="table-cell capitalize px-4 py-3">situação</th>
-                        <th class="table-cell capitalize px-4 py-3">início</th>
-                        <th class="table-cell capitalize px-4 py-3">previsão de fim</th>
-                        <th class="table-cell capitalize px-4 py-3">orientador</th>
-                        <th class="table-cell capitalize px-4 py-3">coorientador</th>
-                        <th class="table-cell capitalize px-4 py-3">supervisor</th>
-                        <th class="table-cell capitalize px-4 py-3">data de fim</th>
-                        <th class="table-cell capitalize px-4 py-3">área</th>
-                        <th class="table-cell capitalize px-4 py-3">termo de compromisso</th>
-                        <th class="table-cell capitalize px-4 py-3">plano de atividades</th>
-                        <th class="table-cell capitalize px-4 py-3">avaliação empresa</th>
-                        <th class="table-cell capitalize px-4 py-3">autoavaliação</th>
-                        <th class="table-cell capitalize px-4 py-3">TCC</th>
-                        <th class="table-cell capitalize px-4 py-3">Ações</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">empresa</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">carga horária</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">coordenador</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">tipo de processo</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">encaminhamentos</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">situação</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">início</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">previsão de fim</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">orientador</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">coorientador</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">supervisor</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">data de fim</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">área</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">termo de compromisso</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">plano de atividades</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">avaliação empresa</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">autoavaliação</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">TCC</th>
+                        <th class="w-fit capitalize pl-2 pr-6 py-2">Ações</th>
                     </tr>
                 </thead>
 
@@ -101,28 +102,28 @@
                     if (isset($_GET['descrescente'])) rsort($estagiosAlunos);
 
                     foreach ($estagiosAlunos as $estagioAluno) {
-                        echo '<tr class="border-1 border-neutral-200 border-b hover:bg-zinc-50 hover:cursor-pointer">';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeAluno() . '
+                        echo '<tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getNomeAluno() . '
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdAluno() .
                             ' </span>
                             </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeEmpresa() . '
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getNomeEmpresa() . '
                             <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                             hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdEmpresa() .
                             ' </span>
                         </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeCoordenador() . '
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getNomeCoordenador() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdCoordenador() .
                             ' </span>
                         </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
-                        echo '<td class="pl-2 pr-1 table-cell">
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
+                        echo '<td class="pl-2 pr-1 w-fit">
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getNumeroEncaminhamentos() .
@@ -146,66 +147,66 @@
                             $estagioAluno->getSituacaoEstagio() .
                             '</span>
                         </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeOrientador() . '
+                        echo '<td class="pl-1 pr-3 w-fit">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
+                        echo '<td class="pl-1 pr-3 w-fit">' . $estagioAluno->getNomeOrientador() . '
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdOrientador() .
                             ' </span>
                             </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeCoorientador() . '
-                        <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
-                        hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getNomeCoorientador() . '
+                                <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
+                                hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdCoorientador() .
                             ' </span>
                         </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeSupervisor() . '
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getNomeSupervisor() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdSupervisor() .
                             ' </span>
                         </td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
-                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeArea() . '
+                        echo '<td class="pl-2 pr-1 w-fit">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
+                        echo '<td class="pl-2 pr-1 w-fit">' . $estagioAluno->getNomeArea() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdArea() .
                             ' </span>
                         </td>';
 
-                        echo '<td class="pl-2 pr-1 table-cell">
+                        echo '<td class="pl-2 pr-1 w-fit">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '">';
                         if ($estagioAluno->getUrlTermoCompromisso()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="pl-2 pr-1 table-cell">
+                        echo '<td class="pl-2 pr-1 w-fit">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '">';
                         if ($estagioAluno->getUrlPlanoAtividades()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="pl-2 pr-1 table-cell">
+                        echo '<td class="pl-2 pr-1 w-fit">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '">';
                         if ($estagioAluno->getUrlAvaliacaoEmpresa()) echo "Clique para baixar
                         </a>
                         </td>'";
 
 
-                        echo '<td class="pl-2 pr-1 table-cell">
+                        echo '<td class="pl-2 pr-1 w-fit">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlAutoavaliacao() . '">';
                         if ($estagioAluno->getUrlAutoavaliacao()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="pl-2 pr-1 table-cell">
+                        echo '<td class="pl-2 pr-1 w-fit">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTcc() . '">';
                         if ($estagioAluno->getUrlTcc()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="pl-2 pr-1 table-cell">';
+                        echo '<td class="pl-2 pr-1 w-fit">';
 
                         echo "<a href='estagioAluno.php?id=" . $estagioAluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>
