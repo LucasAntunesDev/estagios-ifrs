@@ -21,7 +21,7 @@
             Gerenciar Professor
         </h1>
 
-        <nav class="flex" aria-label="Breadcrumb">
+        <nav class="flex mb-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-neutral-700 
@@ -53,18 +53,16 @@
             </ol>
         </nav>
 
-        <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do Professor</legend>
-
+        <fieldset class="bg-zinc-50 p-10 rounded-md w-[40rem]">
             <form action="salvarprofessor.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $professor->getId(); ?>'>
 
                 <div>
-                    <label for="nome" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Nome</label>
+                    <label for="nome" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Nome</label>
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $professor->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none ">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none ">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -76,12 +74,12 @@
                 </div>
 
                 <div>
-                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Email</label>
+                    <label for="email" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Email</label>
 
                     <div class="relative">
                         <input type="email" id="email" name="email" value='<?php echo $professor->getEmail(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
 
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -95,12 +93,12 @@
                 </div>
 
                 <div>
-                    <label for="id_area" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Area</label>
+                    <label for="id_area" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Area</label>
 
                     <div class="relative">
                         <select id="id_area" name="id_area" value="id_area" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
+                    focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800">
                             <?php
                             foreach ($areas as $area) {
                                 $selected = ($area->getId() == $professor->getIdArea()) ? "selected" : "";

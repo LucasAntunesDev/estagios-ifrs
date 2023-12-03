@@ -25,7 +25,7 @@
             Gerenciar Aluno
         </h1>
 
-        <nav class="flex" aria-label="Breadcrumb">
+        <nav class="flex mb-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-neutral-700 
@@ -58,9 +58,7 @@
             </ol>
         </nav>
 
-        <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do Aluno</legend>
-
+        <fieldset class="bg-zinc-50 p-10 rounded-md w-[40rem]">
             <form action="salvarAluno.php" method="post" class="flex flex-col items-center">
                 <input type="hidden" name="id" value='<?php echo $aluno->getId(); ?>'>
 
@@ -68,12 +66,12 @@
 
                     <div class="flex gap-x-4 w-available">
                         <div class="w-available">
-                            <label for="nome" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Nome</label>
+                            <label for="nome" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Nome</label>
 
                             <div class="relative">
                                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -84,13 +82,13 @@
                         </div>
 
                         <div>
-                            <label for="data_nascimento" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Data de Nascimento</label>
+                            <label for="data_nascimento" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Data de Nascimento</label>
 
                             <div class="relative">
 
                                 <input type="date" id="data_nascimento" name="data_nascimento" value=" <?php echo $aluno->getDataNascimento(); ?>" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                    focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xm="numberano_tuermlns=" http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -105,12 +103,12 @@
                     <div class="flex gap-x-4 w-available">
 
                         <div class="w-available">
-                            <label for="telefone" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Telefone (apenas números)</label>
+                            <label for="telefone" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Telefone (apenas números)</label>
 
                             <div class="relative">
                                 <input type="number" id="telefone" name="telefone" value='<?php echo $aluno->getTelefone(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                         <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
@@ -120,12 +118,12 @@
                         </div>
 
                         <div class="w-available">
-                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Email</label>
+                            <label for="email" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Email</label>
 
                             <div class="relative">
                                 <input type="email" id="email" name="email" value='<?php echo $aluno->getEmail(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -140,13 +138,13 @@
 
                     <div class="flex gap-x-4 w-available">
                         <div class="w-available">
-                            <label for="cpf" class="block text-sm font-medium leading-6 text-gray-900 mb-2">CPF (apenas números)</label>
+                            <label for="cpf" class="block text-sm font-medium leading-6 text-verde-1 mb-2">CPF (apenas números)</label>
 
                             <div class="relative">
 
                                 <input type="number" name="cpf" maxlength="11" minlength="11" id="cpf" value="<?php echo $aluno->getCPF(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                         <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" clip-rule="evenodd" />
@@ -156,12 +154,12 @@
                         </div>
 
                         <div class="w-available">
-                            <label for="rg" class="block text-sm font-medium leading-6 text-gray-900 mb-2">RG</label>
+                            <label for="rg" class="block text-sm font-medium leading-6 text-verde-1 mb-2">RG</label>
 
                             <div class="relative">
                                 <input type="text" id="rg" name="rg" value='<?php echo $aluno->getRG(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                         <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z" clip-rule="evenodd" />
@@ -173,12 +171,12 @@
 
                     <div class="flex gap-x-4 w-available">
                         <div class="w-available">
-                            <label for="endereco" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Endereço</label>
+                            <label for="endereco" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Endereço</label>
 
                             <div class="relative">
                                 <input type="text" id="endereco" name="endereco" value=" <?php echo $aluno->getEndereco(); ?>" class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                         <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd" />
@@ -189,12 +187,12 @@
 
 
                         <div class="w-available">
-                            <label for="id_cidade" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Cidade</label>
+                            <label for="id_cidade" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Cidade</label>
 
                             <div class="relative">
                                 <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
+                    focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
                                     <?php
                                     foreach ($cidades as $cidade) {
                                         $selected = ($cidade->getId() == $aluno->getIdCidade()) ? "selected" : "";
@@ -214,12 +212,12 @@
                     <div class="flex gap-x-4">
 
                         <div>
-                            <label for="matricula" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Matricula</label>
+                            <label for="matricula" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Matricula</label>
 
                             <div class="relative">
                                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
                                         <path fill-rule="evenodd" d="M9.664 1.319a.75.75 0 01.672 0 41.059 41.059 0 018.198 5.424.75.75 0 01-.254 1.285 31.372 31.372 0 00-7.86 3.83.75.75 0 01-.84 0 31.508 31.508 0 00-2.08-1.287V9.394c0-.244.116-.463.302-.592a35.504 35.504 0 013.305-2.033.75.75 0 00-.714-1.319 37 37 0 00-3.446 2.12A2.216 2.216 0 006 9.393v.38a31.293 31.293 0 00-4.28-1.746.75.75 0 01-.254-1.285 41.059 41.059 0 018.198-5.424zM6 11.459a29.848 29.848 0 00-2.455-1.158 41.029 41.029 0 00-.39 3.114.75.75 0 00.419.74c.528.256 1.046.53 1.554.82-.21.324-.455.63-.739.914a.75.75 0 101.06 1.06c.37-.369.69-.77.96-1.193a26.61 26.61 0 013.095 2.348.75.75 0 00.992 0 26.547 26.547 0 015.93-3.95.75.75 0 00.42-.739 41.053 41.053 0 00-.39-3.114 29.925 29.925 0 00-5.199 2.801 2.25 2.25 0 01-2.514 0c-.41-.275-.826-.541-1.25-.797a6.985 6.985 0 01-1.084 3.45 26.503 26.503 0 00-1.281-.78A5.487 5.487 0 006 12v-.54z" clip-rule="evenodd" />
@@ -229,12 +227,12 @@
                         </div>
 
                         <div>
-                            <label for="ano_turma" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Ano</label>
+                            <label for="ano_turma" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Ano</label>
 
                             <div class="relative">
-                            <input type="number" id="ano_turma" name="ano_turma" value='<?php echo $aluno->getAnoTurma(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                                <input type="number" id="ano_turma" name="ano_turma" value='<?php echo $aluno->getAnoTurma(); ?>' class="rounded-md 
+                border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800">
 
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -245,12 +243,12 @@
                         </div>
 
                         <div>
-                            <label for="id_curso" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Curso</label>
+                            <label for="id_curso" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Curso</label>
 
                             <div class="relative">
                                 <select id="id_curso" name="id_curso" value="id_curso" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
+                    focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800">
                                     <?php
                                     foreach ($cursos as $curso) {
                                         $selected = ($curso->getId() == $aluno->getIdCurso()) ? "selected" : "";

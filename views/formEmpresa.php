@@ -24,7 +24,7 @@
             Gerenciar Empresa
         </h1>
 
-        <nav class="flex" aria-label="Breadcrumb">
+        <nav class="flex mb-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-neutral-700 
@@ -57,19 +57,17 @@
             </ol>
         </nav>
 
-        <fieldset class="border-[1px] border-zinc-300 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados da empresa</legend>
-
+        <fieldset class="bg-zinc-50 p-10 rounded-md w-[40rem]">
             <form action="salvarEmpresa.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $empresa->getId(); ?>'>
 
                 <div class="flex gap-x-4">
                     <div>
-                        <label for="nome" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Nome</label>
+                        <label for="nome" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Nome</label>
                         <div class="relative">
                             <input type="text" id="nome" name="nome" value='<?php echo $empresa->getNome(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none ">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none ">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -82,12 +80,12 @@
                     </div>
 
                     <div>
-                        <label for="cpnj" class="block text-sm font-medium leading-6 text-gray-900 mb-2">CNPJ</label>
+                        <label for="cpnj" class="block text-sm font-medium leading-6 text-verde-1 mb-2">CNPJ</label>
 
                         <div class="relative">
                             <input type="text" id="cnpj" name="cnpj" value='<?php echo $empresa->getCNPJ(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -101,12 +99,12 @@
                     </div>
 
                     <div class="w-available">
-                        <label for="id_cidade" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Cidade</label>
+                        <label for="id_cidade" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Cidade</label>
 
                         <div class="relative">
                             <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
-                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-gray-500 
-                    focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800 w-available">
+                    border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
+                    focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
                                 <?php
                                 foreach ($cidades as $cidade) {
                                     $selected = ($cidade->getId() == $empresa->getIdCidade()) ? "selected" : "";
@@ -127,12 +125,12 @@
                 <div class="flex gap-x-4">
 
                     <div>
-                        <label for="endereco" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Endereço</label>
+                        <label for="endereco" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Endereço</label>
 
                         <div class="relative">
                             <input type="text" id="endereco" name="endereco" value='<?php echo $empresa->getTelefone(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -145,12 +143,12 @@
                     </div>
 
                     <div>
-                        <label for="telefone" class="block text-sm font-medium leading-6 text-neutral-700 mb-2">Telefone</label>
+                        <label for="telefone" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Telefone</label>
 
                         <div class="relative">
                             <input type="number" id="telefone" name="telefone" value='<?php echo $empresa->getTelefone(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -163,12 +161,12 @@
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900 mb-2">Email</label>
+                        <label for="email" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Email</label>
 
                         <div class="relative">
                             <input type="email" id="email" name="email" value='<?php echo $empresa->getEmail(); ?>' class="rounded-md 
-                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-gray-500 
-                focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none">
+                border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
+                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -198,7 +196,7 @@
         </form>
     </div>
 
-    <?php include_once('views/includes/footer.php')?>
+    <?php include_once('views/includes/footer.php') ?>
 
 </body>
 

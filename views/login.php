@@ -34,8 +34,8 @@
 
                         <div class="relative">
                             <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset 
-                        ring-verde-1 focus:ring-2 focus:ring-inset
-                        focus:ring-vermelho outline-none text-zinc-800">
+                        ring-neutral-300 focus:ring-2 focus:ring-inset
+                        outline-none text-zinc-800">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -51,7 +51,7 @@
                         mb-2">Senha</label>
 
                         <div class="relative">
-                            <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-verde-1 focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
+                            <input type="password" name="senha" id="senha" " class=" rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 focus:ring-2 focus:ring-inset outline-none text-zinc-800">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
