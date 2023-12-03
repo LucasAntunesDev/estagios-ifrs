@@ -21,7 +21,7 @@
             Gerenciar Estágio
         </h1>
 
-        <nav class="flex" aria-label="Breadcrumb">
+        <nav class="flex mb-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-neutral-700 
