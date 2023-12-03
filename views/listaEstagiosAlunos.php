@@ -24,7 +24,7 @@
             Estágios
         </h1>
 
-        <div class="flex items-center gap-x-4 justify-startpl-16 w-6/12 mb-4">
+        <div class="flex items-center gap-x-4 justify-start w-6/12 mb-4">
 
             <a href="estagioAluno.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
          text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
@@ -48,60 +48,81 @@
 
         </div>
 
-        <div class="relative overflow-x-auto border-gray-200 border-1 border-x border-y rounded-xl
-        2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12">
+        <div class="relative overflow-x-auto 2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12">
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
-                        <th class="table-cell px-6 py-3 capitalize ">aluno </th>
-                        <th class="table-cell px-6 py-3 capitalize ">empresa</th>
-                        <th class="table-cell px-6 py-3 capitalize ">carga horária</th>
-                        <th class="table-cell px-6 py-3 capitalize ">coordenador</th>
-                        <th class="table-cell px-6 py-3 capitalize ">tipo de processo</th>
-                        <th class="table-cell px-6 py-3 capitalize ">encaminhamentos</th>
-                        <th class="table-cell px-6 py-3 capitalize">situação</th>
-                        <th class="table-cell px-6 py-3 capitalize ">início</th>
-                        <th class="table-cell px-6 py-3 capitalize ">previsão de fim</th>
-                        <th class="table-cell px-6 py-3 capitalize ">orientador</th>
-                        <th class="table-cell px-6 py-3 capitalize ">coorientador</th>
-                        <th class="table-cell px-6 py-3 capitalize ">supervisor</th>
-                        <th class="table-cell px-6 py-3 capitalize ">data de fim</th>
-                        <th class="table-cell px-6 py-3 capitalize ">área</th>
-                        <th class="table-cell px-6 py-3 capitalize ">termo de compromisso</th>
-                        <th class="table-cell px-6 py-3 capitalize ">plano de atividades</th>
-                        <th class="table-cell px-6 py-3 capitalize ">avaliação empresa</th>
-                        <th class="table-cell px-6 py-3 capitalize ">autoavaliação</th>
-                        <th class="table-cell px-6 py-3 capitalize ">TCC</th>
-                        <th class="table-cell px-6 py-3 capitalize ">Ações</th>
+                        <th class="table-cell capitalize px-4 py-3">
+                            <div class="flex items-center gap-x-2">
+                                <a <?php
+                                    echo (!isset($_GET['descrescente'])) ? "href='estagiosAlunos.php?descrescente'" : "href='estagiosAlunos.php'";
+                                    ?> class="hover:text-neutral-700">
+
+                                    <?php
+                                    if (isset($_GET['descrescente'])) {
+                                        echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                                 <path fill-rule="evenodd" d="M10 5a.75.75 0 01.75.75v6.638l1.96-2.158a.75.75 0 111.08 1.04l-3.25 3.5a.75.75 0 01-1.08 0l-3.25-3.5a.75.75 0 111.08-1.04l1.96 2.158V5.75A.75.75 0 0110 5z" clip-rule="evenodd" />
+                                            </svg>';
+                                    } else {
+                                        echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                                <path fill-rule="evenodd" d="M10 15a.75.75 0 01-.75-.75V7.612L7.29 9.77a.75.75 0 01-1.08-1.04l3.25-3.5a.75.75 0 011.08 0l3.25 3.5a.75.75 0 11-1.08 1.04l-1.96-2.158v6.638A.75.75 0 0110 15z" clip-rule="evenodd" />
+                                            </svg>';
+                                    }
+                                    ?>
+                                </a>
+                                aluno
+                            </div>
+                        </th>
+                        <th class="table-cell capitalize px-4 py-3">empresa</th>
+                        <th class="table-cell capitalize px-4 py-3">carga horária</th>
+                        <th class="table-cell capitalize px-4 py-3">coordenador</th>
+                        <th class="table-cell capitalize px-4 py-3">tipo de processo</th>
+                        <th class="table-cell capitalize px-4 py-3">encaminhamentos</th>
+                        <th class="table-cell capitalize px-4 py-3">situação</th>
+                        <th class="table-cell capitalize px-4 py-3">início</th>
+                        <th class="table-cell capitalize px-4 py-3">previsão de fim</th>
+                        <th class="table-cell capitalize px-4 py-3">orientador</th>
+                        <th class="table-cell capitalize px-4 py-3">coorientador</th>
+                        <th class="table-cell capitalize px-4 py-3">supervisor</th>
+                        <th class="table-cell capitalize px-4 py-3">data de fim</th>
+                        <th class="table-cell capitalize px-4 py-3">área</th>
+                        <th class="table-cell capitalize px-4 py-3">termo de compromisso</th>
+                        <th class="table-cell capitalize px-4 py-3">plano de atividades</th>
+                        <th class="table-cell capitalize px-4 py-3">avaliação empresa</th>
+                        <th class="table-cell capitalize px-4 py-3">autoavaliação</th>
+                        <th class="table-cell capitalize px-4 py-3">TCC</th>
+                        <th class="table-cell capitalize px-4 py-3">Ações</th>
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody class="text-sm">
                     <?php
 
+                    if (isset($_GET['descrescente'])) rsort($estagiosAlunos);
+
                     foreach ($estagiosAlunos as $estagioAluno) {
-                        echo '<tr class="border-1 border-gray-200 border-b">';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeAluno() . '
+                        echo '<tr class="border-1 border-neutral-200 border-b hover:bg-zinc-50 hover:cursor-pointer">';
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeAluno() . '
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdAluno() .
                             ' </span>
                             </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeEmpresa() . '
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeEmpresa() . '
                             <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                             hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdEmpresa() .
                             ' </span>
                         </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeCoordenador() . '
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeCoordenador() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdCoordenador() .
                             ' </span>
                         </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
-                        echo '<td class="p-1 table-cell">
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
+                        echo '<td class="pl-2 pr-1 table-cell">
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getNumeroEncaminhamentos() .
@@ -110,10 +131,10 @@
                         echo '<td class="p-1 w-max capitalize">
                             <span class="';
                         switch ($estagioAluno->getSituacaoEstagio()) {
-                            case 'não iniciado':
+                            case 'Não iniciado':
                                 echo 'bg-red-100 hover:bg-red-200 text-red-700';
                                 break;
-                            case 'finalizado':
+                            case 'Finalizado':
                                 echo 'bg-emerald-100 hover:bg-emerald-200 text-emerald-700';
                                 break;
                             default:
@@ -125,66 +146,66 @@
                             $estagioAluno->getSituacaoEstagio() .
                             '</span>
                         </td>';
-                        echo '<td class="p-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
-                        echo '<td class="p-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeOrientador() . '
+                        echo '<td class="pl-2 pr-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
+                        echo '<td class="pl-2 pr-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeOrientador() . '
                                 <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdOrientador() .
                             ' </span>
                             </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeCoorientador() . '
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeCoorientador() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdCoorientador() .
                             ' </span>
                         </td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeSupervisor() . '
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeSupervisor() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdSupervisor() .
                             ' </span>
                         </td>';
-                        echo '<td class="p-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
-                        echo '<td class="p-1 table-cell">' . $estagioAluno->getNomeArea() . '
+                        echo '<td class="pl-2 pr-1 table-cell">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
+                        echo '<td class="pl-2 pr-1 table-cell">' . $estagioAluno->getNomeArea() . '
                         <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm">' .
                             $estagioAluno->getIdArea() .
                             ' </span>
                         </td>';
 
-                        echo '<td class="p-1 table-cell">
+                        echo '<td class="pl-2 pr-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '">';
                         if ($estagioAluno->getUrlTermoCompromisso()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="p-1 table-cell">
+                        echo '<td class="pl-2 pr-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '">';
                         if ($estagioAluno->getUrlPlanoAtividades()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="p-1 table-cell">
+                        echo '<td class="pl-2 pr-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '">';
                         if ($estagioAluno->getUrlAvaliacaoEmpresa()) echo "Clique para baixar
                         </a>
                         </td>'";
 
 
-                        echo '<td class="p-1 table-cell">
+                        echo '<td class="pl-2 pr-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlAutoavaliacao() . '">';
                         if ($estagioAluno->getUrlAutoavaliacao()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="p-1 table-cell">
+                        echo '<td class="pl-2 pr-1 table-cell">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTcc() . '">';
                         if ($estagioAluno->getUrlTcc()) echo "Clique para baixar
                         </a>
                         </td>'";
 
-                        echo '<td class="p-1 table-cell">';
+                        echo '<td class="pl-2 pr-1 table-cell">';
 
                         echo "<a href='estagioAluno.php?id=" . $estagioAluno->getId() . "' class=' bg-[#127852] rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-[#127852] hover:text-[#127852] transition duration-300 ease-in-out'>

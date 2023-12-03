@@ -22,7 +22,7 @@
             Areas
         </h1>
 
-        <div class="flex items-center gap-x-4 justify-startpl-16 w-6/12 mb-4">
+        <div class="flex items-center gap-x-4 justify-start w-6/12 mb-4">
 
             <a href="area.php" class="bg-verde-1 rounded-full p-2 hover:bg-zinc-50
          text-zinc-50 flex items-center justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out
@@ -51,13 +51,36 @@
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50">
                     <tr class="border-b">
                         <th class="px-6 py-3 capitalize w-min">Id</th>
-                        <th class="px-6 py-3 capitalize w-min">Nome</th>
+                        <th class="px-6 py-3 capitalize w-min">
+                            <div class="flex items-center gap-x-2">
+                                <a <?php
+                                    echo (!isset($_GET['descrescente'])) ? "href='areas.php?descrescente'" : "href='areas.php'";
+                                    ?> class="hover:text-neutral-700">
+
+                                    <?php
+                                    if (isset($_GET['descrescente'])) {
+                                        echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                                 <path fill-rule="evenodd" d="M10 5a.75.75 0 01.75.75v6.638l1.96-2.158a.75.75 0 111.08 1.04l-3.25 3.5a.75.75 0 01-1.08 0l-3.25-3.5a.75.75 0 111.08-1.04l1.96 2.158V5.75A.75.75 0 0110 5z" clip-rule="evenodd" />
+                                            </svg>';
+                                    } else {
+                                        echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                                <path fill-rule="evenodd" d="M10 15a.75.75 0 01-.75-.75V7.612L7.29 9.77a.75.75 0 01-1.08-1.04l3.25-3.5a.75.75 0 011.08 0l3.25 3.5a.75.75 0 11-1.08 1.04l-1.96-2.158v6.638A.75.75 0 0110 15z" clip-rule="evenodd" />
+                                            </svg>';
+                                    }
+                                    ?>
+                                </a>
+                                Nome
+                            </div>
+                        </th>
                         <th class="px-6 py-3 capitalize w-min">Ações</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <?php
+
+                    if (isset($_GET['descrescente'])) rsort($areas);
+
                     foreach ($areas as $area) {
                         echo '<tr class="border-b">';
                         echo '<td class="p-1 w-min">' . $area->getId() . '</td>';
