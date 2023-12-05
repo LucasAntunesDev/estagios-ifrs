@@ -23,7 +23,7 @@
             <form action="fazerLogin.php" method="POST" class="flex flex-col justify-center 
             items-center gap-2 ">
 
-            <h1 class="font-bold text-5xl text-vermelho my-4">
+            <h1 class="font-bold text-5xl text-vermelho-1 my-4">
                 Login
             </h1>
                 <fieldset class="flex flex-col justify-center bg-zinc-50 items-center gap-y-8  rounded-md px-10 py-10">

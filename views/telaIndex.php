@@ -20,7 +20,7 @@
     <div class="flex flex-row justify-center items-center gap-2 h-screen md:px-8">
 
         <div class="flex flex-col justify-center text-start w-6/12">
-            <sapn class="font-bold text-vermelho my-4 capitalize 
+            <sapn class="font-bold text-vermelho-1 my-4 capitalize 
             2xl:w-6/12 xl:w-8/12 lg:w-8/12 2xl:text-6xl xl:text-4xl lg:text-4xl
             md:text-4xl md:w-7/12">
                 Começe um estágio, descubra novas Oportunidades
@@ -38,7 +38,7 @@
 
             <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?>>
                 <button type="submit" class="bg-verde-1 rounded-full py-2 px-16
-                    hover:bg-white border-2 border-verde-1 hover:text-vermelho text-zinc-50 font-bold
+                    hover:bg-white border-2 border-verde-1 hover:text-vermelho-1 text-zinc-50 font-bold
                     capitalize mt-10 w-fit self-start transition duration-300 ease-in-out flex items-center
                     gap-x-1">
                     <?php if (isset($_SESSION['usuario'])) {
@@ -73,7 +73,7 @@
             <img src="views/assets/img-placeholder-1.png" class="xl:h-80 lg:h-72 md:h-64 sm:h-60 rounded-md">
 
             <div class="flex flex-col w-3/5">
-                <sapn class="font-bold text-4xl text-vermelho my-4">
+                <sapn class="font-bold text-4xl text-vermelho-1 my-4">
                     Aprendizado
                 </sapn>
 
@@ -90,7 +90,7 @@
 
         <div class="flex justify-center items-center gap-x-20">
             <div class="flex flex-col w-3/5">
-                <sapn class="font-bold text-4xl text-vermelho my-4">
+                <sapn class="font-bold text-4xl text-vermelho-1 my-4">
                     Oportunidades
                 </sapn>
 
