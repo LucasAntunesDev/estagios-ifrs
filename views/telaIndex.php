@@ -38,9 +38,9 @@
 
             <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?>>
                 <button type="submit" class="bg-verde-1 rounded-full py-2 px-16
-                    hover:bg-white border-2 border-verde-1 hover:text-vermelho-1 text-zinc-50 font-bold
+                    focus:bg-white border-2 border-verde-1 focus:text-vermelho-1 focus:border-verde-1 text-zinc-50 font-bold
                     capitalize mt-10 w-fit self-start transition duration-300 ease-in-out flex items-center
-                    gap-x-1">
+                    gap-x-1 hover:bg-verde-3 hover:border-verde-3">
                     <?php if (isset($_SESSION['usuario'])) {
                         echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                         <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />

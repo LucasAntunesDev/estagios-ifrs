@@ -78,9 +78,9 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 hover:bg-zinc-50
+                    <button type="submit" class="bg-verde-1 rounded-md py-1 px-20 focus:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 
-                     hover:text-verde-1 transition duration-300 ease-in-out">
+                     focus:text-verde-1 transition duration-300 ease-in-out hover:bg-verde-3 hover:border-verde-3 focus:border-verde-1">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                             <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                         </svg>
