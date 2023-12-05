@@ -48,11 +48,10 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
         </div>
 
-        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border ">
+        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border rounded-md">
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
                     <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
-                        <th class="w-fit capitalize pl-2 pr-6 py-2">ID</th>
                         <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
@@ -86,8 +85,15 @@ focus:ring-2 focus:ring-inset focus:ring-vermelho outline-none text-zinc-800">
 
                     foreach ($cursos as $curso) {
                         echo '<tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $curso->getId() . '</td>';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $curso->getNome() . '</td>';
+                        echo '<td class="pl-2 pr-1 w-fit">
+                                <div class="flex items-center">
+                                    <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
+                                    hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm mx-2">' .
+                                $curso->getId() .
+                                ' </span>
+                                ' . $curso->getNome() . '
+                                </div>
+                            </td>';
                         echo '<td class="pl-1 pr-3 w-fit">' . $curso->getNomeCoordenador() . '</td>';
                         echo '<td class="pl-1 pr-3 w-fit">';
 

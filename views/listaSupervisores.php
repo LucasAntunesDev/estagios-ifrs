@@ -51,7 +51,6 @@
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
                     <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
-                        <th class="w-fit capitalize pl-2 pr-6 py-2">Id</th>
                         <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
@@ -88,7 +87,14 @@
 
                     foreach ($supervisores as $supervisor) {
                         echo '<tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $supervisor->getId() . '</td>';
+                        echo '
+                        <td class="pl-2 pr-1 w-fit">
+                            <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
+                            hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm mx-2">' .
+                            $supervisor->getId() .
+                        ' </span>
+                        ' . $supervisor->getNome() . '
+                        </td>';
                         echo '<td class="pl-1 pr-3 w-fit">' . $supervisor->getNome() . '</td>';
                         echo '<td class="pl-1 pr-3 w-fit">' . $supervisor->getTelefone() . '</td>';
                         echo '<td class="pl-1 pr-3 w-fit">' . $supervisor->getEmail() . '</td>';

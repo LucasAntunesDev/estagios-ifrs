@@ -46,11 +46,10 @@
 
         </div>
 
-        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border ">
+        <div class="relative overflow-x-auto max-w-11/12 border-gray-200 border rounded-md">
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
                     <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
-                        <th class="w-fit capitalize pl-2 pr-6 py-2">Id</th>
                         <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
@@ -83,9 +82,16 @@
 
                     foreach ($areas as $area) {
                         echo '<tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $area->getId() . '</td>';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $area->getNome() . '</td>';
-                        echo '<td class="border-y-[1px]  px-4 flex flex-col">';
+                        echo '<td class="pl-2 pr-1 w-fit">
+                                <div class="flex items-center">
+                                    <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
+                                    hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm mx-2">' .
+                                $area->getId() .
+                                ' </span>
+                                ' . $area->getNome() . '
+                                </div>
+                            </td>';
+                        echo '<td class="pl-1 pr-3 w-fit">';
 
                         echo "<a href='Area.php?id=" . $area->getId() . "'class=' bg-verde-1 rounded-md py-1 px-4 hover:bg-zinc-50
                      text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 hover:text-verde-1 transition duration-300 ease-in-out'>

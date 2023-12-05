@@ -50,7 +50,6 @@
             <table class="table-auto">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 bg-gray-50 text-neutral-700">
                     <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">
-                        <th class="w-fit capitalize pl-2 pr-6 py-2">ID</th>
                         <th class="w-fit capitalize pl-2 pr-6 py-2">
                             <div class="flex items-center gap-x-2">
                                 <a <?php
@@ -84,8 +83,15 @@
 
                     foreach ($usuarios as $usuario) {
                         echo ' <tr class="border-1 border-neutral-200 border-b even:bg-zinc-50">';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $usuario->getId() . '</td>';
-                        echo '<td class="pl-1 pr-3 w-fit">' . $usuario->getNome() . '</td>';
+                        echo '<td class="pl-2 pr-1 w-fit">
+                                <div class="flex items-center">
+                                    <span class="bg-sky-100 py-1 px-2 rounded-md hover:bg-sky-200 text-sky-700
+                                    hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm mx-2">' .
+                                $usuario->getId() .
+                                ' </span>
+                                ' . $usuario->getNome() . '
+                                </div>
+                            </td>';
                         echo '<td class="pl-1 pr-3 w-fit">' . $usuario->getLogin() . '</td>';
                         echo '<td class="pl-1 pr-3 w-fit">';
 
