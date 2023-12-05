@@ -1,4 +1,4 @@
-<header class="flex flex-row justify-between items-center px-12 shadow gap-x-4 
+<header class="flex flex-row justify-between items-center px-12 gap-x-4 
 h-16 bg-white text-verde-1 border border-b-neutral-200 min-w-screen max-w-available">
 
     <a href="index.php">
