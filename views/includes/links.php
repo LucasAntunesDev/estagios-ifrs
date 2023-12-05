@@ -15,6 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="views/includes/jquery.mask.js"></script>
 <script src="views/includes/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 
@@ -32,11 +33,15 @@
                     'available': '-webkit-fill-available',
                 },
                 colors: {
-                    vermelho: '#C62126',
+                    'vermelho': {
+                        1: '#C62126',
+                        2: '#de373c',
+                        3: '#a41b20',
+                    },
                     'verde': {
                         1: '#127852',
                         2: '#18A370',
-                        3: '#127852',
+                        3: '#0d563b',
                     },
                 }
             }
