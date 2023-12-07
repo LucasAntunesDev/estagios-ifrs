@@ -67,8 +67,6 @@
                     border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 bg-white
                     focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-72 pr-10">
                                 <?php
-                                echo '<pre>';
-                                var_dump($alunos);
                                 if (isset($_GET['id'])) {
                                     foreach ($alunos as $aluno) {
                                         $selected = ($aluno->getId() == $estagioAluno->getIdAluno()) ? "selected" : "";
@@ -164,9 +162,6 @@
                                 </li>
                             </ul>
 
-                            <!-- <input type="text" id="tipo_processo_estagio" name="tipo_processo_estagio" value=" //<?php echo $estagioAluno->getTipoProcessoEstagio(); ?>" class="rounded-md 
-                border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800"> -->
                         </div>
 
                         <div>
@@ -336,7 +331,7 @@
 
                     <div>
                         <label for="url_termo_compromisso" class="block text-sm font-medium leading-6 text-verde-1 
-                        mb-2">Termo Compromisso:</label>
+                        mb-2">Termo Compromisso</label>
                         <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 
         focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800">
