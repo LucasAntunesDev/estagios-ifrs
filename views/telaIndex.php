@@ -17,7 +17,7 @@
     include('views/includes/menu.php');
     ?>
 
-    <div class="flex flex-row justify-center items-center gap-2 h-screen md:px-8">
+    <div class="flex flex-row justify-center items-center gap-2 min-h-screen md:px-8">
 
         <div class="flex flex-col justify-center text-start w-6/12">
             <sapn class="font-bold text-vermelho-1 my-4 capitalize 
