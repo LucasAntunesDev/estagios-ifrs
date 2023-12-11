@@ -67,7 +67,7 @@
 
     </div>
 
-    <div class="flex flex-col justify-center items-center gap-y-10">
+    <div class="flex flex-col justify-center items-center gap-y-10" id="sobre">
 
         <div class="flex justify-center items-center gap-x-20">
             <img src="views/assets/img-placeholder-1.png" class="xl:h-80 lg:h-72 md:h-64 sm:h-60 rounded-md">

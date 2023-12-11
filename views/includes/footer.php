@@ -7,7 +7,7 @@
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-neutral-500 sm:mb-0">
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Sobre</a>
+                    <a href="index.php#sobre" class="hover:underline me-4 md:me-6">Sobre</a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center gap-x-2 me-4 md:me-6">
