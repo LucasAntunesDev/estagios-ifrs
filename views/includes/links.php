@@ -28,9 +28,11 @@
                 },
                 width:{
                     'available': '-webkit-fill-available',
+                    'moz-available': '-moz-available',
                 },
                 height:{
                     'available': '-webkit-fill-available',
+                    'moz-available': '-moz-available',
                 },
                 colors: {
                     'vermelho': {
