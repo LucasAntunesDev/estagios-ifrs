@@ -5,7 +5,7 @@
                 <img src="views/assets/ifrs-logo.png" class="h-28" alt="Logo do IFRS" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap ">Estágios IFRS</span>
             </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-neutral-500 sm:mb-0">
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-neutral-500 sm:mb-0 gap-y-2 md:gap-y-0">
                 <li>
                     <a href="index.php#sobre" class="hover:underline me-4 md:me-6">Sobre</a>
                 </li>
