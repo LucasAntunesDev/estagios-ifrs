@@ -1,4 +1,4 @@
-<!DOCTYPE html 5>
+<!DOCTYPE html 5 class="scroll-pt-16">
 <html lang="pt-BR">
 
 <head>
@@ -17,26 +17,24 @@
     include('views/includes/menu.php');
     ?>
 
-    <div class="flex flex-row justify-center items-center gap-2 min-h-screen md:px-8">
+    <div class="flex flex-row justify-center items-center gap-2 md:min-h-screen md:px-8
+    flex-wrap-reverse mt-4 md:mt-0">
 
-        <div class="flex flex-col justify-center text-start w-6/12">
-            <sapn class="font-bold text-vermelho-1 my-4 capitalize 
+        <div class="flex flex-col justify-center text-start md:w-6/12 w-72">
+            <sapn class="font-extrabold text-vermelho-1 md:my-4 capitalize 
             2xl:w-6/12 xl:w-8/12 lg:w-8/12 2xl:text-6xl xl:text-4xl lg:text-4xl
-            md:text-4xl md:w-7/12">
+            md:text-4xl md:w-7/12 text-2xl w-72">
                 Começe um estágio, descubra novas Oportunidades
             </sapn>
 
             <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
-            lg:w-9/12">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Duis facilisis sodales sapien, eget finibus purus solli
-                citudin a. Donec volutpat sem in urna ornare vulputate.
+            lg:w-9/12 text-md mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
                 citudin a. Donec volutpat sem in urna ornare vulputate.
             </p>
 
-            <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?>>
+            <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?> class="hidden md:block">
                 <button type="submit" class="bg-verde-1 rounded-full py-2 px-16
                     focus:bg-white border-2 border-verde-1 focus:text-vermelho-1 focus:border-verde-1 text-zinc-50 font-bold
                     capitalize mt-10 w-fit self-start transition duration-300 ease-in-out flex items-center
@@ -62,22 +60,26 @@
         </div>
 
         <div class="flex justify-center items-center" id="login-div">
-            <img src="views/assets/estagios_foto.png" class="2xl:h-[32rem] xl:h-96 lg:h-[24rem] md:h-96">
+            <img src="views/assets/img-placeholder-1.svg" 
+            class="2xl:w-[32rem] xl:w-96 lg:w-[24rem] md:w-96 w-64 my-8 md:my-0">
         </div>
 
     </div>
 
     <div class="flex flex-col justify-center items-center gap-y-10" id="sobre">
 
-        <div class="flex justify-center items-center gap-x-20">
-            <img src="views/assets/img-placeholder-1.png" class="xl:h-80 lg:h-72 md:h-64 sm:h-60 rounded-md">
+        <div class="flex justify-center items-center gap-x-20 flex-wrap 
+        md:flex-nowrap mt-8 md:mt-0">
+            <img src="views/assets/img-placeholder-2.svg" 
+            class="md:w-[28rem] w-[22rem]">
 
             <div class="flex flex-col w-3/5">
-                <sapn class="font-bold text-4xl text-vermelho-1 my-4">
+                <sapn class="font-extrabold text-4xl text-vermelho-1 my-4">
                     Aprendizado
                 </sapn>
 
-                <p class="w-4/5 2xl:text-lg xl:text-md text-neutral-700">
+                <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
+            lg:w-9/12 text-md mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis facilisis sodales sapien, eget finibus purus solli
                     citudin a. Donec volutpat sem in urna ornare vulputate.
@@ -88,21 +90,26 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-center gap-x-20">
+        <div class="flex justify-center items-center gap-x-20 flex-wrap-reverse 
+        md:flex-nowrap">
             <div class="flex flex-col w-3/5">
-                <sapn class="font-bold text-4xl text-vermelho-1 my-4">
+                <sapn class="font-extrabold text-4xl text-vermelho-1 my-4">
                     Oportunidades
                 </sapn>
 
-                <p class="w-4/5 2xl:text-lg xl:text-md text-neutral-700">
+                <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
+            lg:w-9/12 text-md mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis facilisis sodales sapien, eget finibus purus solli
                     citudin a. Donec volutpat sem in urna ornare vulputate.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis facilisis sodales sapien, eget finibus purus solli
+                    citudin a. Donec volutpat sem in urna ornare vulputate.
                 </p>
             </div>
 
-            <img src="views/assets/img-placeholder-2.png" class="xl:h-80 lg:h-72 md:h-64 sm:h-60 rounded-md">
+            <img src="views/assets/img-placeholder-3.svg" 
+            class="md:w-[22rem] w-[18rem]">
         </div>
     </div>
 
