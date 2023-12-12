@@ -183,7 +183,7 @@
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '">';
                         if ($estagioAluno->getUrlTermoCompromisso()) echo "Clique para baixar
                         </a>
-                        </td>'";
+                        </td>";
 
                         echo '<td class="pl-2 pr-1 w-fit">
                         <a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '">';
