@@ -6,7 +6,7 @@ h-16 bg-white text-verde-1 border border-b-neutral-200 min-w-screen max-w-availa
 transition ease-in-out duration-300 cursor-pointer">
     </a>
 
-    <div class="flex items-center md:justify-between gap-x-4  md:gap-x-0 flex-row-reverse md:flex-row w-available w-moz-available">
+    <div class="flex items-center md:justify-between gap-x-4  md:gap-x-0 flex-row-reverse <?php echo isset($_SESSION['usuario']) ? 'md:flex-row w-available w-moz-available' : ''; ?>">
 
         <div class="md:mx-auto <?php echo isset($_SESSION['usuario']) ? '' : 'hidden' ?>">
             <ul class="flex items-center justify-center gap-x-3 font-medium ">
@@ -192,7 +192,7 @@ transition ease-in-out duration-300 cursor-pointer">
 
         </div>";
         } else {
-            echo "<div class='flex justify-center items-center gap-x-2 hover:text-verde-2 hover:cursor-pointer'>
+            echo "<div class='flex justify-between items-center gap-x-2 hover:text-verde-2 hover:cursor-pointer'>
                 
                 <a href='login.php' class='flex gap-x-2 font-bold hover:text-verde-2'>
                     Entrar
