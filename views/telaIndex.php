@@ -21,7 +21,7 @@
     flex-wrap-reverse mt-4 md:mt-0">
 
         <div class="flex flex-col justify-center text-start md:w-6/12 w-72">
-            <sapn class="font-extrabold text-vermelho-1 md:my-4 capitalize 
+            <sapn class="font-extrabold text-vermelho-500 md:my-4 capitalize 
             2xl:w-6/12 xl:w-8/12 lg:w-8/12 2xl:text-6xl xl:text-4xl lg:text-4xl
             md:text-4xl md:w-7/12 text-2xl w-72">
                 Começe um estágio, descubra novas Oportunidades
@@ -35,10 +35,10 @@
             </p>
 
             <a <?php echo isset($_SESSION['usuario']) ? 'href="estagioAluno.php"' : 'href="login.php"' ?> class="hidden md:block">
-                <button type="submit" class="bg-verde-1 rounded-full py-2 px-16
-                    focus:bg-white border-2 border-verde-1 focus:text-vermelho-1 focus:border-verde-1 text-zinc-50 font-bold
+                <button type="submit" class="bg-verde-500 rounded-full py-2 px-16
+                    focus:bg-white border-2 border-verde-500 focus:text-vermelho-500 focus:border-verde-500 text-zinc-50 font-bold
                     capitalize mt-10 w-fit self-start transition duration-300 ease-in-out flex items-center
-                    gap-x-1 hover:bg-verde-3 hover:border-verde-3">
+                    gap-x-1 hover:bg-verde-600 hover:border-verde-600">
                     <?php if (isset($_SESSION['usuario'])) {
                         echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                         <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
@@ -74,7 +74,7 @@
             class="md:w-[28rem] w-[22rem]">
 
             <div class="flex flex-col w-3/5">
-                <sapn class="font-extrabold text-4xl text-vermelho-1 my-4">
+                <sapn class="font-extrabold text-4xl text-vermelho-500 my-4">
                     Aprendizado
                 </sapn>
 
@@ -93,7 +93,7 @@
         <div class="flex justify-center items-center gap-x-20 flex-wrap-reverse 
         md:flex-nowrap">
             <div class="flex flex-col w-3/5">
-                <sapn class="font-extrabold text-4xl text-vermelho-1 my-4">
+                <sapn class="font-extrabold text-4xl text-vermelho-500 my-4">
                     Oportunidades
                 </sapn>
 

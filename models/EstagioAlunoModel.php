@@ -89,6 +89,259 @@ final class EstagioAlunoModel extends Model {
 
         return $array;
     }
+
+    public function selectEstagioFinalizado($vo = null) {
+        $db = new Database();
+        $data = $db->select('SELECT estagio_aluno.id,
+        estagio_aluno.id_aluno,
+        estagio_aluno.id_empresa,
+        estagio_aluno.carga_horaria,
+        estagio_aluno.id_coordenador,
+        estagio_aluno.tipo_processo_estagio,
+        estagio_aluno.numero_encaminhamentos,
+        estagio_aluno.situacao_estagio,
+        estagio_aluno.data_inicio,
+        estagio_aluno.previsao_fim,
+        estagio_aluno.id_orientador,
+        estagio_aluno.id_coorientador,
+        estagio_aluno.id_supervisor,
+        estagio_aluno.data_fim,
+        estagio_aluno.id_area,
+        estagio_aluno.url_termo_compromisso,
+        estagio_aluno.url_plano_atividades,
+        estagio_aluno.url_avaliacao_empresa,
+        estagio_aluno.url_tcc,
+        estagio_aluno.url_autoavaliacao,
+        aluno.nome as nome_aluno,
+        empresa.nome as nome_empresa,
+        orientador.nome as "nome_orientador",
+        coorientador.nome as "nome_coorientador",
+        coordenador.nome as "nome_coordenador",
+        supervisor.nome as "nome_supervisor",
+        area.nome as nome_area
+        FROM estagio_aluno
+        JOIN aluno
+        ON estagio_aluno.id_aluno = aluno.id
+        JOIN empresa
+        ON estagio_aluno.id_empresa = empresa.id
+        JOIN professor orientador
+        ON estagio_aluno.id_orientador = orientador.id
+        JOIN professor coorientador
+        ON estagio_aluno.id_coorientador = coorientador.id
+        JOIN professor coordenador
+        ON estagio_aluno.id_coordenador = coordenador.id
+        JOIN supervisor
+        ON estagio_aluno.id_supervisor = supervisor.id
+        JOIN area
+        ON estagio_aluno.id_area = area.id
+        where situacao_estagio = "finalizado"');
+
+        $array = [];
+
+        foreach ($data as $row) {
+            $vo = new EstagioAlunoVO(
+                $row['id'],
+                $row['id_aluno'],
+                $row['id_empresa'],
+                $row['carga_horaria'],
+                $row['id_coordenador'],
+                $row['tipo_processo_estagio'],
+                $row['numero_encaminhamentos'],
+                $row['situacao_estagio'],
+                $row['data_inicio'],
+                $row['previsao_fim'],
+                $row['id_orientador'],
+                $row['id_coorientador'],
+                $row['id_supervisor'],
+                $row['data_fim'],
+                $row['id_area'],
+                $row['url_termo_compromisso'],
+                $row['url_plano_atividades'],
+                $row['url_avaliacao_empresa'],
+                $row['url_tcc'],
+                $row['url_autoavaliacao'],
+                $row['nome_aluno'],
+                $row['nome_empresa'],
+                $row['nome_coordenador'],
+                $row['nome_orientador'],
+                $row['nome_coorientador'],
+                $row['nome_supervisor'],
+                $row['nome_area']
+            );
+            array_push($array, $vo);
+        }
+
+        return $array;
+    }
+
+    public function selectEstagioEmAndamento($vo = null) {
+        $db = new Database();
+        $data = $db->select('SELECT estagio_aluno.id,
+        estagio_aluno.id_aluno,
+        estagio_aluno.id_empresa,
+        estagio_aluno.carga_horaria,
+        estagio_aluno.id_coordenador,
+        estagio_aluno.tipo_processo_estagio,
+        estagio_aluno.numero_encaminhamentos,
+        estagio_aluno.situacao_estagio,
+        estagio_aluno.data_inicio,
+        estagio_aluno.previsao_fim,
+        estagio_aluno.id_orientador,
+        estagio_aluno.id_coorientador,
+        estagio_aluno.id_supervisor,
+        estagio_aluno.data_fim,
+        estagio_aluno.id_area,
+        estagio_aluno.url_termo_compromisso,
+        estagio_aluno.url_plano_atividades,
+        estagio_aluno.url_avaliacao_empresa,
+        estagio_aluno.url_tcc,
+        estagio_aluno.url_autoavaliacao,
+        aluno.nome as nome_aluno,
+        empresa.nome as nome_empresa,
+        orientador.nome as "nome_orientador",
+        coorientador.nome as "nome_coorientador",
+        coordenador.nome as "nome_coordenador",
+        supervisor.nome as "nome_supervisor",
+        area.nome as nome_area
+        FROM estagio_aluno
+        JOIN aluno
+        ON estagio_aluno.id_aluno = aluno.id
+        JOIN empresa
+        ON estagio_aluno.id_empresa = empresa.id
+        JOIN professor orientador
+        ON estagio_aluno.id_orientador = orientador.id
+        JOIN professor coorientador
+        ON estagio_aluno.id_coorientador = coorientador.id
+        JOIN professor coordenador
+        ON estagio_aluno.id_coordenador = coordenador.id
+        JOIN supervisor
+        ON estagio_aluno.id_supervisor = supervisor.id
+        JOIN area
+        ON estagio_aluno.id_area = area.id
+        where situacao_estagio = "em andamento"');
+
+        $array = [];
+
+        foreach ($data as $row) {
+            $vo = new EstagioAlunoVO(
+                $row['id'],
+                $row['id_aluno'],
+                $row['id_empresa'],
+                $row['carga_horaria'],
+                $row['id_coordenador'],
+                $row['tipo_processo_estagio'],
+                $row['numero_encaminhamentos'],
+                $row['situacao_estagio'],
+                $row['data_inicio'],
+                $row['previsao_fim'],
+                $row['id_orientador'],
+                $row['id_coorientador'],
+                $row['id_supervisor'],
+                $row['data_fim'],
+                $row['id_area'],
+                $row['url_termo_compromisso'],
+                $row['url_plano_atividades'],
+                $row['url_avaliacao_empresa'],
+                $row['url_tcc'],
+                $row['url_autoavaliacao'],
+                $row['nome_aluno'],
+                $row['nome_empresa'],
+                $row['nome_coordenador'],
+                $row['nome_orientador'],
+                $row['nome_coorientador'],
+                $row['nome_supervisor'],
+                $row['nome_area']
+            );
+            array_push($array, $vo);
+        }
+
+        return $array;
+    }
+    
+    public function selectEstagioNaoIniciado($vo = null) {
+        $db = new Database();
+        $data = $db->select('SELECT estagio_aluno.id,
+        estagio_aluno.id_aluno,
+        estagio_aluno.id_empresa,
+        estagio_aluno.carga_horaria,
+        estagio_aluno.id_coordenador,
+        estagio_aluno.tipo_processo_estagio,
+        estagio_aluno.numero_encaminhamentos,
+        estagio_aluno.situacao_estagio,
+        estagio_aluno.data_inicio,
+        estagio_aluno.previsao_fim,
+        estagio_aluno.id_orientador,
+        estagio_aluno.id_coorientador,
+        estagio_aluno.id_supervisor,
+        estagio_aluno.data_fim,
+        estagio_aluno.id_area,
+        estagio_aluno.url_termo_compromisso,
+        estagio_aluno.url_plano_atividades,
+        estagio_aluno.url_avaliacao_empresa,
+        estagio_aluno.url_tcc,
+        estagio_aluno.url_autoavaliacao,
+        aluno.nome as nome_aluno,
+        empresa.nome as nome_empresa,
+        orientador.nome as "nome_orientador",
+        coorientador.nome as "nome_coorientador",
+        coordenador.nome as "nome_coordenador",
+        supervisor.nome as "nome_supervisor",
+        area.nome as nome_area
+        FROM estagio_aluno
+        JOIN aluno
+        ON estagio_aluno.id_aluno = aluno.id
+        JOIN empresa
+        ON estagio_aluno.id_empresa = empresa.id
+        JOIN professor orientador
+        ON estagio_aluno.id_orientador = orientador.id
+        JOIN professor coorientador
+        ON estagio_aluno.id_coorientador = coorientador.id
+        JOIN professor coordenador
+        ON estagio_aluno.id_coordenador = coordenador.id
+        JOIN supervisor
+        ON estagio_aluno.id_supervisor = supervisor.id
+        JOIN area
+        ON estagio_aluno.id_area = area.id
+        where situacao_estagio = "não iniciado"');
+
+        $array = [];
+
+        foreach ($data as $row) {
+            $vo = new EstagioAlunoVO(
+                $row['id'],
+                $row['id_aluno'],
+                $row['id_empresa'],
+                $row['carga_horaria'],
+                $row['id_coordenador'],
+                $row['tipo_processo_estagio'],
+                $row['numero_encaminhamentos'],
+                $row['situacao_estagio'],
+                $row['data_inicio'],
+                $row['previsao_fim'],
+                $row['id_orientador'],
+                $row['id_coorientador'],
+                $row['id_supervisor'],
+                $row['data_fim'],
+                $row['id_area'],
+                $row['url_termo_compromisso'],
+                $row['url_plano_atividades'],
+                $row['url_avaliacao_empresa'],
+                $row['url_tcc'],
+                $row['url_autoavaliacao'],
+                $row['nome_aluno'],
+                $row['nome_empresa'],
+                $row['nome_coordenador'],
+                $row['nome_orientador'],
+                $row['nome_coorientador'],
+                $row['nome_supervisor'],
+                $row['nome_area']
+            );
+            array_push($array, $vo);
+        }
+
+        return $array;
+    }
+
     public function selectOne($vo = null) {
         $db = new Database();
         $query = 'SELECT * FROM estagio_aluno WHERE id = :id';

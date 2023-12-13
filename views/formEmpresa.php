@@ -16,7 +16,7 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="flex gap-x-3 items-center font-bold text-4xl text-vermelho-1 my-4">
+        <h1 class="flex gap-x-3 items-center font-bold text-4xl text-vermelho-500 my-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
                 <path fill-rule="evenodd" d="M3 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5H15v-18a.75.75 0 000-1.5H3zM6.75 19.5v-2.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 010 1.5h-.75A.75.75 0 016 6.75zM6.75 9a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM6 12.75a.75.75 0 01.75-.75h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 6a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zm-.75 3.75A.75.75 0 0110.5 9h.75a.75.75 0 010 1.5h-.75a.75.75 0 01-.75-.75zM10.5 12a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM16.5 6.75v15h5.25a.75.75 0 000-1.5H21v-12a.75.75 0 000-1.5h-4.5zm1.5 4.5a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008zm.75 2.25a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75v-.008a.75.75 0 00-.75-.75h-.008zM18 17.25a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z" clip-rule="evenodd" />
             </svg>
@@ -28,7 +28,7 @@
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-neutral-700 
-                    hover:text-vermelho-1">
+                    hover:text-vermelho-500">
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-2">
                             <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
@@ -43,7 +43,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                         </svg>
                         <a href="empresas.php" class="ms-1 text-sm font-medium text-neutral-700 
-                        hover:text-vermelho-1 md:ms-2">Empresas</a>
+                        hover:text-vermelho-500 md:ms-2">Empresas</a>
                     </div>
                 </li>
                 <li aria-current="page">
@@ -57,17 +57,17 @@
             </ol>
         </nav>
 
-        <fieldset class="bg-zinc-50 p-10 rounded-md w-[40rem]">
+        <fieldset class="bg-slate-50 p-10 rounded-md w-[40rem]">
             <form action="salvarEmpresa.php" method="post" class="flex flex-col justify-center items-center gap-2">
                 <input type="hidden" name="id" value='<?php echo $empresa->getId(); ?>'>
 
                 <div class="flex gap-x-4">
                     <div>
-                        <label for="nome" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Nome</label>
+                        <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
                         <div class="relative">
                             <input type="text" id="nome" name="nome" value='<?php echo $empresa->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none ">
+                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none ">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -80,12 +80,12 @@
                     </div>
 
                     <div>
-                        <label for="cpnj" class="block text-sm font-medium leading-6 text-verde-1 mb-2">CNPJ</label>
+                        <label for="cpnj" class="block text-sm font-medium leading-6 text-verde-500 mb-2">CNPJ</label>
 
                         <div class="relative">
                             <input type="text" id="cnpj" name="cnpj" value='<?php echo $empresa->getCNPJ(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
+                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -99,12 +99,12 @@
                     </div>
 
                     <div class="w-available">
-                        <label for="id_cidade" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Cidade</label>
+                        <label for="id_cidade" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Cidade</label>
 
                         <div class="relative">
                             <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
-                    focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none text-zinc-800 w-available">
+                    focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800 w-available">
                                 <?php
                                 foreach ($cidades as $cidade) {
                                     $selected = ($cidade->getId() == $empresa->getIdCidade()) ? "selected" : "";
@@ -125,12 +125,12 @@
                 <div class="flex gap-x-4">
 
                     <div>
-                        <label for="endereco" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Endereço</label>
+                        <label for="endereco" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Endereço</label>
 
                         <div class="relative">
                             <input type="text" id="endereco" name="endereco" value='<?php echo $empresa->getTelefone(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
+                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -143,12 +143,12 @@
                     </div>
 
                     <div>
-                        <label for="telefone" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Telefone</label>
+                        <label for="telefone" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Telefone</label>
 
                         <div class="relative">
                             <input type="number" id="telefone" name="telefone" value='<?php echo $empresa->getTelefone(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
+                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -161,12 +161,12 @@
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium leading-6 text-verde-1 mb-2">Email</label>
+                        <label for="email" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Email</label>
 
                         <div class="relative">
                             <input type="email" id="email" name="email" value='<?php echo $empresa->getEmail(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-neutral-700 ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-2 outline-none">
+                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none">
 
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
@@ -182,9 +182,9 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="bg-verde-1 rounded-md py-1 px-20 focus:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 
-                     focus:text-verde-1 transition duration-300 ease-in-out hover:bg-verde-3 hover:border-verde-3 focus:border-verde-1">
+                    <button type="submit" class="bg-verde-500 rounded-md py-1 px-20 focus:bg-slate-50
+                     text-slate-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-500 
+                     focus:text-verde-500 transition duration-300 ease-in-out hover:bg-verde-600 hover:border-verde-600 focus:border-verde-500">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                             <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                         </svg>

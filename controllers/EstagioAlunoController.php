@@ -18,8 +18,20 @@ final class EstagioAlunoController extends Controller
         $model = new EstagioAlunoModel();
         $data = $model->selectAll();
 
+        $model = new EstagioAlunoModel();
+        $estagiosNaoIniciados = $model->selectEstagioNaoIniciado();
+
+        $model = new EstagioAlunoModel();
+        $estagiosEmAndamento = $model->selectEstagioEmAndamento();
+
+        $model = new EstagioAlunoModel();
+        $estagiosFinalizados = $model->selectEstagioFinalizado();
+
         $this->loadView('listaEstagiosAlunos', [
-            'estagiosAlunos' => $data
+            'estagiosAlunos' => $data,
+            'estagiosNaoIniciados' => $estagiosNaoIniciados,
+            'estagiosEmAndamento' => $estagiosEmAndamento,
+            'estagiosFinalizados' => $estagiosFinalizados
         ]);
     }
 

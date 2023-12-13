@@ -23,13 +23,13 @@
             <form action="fazerLogin.php" method="POST" class="flex flex-col justify-center 
             items-center gap-2 ">
 
-            <h1 class="font-bold text-5xl text-vermelho-1 my-4">
+            <h1 class="font-bold text-5xl text-vermelho-500 my-4">
                 Login
             </h1>
-                <fieldset class="flex flex-col justify-center bg-zinc-50 items-center gap-y-8  rounded-md px-10 py-10">
+                <fieldset class="flex flex-col justify-center bg-slate-50 items-center gap-y-8  rounded-md px-10 py-10">
 
                     <div>
-                        <label for="login" class="block text-sm font-medium leading-6 text-verde-1 
+                        <label for="login" class="block text-sm font-medium leading-6 text-verde-500 
                         mb-2">Login</label>
 
                         <div class="relative">
@@ -47,7 +47,7 @@
                     </div>
 
                     <div>
-                        <label for="senha" class="block text-sm font-medium leading-6 text-verde-1
+                        <label for="senha" class="block text-sm font-medium leading-6 text-verde-500
                         mb-2">Senha</label>
 
                         <div class="relative">
@@ -63,10 +63,10 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="class=' bg-verde-1 rounded-md py-1 px-20 focus:bg-zinc-50
-                     text-zinc-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-1 
-                     focus:text-verde-1 focus:border-verde-1 transition duration-300 ease-in-out w-available font-medium
-                     hover:bg-verde-3 hover:border-verde-3">
+                    <button type="submit" class="class=' bg-verde-500 rounded-md py-1 px-20 focus:bg-slate-50
+                     text-slate-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-500 
+                     focus:text-verde-500 focus:border-verde-500 transition duration-300 ease-in-out w-available font-medium
+                     hover:bg-verde-600 hover:border-verde-600">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                             <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 015.25 2h5.5A2.25 2.25 0 0113 4.25v2a.75.75 0 01-1.5 0v-2a.75.75 0 00-.75-.75h-5.5a.75.75 0 00-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 00.75-.75v-2a.75.75 0 011.5 0v2A2.25 2.25 0 0110.75 18h-5.5A2.25 2.25 0 013 15.75V4.25z" clip-rule="evenodd" />
                             <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
