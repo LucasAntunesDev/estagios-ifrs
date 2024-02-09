@@ -2,7 +2,7 @@
     <div class="w-full max-w-screen-xl mx-auto p-4 md:pt-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="index.php" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="views/assets/ifrs-logo.png" class="h-28" alt="Logo do IFRS" />
+                <img src="views/assets/imgs/ifrs-logo.png" class="h-28" alt="Logo do IFRS" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap ">Estágios IFRS</span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-neutral-500 sm:mb-0 gap-y-2 md:gap-y-0">

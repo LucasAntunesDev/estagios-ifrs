@@ -60,7 +60,7 @@
         </div>
 
         <div class="flex justify-center items-center" id="login-div">
-            <img src="views/assets/img-placeholder-1.svg" 
+            <img src="views/assets/imgs/img-placeholder-1.svg" 
             class="2xl:w-[32rem] xl:w-96 lg:w-[24rem] md:w-96 w-64 my-8 md:my-0">
         </div>
 
@@ -70,7 +70,7 @@
 
         <div class="flex justify-center items-center gap-x-20 flex-wrap 
         md:flex-nowrap mt-8 md:mt-0">
-            <img src="views/assets/img-placeholder-2.svg" 
+            <img src="views/assets/imgs/img-placeholder-2.svg" 
             class="md:w-[28rem] w-[22rem]">
 
             <div class="flex flex-col w-3/5">
@@ -108,7 +108,7 @@
                 </p>
             </div>
 
-            <img src="views/assets/img-placeholder-3.svg" 
+            <img src="views/assets/imgs/img-placeholder-3.svg" 
             class="md:w-[22rem] w-[18rem]">
         </div>
     </div>

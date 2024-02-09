@@ -86,7 +86,7 @@
                 }
             </style>
 
-                <?php include_once('views/assets/login_vetor.svg') ?>
+                <?php include_once('views/assets/imgs/login_vetor.svg') ?>
         </div>
     </div>
 
