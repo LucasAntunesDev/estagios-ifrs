@@ -179,7 +179,7 @@
 
                 foreach ($estagiosAlunos as $estagioAluno) {
                     echo '<tr class="even:bg-slate-50">';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap pr-8">
+                    echo '<td class="pl-2 w-fit py-5 whitespace-nowrap pr-8">
                                 <div class="flex items-center">
                                     <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
                                     hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit mx-2">' .
