@@ -29,7 +29,7 @@ final class IndexController extends Controller {
             $vo = $model->selectOne(new UsuarioVO($id));
         }
 
-        $this->loadView('telaIndex');
+        $this->loadView('index');
     }
 
 }
