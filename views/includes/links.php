@@ -4,9 +4,12 @@
 <link rel="icon" type="image/png" href="https://ifrs.edu.br/bento/wp-content/themes/ifrs-portal-theme/favicons/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="https://ifrs.edu.br/bento/wp-content/themes/ifrs-portal-theme/favicons/favicon-16x16.png" sizes="16x16">
 
+<link rel="stylesheet" href="views/assets/css/output.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
 
 <link rel="stylesheet" href="views/assets/css/estilo.css">
+<link rel="stylesheet" href="views/assets/css/global.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,50 +19,3 @@
 <script src="views/assets/js/jquery.mask.js"></script>
 <script src="views/assets/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    'sans': 'Urbanist, sans-serif',
-                },
-                width:{
-                    'available': '-webkit-fill-available',
-                    'moz-available': '-moz-available',
-                },
-                height:{
-                    'available': '-webkit-fill-available',
-                    'moz-available': '-moz-available',
-                },
-                colors: {
-                    'vermelho': {
-                        100: '#fbe9ea',
-                        200: '#edb7b9',
-                        300: '#e08588',
-                        400: '#d35357',
-                        500: '#C62126',
-                        600: '#9a191f',
-                        700: '#6e1216',
-                        800: '#420b0d',
-                        900: '#160404',
-                    },
-                    'verde': {
-                        50:'#edf8f2',
-                        100:'#e9fcf5',
-                        200:'#b4dbcd',
-                        300:'#7ebaa4',
-                        400:'#48997b',
-                        500:'#127852',
-                        600:'#0f6142',
-                        700:'#0b4831',
-                        800:'#072f20',
-                        900:'#03160f',
-                    },
-                }
-            }
-        }
-    }
-</script>
