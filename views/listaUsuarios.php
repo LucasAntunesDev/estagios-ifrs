@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estágios IFRS - Usuários</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <?php include('views/includes/links.php'); ?>
 </head>
 
@@ -15,35 +16,44 @@
     <?php include('views/includes/menu.php') ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-vermelho-500 py-4 flex items-center gap-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
-                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
-            </svg>
-            Usuários
-        </h1>
+        <div class="flex justify-around items-center gap-2">
 
-        <div class="flex items-center gap-x-4 justify-start w-6/12 mb-4">
+            <div class="flex justify-start items-center gap-x-12">
 
-            <a href="usuario.php" class="bg-verde-500 rounded-full p-2 focus:bg-slate-50
-         text-slate-50 flex items-center justify-center border-2 border-verde-500 
-         focus:text-verde-500 transition duration-300 ease-in-out mb-2 mr-8 self-end
-         hover:bg-verde-600 hover:border-verde-600 focus:border-verde-500">
+                <h1 class="font-bold text-3xl text-vermelho-500 py-4 flex items-center gap-x-2">
+                    Usuários
+                </h1>
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-                </svg>
-            </a>
-
-            <div class="relative">
-                <input id="pesquisa-input" placeholder="Procurar" type="text" class="rounded-md 
-    border-0 py-1.5 pr-60 pl-10  ring-1 ring-inset ring-gray-500 
-    focus:ring-2 focus:ring-inset focus:ring-vermelho-500 outline-none text-zinc-800">
-                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
-                        <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
-                    </svg>
+                <div class="relative">
+                    <input id="pesquisa-input" placeholder="Procurar" type="text" class="rounded-full 
+        border-0 py-1.5 pr-10 pl-10 outline-none hover:bg-slate-100
+        bg-slate-50">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            class="w-5 h-5 fill-neutral-700">
+                            <path fill-rule="evenodd"
+                                d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
                 </div>
+
+
             </div>
+
+            <a href="usuario.php" class="bg-verde-500 rounded-md py-1 px-4 focus:bg-slate-50
+text-slate-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-500 
+focus:text-verde-500 focus:border-verde-500 transition duration-300 ease-in-out
+hover:bg-verde-600 hover:border-verde-600 self-baseline">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                </svg>
+
+                Adicionar usuario
+            </a>
 
         </div>
 
@@ -54,8 +64,8 @@
                         <th class="w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">
                             <div class=" flex items-center gap-x-2">
                             <a <?php
-                                echo (!isset($_GET['descrescente'])) ? "href='usuarios.php?descrescente'" : "href='usuarios.php'";
-                                ?> class="hover:text-neutral-700">
+                            echo (!isset($_GET['descrescente'])) ? "href='usuarios.php?descrescente'" : "href='usuarios.php'";
+                            ?> class="hover:text-neutral-700">
 
                                 <?php
                                 if (isset($_GET['descrescente'])) {
@@ -80,7 +90,8 @@
                 <tbody class=" text-sm bg-neutral-50/40">
             <?php
 
-            if (isset($_GET['descrescente'])) rsort($usuarios);
+            if (isset($_GET['descrescente']))
+                rsort($usuarios);
 
             foreach ($usuarios as $usuario) {
                 echo ' <tr class="even:bg-slate-50">';
