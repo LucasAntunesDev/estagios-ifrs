@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresas</title>
+    <title>Estágios IFRS - Empresas</title>
     <?php include('views/includes/links.php'); ?>
 </head>
 

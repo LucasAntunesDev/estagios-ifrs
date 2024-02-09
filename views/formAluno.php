@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estágios IFRS - Gerenciar Aluno</title>
-
-
     <?php include('views/includes/links.php'); ?>
 </head>
 
