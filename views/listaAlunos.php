@@ -53,7 +53,7 @@
             <table class="table-auto text-neutral-700 font-medium">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 text-verde-500 bg-slate-50">
                     <tr class="even:bg-slate-50">
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">
+                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap *:w-fit *:capitalize *:pl-2 *:pr-6 *:py-3 *:whitespace-nowrap" scope="col"">
                         <div class=" flex items-center gap-x-2">
                             <a <?php
                                 echo (!isset($_GET['descrescente'])) ? "href='alunos.php?descrescente'" : "href='alunos.php'";
@@ -75,16 +75,16 @@
                         </div>
                     </th>
                     
-                        <th class="w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Matrícula</th>
-                        <th class="w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Data de nascimento</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Email</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">CPF</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">RG</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Endereco</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Telefone</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Turma</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Cidade</th>
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap" scope="col"">Ações</th>
+                        <th scope="col"">Matrícula</th>
+                        <th scope="col"">Data de nasc.</th>
+                        <th scope="col"">Email</th>
+                        <th scope="col"">CPF</th>
+                        <th scope="col"">RG</th>
+                        <th scope="col"">Endereco</th>
+                        <th scope="col"">Telefone</th>
+                        <th scope="col"">Turma</th>
+                        <th scope="col"">Cidade</th>
+                        <th scope="col"">Ações</th>
                     </tr>
                 </thead>
 
