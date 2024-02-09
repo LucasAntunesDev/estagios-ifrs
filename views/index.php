@@ -24,7 +24,7 @@
                 Começe um estágio, descubra novas Oportunidades
             </sapn>
 
-            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
+            <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-gray-600
             lg:w-9/12 text-md mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis facilisis sodales sapien, eget finibus purus solli
@@ -75,7 +75,7 @@
                     Aprendizado
                 </sapn>
 
-                <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
+                <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-gray-600
             lg:w-9/12 text-md mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis facilisis sodales sapien, eget finibus purus solli
@@ -95,7 +95,7 @@
                     Oportunidades
                 </sapn>
 
-                <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-neutral-700
+                <p class="2xl:w-8/12 xl:w-9/12 2xl:text-xl xl:text-lg text-gray-600
             lg:w-9/12 text-md mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis facilisis sodales sapien, eget finibus purus solli

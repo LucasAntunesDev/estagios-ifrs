@@ -1189,6 +1189,14 @@ video {
   fill: #dc2626;
 }
 
+.fill-gray-500 {
+  fill: #6b7280;
+}
+
+.fill-gray-600 {
+  fill: #4b5563;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1481,6 +1489,11 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
 .accent-verde-500 {
   accent-color: #127852;
 }
@@ -1635,6 +1648,16 @@ video {
 .hover\:text-verde-500:hover {
   --tw-text-opacity: 1;
   color: rgb(18 120 82 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {

@@ -26,7 +26,7 @@
                 border-0 py-1.5 pr-10 pl-10 outline-none hover:bg-slate-100
                   bg-slate-50">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-neutral-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
                         <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
                     </svg>
                 </div>
@@ -41,7 +41,7 @@
 
             <!-- Dropdown menu -->
             <div id="dropdownDefaultCheckbox" class="z-10 hidden w-48 bg-white divide-y rounded-lg shadow " style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(724px, 124px);" data-popper-placement="bottom">
-                <ul class="py-2 text-sm font-bold text-neutral-700" aria-labelledby="dropdownCheckboxButton">
+                <ul class="py-2 text-sm font-bold text-gray-600" aria-labelledby="dropdownCheckboxButton">
 
                     <li class="hover:bg-slate-50 rounded-md py-2 px-4 mx-2">
                         <a href="estagiosAlunos.php" class="flex items-center gap-x-2 hover:cursor-pointer">
@@ -104,7 +104,7 @@
 
     <div class="relative overflow-x-auto 2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12 
         rounded-xl mx-auto">
-        <table class="table-auto text-neutral-700 font-medium">
+        <table class="table-auto text-gray-600 font-medium">
             <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 text-verde-500 bg-slate-50">
                 <tr class="table-row *:w-fit *:capitalize *:pl-2 *:pr-6 *:py-3 *:whitespace-nowrap">
                     <th class="w-fit capitalize pl-2 pr-6 py-2">
