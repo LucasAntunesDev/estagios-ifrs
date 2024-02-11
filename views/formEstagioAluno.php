@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estágios IFRS - Gerenciar Estágio</title>
-    
-    
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
     <?php include('views/includes/links.php'); ?>
 </head>
 
@@ -53,8 +50,8 @@
             </ol>
         </nav>
 
-        <fieldset class="bg-slate-50 p-10 rounded-md">
-            <form action="salvarEstagioAluno.php" method="post" class="flex flex-col justify-center items-center gap-2" enctype=multipart/form-data>
+        <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
+            <fieldset class="bg-slate-50 p-10 rounded-md">
                 <input type="hidden" name="id" value='<?php echo $estagioAluno->getId(); ?>'>
 
                 <div class="flex flex-col justify-center items-baseline gap-2">
@@ -201,7 +198,8 @@
                                     <!-- <option value="não iniciado" <? //php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' 
                                                                         ?>>Não Iniciado</option> -->
                                     <option value="em andamento" <?php echo $estagioAluno->getSituacaoEstagio() == 'em andamento' ? 'selected' : '' ?>>Em Andamento</option>
-                                    <option value="finalizado" <?php echo $estagioAluno->getSituacaoEstagio() == 'finalizado' ? 'selected' : '' ?>>Finalizado</option>
+                                    <option value="finalizado" <?php echo $estagioAluno->getSituacaoEstagio() == 'finalizado' ? 'selected' : '' ?>>
+                                        Finalizado</option>
 
                                 </select>
 
@@ -214,110 +212,114 @@
                         </div>
                     </div>
 
-                    <input type="hidden" id="numero_encaminhamentos" name="numero_encaminhamentos" value='<?php echo $estagioAluno->getNumeroEncaminhamentos(); ?>'>
+            </fieldset>
 
-                    <input type="hidden" id="previsao_fim" name="previsao_fim" value='<?php echo $estagioAluno->getPrevisaoFim(); ?>'>
 
-                    <div class="flex gap-x-4 w-available">
+            <input type="hidden" id="numero_encaminhamentos" name="numero_encaminhamentos" value='<?php echo $estagioAluno->getNumeroEncaminhamentos(); ?>'>
+
+            <input type="hidden" id="previsao_fim" name="previsao_fim" value='<?php echo $estagioAluno->getPrevisaoFim(); ?>'>
+
+            <fieldset class="bg-slate-50 p-10 rounded-md">
+
+                <div class="flex gap-x-4 w-available">
+                    <div>
                         <div>
-                            <div>
-                                <label for="id_coordenador" class="block text-sm font-medium leading-6 text-verde-500 
+                            <label for="id_coordenador" class="block text-sm font-medium leading-6 text-verde-500 
                         mb-2">Coordenador</label>
 
-                                <div class="relative">
-                                    <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 
+                            <div class="relative">
+                                <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 
                     border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 bg-white
                     focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
-                                        <?php
-                                        foreach ($coordenadores as $coordenador) {
-                                            $selected = ($coordenador->getId() == $estagioAluno->getIdCoordenador()) ? "selected" : "";
-                                            echo "<option value='" . $coordenador->getId() . "' " . $selected . "> " . $coordenador->getNome() . "</option>";
-                                        }
-                                        ?>
-                                    </select>
+                                    <?php
+                                    foreach ($coordenadores as $coordenador) {
+                                        $selected = ($coordenador->getId() == $estagioAluno->getIdCoordenador()) ? "selected" : "";
+                                        echo "<option value='" . $coordenador->getId() . "' " . $selected . "> " . $coordenador->getNome() . "</option>";
+                                    }
+                                    ?>
+                                </select>
 
-                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
-                                            <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
-                                        </svg>
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
+                                        <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                                    </svg>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div>
-                            <label for="id_orientador" class="block text-sm font-medium leading-6 text-verde-500 
+                    <div>
+                        <label for="id_orientador" class="block text-sm font-medium leading-6 text-verde-500 
                         mb-2">Orientador</label>
 
-                            <div class="relative">
-                                <select id="id_orientador" name="id_orientador" value="id_orientador" class="rounded-md 
+                        <div class="relative">
+                            <select id="id_orientador" name="id_orientador" value="id_orientador" class="rounded-md 
                                 border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 bg-white
                                 focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
-                                    <?php
-                                    foreach ($orientadores as $orientador) {
-                                        $selected = ($orientador->getId() == $estagioAluno->getIdOrientador()) ? "selected" : "";
-                                        echo "<option value='" . $orientador->getId() . "' " . $selected . "> " . $orientador->getNome() . "</option>";
-                                    }
-                                    ?>
-                                </select>
+                                <?php
+                                foreach ($orientadores as $orientador) {
+                                    $selected = ($orientador->getId() == $estagioAluno->getIdOrientador()) ? "selected" : "";
+                                    echo "<option value='" . $orientador->getId() . "' " . $selected . "> " . $orientador->getNome() . "</option>";
+                                }
+                                ?>
+                            </select>
 
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
-                                        <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
-                                    </svg>
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
+                                    <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                                </svg>
 
-                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div>
-                            <label for="id_coorientador" class="block text-sm font-medium leading-6 text-verde-500 
+                    <div>
+                        <label for="id_coorientador" class="block text-sm font-medium leading-6 text-verde-500 
                         mb-2">Coorientador</label>
 
-                            <div class="relative">
-                                <select id="id_coorientador" name="id_coorientador" value="id_coorientador" class="rounded-md 
+                        <div class="relative">
+                            <select id="id_coorientador" name="id_coorientador" value="id_coorientador" class="rounded-md 
                     border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 bg-white
                     focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
-                                    <?php
-                                    foreach ($coorientadores as $coorientador) {
-                                        $selected = ($coorientador->getId() == $estagioAluno->getIdCoorientador()) ? "selected" : "";
-                                        echo "<option value='" . $coorientador->getId() . "' " . $selected . "> " . $coorientador->getNome() . "</option>";
-                                    }
-                                    ?>
-                                </select>
+                                <?php
+                                foreach ($coorientadores as $coorientador) {
+                                    $selected = ($coorientador->getId() == $estagioAluno->getIdCoorientador()) ? "selected" : "";
+                                    echo "<option value='" . $coorientador->getId() . "' " . $selected . "> " . $coorientador->getNome() . "</option>";
+                                }
+                                ?>
+                            </select>
 
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
-                                        <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
-                                    </svg>
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
+                                    <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                                </svg>
 
-                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div>
-                            <label for="id_supervisor" class="block text-sm font-medium leading-6 text-verde-500 
+                    <div>
+                        <label for="id_supervisor" class="block text-sm font-medium leading-6 text-verde-500 
                         mb-2">Supervisor</label>
 
-                            <div class="relative">
-                                <select id="id_supervisor" name="id_supervisor" value="id_supervisor" class="rounded-md 
+                        <div class="relative">
+                            <select id="id_supervisor" name="id_supervisor" value="id_supervisor" class="rounded-md 
                     border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 bg-white
                     focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
-                                    <?php
-                                    foreach ($supervisores as $supervisor) {
-                                        $selected = ($supervisor->getId() == $estagioAluno->getIdSupervisor()) ? "selected" : "";
-                                        echo "<option value='" . $supervisor->getId() . "' " . $selected . "> " . $supervisor->getNome() . "</option>";
-                                    }
-                                    ?>
-                                </select>
+                                <?php
+                                foreach ($supervisores as $supervisor) {
+                                    $selected = ($supervisor->getId() == $estagioAluno->getIdSupervisor()) ? "selected" : "";
+                                    echo "<option value='" . $supervisor->getId() . "' " . $selected . "> " . $supervisor->getNome() . "</option>";
+                                }
+                                ?>
+                            </select>
 
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
-                                        <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
-                                    </svg>
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
+                                    <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                                </svg>
 
-                                </div>
                             </div>
                         </div>
 
@@ -383,20 +385,23 @@
 
                 </div>
 
-                <button type="submit" class="bg-verde-500 rounded-md py-1 px-20 focus:bg-slate-50
-                     text-slate-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-500 
-                     focus:text-verde-500 transition duration-300 ease-in-out hover:bg-verde-600 hover:border-verde-600 focus:border-verde-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                    </svg>
-                    Salvar
-                </button>
     </div>
 
     </div>
+    </fieldset>
+
+    <button type="submit" class="bg-verde-500 rounded-md py-1 px-20 focus:bg-slate-50
+         text-slate-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-500 
+         focus:text-verde-500 transition duration-300 ease-in-out hover:bg-verde-600 hover:border-verde-600 focus:border-verde-500
+         mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+        </svg>
+        Salvar
+    </button>
+    
 
     </form>
-    </fieldset>
 
     </form>
     </div>
