@@ -56,7 +56,6 @@
         </nav>
 
         <fieldset class="bg-slate-50 p-10 rounded-md w-[40rem]">
-            <legend class="text-gray-900 font-bold text-center text-xl">Dados do Supervisor</legend>
 
             <form action="salvarSupervisor.php" method="post" class="flex flex-col justify-center items-start gap-2">
                 <input type="hidden" name="id" value='<?php echo $supervisor->getId(); ?>'>
@@ -77,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div>
                         <label for="empresa" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Empresa</label>
                         <div class="relative">
@@ -162,22 +161,21 @@
 
                 </div>
 
-                <div>
-                    <button type="submit" class="bg-verde-500 rounded-md py-1 px-20 focus:bg-slate-50
-                     text-slate-50 flex items-center mt-4 gap-x-2 justify-center border-2 border-verde-500 
-                     focus:text-verde-500 transition duration-300 ease-in-out hover:bg-verde-600 hover:border-verde-600 focus:border-verde-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-                        </svg>
-                        Salvar
-                    </button>
-            </form>
         </fieldset>
 
-        </form>
-    </div>
+        <div class="flex items-center gap-x-2 justify-center">
+            <a href="supervisores.php" class="btn outlined">
+                Cancelar
+            </a>
 
-    <?php include_once('views/includes/footer.php') ?>
+            <button type="submit" class="btn primary">
+                Salvar
+            </button>
+        </div>
+
+        </form>
+
+        <?php include_once('views/includes/footer.php') ?>
 
 </body>
 
