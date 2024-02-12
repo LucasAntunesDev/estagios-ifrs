@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+ .btn {
+  @apply rounded-md py-2 px-4 flex items-center mt-4 gap-x-2 justify-center
+        transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+ }
+
+ .btn.primary {
+  @apply bg-verde-500 focus:ring-verde-400 text-zinc-50 hover:bg-verde-600;
+ }
+
+ .btn.secundary {
+  @apply bg-zinc-100 focus:ring-zinc-100  hover:bg-zinc-200;
+ }
+
+ .btn.outlined {
+  @apply bg-inherit focus:ring-gray-200  hover:border-gray-400 border border-gray-200;
+ }
+
+ .btn.destructive {
+  @apply bg-vermelho-500 focus:ring-vermelho-400 text-zinc-50 hover:bg-vermelho-600;
+ }
+
+ .btn.ghost {
+  @apply bg-inherit focus:font-bold  hover:text-gray-700 ring-0;
+ }
+
+ .btn.link {
+  @apply bg-inherit focus:text-gray-700  no-underline hover:underline ring-0;
+ }
+
+ .btn.btn-rounded-full{
+    @apply rounded-full;
+ }
+ 
+}
