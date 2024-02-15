@@ -50,9 +50,9 @@
             </ol>
         </nav>
 
-        <form action="salvarprofessor.php" method="post" class="flex flex-col justify-center items-center gap-2">
+        <form action="salvarprofessor.php" method="post">
 
-            <fieldset class="bg-slate-50 p-10 rounded-md w-[40rem]">
+            <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
                 <input type="hidden" name="id" value='<?php echo $professor->getId(); ?>'>
 
                 <div>

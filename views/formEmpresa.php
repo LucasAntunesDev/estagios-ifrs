@@ -57,8 +57,8 @@
             </ol>
         </nav>
 
-        <fieldset class="bg-slate-50 p-10 rounded-md w-[40rem]">
-            <form action="salvarEmpresa.php" method="post" class="flex flex-col justify-center items-center gap-2">
+        <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
+            <form action="salvarEmpresa.php" method="post">
                 <input type="hidden" name="id" value='<?php echo $empresa->getId(); ?>'>
 
                 <div class="flex gap-x-4">

@@ -57,8 +57,8 @@
             </ol>
         </nav>
 
-        <form action="salvarCidade.php" method="post" class="flex flex-col justify-center items-center gap-2">
-            <fieldset class="bg-slate-50 p-10 rounded-md w-[40rem]">
+        <form action="salvarCidade.php" method="post">items
+            <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
                 <input type="hidden" name="id" value='<?php echo $cidade->getId(); ?>'>
 
                 <div>

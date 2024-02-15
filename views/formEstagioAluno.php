@@ -51,7 +51,7 @@
         </nav>
 
         <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
-            <fieldset class="bg-slate-50 p-10 rounded-md">
+            <fieldset class="bg-slate-50 p-10 rounded-md w-fit">
                 <input type="hidden" name="id" value='<?php echo $estagioAluno->getId(); ?>'>
 
                 <div class="flex flex-col justify-center items-baseline gap-2">

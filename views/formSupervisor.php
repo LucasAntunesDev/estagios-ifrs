@@ -55,9 +55,10 @@
             </ol>
         </nav>
 
-        <fieldset class="bg-slate-50 p-10 rounded-md w-[40rem]">
 
-            <form action="salvarSupervisor.php" method="post" class="flex flex-col justify-center items-start gap-2">
+        <form action="salvarSupervisor.php" method="post">
+
+            <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
                 <input type="hidden" name="id" value='<?php echo $supervisor->getId(); ?>'>
 
                 <div class="flex gap-x-4">
@@ -161,17 +162,17 @@
 
                 </div>
 
-        </fieldset>
+            </fieldset>
 
-        <div class="flex items-center gap-x-2 justify-center">
-            <a href="supervisores.php" class="btn outlined">
-                Cancelar
-            </a>
+            <div class="flex items-center gap-x-2 justify-center">
+                <a href="supervisores.php" class="btn outlined">
+                    Cancelar
+                </a>
 
-            <button type="submit" class="btn primary">
-                Salvar
-            </button>
-        </div>
+                <button type="submit" class="btn primary">
+                    Salvar
+                </button>
+            </div>
 
         </form>
 
