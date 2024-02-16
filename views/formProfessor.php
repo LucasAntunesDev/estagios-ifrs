@@ -47,7 +47,7 @@
         </nav>
 
         <h1 class="font-bold text-4xl text-vermelho-500 mb-4">
-            Gerenciar Professor
+        <?php echo isset($_GET['id']) ? 'Editar' : 'Adicionar' ?> professor
         </h1>
 
         <form action="salvarprofessor.php" method="post">

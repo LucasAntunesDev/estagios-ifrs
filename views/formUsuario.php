@@ -48,12 +48,12 @@
         </nav>
 
         <h1 class="font-bold text-4xl text-vermelho-500 pb-4 flex items-center gap-x-2">
-            Formulário de Usuário
+            <?php echo isset($_GET['id']) ? 'Editar' : 'Adicionar' ?> usuário
         </h1>
 
         <form action="salvarUsuario.php" method="post">
 
-            <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
+            <fieldset class="flex flex-col items-center border border-zinc-300 p-10 rounded-md w-[40rem]">
                 <input type="hidden" name="id" value='<?php echo $usuario->getId(); ?>'>
 
                 <div>

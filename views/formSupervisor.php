@@ -48,7 +48,7 @@
         </nav>
 
         <h1 class="flex gap-x-3 items-center font-bold text-4xl text-vermelho-500 mb-4">
-            Gerenciar Supervisor
+            <?php echo isset($_GET['id']) ? 'Editar' : 'Adicionar' ?> supervisor
         </h1>
 
 

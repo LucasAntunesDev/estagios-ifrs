@@ -51,7 +51,7 @@
         </nav>
 
         <h1 class="font-bold text-4xl text-vermelho-500 pb-4 flex items-center gap-x-2">
-            Gerenciar Cidade
+            <?php echo isset($_GET['id']) ? 'Editar' : 'Adicionar' ?> cidade
         </h1>
 
         <form action="salvarCidade.php" method="post">

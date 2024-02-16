@@ -51,7 +51,7 @@
         </nav>
 
         <h1 class="flex gap-x-3 items-center font-bold text-4xl text-vermelho-500 mb-4">
-            Gerenciar Empresa
+            <?php echo isset($_GET['id']) ? 'Editar' : 'Adicionar' ?> empresa
         </h1>
 
         <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">

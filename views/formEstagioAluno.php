@@ -47,7 +47,7 @@
         </nav>
 
         <h1 class="font-bold text-4xl text-vermelho-500 mb-4">
-            Gerenciar Estágio
+            <?php echo isset($_GET['id']) ? 'Editar' : 'Adicionar' ?> estágio
         </h1>
 
         <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
