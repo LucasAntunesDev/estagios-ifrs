@@ -26,14 +26,21 @@
                 border-0 py-1.5 pr-10 pl-10 outline-none hover:bg-slate-100
                   bg-slate-50">
                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-zinc-600">
                         <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
                     </svg>
                 </div>
             </div>
 
             <button id="dropdownCheckboxButton" data-dropdown-toggle="dropdownDefaultCheckbox" class="flex rounded-md items-center bg-zinc-100 py-1 px-4  " type="button">
-                Situação
+                <!-- Situação -->
+                <?php
+                if (isset($_GET['nao_iniciado'])) echo 'Não iniciado';
+                else if (isset($_GET['em_andamento'])) echo 'Em andamento';
+                else if (isset($_GET['finalizado'])) echo 'Finalizados';
+                else echo 'Todos';
+
+                ?>
                 <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
                 </svg>
@@ -41,7 +48,7 @@
 
             <!-- Dropdown menu -->
             <div id="dropdownDefaultCheckbox" class="z-10 hidden w-48 bg-white divide-y rounded-lg shadow " style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(724px, 124px);" data-popper-placement="bottom">
-                <ul class="py-2 text-sm font-bold text-gray-600" aria-labelledby="dropdownCheckboxButton">
+                <ul class="py-2 text-sm font-bold text-zinc-600" aria-labelledby="dropdownCheckboxButton">
 
                     <li class="hover:bg-slate-50 rounded-md py-2 px-4 mx-2">
                         <a href="estagiosAlunos.php" class="flex items-center gap-x-2 hover:cursor-pointer">
@@ -104,14 +111,14 @@
 
     <div class="relative overflow-x-auto 2xl:max-w-fit xl:w-11/12 md:w-11/12 w-7/12 
         rounded-xl mx-auto">
-        <table class="table-auto text-gray-600 font-medium">
+        <table class="table-auto text-zinc-600 font-medium">
             <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 text-verde-500 bg-slate-50">
                 <tr class="table-row *:w-fit *:capitalize *:pl-2 *:pr-6 *:py-3 *:whitespace-nowrap">
                     <th class="w-fit capitalize pl-2 pr-6 py-2">
                         <div class="flex items-center gap-x-2">
                             <a <?php
-                            echo (!isset($_GET['descrescente'])) ? "href='estagiosAlunos.php?descrescente'" : "href='estagiosAlunos.php'";
-                            ?> class="hover:">
+                                echo (!isset($_GET['descrescente'])) ? "href='estagiosAlunos.php?descrescente'" : "href='estagiosAlunos.php'";
+                                ?> class="hover:">
 
                                 <?php
                                 if (isset($_GET['descrescente'])) {
@@ -125,27 +132,26 @@
                                 }
                                 ?>
                             </a>
-                            aluno
+                            <!-- aluno -->
                         </div>
                     </th>
                     <th scope="col">empresa</th>
-                    <th scope="col">carga horária</th>
+                    <th scope="col">área</th>
                     <th scope="col">coordenador</th>
                     <th scope="col">tipo de processo</th>
-                    <th scope="col">encaminhamentos</th>
-                    <th scope="col">situação</th>
-                    <th scope="col">início</th>
-                    <th scope="col">previsão de fim</th>
+                    <!-- <th scope="col">encaminhamentos</th> -->
+                    <!-- <th scope="col">situação</th> -->
+                    <th scope="col">período</th>
+                    <!-- <th scope="col">previsão de fim</th> -->
                     <th scope="col">orientador</th>
                     <th scope="col">coorientador</th>
                     <th scope="col">supervisor</th>
-                    <th scope="col">data de fim</th>
-                    <th scope="col">área</th>
-                    <th scope="col">termo de compromisso</th>
-                    <th scope="col">plano de atividades</th>
+                    <!-- <th scope="col">data de fim</th> -->
+                    <th scope="col">documentos</th>
+                    <!-- <th scope="col">plano de atividades</th>
                     <th scope="col">avaliação empresa</th>
                     <th scope="col">autoavaliação</th>
-                    <th scope="col">TCC</th>
+                    <th scope="col">TCC</th> -->
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -159,7 +165,7 @@
                 // if (isset($_GET['finalizado'])) $estagiosAlunos = $estagiosFinalizados;
                 // else if (isset($_GET['nao_iniciado'])) $estagiosAlunos = $estagiosNaoIniciados;
                 // else if (isset($_GET['em_andamento'])) $estagiosAlunos = $estagiosEmAndamento;
-                
+
                 switch (true) {
                     case isset($_GET['finalizado']):
                         $estagiosAlunos = $estagiosFinalizados;
@@ -177,115 +183,188 @@
                 foreach ($estagiosAlunos as $estagioAluno) {
                     echo '<tr class="even:bg-slate-50">';
                     echo '<td class="pl-2 w-fit py-5 whitespace-nowrap pr-8">
-                                <div class="flex items-center">
-                                    <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
+                                <div class="flex items-center gap-x-2">
+                                    <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800 select-none
                                     hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit mx-2">' .
                         $estagioAluno->getIdAluno() .
                         ' </span>
-                                ' . $estagioAluno->getNomeAluno() . '
+                                <div class="inline-flex flex-col">
+                                <span>' . $estagioAluno->getNomeAluno() . '</span>
+                                <span class="text-xs text-zinc-500">' . $estagioAluno->getCargaHoraria() . ' horas</span>
+                                <span class="text-xs text-zinc-500">' . $estagioAluno->getNumeroEncaminhamentos() . ' encaminhamentos</span>
+                            
+
+                        </div>
+                                <span class="text-sm font-medium py-1 px-2 rounded-md inline-flex items-center w-max
+                                hover:cursor-pointer transition duration-300 ease-in-out">';
+
+                    switch ($estagioAluno->getSituacaoEstagio()) {
+                        case 'Não Iniciado':
+                            echo '<button data-tooltip-target="tooltip-nao-inicado" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 fill-red-600">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z" clip-rule="evenodd" />
+                                    </svg>
+                                 </button>
+                            
+                            <div id="tooltip-nao-inicado" role="tooltip" class="absolute z-10 invisible inline-block 
+                            px-3 py-2 text-sm font-medium border border-zinc-200 rounded-lg shadow-sm opacity-0 tooltip">
+                                Não Iniciado
+                            </div>';
+                            break;
+                        case 'Finalizado':
+                            echo '<button data-tooltip-target=".tooltip-finalizado" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="size-5 fill-emerald-600">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+                                </svg>   
+                            </button>
+
+                            <div role="tooltip" class="tooltip-finalizado absolute z-10 invisible inline-block 
+                            px-3 py-2 text-sm font-medium border border-zinc-200 rounded-lg shadow-sm opacity-0 tooltip">
+                                Finalizado
+                            </div>';
+                            break;
+                        default:
+                            echo '<button data-tooltip-target=".tooltip-em-andamento" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 fill-yellow-400">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5Zm0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
+                                    </svg>
+                                 </button>
+                            
+                            <div  role="tooltip" class="tooltip-em-andamento absolute z-10 invisible inline-block 
+                            px-3 py-2 text-sm font-medium border border-zinc-200 rounded-lg shadow-sm opacity-0 tooltip">
+                                Em Andamento
+                            </div>';
+                            break;
+                    }
+                    '</span>
                                 </div>
                             </td>';
+
+                    // echo '<td class="p-1 w-max capitalize">
+
+                    //     </td>';
+
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getNomeEmpresa() . '
-                            <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
+                            <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800 select-none
                             hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
                         $estagioAluno->getIdEmpresa() .
                         ' </span>
                         </td>';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getCargaHoraria() . ' horas </td>';
+                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col"> 
+                            <button data-tooltip-target=".tooltip-area" type="button">
+                                '.$estagioAluno->getNomeArea().'
+                                </button>
+                            
+                            <div id="tooltip-area" role="tooltip" class="absolute z-10 invisible inline-block tooltip-area
+                            px-3 py-2 text-sm font-medium border border-zinc-200 rounded-lg shadow-sm opacity-0 tooltip">
+                                '. $estagioAluno->getIdArea() .'
+                            </div>    
+                    </td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getNomeCoordenador() . '
-                        <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
+                        <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800 select-none
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
                         $estagioAluno->getIdCoordenador() .
                         ' </span>
                         </td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getTipoProcessoEstagio() . '</td>';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">
-                                <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
-                                hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
-                        $estagioAluno->getNumeroEncaminhamentos() .
-                        '</sapn>
-                            </td>';
-                    echo '<td class="p-1 w-max capitalize">
-                            <span class="';
-                    switch ($estagioAluno->getSituacaoEstagio()) {
-                        case 'Não Iniciado':
-                            echo 'bg-red-300 hover:bg-red-400 text-red-900';
-                            break;
-                        case 'Finalizado':
-                            echo 'bg-emerald-300 hover:bg-emerald-400 text-emerald-900';
-                            break;
-                        default:
-                            echo 'bg-yellow-200 hover:bg-yellow-300 text-yellow-800';
-                            break;
-                    }
-                    echo ' text-sm font-medium py-1 px-2 rounded-md inline-flex items-center w-max
-                        hover:cursor-pointer transition duration-300 ease-in-out">' .
-                        $estagioAluno->getSituacaoEstagio() .
-                        '</span>
-                        </td>';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) . '</td>';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
+                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap">' . date('d/m/Y', strtotime($estagioAluno->getDataInicio())) .
+                        ' até ';
+                    echo ($estagioAluno->getSituacaoEstagio() == 'Finalizado') ? date('d/m/Y', strtotime($estagioAluno->getDataFim()))
+                        :
+                        date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '
+                                <br><span class="py-1 px-2 rounded-md border border-zinc-200 select-none">Previsão</span>
+                            ';
+                    '</td>';
+                    // echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap">' . date('d/m/Y', strtotime($estagioAluno->getPrevisaoFim())) . '</td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap">' . $estagioAluno->getNomeOrientador() . '
-                                <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
+                                <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800 select-none
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
                         $estagioAluno->getIdOrientador() .
                         ' </span>
                             </td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getNomeCoorientador() . '
-                                <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
+                                <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800 select-none
                                 hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
                         $estagioAluno->getIdCoorientador() .
                         ' </span>
                         </td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getNomeSupervisor() . '
-                        <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
+                        <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800 select-none
                         hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
                         $estagioAluno->getIdSupervisor() .
                         ' </span>
                         </td>';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . date('d/m/Y', strtotime($estagioAluno->getDataFim())) . '</td>';
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getNomeArea() . '
-                        <span class="bg-sky-300 py-1 px-2 rounded-md hover:bg-sky-400 text-sky-800
-                        hover:cursor-pointer transition duration-300 ease-in-out font-medium text-sm h-fit">' .
-                        $estagioAluno->getIdArea() .
-                        ' </span>
-                        </td>';
 
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">
-                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '">';
+                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap">';
+
                     if ($estagioAluno->getUrlTermoCompromisso())
-                        echo "Clique para baixar
-                        </a>
-                        </td>";
+                        echo '<a target="_blank" href="uploads/' . $estagioAluno->getUrlTermoCompromisso() . '"
+                        class="py-1 px-2 rounded-lg border border-zinc-200 select-none hover:bg-zinc-100
+                        transition duration-300 ease-in-out flex gap-x-1 mb-2">';
+                    if ($estagioAluno->getUrlTermoCompromisso())
+                        echo "
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='size-5 fill-zinc-400'>
+                            <path fill-rule='evenodd' d='M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z' clip-rule='evenodd' />
+                        </svg>
 
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">
-                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '">';
+                        Termo de compromisso 
+                        </a>";
+
                     if ($estagioAluno->getUrlPlanoAtividades())
-                        echo "Clique para baixar
-                        </a>
-                        </td>'";
+                        echo '<a target="_blank" href="uploads/' . $estagioAluno->getUrlPlanoAtividades() . '"
+                    class="py-1 px-2 rounded-lg border border-zinc-200 select-none hover:bg-zinc-100
+                    transition duration-300 ease-in-out flex gap-x-1 mb-2">';
+                    if ($estagioAluno->getUrlPlanoAtividades())
+                        echo "
+                         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='size-5 fill-zinc-400'>
+                            <path fill-rule='evenodd' d='M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z' clip-rule='evenodd' />
+                        </svg>
 
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">
-                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '">';
+                        Plano de atividades
+                    </a>";
+
                     if ($estagioAluno->getUrlAvaliacaoEmpresa())
-                        echo "Clique para baixar
-                        </a>
-                        </td>'";
+                        echo '<a target="_blank" href="uploads/' . $estagioAluno->getUrlAvaliacaoEmpresa() . '"
+                    class="py-1 px-2 rounded-lg border border-zinc-200 select-none hover:bg-zinc-100
+                    transition duration-300 ease-in-out flex gap-x-1 mb-2">';
+                    if ($estagioAluno->getUrlAvaliacaoEmpresa())
+                        echo "
+                         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='size-5 fill-zinc-400'>
+                            <path fill-rule='evenodd' d='M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z' clip-rule='evenodd' />
+                        </svg>
+                       
 
 
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">
-                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlAutoavaliacao() . '">';
+                        Avaliação da empresa
+                    </a>";
+
                     if ($estagioAluno->getUrlAutoavaliacao())
-                        echo "Clique para baixar
-                        </a>
-                        </td>'";
+                        echo '<a target="_blank" href="uploads/' . $estagioAluno->getUrlAutoavaliacao() . '"
+                    class="py-1 px-2 rounded-lg border border-zinc-200 select-none hover:bg-zinc-100
+                    transition duration-300 ease-in-out flex gap-x-1 mb-2">';
+                    if ($estagioAluno->getUrlAutoavaliacao())
+                        echo "
+                         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='size-5 fill-zinc-400'>
+                            <path fill-rule='evenodd' d='M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z' clip-rule='evenodd' />
+                        </svg>
 
-                    echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">
-                        <a target="_blank" href="uploads/' . $estagioAluno->getUrlTcc() . '">';
-                    if ($estagioAluno->getUrlTcc())
-                        echo "Clique para baixar
-                        </a>
-                        </td>'";
+                        Autoavaliação
+                    </a>";
+
+                    if ($estagioAluno->getUrlTCC())
+                        echo '<a target="_blank" href="uploads/' . $estagioAluno->getUrlTCC() . '"
+                    class="py-1 px-2 rounded-lg border border-zinc-200 select-none hover:bg-zinc-100
+                    transition duration-300 ease-in-out flex gap-x-1 mb-2">';
+                    if ($estagioAluno->getUrlTCC())
+                        echo "
+                         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' class='size-5 fill-zinc-400'>
+                            <path fill-rule='evenodd' d='M15.621 4.379a3 3 0 0 0-4.242 0l-7 7a3 3 0 0 0 4.241 4.243h.001l.497-.5a.75.75 0 0 1 1.064 1.057l-.498.501-.002.002a4.5 4.5 0 0 1-6.364-6.364l7-7a4.5 4.5 0 0 1 6.368 6.36l-3.455 3.553A2.625 2.625 0 1 1 9.52 9.52l3.45-3.451a.75.75 0 1 1 1.061 1.06l-3.45 3.451a1.125 1.125 0 0 0 1.587 1.595l3.454-3.553a3 3 0 0 0 0-4.242Z' clip-rule='evenodd' />
+                        </svg>
+
+                        TCC
+                    </a>";
+
+                    "</td>";
 
                     echo '<td class="flex pl-2 pr-1 w-fit py-5 flex-nowrap gap-x-2" scope="col">';
 
