@@ -13,12 +13,8 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-vermelho-500 my-4">
-            <i class="fa-solid fa-circle-user"></i>
-            Gerenciar Estágio
-        </h1>
 
-        <nav class="flex mb-4" aria-label="Breadcrumb">
+        <nav class="flex my-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-gray-600 
@@ -49,6 +45,10 @@
                 </li>
             </ol>
         </nav>
+
+        <h1 class="font-bold text-4xl text-vermelho-500 mb-4">
+            Gerenciar Estágio
+        </h1>
 
         <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
             <fieldset class="bg-slate-50 p-10 rounded-md w-fit">

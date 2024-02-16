@@ -16,15 +16,8 @@
     <?php include('views/includes/menu.php'); ?>
 
     <div class="flex flex-col justify-center items-center gap-2">
-        <h1 class="font-bold text-4xl text-vermelho-500 py-4 flex items-center gap-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
-                <path d="M19.006 3.705a.75.75 0 00-.512-1.41L6 6.838V3a.75.75 0 00-.75-.75h-1.5A.75.75 0 003 3v4.93l-1.006.365a.75.75 0 00.512 1.41l16.5-6z" />
-                <path fill-rule="evenodd" d="M3.019 11.115L18 5.667V9.09l4.006 1.456a.75.75 0 11-.512 1.41l-.494-.18v8.475h.75a.75.75 0 010 1.5H2.25a.75.75 0 010-1.5H3v-9.129l.019-.006zM18 20.25v-9.565l1.5.545v9.02H18zm-9-6a.75.75 0 00-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75H9z" clip-rule="evenodd" />
-            </svg>
-            Gerenciar Cidade
-        </h1>
 
-        <nav class="flex mb-4" aria-label="Breadcrumb">
+        <nav class="flex my-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="index.php" class="inline-flex items-center text-sm font-medium text-gray-600 
@@ -57,7 +50,11 @@
             </ol>
         </nav>
 
-        <form action="salvarCidade.php" method="post">items
+        <h1 class="font-bold text-4xl text-vermelho-500 pb-4 flex items-center gap-x-2">
+            Gerenciar Cidade
+        </h1>
+
+        <form action="salvarCidade.php" method="post">
             <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
                 <input type="hidden" name="id" value='<?php echo $cidade->getId(); ?>'>
 
