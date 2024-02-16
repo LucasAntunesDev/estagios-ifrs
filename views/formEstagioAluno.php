@@ -51,7 +51,10 @@
         </h1>
 
         <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
-            <fieldset class="bg-slate-50 p-10 rounded-md w-fit">
+            <fieldset class="p-10 border-b border-b-zinc-300">
+
+                <h2 class="text-base font-semibold leading-7 text-verde-500">Informações básicas</h2>
+
                 <input type="hidden" name="id" value='<?php echo $estagioAluno->getId(); ?>'>
 
                 <div class="flex flex-col justify-center items-baseline gap-2">
@@ -219,7 +222,9 @@
 
             <input type="hidden" id="previsao_fim" name="previsao_fim" value='<?php echo $estagioAluno->getPrevisaoFim(); ?>'>
 
-            <fieldset class="bg-slate-50 p-10 rounded-md">
+            <fieldset class="p-10">
+
+                <h2 class="text-base font-semibold leading-7 text-verde-500">Documentos</h2>
 
                 <div class="flex gap-x-4 w-available">
                     <div>

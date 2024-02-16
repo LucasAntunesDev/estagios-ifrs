@@ -52,7 +52,7 @@
 
         <form action="salvarprofessor.php" method="post">
 
-            <fieldset class="flex flex-col items-center bg-slate-50 p-10 rounded-md w-[40rem]">
+            <fieldset class="flex flex-col items-center p-10 w-[40rem]">
                 <input type="hidden" name="id" value='<?php echo $professor->getId(); ?>'>
 
                 <div>

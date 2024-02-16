@@ -901,10 +901,6 @@ video {
   height: 1.75rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -940,10 +936,6 @@ video {
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
-}
-
-.w-12 {
-  width: 3rem;
 }
 
 .w-2 {
@@ -1286,6 +1278,11 @@ video {
   border-bottom-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.border-b-zinc-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(212 212 216 / var(--tw-border-opacity));
+}
+
 .border-t-gray-500 {
   --tw-border-opacity: 1;
   border-top-color: rgb(107 114 128 / var(--tw-border-opacity));
@@ -1483,6 +1480,10 @@ video {
   padding-left: 0.5rem;
 }
 
+.pl-24 {
+  padding-left: 6rem;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -1519,8 +1520,8 @@ video {
   padding-inline-start: 0.75rem;
 }
 
-.pl-24 {
-  padding-left: 6rem;
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
 .text-left {
@@ -1588,6 +1589,10 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
 }
 
 .text-gray-400 {
@@ -1670,11 +1675,6 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
 .accent-verde-500 {
   accent-color: #127852;
 }
@@ -1713,11 +1713,6 @@ video {
 .ring-neutral-300 {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(212 212 212 / var(--tw-ring-opacity));
-}
-
-.ring-gray-300 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity));
 }
 
 .transition {
@@ -1760,16 +1755,6 @@ video {
 
 .\*\:capitalize > * {
   text-transform: capitalize;
-}
-
-.placeholder\:text-gray-400::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-gray-400::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .even\:bg-slate-50:nth-child(even) {
@@ -1890,11 +1875,6 @@ video {
   --tw-ring-color: rgb(72 153 123 / var(--tw-ring-opacity));
 }
 
-.focus\:ring-indigo-600:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
-}
-
 @media (min-width: 640px) {
   .sm\:mx-auto {
     margin-left: auto;
@@ -1927,15 +1907,6 @@ video {
 
   .sm\:text-center {
     text-align: center;
-  }
-
-  .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-
-  .sm\:leading-6 {
-    line-height: 1.5rem;
   }
 }
 
