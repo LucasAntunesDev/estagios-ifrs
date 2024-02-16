@@ -15,7 +15,7 @@
 
     <?php include('views/includes/menu.php'); ?>
 
-    <div class="flex flex-col justify-center items-center gap-2">
+    <div class="flex flex-col justify-center pl-24 items-start gap-2">
 
         <nav class="flex my-4" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
