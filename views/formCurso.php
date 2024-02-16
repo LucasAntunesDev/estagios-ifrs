@@ -60,7 +60,7 @@
                 <input type="hidden" name="id" value='<?php echo $curso->getId(); ?>'>
 
                 <div>
-                    <label for="nome" class="block text-sm font-medium leading-6  mb-2">Nome</label>
+                    <label for="nome" class="label">Nome</label>
 
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $curso->getNome(); ?>' class="rounded-md 
@@ -75,7 +75,7 @@
                 </div>
 
                 <div>
-                    <label for="id_coordenador" class="block text-sm font-medium leading-6  mb-2">Coordenador</label>
+                    <label for="id_coordenador" class="label">Coordenador</label>
 
                     <div class="relative">
                         <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 

@@ -60,7 +60,7 @@
 
                 <div class="flex gap-x-4">
                     <div>
-                        <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
+                        <label for="nome" class="label">Nome</label>
                         <div class="relative">
                             <input type="text" id="nome" name="nome" value='<?php echo $empresa->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-600 ring-1 ring-inset ring-neutral-300
@@ -77,7 +77,7 @@
                     </div>
 
                     <div>
-                        <label for="cpnj" class="block text-sm font-medium leading-6 text-verde-500 mb-2">CNPJ</label>
+                        <label for="cpnj" class="label">CNPJ</label>
 
                         <div class="relative">
                             <input type="text" id="cnpj" name="cnpj" value='<?php echo $empresa->getCNPJ(); ?>' class="rounded-md 
@@ -96,7 +96,7 @@
                     </div>
 
                     <div class="w-available">
-                        <label for="id_cidade" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Cidade</label>
+                        <label for="id_cidade" class="label">Cidade</label>
 
                         <div class="relative">
                             <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
@@ -122,7 +122,7 @@
                 <div class="flex gap-x-4">
 
                     <div>
-                        <label for="endereco" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Endereço</label>
+                        <label for="endereco" class="label">Endereço</label>
 
                         <div class="relative">
                             <input type="text" id="endereco" name="endereco" value='<?php echo $empresa->getTelefone(); ?>' class="rounded-md 
@@ -140,7 +140,7 @@
                     </div>
 
                     <div>
-                        <label for="telefone" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Telefone</label>
+                        <label for="telefone" class="label">Telefone</label>
 
                         <div class="relative">
                             <input type="number" id="telefone" name="telefone" value='<?php echo $empresa->getTelefone(); ?>' class="rounded-md 
@@ -158,7 +158,7 @@
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Email</label>
+                        <label for="email" class="label">Email</label>
 
                         <div class="relative">
                             <input type="email" id="email" name="email" value='<?php echo $empresa->getEmail(); ?>' class="rounded-md 

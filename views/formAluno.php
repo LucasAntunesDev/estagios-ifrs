@@ -60,7 +60,7 @@
 
                     <div class="flex gap-x-4 w-available">
                         <div class="w-available">
-                            <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
+                            <label for="nome" class="label">Nome</label>
 
                             <div class="relative">
                                 <input type="text" id="nome" name="nome" value='<?php echo $aluno->getNome(); ?>' class="rounded-md 
@@ -76,7 +76,7 @@
                         </div>
 
                         <div>
-                            <label for="data_nascimento" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Data de
+                            <label for="data_nascimento" class="label">Data de
                                 Nascimento</label>
 
                             <div class="relative">
@@ -98,7 +98,7 @@
                     <div class="flex gap-x-4 w-available">
 
                         <div class="w-available">
-                            <label for="telefone" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Telefone (apenas
+                            <label for="telefone" class="label">Telefone (apenas
                                 números)</label>
 
                             <div class="relative">
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="w-available">
-                            <label for="email" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Email</label>
+                            <label for="email" class="label">Email</label>
 
                             <div class="relative">
                                 <input type="email" id="email" name="email" value='<?php echo $aluno->getEmail(); ?>' class="rounded-md 
@@ -134,7 +134,7 @@
 
                     <div class="flex gap-x-4 w-available">
                         <div class="w-available">
-                            <label for="cpf" class="block text-sm font-medium leading-6 text-verde-500 mb-2">CPF (apenas
+                            <label for="cpf" class="label">CPF (apenas
                                 números)</label>
 
                             <div class="relative">
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="w-available">
-                            <label for="rg" class="block text-sm font-medium leading-6 text-verde-500 mb-2">RG</label>
+                            <label for="rg" class="label">RG</label>
 
                             <div class="relative">
                                 <input type="text" id="rg" name="rg" value='<?php echo $aluno->getRG(); ?>' class="rounded-md 
@@ -168,7 +168,7 @@
 
                     <div class="flex gap-x-4 w-available">
                         <div class="w-available">
-                            <label for="endereco" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Endereço</label>
+                            <label for="endereco" class="label">Endereço</label>
 
                             <div class="relative">
                                 <input type="text" id="endereco" name="endereco" value=" <?php echo $aluno->getEndereco(); ?>" class="rounded-md 
@@ -184,7 +184,7 @@
 
 
                         <div class="w-available">
-                            <label for="id_cidade" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Cidade</label>
+                            <label for="id_cidade" class="label">Cidade</label>
 
                             <div class="relative">
                                 <select id="id_cidade" name="id_cidade" value="id_cidade" class="rounded-md 
@@ -209,7 +209,7 @@
                     <div class="flex gap-x-4">
 
                         <div>
-                            <label for="matricula" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Matricula</label>
+                            <label for="matricula" class="label">Matricula</label>
 
                             <div class="relative">
                                 <input type="number" id="matricula" name="matricula" value='<?php echo $aluno->getMatricula(); ?>' class="rounded-md 
@@ -224,7 +224,7 @@
                         </div>
 
                         <div>
-                            <label for="ano_turma" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Ano</label>
+                            <label for="ano_turma" class="label">Ano</label>
 
                             <div class="relative">
                                 <input type="number" id="ano_turma" name="ano_turma" value='<?php echo $aluno->getAnoTurma(); ?>' class="rounded-md 
@@ -240,7 +240,7 @@
                         </div>
 
                         <div>
-                            <label for="id_curso" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Curso</label>
+                            <label for="id_curso" class="label">Curso</label>
 
                             <div class="relative">
                                 <select id="id_curso" name="id_curso" value="id_curso" class="rounded-md 

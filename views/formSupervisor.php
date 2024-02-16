@@ -59,7 +59,7 @@
 
                 <div class="flex gap-x-4">
                     <div>
-                        <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
+                        <label for="nome" class="label">Nome</label>
                         <div class="relative">
                             <input type="text" id="nome" name="nome" value='<?php echo $supervisor->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-600 ring-1 ring-inset ring-neutral-300
@@ -75,7 +75,7 @@
                     </div>
 
                     <div>
-                        <label for="empresa" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Empresa</label>
+                        <label for="empresa" class="label">Empresa</label>
                         <div class="relative">
                             <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
                     border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
@@ -101,7 +101,7 @@
 
                 <div class="flex gap-x-4">
                     <div>
-                        <label for="telefone" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Telefone</label>
+                        <label for="telefone" class="label">Telefone</label>
 
                         <div class="relative">
                             <input type="number" id="telefone" name="telefone" value='<?php echo $supervisor->getTelefone(); ?>' class="rounded-md 
@@ -119,7 +119,7 @@
                     </div>
 
                     <div>
-                        <label for="email" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Email</label>
+                        <label for="email" class="label">Email</label>
 
                         <div class="relative">
                             <input type="email" id="email" name="email" value='<?php echo $supervisor->getEmail(); ?>' class="rounded-md 
@@ -140,7 +140,7 @@
 
 
                 <div>
-                    <label for="cargo" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Cargo</label>
+                    <label for="cargo" class="label">Cargo</label>
 
                     <div class="relative">
                         <input type="text" id="cargo" name="cargo" value='<?php echo $supervisor->getCargo(); ?>' class="rounded-md 

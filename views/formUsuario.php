@@ -57,7 +57,7 @@
                 <input type="hidden" name="id" value='<?php echo $usuario->getId(); ?>'>
 
                 <div>
-                    <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
+                    <label for="nome" class="label">Nome</label>
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $usuario->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300
@@ -73,7 +73,7 @@
                 </div>
 
                 <div>
-                    <label for="login" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Login</label>
+                    <label for="login" class="label">Login</label>
 
                     <div class="relative">
                         <input type="text" id="login" name="login" value='<?php echo $usuario->getLogin(); ?>' class="rounded-md 
@@ -91,7 +91,7 @@
                 </div>
 
                 <div>
-                    <label for="senha" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Senha</label>
+                    <label for="senha" class="label">Senha</label>
 
                     <div class="relative">
                         <input type="password" id="senha" name="senha" value="" class="rounded-md 

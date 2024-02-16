@@ -60,8 +60,7 @@
                 <div class="flex flex-col justify-center items-baseline gap-2">
 
                     <div class="w-available">
-                        <label for="id_aluno" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Aluno</label>
+                        <label for="id_aluno" class="label">Aluno</label>
                         <div class="relative ">
                             <select id="id_aluno" name="id_aluno" value="id_aluno" class="rounded-md 
                     border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 bg-white
@@ -92,8 +91,7 @@
                     <div class="flex gap-x-4">
 
                         <div>
-                            <label for="id_empresa" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Empresa</label>
+                            <label for="id_empresa" class="label">Empresa</label>
 
                             <div class="relative">
                                 <select id="id_empresa" name="id_empresa" value="id_empresa" class="rounded-md 
@@ -117,14 +115,12 @@
                         </div>
 
                         <div>
-                            <label for="data_inicio" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Data de Início</label>
+                            <label for="data_inicio" class="label">Data de Início</label>
                             <input type="date" id="data_inicio" name="data_inicio" value='<?php echo $estagioAluno->getDataInicio(); ?>' class="rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset ring-neutral-300 focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
                         </div>
 
                         <div>
-                            <label for="carga_horaria" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Carga horária (em horas)</label>
+                            <label for="carga_horaria" class="label">Carga horária (em horas)</label>
                             <input type="text" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
                 border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300
                 focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
@@ -134,8 +130,7 @@
 
                     <div class="flex gap-x-4">
                         <div>
-                            <label for="tipo_processo_estagio" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Tipo de Processo</label>
+                            <label for="tipo_processo_estagio" class="label">Tipo de Processo</label>
 
                             <ul class="items-center w-full text-sm font-medium text-neutral-900 bg-white border border-neutral-200 rounded-lg sm:flex  hover:cursor-pointer">
                                 <li class="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r hover:cursor-pointer px-2">
@@ -165,8 +160,7 @@
                         </div>
 
                         <div>
-                            <label for="id_area" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Area</label>
+                            <label for="id_area" class="label">Area</label>
 
                             <div class="relative">
                                 <select id="id_area" name="id_area" value="id_area" class="rounded-md 
@@ -190,8 +184,7 @@
                         </div>
 
                         <div>
-                            <label for="situacao_estagio" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Situação</label>
+                            <label for="situacao_estagio" class="label">Situação</label>
 
                             <div class="relative">
                                 <select name="situacao_estagio" id="situacao_estagio" value="situacao_estagio" class="rounded-md 
@@ -229,8 +222,7 @@
                 <div class="flex gap-x-4 w-available">
                     <div>
                         <div>
-                            <label for="id_coordenador" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Coordenador</label>
+                            <label for="id_coordenador" class="label">Coordenador</label>
 
                             <div class="relative">
                                 <select id="id_coordenador" name="id_coordenador" value="id_coordenador" class="rounded-md 
@@ -255,8 +247,7 @@
                     </div>
 
                     <div>
-                        <label for="id_orientador" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Orientador</label>
+                        <label for="id_orientador" class="label">Orientador</label>
 
                         <div class="relative">
                             <select id="id_orientador" name="id_orientador" value="id_orientador" class="rounded-md 
@@ -280,8 +271,7 @@
                     </div>
 
                     <div>
-                        <label for="id_coorientador" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Coorientador</label>
+                        <label for="id_coorientador" class="label">Coorientador</label>
 
                         <div class="relative">
                             <select id="id_coorientador" name="id_coorientador" value="id_coorientador" class="rounded-md 
@@ -305,8 +295,7 @@
                     </div>
 
                     <div>
-                        <label for="id_supervisor" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Supervisor</label>
+                        <label for="id_supervisor" class="label">Supervisor</label>
 
                         <div class="relative">
                             <select id="id_supervisor" name="id_supervisor" value="id_supervisor" class="rounded-md 
@@ -337,8 +326,7 @@
                 <div class="flex gap-x-4">
 
                     <div>
-                        <label for="url_termo_compromisso" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Termo Compromisso</label>
+                        <label for="url_termo_compromisso" class="label">Termo Compromisso</label>
                         <input type="file" id="url_termo_compromisso" name="url_termo_compromisso" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTermoCompromisso(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 
         focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
@@ -346,8 +334,7 @@
 
                     <input type="hidden" name="url_plano_atividades" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>'>
                     <div>
-                        <label for="url_plano_atividades" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Plano Atividades</label>
+                        <label for="url_plano_atividades" class="label">Plano Atividades</label>
                         <input type="file" id="url_plano_atividades" name="url_plano_atividades" accept="application/pdf" value='<?php echo $estagioAluno->getUrlPlanoAtividades(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 
         focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
@@ -359,8 +346,7 @@
 
                     <input type="hidden" name="url_avaliacao_empresa" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>'>
                     <div>
-                        <label for="url_avaliacao_empresa" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Avaliação Empresa</label>
+                        <label for="url_avaliacao_empresa" class="label">Avaliação Empresa</label>
                         <input type="file" id="url_avaliacao_empresa" name="url_avaliacao_empresa" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAvaliacaoEmpresa(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 
         focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
@@ -368,8 +354,7 @@
 
                     <input type="hidden" name="url_autoavaliacao" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>'>
                     <div>
-                        <label for="url_autoavaliacao" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Autoavaliação</label>
+                        <label for="url_autoavaliacao" class="label">Autoavaliação</label>
                         <input type="file" id="url_autoavaliacao" name="url_autoavaliacao" accept="application/pdf" value='<?php echo $estagioAluno->getUrlAutoavaliacao(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 
         focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
@@ -381,8 +366,7 @@
 
                     <input type="hidden" name="url_tcc" value='<?php echo $estagioAluno->getUrlTcc(); ?>'>
                     <div>
-                        <label for="url_tcc" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">TCC</label>
+                        <label for="url_tcc" class="label">TCC</label>
                         <input type="file" id="url_tcc" name="url_tcc" accept="application/pdf" value='<?php echo $estagioAluno->getUrlTcc(); ?>' class="rounded-md 
         border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300 
         focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">

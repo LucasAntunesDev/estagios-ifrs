@@ -60,7 +60,7 @@
                 <input type="hidden" name="id" value='<?php echo $area->getId(); ?>'>
 
                 <div>
-                    <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
+                    <label for="nome" class="label">Nome</label>
 
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $area->getNome(); ?>' class="rounded-md 

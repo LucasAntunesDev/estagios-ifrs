@@ -56,7 +56,7 @@
                 <input type="hidden" name="id" value='<?php echo $professor->getId(); ?>'>
 
                 <div>
-                    <label for="nome" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Nome</label>
+                    <label for="nome" class="label">Nome</label>
                     <div class="relative">
                         <input type="text" id="nome" name="nome" value='<?php echo $professor->getNome(); ?>' class="rounded-md 
                 border-0 py-1.5 pr-7 pl-10 text-gray-600 ring-1 ring-inset ring-neutral-300
@@ -72,7 +72,7 @@
                 </div>
 
                 <div>
-                    <label for="email" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Email</label>
+                    <label for="email" class="label">Email</label>
 
                     <div class="relative">
                         <input type="email" id="email" name="email" value='<?php echo $professor->getEmail(); ?>' class="rounded-md 
@@ -91,7 +91,7 @@
                 </div>
 
                 <div>
-                    <label for="id_area" class="block text-sm font-medium leading-6 text-verde-500 mb-2">Area</label>
+                    <label for="id_area" class="label">Area</label>
 
                     <div class="relative">
                         <select id="id_area" name="id_area" value="id_area" class="rounded-md 

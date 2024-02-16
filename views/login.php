@@ -27,8 +27,7 @@
                 <fieldset class="flex flex-col justify-center bg-slate-50 items-center gap-y-8  rounded-md px-10 py-10">
 
                     <div>
-                        <label for="login" class="block text-sm font-medium leading-6 text-verde-500 
-                        mb-2">Login</label>
+                        <label for="login" class="label">Login</label>
 
                         <div class="relative">
                             <input type="text" name="login" id="login" class="rounded-md border-0 py-1.5 pr-7 pl-10 ring-1 ring-inset 
