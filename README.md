@@ -83,13 +83,9 @@ _Aqui está uma explicação passo a passo de como instalar e, posteriormente, u
    ```sh
    composer install
    ```
-3. Carregue o autoload
-   ```sh
-   composer dump-autoload
-   ```
-4. Crie/importe o banco de dados
+3. Crie/importe o banco de dados
    Copie o código do arquivo **_estagios.sql_** e crie o banco de dados ou importe-o -- se estiver usando alguma ferramenta que permita isso.
-5. Se quiser usar o sistema logado, entre com o usuário **_admin_** e a senha **_admin_**. Depois, você pode criar outros usuários dentro do sistema.
+4. Se quiser usar o sistema logado, entre com o usuário **_admin_** e a senha **_admin_**. Depois, você pode criar outros usuários dentro do sistema.
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
