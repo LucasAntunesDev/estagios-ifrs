@@ -51,7 +51,7 @@
         </h1>
 
         <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
-            <fieldset class="p-10 border-b border-b-zinc-300">
+            <fieldset class="py-10 border-b border-b-zinc-300">
 
                 <h2 class="text-base font-semibold leading-7 text-verde-500">Informações básicas</h2>
 
