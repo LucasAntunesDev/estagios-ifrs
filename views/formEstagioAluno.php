@@ -120,10 +120,12 @@
                         </div>
 
                         <div>
-                            <label for="carga_horaria" class="label">Carga horária (em horas)</label>
-                            <input type="text" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" class="rounded-md 
-                border-0 py-1.5 pl-10  ring-1 ring-inset ring-neutral-300
-                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
+                            <label for="carga_horaria" class="label">Carga horária</label>
+                            <div class="rounded-md border-0 py-1.5  ring-1 ring-inset ring-neutral-300 focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800">
+                                <input type="text" id="carga_horaria" name="carga_horaria" value=" <?php echo $estagioAluno->getCargaHoraria(); ?>" maxlength="3" class="w-12 ml-2 mr-2 border-r border-r-neutral-200 outline-none">
+                                <span class="pr-2">horas</span>
+                            </div>
+
                         </div>
 
                     </div>
