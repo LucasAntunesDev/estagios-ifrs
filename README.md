@@ -3,9 +3,7 @@
 <div align="center">
   <h1 align="center">Sistema de gerenciamento de estágios - IFRS</h1>
 
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://ifrs.edu.br/wp-content/uploads/2017/08/logo_vertical-01-1.jpg" alt="Logo do IFRS" width="180">
-  </a>
+  <img src="https://ifrs.edu.br/wp-content/uploads/2017/08/logo_vertical-01-1.jpg" alt="Logo do IFRS" width="180">
 
   <p align="center">
     Trabalho integrado (em grupo) de <strong>Programação Web II</strong>, <strong>Interface Web</strong> e <strong>Banco de Dados</strong>, em que foi desenvolvido um sistema com a proposta de possibilitar o gerenciamento dos estágios realizados no <strong>IFRS - Campus Bento Gonçalves</strong>
@@ -34,7 +32,7 @@
 
 ## Sobre o projeto
 
-<img src="https://lucasantunesdev.github.io/LucasAntunes.dev/src/imgs/estagios-if.png">
+<img src="https://lucasantunesdev.github.io/LucasAntunes.dev/src/imgs/estagios-ifrs.gif">
 
 O trabalho foi passado pelos professores com o intuito de testar os conhecimentos compartilhados no curso como o desenvolvimento de sistemas, trabalho em equipe e modelagem de sistemas. Além disso, o desenvolvimento do sistema também visou preencher uma lacuna da seção de estágios do campus, que é a falta de um sistema dedicado ao gerenciamente destes. Cabe ressaltar, entretanto, que, ao menos até o presente, o sistema não foi adotado de fato pelo IFRS, sendo apenas um protótipo/conceito.
 
