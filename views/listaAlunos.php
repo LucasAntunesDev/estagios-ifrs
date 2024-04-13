@@ -26,11 +26,8 @@
                     border-0 py-1.5 pr-10 pl-10 outline-none hover:bg-slate-100
                 bg-slate-50">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                            class="w-5 h-5 fill-gray-600">
-                            <path fill-rule="evenodd"
-                                d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                                clip-rule="evenodd"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
+                            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
                         </svg>
                     </div>
                 </div>
@@ -43,10 +40,8 @@
             focus:text-verde-500 focus:border-verde-500 transition duration-300 ease-in-out
             hover:bg-verde-600 hover:border-verde-600 self-baseline">
 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
                 </svg>
 
                 Adicionar aluno
@@ -58,12 +53,11 @@
             <table class="table-auto text-gray-600 font-medium">
                 <thead class="pl-6 font-semibold text-sm text-left pr-3 py-3.5 text-verde-500 bg-slate-50">
                     <tr class="even:bg-slate-50">
-                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap *:w-fit *:capitalize *:pl-2 *:pr-6 *:py-3 *:whitespace-nowrap"
-                            scope="col"">
+                        <th class=" w-fit capitalize pl-2 pr-6 py-3 whitespace-nowrap *:w-fit *:capitalize *:pl-2 *:pr-6 *:py-3 *:whitespace-nowrap" scope="col"">
                         <div class=" flex items-center gap-x-2">
                             <a <?php
-                            echo (!isset($_GET['descrescente'])) ? "href='alunos.php?descrescente'" : "href='alunos.php'";
-                            ?> class="hover:text-gray-600">
+                                echo (!isset($_GET['descrescente'])) ? "href='alunos.php?descrescente'" : "href='alunos.php'";
+                                ?> class="hover:text-gray-600">
 
                                 <?php
                                 if (isset($_GET['descrescente'])) {
@@ -83,14 +77,32 @@
 
         <th scope="col"">Matrícula</th>
                         <th scope=" col"">Data de nasc.</th>
-        <th scope="col"">Email</th>
-                        <th scope=" col"">CPF</th>
-        <th scope="col"">RG</th>
-                        <th scope=" col"">Endereco</th>
-        <th scope="col"">Telefone</th>
-                        <th scope=" col"">Turma</th>
-        <th scope="col"">Cidade</th>
-                        <th scope=" col"">Ações</th>
+        <th scope="col"" >
+        <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z" />
+            <path d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z" />
+            </svg>
+        </th>
+        <th scope=" col"">CPF</th>
+        <th scope=" col"">RG</th>
+        <th scope=" col"">
+        <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd" d="m9.69 18.933.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 1 0 3 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 0 0 2.273 1.765 11.842 11.842 0 0 0 .976.544l.062.029.018.008.006.003ZM10 11.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z" clip-rule="evenodd" />
+            </svg>
+        </th>
+        <th scope=" col"">
+            <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
+            </svg>
+
+        </th>
+        <th scope=" col"">Turma</th>
+        <th scope=" col"">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path d="M14.916 2.404a.75.75 0 0 1-.32 1.011l-.596.31V17a1 1 0 0 1-1 1h-2.26a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.5a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1 0-1.5H2V9.957a.75.75 0 0 1-.596-1.372L2 8.275V5.75a.75.75 0 0 1 1.5 0v1.745l10.404-5.41a.75.75 0 0 1 1.012.319ZM15.861 8.57a.75.75 0 0 1 .736-.025l1.999 1.04A.75.75 0 0 1 18 10.957V16.5h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75V9.21a.75.75 0 0 1 .361-.64Z" />
+            </svg>
+        </th>
+        <th scope=" col"">Ações</th>
         </tr>
         </thead>
 
@@ -146,8 +158,8 @@
                 echo '</tr>';
             }
             ?>
-        </tbody>
-        </table>
+            </tbody>
+            </table>
     </div>
     </div>
 
