@@ -51,7 +51,7 @@
         </h1>
 
         <form action="salvarEstagioAluno.php" method="post" class="flex flex-col  gap-2" enctype=multipart/form-data>
-            <fieldset class="py-10 border-b border-b-zinc-300">
+            <fieldset class="py-12 px-8 bg-zinc-100/50 border-zinc-400/10 border-[1px] rounded-lg mb-8">
 
                 <h2 class="text-base font-semibold leading-7 text-verde-500">Informações básicas</h2>
 
@@ -188,25 +188,42 @@
                         <div>
                             <label for="situacao_estagio" class="label">Situação</label>
 
-                            <div class="relative">
-                                <select name="situacao_estagio" id="situacao_estagio" value="situacao_estagio" class="rounded-md 
-                border-0 py-1.5 pl-10 ring-1 ring-inset ring-neutral-300 bg-white
-                focus:ring-2 focus:ring-inset focus:ring-verde-400 outline-none text-zinc-800 w-available">
+                            <ul class="items-center w-full text-sm font-medium text-neutral-900 bg-white border border-neutral-200 rounded-lg sm:flex  hover:cursor-pointer">
+                                <li class="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r hover:cursor-pointer px-2">
+                                    <div class="flex items-center ps-3 hover:cursor-pointer">
+                                        <input id="em_andamento" type="radio" value="em andamento" name="situacao_estagio" class="w-4 h-4 text-verde-500 <?php echo $estagioAluno->getSituacaoEstagio() == "Em andamento" ? "checked" : '' ?>
+                                         bg-neutral-100 border-neutral-300 focus:ring-verde-400 focus:ring-2 accent-verde-500 
+                                          hover:cursor-pointer">
 
-                                    <!-- <option value="não iniciado" <? //php echo $estagioAluno->getSituacaoEstagio() == 'não iniciado' ? 'selected' : '' 
-                                                                        ?>>Não Iniciado</option> -->
-                                    <option value="em andamento" <?php echo $estagioAluno->getSituacaoEstagio() == 'em andamento' ? 'selected' : '' ?>>Em Andamento</option>
-                                    <option value="finalizado" <?php echo $estagioAluno->getSituacaoEstagio() == 'finalizado' ? 'selected' : '' ?>>
-                                        Finalizado</option>
+                                        <label for="em_andamento" class="w-full py-3 ms-2 text-sm font-medium text-neutral-900  hover:cursor-pointer">
+                                            Em andamento
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r hover:cursor-pointer px-2">
+                                    <div class="flex items-center ps-3 hover:cursor-pointer">
+                                        <input id="nao_inciado" type="radio" value="não iniciado" name="situacao_estagio"  <?php echo $estagioAluno->getSituacaoEstagio() == "não iniciado" ? "checked" : '' ?> class="w-4 h-4 text-verde-500
+                                         bg-neutral-100 border-neutral-300 focus:ring-verde-400 focus:ring-2 accent-verde-500
+                                           hover:cursor-pointer">
 
-                                </select>
+                                        <label for="nao_inciado" class="w-full py-3 ms-2 text-sm font-medium text-neutral-900  hover:cursor-pointer">
+                                            Não Iniciado
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="w-full border-b border-neutral-200 sm:border-b-0 sm:border-r hover:cursor-pointer px-2">
+                                    <div class="flex items-center ps-3 hover:cursor-pointer">
+                                        <input id="finalizado" type="radio" value="finalizado" name="situacao_estagio"  <?php echo $estagioAluno->getSituacaoEstagio() == "finalizado" ? "checked" : '' ?> class="w-4 h-4 text-verde-500
+                                         bg-neutral-100 border-neutral-300 focus:ring-verde-400 focus:ring-2 accent-verde-500
+                                           hover:cursor-pointer">
 
-                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 fill-gray-600">
-                                        <path d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
-                                    </svg>
-                                </div>
-                            </div>
+                                        <label for="finalizado" class="w-full py-3 ms-2 text-sm font-medium text-neutral-900  hover:cursor-pointer">
+                                            Finalizado
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
 
@@ -217,7 +234,7 @@
 
             <input type="hidden" id="previsao_fim" name="previsao_fim" value='<?php echo $estagioAluno->getPrevisaoFim(); ?>'>
 
-            <fieldset class="p-10">
+            <fieldset class="py-12 px-8 bg-zinc-100/50 border-zinc-400/10 border-[1px] rounded-lg">
 
                 <h2 class="text-base font-semibold leading-7 text-verde-500">Documentos</h2>
 
