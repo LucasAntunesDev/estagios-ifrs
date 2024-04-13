@@ -141,13 +141,21 @@
                     <th scope="col">tipo de processo</th>
                     <!-- <th scope="col">encaminhamentos</th> -->
                     <!-- <th scope="col">situação</th> -->
-                    <th scope="col">período</th>
+                    <th scope="col">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
+                        </svg>
+                    </th>
                     <!-- <th scope="col">previsão de fim</th> -->
                     <th scope="col">orientador</th>
                     <th scope="col">coorientador</th>
                     <th scope="col">supervisor</th>
                     <!-- <th scope="col">data de fim</th> -->
-                    <th scope="col">documentos</th>
+                    <th scope="col">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm2.25 8.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Z" clip-rule="evenodd" />
+                        </svg>
+                    </th>
                     <!-- <th scope="col">plano de atividades</th>
                     <th scope="col">avaliação empresa</th>
                     <th scope="col">autoavaliação</th>
@@ -252,12 +260,12 @@
                         </td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col"> 
                             <button data-tooltip-target=".tooltip-area" type="button">
-                                '.$estagioAluno->getNomeArea().'
+                                ' . $estagioAluno->getNomeArea() . '
                                 </button>
                             
                             <div id="tooltip-area" role="tooltip" class="absolute z-10 invisible inline-block tooltip-area
                             px-3 py-2 text-sm font-medium border border-zinc-200 rounded-lg shadow-sm opacity-0 tooltip">
-                                '. $estagioAluno->getIdArea() .'
+                                ' . $estagioAluno->getIdArea() . '
                             </div>    
                     </td>';
                     echo '<td class="pl-2 pr-1 w-fit py-5 whitespace-nowrap" scope="col">' . $estagioAluno->getNomeCoordenador() . '
