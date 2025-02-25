@@ -87,8 +87,18 @@ _Aqui está uma explicação passo a passo de como instalar e, posteriormente, u
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
-<a id="equipe"></a>
+<a id="galeria"></a>
 
+# Galeria 🖼️
+Estas são algumas fotos do sistema.
+
+<img src="https://github.com/user-attachments/assets/9bfdbc16-ccc7-4638-82eb-154fec816fdd" width="45%"/>
+<img src="https://github.com/user-attachments/assets/8e54823f-27b0-403c-ac99-028ec54c1d67" width="45%"/>
+<img src="https://github.com/user-attachments/assets/fdf1898a-08b5-4845-86cc-c3ab20da7a00" width="45%"/>
+<img src="https://github.com/user-attachments/assets/206cedc7-df56-4959-bf88-ed7c9b25a593" width="45%"/>
+<img src="https://github.com/user-attachments/assets/789ac7b6-0681-4acb-a158-3a77b998f49a" width="45%"/>
+
+<a id="equipe"></a>
 ## Equipe 💪
 
 O projeto foi desenvolvido por:
